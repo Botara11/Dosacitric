@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Vector;
 
 public class ParteA {
-	private float IndiceDosificacion = (float) 0.085; // HARDCODEADO
+	private float IndiceDosificacion = (float) 0.085; // HARDCODEADO -> TIENE QUE ESTAR EN LA NUBE
 	/**** A1 ****/
 	private float DensidadFoliar;
 	private float AnchoCalle;
