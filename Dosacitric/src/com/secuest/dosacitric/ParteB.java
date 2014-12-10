@@ -42,11 +42,11 @@ public class ParteB {
 																// Z.Baja
 		this.NumeroBoquillasAbiertas = NumeroBoquillasAbiertas; // Z.Alta
 																// Z.Media y
-																// Z.Baja
+									 							// Z.Baja
 		this.PorcentajeVegetacion = PorcentajeVegetacion; // Z.Alta Z.Media y
 															// Z.Baja
 		this.IntervaloCaudalAdmisible = IntervaloCaudalAdmisible; // Z.Alta
-																	// Z.Media y
+						  											// Z.Media y
 																	// Z.Baja
 		this.VariacionCaudalAdmisible = VariacionCaudalAdmisible;
 	}
