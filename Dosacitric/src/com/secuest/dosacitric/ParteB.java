@@ -46,9 +46,10 @@ public class ParteB {
 		this.PorcentajeVegetacion = PorcentajeVegetacion; // Z.Alta Z.Media y
 															// Z.Baja
 		this.IntervaloCaudalAdmisible = IntervaloCaudalAdmisible; // Z.Alta
-						  											// Z.Media y
+						  		 									// Z.Media y
 																	// Z.Baja
 		this.VariacionCaudalAdmisible = VariacionCaudalAdmisible;
+		//hhh
 	}
 
 	public void calcularParteB() {
