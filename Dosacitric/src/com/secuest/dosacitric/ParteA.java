@@ -3,6 +3,7 @@ package com.secuest.dosacitric;
 import java.util.ArrayList;
 import java.util.Vector;
 
+
 public class ParteA {
 	private float IndiceDosificacion = (float) 0.085; // HARDCODEADO -> TIENE QUE ESTAR EN LA NUBE
 	/**** A1 ****/
@@ -30,9 +31,7 @@ public class ParteA {
 
 	/**** A4 ****/
 	private float TipoPulverizador;
-
-	public ParteA() {
-	}
+	
 
 	public void rellenarA1(float DensidadFoliar, float AnchoCalle,
 			float DistanciaArboles, float LongitudArboles,

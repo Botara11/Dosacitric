@@ -1,5 +1,7 @@
 package com.secuest.dosacitric;
 
+
+
 public class ParteB {
 
 	/**** B ****/
@@ -19,9 +21,10 @@ public class ParteB {
 	private int NumeroTotalBoquillasAbiertas;
 	private float [] CaudalLiquidoZona;
 	private float [] CaudalLiquidoBoquilla;
+	
 	public ParteB() {
-
 	}
+	
 
 	public void rellenarB(float VolumenApp, float AnchoTrabajo,
 			float VelocidadAvance, float CaudalLiquidoTotal,
