@@ -190,10 +190,12 @@
         android:layout_toRightOf="@+id/textView4"
         android:background="#FFFFFF"
         android:ems="10" >
+        
+        <requestFocus />
     </EditText>
 
     <EditText
-        android:id="@+id/logitudArb"
+        android:id="@+id/longitudArb"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/distancia"
@@ -294,7 +296,7 @@
         android:minLines="1"
         android:minWidth="40dp" >
 
-        <requestFocus />
+        
     </EditText>
 
     <Spinner

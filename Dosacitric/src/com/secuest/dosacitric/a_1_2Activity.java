@@ -3,11 +3,11 @@ package com.secuest.dosacitric;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
@@ -24,6 +24,7 @@ public class a_1_2Activity extends Activity{
 	private Spinner formaArb;
 	private Spinner fechaUltima;
 	private Spinner gradoPoda;
+	private ParteA parteA;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -34,8 +35,10 @@ public class a_1_2Activity extends Activity{
 		fechaUltima = (Spinner) findViewById(R.id.fechaultima);
 		gradoPoda = (Spinner) findViewById(R.id.gradoPoda);
 		
+		//parteA = (ParteA) getIntent().getSerializableExtra("ParteA");
+		
 		ArrayList<String> lista = new ArrayList<String>();
-		lista.add("EsfŽrica (globo)");
+		lista.add("EsfÃ©rica (globo)");
 		lista.add("Seto");
 		lista.add("Seleccionar");
 		ArrayAdapterMio<String> adaptador = new ArrayAdapterMio<String>(this, 
@@ -47,9 +50,9 @@ public class a_1_2Activity extends Activity{
 
 		ArrayList<String> lista1 = new ArrayList<String>();
 		lista1.add("Hace menos de 3 meses");
-		lista1.add("Entre 3 meses y 1 a–o");
-		lista1.add("Entre 1 a–o y 2 a–os");
-		lista1.add("Hace m‡s de 2 a–os");
+		lista1.add("Entre 3 meses y 1 aÃ±o");
+		lista1.add("Entre 1 aÃ±o y 2 aÃ±os");
+		lista1.add("Hace mÃ¡s de 2 aÃ±os");
 		lista1.add("Seleccionar");
 		ArrayAdapterMio<String> adaptador1 = new ArrayAdapterMio<String>(this, 
 				R.layout.spinner_item, lista1);
@@ -79,6 +82,19 @@ public class a_1_2Activity extends Activity{
 				
 				String revisando = "";
 				String reemplazado = "";
+				
+				//Intent i =new Intent(a_1_2Activity.this, ParteA.class);
+			    //String alturaM = alturaMeseta.getText().toString();
+			    //i.putExtra("alturaMeseta", alturaM);
+				//startActivity(i);
+				
+				Intent i =new Intent(a_1_2Activity.this, Resultados1.class);
+				i.putExtra("alturaMeseta", alturaMeseta.getText().toString());
+				
+				//Log.e("n", alturaMeseta.getText());
+				startActivity(i);
+				
+				
 				try {
 					revisando = "Altura de la Meseta";
 					reemplazado = alturaMeseta.getText().toString().replace(',', '.');
@@ -88,7 +104,7 @@ public class a_1_2Activity extends Activity{
 					if(formaArb.getSelectedItemPosition()==formaArb.getCount())
 						Double.parseDouble("p");
 					
-					revisando = "Fecha de la œltima poda";
+					revisando = "Fecha de la Ãºltima poda";
 					if(fechaUltima.getSelectedItemPosition()==fechaUltima.getCount())
 						Double.parseDouble("p");
 					
@@ -97,7 +113,7 @@ public class a_1_2Activity extends Activity{
 						Double.parseDouble("p");
 					
 					
-					startActivity(new Intent(a_1_2Activity.this, MainActivity.class));
+					startActivity(new Intent(a_1_2Activity.this, RadioButton.class));
 
 				} catch (Exception e) {
 					e.printStackTrace();

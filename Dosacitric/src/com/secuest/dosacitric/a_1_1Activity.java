@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,7 +24,7 @@ public class a_1_1Activity extends Activity{
 	
 	private EditText anchocalle;
 	private EditText distancia;
-	private EditText logitudArb;
+	private EditText longitudArb;
 	private EditText anchuraArb;
 	private EditText alturaArb;
 	private Spinner genero;
@@ -35,10 +36,9 @@ public class a_1_1Activity extends Activity{
 		
 		anchocalle = (EditText)findViewById(R.id.anchocalle);
 		distancia = (EditText)findViewById(R.id.distancia);
-		logitudArb = (EditText)findViewById(R.id.logitudArb);
+		longitudArb = (EditText)findViewById(R.id.longitudArb);
 		anchuraArb = (EditText)findViewById(R.id.anchuraArb);
 		alturaArb = (EditText) findViewById(R.id.alturaArb);
-		
 		
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
@@ -47,6 +47,24 @@ public class a_1_1Activity extends Activity{
 			public void onClick(View v) {
 				String revisando = "";
 				String reemplazado = "";
+				
+				Intent i =new Intent(a_1_1Activity.this, a_1_2Activity.class);
+				//String anchoc = anchocalle.getText().toString();
+				//String dist = distancia.getText().toString();
+				//String longitudA = longitudArb.getText().toString();
+				//String anchuraA = anchuraArb.getText().toString();
+			    //String alturaA = alturaArb.getText().toString();
+				i.putExtra("anchocalle", anchocalle.getText().toString());
+				i.putExtra("distancia", distancia.getText().toString());
+				i.putExtra("longitudArb", longitudArb.getText().toString());
+				i.putExtra("anchuraArb", anchuraArb.getText().toString());
+				i.putExtra("alturaArb", alturaArb.getText().toString());
+				
+				Log.e("n", anchocalle.getText()+"."+ distancia.getText()+"."
+						+ longitudArb.getText()+"."+ anchuraArb.getText()
+						+"."+ alturaArb.getText());
+				startActivity(i);
+				
 				try {
 					revisando = "Ancho de calle";
 					reemplazado = anchocalle.getText().toString().replace(',', '.');
@@ -57,7 +75,7 @@ public class a_1_1Activity extends Activity{
 					Double.parseDouble(reemplazado);
 					
 					revisando = "Longitud de los arboles";
-					reemplazado = logitudArb.getText().toString().replace(',', '.');
+					reemplazado = longitudArb.getText().toString().replace(',', '.');
 					Double.parseDouble(reemplazado);
 					
 					revisando = "Anchura de los arboles";
@@ -72,7 +90,7 @@ public class a_1_1Activity extends Activity{
 					int pos = genero.getSelectedItemPosition();
 					if(pos==3)
 						Double.parseDouble("p");
-					startActivity(new Intent(a_1_1Activity.this, a_1_2Activity.class));
+					startActivity(new Intent(a_1_1Activity.this, Resultados1.class));
 
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -82,6 +100,8 @@ public class a_1_1Activity extends Activity{
 
 			}
 		});
+		
+		
 		
 		Button atras = (Button) findViewById(R.id.atras);
 		atras.setClickable(true);

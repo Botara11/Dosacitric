@@ -36,6 +36,27 @@
             android:name="a_1_2Activity"
             android:label="@string/A1" >            
         </activity> 
+        <activity
+            android:name="b_1Activity"
+            android:label="@string/B1" >            
+        </activity>
+        <activity
+            android:name="RadioButton"
+            android:label="@string/B1" >            
+        </activity>
+        <activity
+            android:name="ParteA"
+            android:label="@string/A" >            
+        </activity>
+        <activity
+            android:name="ParteB"
+            android:label="@string/B" >            
+        </activity>
+         <activity
+            android:name="Resultados1"
+            android:label="@string/R1" >            
+        </activity>
+        
     </application>
 
 </manifest>
