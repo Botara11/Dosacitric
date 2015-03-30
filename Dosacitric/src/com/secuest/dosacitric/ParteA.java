@@ -1,10 +1,11 @@
 package com.secuest.dosacitric;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Vector;
 
 
-public class ParteA {
+public class ParteA implements Serializable{
 	private float IndiceDosificacion = (float) 0.085; // HARDCODEADO -> TIENE QUE ESTAR EN LA NUBE
 	/**** A1 ****/
 	private float DensidadFoliar;
@@ -35,8 +36,7 @@ public class ParteA {
 
 	public void rellenarA1(float DensidadFoliar, float AnchoCalle,
 			float DistanciaArboles, float LongitudArboles,
-			float AnchuraArboles, float AlturaArboles, float AlturaMeseta,
-			float FormaArbol, float FechaUltimaPoda, float GradoPoda) {
+			float AnchuraArboles, float AlturaArboles) {
 
 		this.DensidadFoliar = DensidadFoliar;
 		this.AnchoCalle = AnchoCalle;
@@ -44,10 +44,17 @@ public class ParteA {
 		this.LongitudArboles = LongitudArboles;
 		this.AnchuraArboles = AnchuraArboles;
 		this.AlturaArboles = AlturaArboles;
+		
+	}
+	
+	public void rellenarA11(float AlturaMeseta,
+			float FormaArbol, float FechaUltimaPoda, float GradoPoda){
+		
 		this.AlturaMeseta = AlturaMeseta;
 		this.FormaArbol = FormaArbol;
 		this.FechaUltimaPoda = FechaUltimaPoda;
 		this.GradoPoda = GradoPoda;
+		
 	}
 
 	public void rellenarA2(float ProductosAplicar, float FormaActuacion,

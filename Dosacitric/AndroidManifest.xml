@@ -35,6 +35,10 @@
         <activity
             android:name="a_1_2Activity"
             android:label="@string/A1" >            
+        </activity>
+        <activity
+            android:name="a_1_3Activity"
+            android:label="@string/A3" >            
         </activity> 
         <activity
             android:name="b_1Activity"

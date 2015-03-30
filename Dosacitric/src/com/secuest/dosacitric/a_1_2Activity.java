@@ -83,7 +83,7 @@ public class a_1_2Activity extends Activity{
 				String revisando = "";
 				String reemplazado = "";
 				
-				//Intent i =new Intent(a_1_2Activity.this, ParteA.class);
+				/*Intent i =new Intent(a_1_2Activity.this, ParteA.class);
 			    //String alturaM = alturaMeseta.getText().toString();
 			    //i.putExtra("alturaMeseta", alturaM);
 				//startActivity(i);
@@ -92,13 +92,19 @@ public class a_1_2Activity extends Activity{
 				i.putExtra("alturaMeseta", alturaMeseta.getText().toString());
 				
 				//Log.e("n", alturaMeseta.getText());
-				startActivity(i);
+				startActivity(i);*/
 				
 				
 				try {
+					
+					ParteA nuevo = new ParteA();
+					
+					Intent ii = getIntent();
+					//float ancho = ii.getIntExtra("anchocalle", p);
+					
 					revisando = "Altura de la Meseta";
 					reemplazado = alturaMeseta.getText().toString().replace(',', '.');
-					Double.parseDouble(reemplazado);
+					float ancho = (float) Double.parseDouble(reemplazado);
 					
 					revisando = "Forma del arbol";
 					if(formaArb.getSelectedItemPosition()==formaArb.getCount())
@@ -113,7 +119,10 @@ public class a_1_2Activity extends Activity{
 						Double.parseDouble("p");
 					
 					
-					startActivity(new Intent(a_1_2Activity.this, RadioButton.class));
+					/*nuevo.rellenarA11(ancho, ancho, ancho, ancho, ancho, ancho, ancho, ancho, ancho, ancho);
+					 Intent i = new Intent(a_1_2Activity.this, RadioButton.class);
+					 i.putExtra("partea",nuevo);
+					startActivity(i);*/
 
 				} catch (Exception e) {
 					e.printStackTrace();

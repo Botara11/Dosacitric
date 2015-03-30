@@ -21,25 +21,25 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class a_1_1Activity extends Activity{
-	
+
 	private EditText anchocalle;
 	private EditText distancia;
 	private EditText longitudArb;
 	private EditText anchuraArb;
 	private EditText alturaArb;
 	private Spinner genero;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.a_1_1);
-		
+
 		anchocalle = (EditText)findViewById(R.id.anchocalle);
 		distancia = (EditText)findViewById(R.id.distancia);
 		longitudArb = (EditText)findViewById(R.id.longitudArb);
 		anchuraArb = (EditText)findViewById(R.id.anchuraArb);
 		alturaArb = (EditText) findViewById(R.id.alturaArb);
-		
+
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
@@ -47,8 +47,8 @@ public class a_1_1Activity extends Activity{
 			public void onClick(View v) {
 				String revisando = "";
 				String reemplazado = "";
-				
-				Intent i =new Intent(a_1_1Activity.this, a_1_2Activity.class);
+
+				/*Intent i =new Intent(a_1_1Activity.this, a_1_2Activity.class);
 				//String anchoc = anchocalle.getText().toString();
 				//String dist = distancia.getText().toString();
 				//String longitudA = longitudArb.getText().toString();
@@ -59,38 +59,45 @@ public class a_1_1Activity extends Activity{
 				i.putExtra("longitudArb", longitudArb.getText().toString());
 				i.putExtra("anchuraArb", anchuraArb.getText().toString());
 				i.putExtra("alturaArb", alturaArb.getText().toString());
-				
+
 				Log.e("n", anchocalle.getText()+"."+ distancia.getText()+"."
 						+ longitudArb.getText()+"."+ anchuraArb.getText()
 						+"."+ alturaArb.getText());
-				startActivity(i);
-				
+				startActivity(i);*/	
+
 				try {
+
 					revisando = "Ancho de calle";
 					reemplazado = anchocalle.getText().toString().replace(',', '.');
-					Double.parseDouble(reemplazado);
-					
+					float anchocalle = (float) Double.parseDouble(reemplazado);
+
 					revisando = "Distancia entre arboles";
 					reemplazado = distancia.getText().toString().replace(',', '.');
-					Double.parseDouble(reemplazado);
-					
+					float distancia = (float) Double.parseDouble(reemplazado);
+
 					revisando = "Longitud de los arboles";
 					reemplazado = longitudArb.getText().toString().replace(',', '.');
-					Double.parseDouble(reemplazado);
-					
+					float longitudArb = (float) Double.parseDouble(reemplazado);
+
 					revisando = "Anchura de los arboles";
 					reemplazado = anchuraArb.getText().toString().replace(',', '.');
-					Double.parseDouble(reemplazado);
-					
+					float anchuraArb = (float) Double.parseDouble(reemplazado);
+
 					revisando = "Altura de los arboles";
 					reemplazado = alturaArb.getText().toString().replace(',', '.');
-					Double.parseDouble(reemplazado);
-					
+					float alturaArb = (float) Double.parseDouble(reemplazado);
+
 					revisando = "Densidad foliar del cultivo";
-					int pos = genero.getSelectedItemPosition();
+					Float pos = (float) genero.getSelectedItemPosition();
 					if(pos==3)
-						Double.parseDouble("p");
-					startActivity(new Intent(a_1_1Activity.this, Resultados1.class));
+					Double.parseDouble("p");
+					
+					ParteA nuevo = new ParteA();
+
+					nuevo.rellenarA1(anchocalle, distancia, longitudArb, anchuraArb, alturaArb, pos);
+					Intent i = new Intent(a_1_1Activity.this,Resultados1.class);
+					i.putExtra("partea",nuevo);
+					startActivity(i);
 
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -100,9 +107,9 @@ public class a_1_1Activity extends Activity{
 
 			}
 		});
-		
-		
-		
+
+
+
 		Button atras = (Button) findViewById(R.id.atras);
 		atras.setClickable(true);
 		atras.setOnClickListener(new OnClickListener() {
@@ -113,7 +120,7 @@ public class a_1_1Activity extends Activity{
 				finish();
 			}
 		});
-		
+
 		Button indice = (Button) findViewById(R.id.indice);
 		indice.setClickable(true);
 		indice.setOnClickListener(new OnClickListener() {
@@ -123,30 +130,30 @@ public class a_1_1Activity extends Activity{
 				startActivity(new Intent(a_1_1Activity.this, Indice.class));
 			}
 		});
-		
+
 		genero = (Spinner) findViewById(R.id.spinner1);
 
 		ArrayList<String> lista = new ArrayList<String>();
-				lista.add("Bajo");
-				lista.add("Medio");
-				lista.add("Alto");
-				lista.add("Seleccionar");
-				ArrayAdapterMio<String> adaptador = new ArrayAdapterMio<String>(this, 
-						//android.R.layout.simple_spinner_dropdown_item, lista);
-						R.layout.spinner_item, lista);
-				adaptador.setDropDownViewResource(R.layout.spinner_item);
-				genero.setAdapter(adaptador);
-				//genero.setSelection(adaptador.getCount());
-				genero.setSelection(adaptador.getCount());
+		lista.add("Bajo");
+		lista.add("Medio");
+		lista.add("Alto");
+		lista.add("Seleccionar");
+		ArrayAdapterMio<String> adaptador = new ArrayAdapterMio<String>(this, 
+				//android.R.layout.simple_spinner_dropdown_item, lista);
+				R.layout.spinner_item, lista);
+		adaptador.setDropDownViewResource(R.layout.spinner_item);
+		genero.setAdapter(adaptador);
+		//genero.setSelection(adaptador.getCount());
+		genero.setSelection(adaptador.getCount());
 	}
-	
+
 	private class ArrayAdapterMio<String> extends ArrayAdapter<String> {
-		
+
 		public ArrayAdapterMio(Context context, int resource,
 				List<String> objects) {
 			super(context, resource, objects);
 		}
-		
+
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			View v = super.getView(position, convertView, parent);
@@ -161,13 +168,13 @@ public class a_1_1Activity extends Activity{
 			return super.getCount()-1; // you dont display last item. It is used as hint.
 		} 
 	}
-	
+
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		return super.onPrepareOptionsMenu(menu);
 	}
 
-	
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -176,8 +183,8 @@ public class a_1_1Activity extends Activity{
 		return true;
 	}
 
-	
-	
+
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will

@@ -10,22 +10,25 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Resultados1 extends Activity{
+	
+	private ParteA parteA;
+	private String hola;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.resultados1);
+		setContentView(R.layout.parteb2);
 		/**** A1 ****/
-		TextView anchocalle = (TextView) findViewById(R.id.anchocalle);	        
+		/*TextView anchocalle = (TextView) findViewById(R.id.anchocalle);	        
 		TextView distancia = (TextView)findViewById(R.id.distancia);
 		TextView longitudArb = (TextView)findViewById(R.id.longitudArb);
 		TextView anchuraArb = (TextView)findViewById(R.id.anchuraArb);
 		TextView alturaArb = (TextView) findViewById(R.id.alturaArb);
 
-		TextView alturaMeseta = (TextView) findViewById(R.id.alturaMeseta);
+		TextView alturaMeseta = (TextView) findViewById(R.id.alturaMeseta);*/
 
-		Intent i = getIntent();
+		//Intent i = getIntent();
 		// Receiving the Data
-		String StringAnchocalle = i.getStringExtra("anchocalle");
+		/*String StringAnchocalle = i.getStringExtra("anchocalle");
 		String StringDistancia = i.getStringExtra("distancia");
 		String StringLongitudArb = i.getStringExtra("longitudArb");
 		String StringAnchuraArb = i.getStringExtra("anchuraArb");
@@ -41,8 +44,16 @@ public class Resultados1 extends Activity{
 		longitudArb.setText(StringLongitudArb);
 		anchuraArb.setText(StringAnchuraArb);
 		alturaArb.setText(StringAlturaArb);
-		alturaMeseta.setText(StringAlturaMeseta);
+		alturaMeseta.setText(StringAlturaMeseta);*/
 		
+		Intent i = getIntent();
+		
+		ParteA parteA = (ParteA) i.getSerializableExtra("partea");
+		
+		Log.e("Resultados 1", "hola");
+		
+	
+
 	}
 
 	public boolean onPrepareOptionsMenu(Menu menu) {
