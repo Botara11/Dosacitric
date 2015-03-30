@@ -79,8 +79,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="13dp"
                 android:layout_marginRight="10dp"
+                android:layout_marginTop="13dp"
                 android:gravity="center"
                 android:text="Número de boquillas que deben cerrarse por zona"
                 android:textColor="@color/white"
@@ -355,7 +355,7 @@
                 android:layout_below="@+id/textView28"
                 android:layout_marginTop="16dp"
                 android:maxLines="2"
-                android:text="Variación de caudal admisible ="
+                android:text="Variación de caudal admisible"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -396,40 +396,6 @@
                 android:textSize="17sp" />
 
             <TextView
-                android:id="@+id/textView33"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/textView23"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:text="%"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <TextView
-                android:id="@+id/textView34"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textView23"
-                android:layout_alignBottom="@+id/textView23"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:text="%"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <TextView
-                android:id="@+id/textView35"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/textView25"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:text="%"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <TextView
                 android:id="@+id/textView37"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -461,6 +427,209 @@
                 android:text="L/min"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textView2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/textView2"
+                android:ems="10" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView5"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textView5"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/textView5"
+                android:ems="10" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView15"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textView15"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/textView23"
+                android:ems="10" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView14"
+                android:layout_alignLeft="@+id/editText3"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textView16"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView17"
+                android:layout_alignLeft="@+id/editText4"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textView17"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10" />
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView20"
+                android:layout_alignTop="@+id/textView33"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textView33"
+                android:layout_toRightOf="@+id/textView24"
+                android:ems="10" />
+
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView21"
+                android:layout_alignTop="@+id/textView23"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textView34"
+                android:layout_toRightOf="@+id/textView23"
+                android:ems="10" />
+
+            <EditText
+                android:id="@+id/editText8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView24"
+                android:layout_alignTop="@+id/textView24"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textView35"
+                android:layout_toRightOf="@+id/textView24"
+                android:ems="10" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView27"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textView36"
+                android:layout_toRightOf="@+id/textView30"
+                android:background="@color/white"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView28"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textView37"
+                android:layout_toRightOf="@+id/textView31"
+                android:background="@color/white"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView29"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textView38"
+                android:layout_toRightOf="@+id/textView32"
+                android:background="@color/white"
+                android:text="" />
+
+            <SeekBar
+                android:id="@+id/seekBar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textView29"
+                android:layout_below="@+id/textView29"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView22"
+                android:layout_alignBottom="@+id/textView22"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="%"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView21"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="%"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView24"
+                android:layout_alignBottom="@+id/textView24"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="%"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/seekBar1"
+                android:layout_marginRight="10dp"
+                android:text="%"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView11"
+                android:layout_alignBottom="@+id/textView11"
+                android:layout_toLeftOf="@+id/textView11"
+                android:layout_toRightOf="@+id/seekBar1"
+                android:text="" 
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"/>
+
         </RelativeLayout>
     </ScrollView>
 
