@@ -615,9 +615,9 @@ int id textView32 0x7f0a00a8
 int id textView33 0x7f0a00a9
 int id textView34 0x7f0a00aa
 int id textView35 0x7f0a00ab
-int id textView36 0x7f0a00ac
-int id textView37 0x7f0a00ad
-int id textView38 0x7f0a00ae
+int id textView36 0x7f0a00ae
+int id textView37 0x7f0a00ac
+int id textView38 0x7f0a00ad
 int id textView4 0x7f0a003b
 int id textView5 0x7f0a003d
 int id textView6 0x7f0a003e
