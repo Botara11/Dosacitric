@@ -69,33 +69,33 @@ public class a_1_1Activity extends Activity{
 
 					revisando = "Ancho de calle";
 					reemplazado = anchocalle.getText().toString().replace(',', '.');
-					float anchocalle = (float) Double.parseDouble(reemplazado);
+					float anchocalle1 = (float) Double.parseDouble(reemplazado);
 
 					revisando = "Distancia entre arboles";
 					reemplazado = distancia.getText().toString().replace(',', '.');
-					float distancia = (float) Double.parseDouble(reemplazado);
+					float distancia1 = (float) Double.parseDouble(reemplazado);
 
 					revisando = "Longitud de los arboles";
 					reemplazado = longitudArb.getText().toString().replace(',', '.');
-					float longitudArb = (float) Double.parseDouble(reemplazado);
+					float longitudArb1 = (float) Double.parseDouble(reemplazado);
 
 					revisando = "Anchura de los arboles";
 					reemplazado = anchuraArb.getText().toString().replace(',', '.');
-					float anchuraArb = (float) Double.parseDouble(reemplazado);
+					float anchuraArb1 = (float) Double.parseDouble(reemplazado);
 
 					revisando = "Altura de los arboles";
 					reemplazado = alturaArb.getText().toString().replace(',', '.');
-					float alturaArb = (float) Double.parseDouble(reemplazado);
+					float alturaArb1 = (float) Double.parseDouble(reemplazado);
 
 					revisando = "Densidad foliar del cultivo";
-					Float pos = (float) genero.getSelectedItemPosition();
-					if(pos==3)
+					Float pos1 = (float) genero.getSelectedItemPosition();
+					if(pos1==3)
 					Double.parseDouble("p");
 					
 					ParteA nuevo = new ParteA();
 
-					nuevo.rellenarA1(anchocalle, distancia, longitudArb, anchuraArb, alturaArb, pos);
-					Intent i = new Intent(a_1_1Activity.this,Resultados1.class);
+					nuevo.rellenarA1(anchocalle1, distancia1, longitudArb1, anchuraArb1, alturaArb1, pos1);
+					Intent i = new Intent(a_1_1Activity.this,a_1_2Activity.class);
 					i.putExtra("partea",nuevo);
 					startActivity(i);
 

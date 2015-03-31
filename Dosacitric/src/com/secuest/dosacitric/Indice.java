@@ -22,7 +22,7 @@ public class Indice extends Activity{
 			@Override
 			public void onClick(View v) {
 				System.out.println("CLICK");
-				startActivity(new Intent(Indice.this, Resultados1.class));
+				startActivity(new Intent(Indice.this, a_1_1Activity.class));
 
 			}
 		});

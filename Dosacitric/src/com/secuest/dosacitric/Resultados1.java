@@ -16,7 +16,7 @@ public class Resultados1 extends Activity{
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.parteb2);
+		setContentView(R.layout.resultados1);
 		/**** A1 ****/
 		/*TextView anchocalle = (TextView) findViewById(R.id.anchocalle);	        
 		TextView distancia = (TextView)findViewById(R.id.distancia);
@@ -46,11 +46,13 @@ public class Resultados1 extends Activity{
 		alturaArb.setText(StringAlturaArb);
 		alturaMeseta.setText(StringAlturaMeseta);*/
 		
-		Intent i = getIntent();
+		Intent iiii = getIntent();
 		
-		ParteA parteA = (ParteA) i.getSerializableExtra("partea");
+		ParteA resultados1 = (ParteA) iiii.getSerializableExtra("partea");
 		
-		Log.e("Resultados 1", "hola");
+		Log.e("didi", resultados1.DensidadFoliar+"");
+		Log.e("didi", resultados1.FormaArbol+"");
+		Log.e("didi", resultados1.AlturaMeseta+"");
 		
 	
 

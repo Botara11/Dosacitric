@@ -6,32 +6,32 @@ import java.util.Vector;
 
 
 public class ParteA implements Serializable{
-	private float IndiceDosificacion = (float) 0.085; // HARDCODEADO -> TIENE QUE ESTAR EN LA NUBE
+	public float IndiceDosificacion = (float) 0.085; // HARDCODEADO -> TIENE QUE ESTAR EN LA NUBE
 	/**** A1 ****/
-	private float DensidadFoliar;
-	private float AnchoCalle;
-	private float DistanciaArboles;
-	private float LongitudArboles;
-	private float AnchuraArboles;
-	private float AlturaArboles;
-	private float AlturaMeseta;
-	private float FormaArbol;
-	private float FechaUltimaPoda;
-	private float GradoPoda;
+	public float DensidadFoliar;
+	public float AnchoCalle;
+	public float DistanciaArboles;
+	public float LongitudArboles;
+	public float AnchuraArboles;
+	public float AlturaArboles;
+	public float AlturaMeseta;
+	public float FormaArbol;
+	public float FechaUltimaPoda;
+	public float GradoPoda;
 
 	/**** A2 ****/
-	private float ProductosAplicar;
-	private float FormaActuacion;
-	private float Mojantes;
-	private float ZonaCriticaTratar;
+	public float ProductosAplicar;
+	public float FormaActuacion;
+	public float Mojantes;
+	public float ZonaCriticaTratar;
 
 	/**** A3 ****/
-	private float Temperatura;
-	private float Humedad;
-	private float VelocidadViento;
+	public float Temperatura;
+	public float Humedad;
+	public float VelocidadViento;
 
 	/**** A4 ****/
-	private float TipoPulverizador;
+	public float TipoPulverizador;
 	
 
 	public void rellenarA1(float DensidadFoliar, float AnchoCalle,
@@ -57,24 +57,19 @@ public class ParteA implements Serializable{
 		
 	}
 
-	public void rellenarA2(float ProductosAplicar, float FormaActuacion,
-			float Mojantes, float ZonaCriticaTratar) {
+	public void rellenarA2345(float ProductosAplicar, float FormaActuacion,
+			float Mojantes, float ZonaCriticaTratar, float Temperatura, float Humedad,
+			float VelocidadViento, float TipoPulverizador) {
 		this.ProductosAplicar = ProductosAplicar;
 		this.FormaActuacion = FormaActuacion;
 		this.FormaActuacion = FormaActuacion;
 		this.ZonaCriticaTratar = ZonaCriticaTratar;
-	}
-
-	public void rellenarA3(float Temperatura, float Humedad,
-			float VelocidadViento) {
 		this.Temperatura = Temperatura;
 		this.Humedad = Humedad;
 		this.VelocidadViento = VelocidadViento;
-	}
-
-	public void rellenarA4(float TipoPulverizador) {
 		this.TipoPulverizador = TipoPulverizador;
 	}
+
 
 	// DEVUELVE A5 (VOLUMEN DE APLICACION) (L/HA L/HG)
 	public ArrayList<Integer> calcularParteA() {
