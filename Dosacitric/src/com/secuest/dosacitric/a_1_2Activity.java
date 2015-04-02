@@ -99,8 +99,8 @@ public class a_1_2Activity extends Activity{
 
 					ParteA nuevo = new ParteA();
 
-					Intent ii = getIntent();
-					ParteA parteaa = (ParteA) ii.getSerializableExtra("partea");
+					Intent a1 = getIntent();
+					ParteA parteaa = (ParteA) a1.getSerializableExtra("partea");
 
 					Log.e("didi", parteaa.toString());
 
@@ -125,9 +125,9 @@ public class a_1_2Activity extends Activity{
 
 
 					nuevo.rellenarA11(alturaMeseta1, formaArb1, fechaUltima1, gradoPoda1);
-					Intent i = new Intent(a_1_2Activity.this, Resultados1.class);
-					i.putExtra("partea",nuevo);
-					startActivity(i);
+					Intent a2 = new Intent(a_1_2Activity.this, a_1_3Activity.class);
+					a2.putExtra("parteaa",nuevo);
+					startActivity(a2);
 
 				} catch (Exception e) {
 					e.printStackTrace();

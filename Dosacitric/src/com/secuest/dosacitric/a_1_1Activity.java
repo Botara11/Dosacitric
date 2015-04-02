@@ -90,14 +90,14 @@ public class a_1_1Activity extends Activity{
 					revisando = "Densidad foliar del cultivo";
 					Float pos1 = (float) genero.getSelectedItemPosition();
 					if(pos1==3)
-					Double.parseDouble("p");
-					
+						Double.parseDouble("p");
+
 					ParteA nuevo = new ParteA();
 
 					nuevo.rellenarA1(anchocalle1, distancia1, longitudArb1, anchuraArb1, alturaArb1, pos1);
-					Intent i = new Intent(a_1_1Activity.this,a_1_2Activity.class);
-					i.putExtra("partea",nuevo);
-					startActivity(i);
+					Intent a1 = new Intent(a_1_1Activity.this,a_1_2Activity.class);
+					a1.putExtra("partea",nuevo);
+					startActivity(a1);
 
 				} catch (Exception e) {
 					e.printStackTrace();

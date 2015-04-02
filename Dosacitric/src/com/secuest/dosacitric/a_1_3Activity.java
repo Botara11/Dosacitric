@@ -93,8 +93,8 @@ public class a_1_3Activity extends Activity{
 		ArrayAdapterMio<String> adaptador3 = new ArrayAdapterMio<String>(this, 
 				R.layout.spinner_item, lista3);
 		adaptador3.setDropDownViewResource(R.layout.spinner_item);
-		productosAplicar.setAdapter(adaptador3);
-		productosAplicar.setSelection(adaptador3.getCount());
+		zonaCritica.setAdapter(adaptador3);
+		zonaCritica.setSelection(adaptador3.getCount());
 
 
 		ArrayList<String> lista4 = new ArrayList<String>();
@@ -106,8 +106,8 @@ public class a_1_3Activity extends Activity{
 		ArrayAdapterMio<String> adaptador4 = new ArrayAdapterMio<String>(this, 
 				R.layout.spinner_item, lista4);
 		adaptador4.setDropDownViewResource(R.layout.spinner_item);
-		formaActuacion.setAdapter(adaptador4);
-		formaActuacion.setSelection(adaptador4.getCount());
+		temperatura.setAdapter(adaptador4);
+		temperatura.setSelection(adaptador4.getCount());
 
 
 		ArrayList<String> lista5 = new ArrayList<String>();
@@ -119,8 +119,8 @@ public class a_1_3Activity extends Activity{
 		ArrayAdapterMio<String> adaptador5 = new ArrayAdapterMio<String>(this, 
 				R.layout.spinner_item, lista5);
 		adaptador5.setDropDownViewResource(R.layout.spinner_item);
-		utilizaMojantes.setAdapter(adaptador5);
-		utilizaMojantes.setSelection(adaptador5.getCount());
+		humedadRelativa.setAdapter(adaptador5);
+		humedadRelativa.setSelection(adaptador5.getCount());
 
 		ArrayList<String> lista6 = new ArrayList<String>();
 		lista6.add("Menor de 1 m/s (ausencia de viento)");
@@ -130,8 +130,8 @@ public class a_1_3Activity extends Activity{
 		ArrayAdapterMio<String> adaptador6 = new ArrayAdapterMio<String>(this, 
 				R.layout.spinner_item, lista6);
 		adaptador6.setDropDownViewResource(R.layout.spinner_item);
-		formaActuacion.setAdapter(adaptador6);
-		formaActuacion.setSelection(adaptador6.getCount());
+		velocidadViento.setAdapter(adaptador6);
+		velocidadViento.setSelection(adaptador6.getCount());
 
 
 		ArrayList<String> lista7 = new ArrayList<String>();
@@ -141,8 +141,8 @@ public class a_1_3Activity extends Activity{
 		ArrayAdapterMio<String> adaptador7 = new ArrayAdapterMio<String>(this, 
 				R.layout.spinner_item, lista7);
 		adaptador7.setDropDownViewResource(R.layout.spinner_item);
-		utilizaMojantes.setAdapter(adaptador7);
-		utilizaMojantes.setSelection(adaptador7.getCount());
+		tipoPulverizacion.setAdapter(adaptador7);
+		tipoPulverizacion.setSelection(adaptador7.getCount());
 
 
 

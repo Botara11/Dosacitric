@@ -4,6 +4,65 @@
     android:layout_height="match_parent"
     android:background="#ffcc99"
     android:orientation="vertical" >
+    
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="bottom" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/atras"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="Atrás"
+                android:textColor="#E65F00" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp"
+                android:background="#E65F00" />
+
+            <Button
+                android:id="@+id/indice"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="Índice"
+                android:textColor="#E65F00" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp"
+                android:background="#E65F00" />
+
+            <Button
+                android:id="@+id/siguiente"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="Siguiente"
+                android:textColor="#E65F00" />
+        </TableRow>
+    </TableLayout>
+    
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -13,7 +72,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="match_parent" >
 
             <TextView
                 android:id="@+id/textView1"
@@ -23,8 +82,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#afd2c0"
-                android:text="A.1. CARACTERISTICAS DEL CULTIVO"  
-                android:textSize="17sp"/>
+                android:text="A.1. CARACTERISTICAS DEL CULTIVO"
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -45,7 +104,7 @@
                 android:layout_below="@+id/textView2"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Marco de plantación" 
+                android:text="Marco de plantación"
                 android:textSize="17dp" />
 
             <TextView
@@ -56,8 +115,8 @@
                 android:layout_below="@+id/textView3"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Volumen del árbol"  
-                android:textSize="17dp"/>
+                android:text="Volumen del árbol"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -67,7 +126,7 @@
                 android:layout_below="@+id/textView4"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Forma del árbol" 
+                android:text="Forma del árbol"
                 android:textSize="17dp" />
 
             <TextView
@@ -78,8 +137,8 @@
                 android:layout_below="@+id/textView5"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Poda"  
-                android:textSize="17dp"/>
+                android:text="Poda"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -89,7 +148,7 @@
                 android:layout_below="@+id/textView6"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="- Fecha de la última poda" 
+                android:text="- Fecha de la última poda"
                 android:textSize="17dp" />
 
             <TextView
@@ -100,8 +159,8 @@
                 android:layout_below="@+id/textView7"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="- Grado de poda"  
-                android:textSize="17dp"/>
+                android:text="- Grado de poda"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -113,8 +172,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#d7d7db"
-                android:text="A.2. TIPO DE TRATAMIENTO"  
-                android:textSize="17dp"/>
+                android:text="A.2. TIPO DE TRATAMIENTO"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -124,7 +183,7 @@
                 android:layout_below="@+id/textView9"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Productos a aplicar" 
+                android:text="Productos a aplicar"
                 android:textSize="17dp" />
 
             <TextView
@@ -135,8 +194,8 @@
                 android:layout_below="@+id/textView10"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Forma de actuación"  
-                android:textSize="17dp"/>
+                android:text="Forma de actuación"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -146,7 +205,7 @@
                 android:layout_below="@+id/textView11"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="¿Utiliza coadyuvantes (mojantes)?" 
+                android:text="¿Utiliza coadyuvantes (mojantes)?"
                 android:textSize="17dp" />
 
             <TextView
@@ -157,8 +216,8 @@
                 android:layout_below="@+id/textView12"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona crítica a tratar"  
-                android:textSize="17dp"/>
+                android:text="Zona crítica a tratar"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -170,7 +229,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#c3c3c8"
-                android:text="A.3. CONDICIONES METEREOLÓGICAS" 
+                android:text="A.3. CONDICIONES METEREOLÓGICAS"
                 android:textSize="17dp" />
 
             <TextView
@@ -181,8 +240,8 @@
                 android:layout_below="@+id/textView14"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Temperatura"  
-                android:textSize="17dp"/>
+                android:text="Temperatura"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -192,7 +251,7 @@
                 android:layout_below="@+id/textView15"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Humedad Relativa" 
+                android:text="Humedad Relativa"
                 android:textSize="17dp" />
 
             <TextView
@@ -203,8 +262,8 @@
                 android:layout_below="@+id/textView16"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Velocidad del viento"  
-                android:textSize="17dp"/>
+                android:text="Velocidad del viento"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView18"
@@ -216,8 +275,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#ff6600"
-                android:text="A.4. EQUIPO EMPLEADO"  
-                android:textSize="17dp"/>
+                android:text="A.4. EQUIPO EMPLEADO"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView19"
@@ -227,8 +286,8 @@
                 android:layout_below="@+id/textView18"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Tipo de pulverizador"  
-                android:textSize="17dp"/>
+                android:text="Tipo de pulverizador"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView20"
@@ -240,8 +299,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#808080"
-                android:text="A.5. VOLUMEN DE APLICACIÓN"  
-                android:textSize="17dp"/>
+                android:text="A.5. VOLUMEN DE APLICACIÓN"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView21"
@@ -250,10 +309,10 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/textView20"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:text="L/ha" 
-                android:layout_marginRight="10dp" 
-                android:textSize="17dp"/>
+                android:text="L/ha"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView22"
@@ -262,9 +321,9 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/textView21"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:text="L/hg"
-                android:layout_marginRight="10dp" 
                 android:textSize="17dp" />
 
             <TextView
@@ -274,7 +333,8 @@
                 android:layout_alignBaseline="@+id/textView2"
                 android:layout_alignBottom="@+id/textView2"
                 android:layout_alignParentRight="true"
-                android:text="TextView" 
+                android:layout_marginRight="10dp"
+                android:text="TextView"
                 android:textSize="17dp" />
 
             <TextView
@@ -284,7 +344,8 @@
                 android:layout_alignBaseline="@+id/textView3"
                 android:layout_alignBottom="@+id/textView3"
                 android:layout_alignParentRight="true"
-                android:text="TextView" 
+                android:layout_marginRight="10dp"
+                android:text="m x m"
                 android:textSize="17dp" />
 
             <TextView
@@ -294,7 +355,8 @@
                 android:layout_alignBaseline="@+id/textView4"
                 android:layout_alignBottom="@+id/textView4"
                 android:layout_alignParentRight="true"
-                android:text="TextView" 
+                android:layout_marginRight="10dp"
+                android:text="TextView"
                 android:textSize="17dp" />
 
             <TextView
@@ -304,8 +366,9 @@
                 android:layout_alignBaseline="@+id/textView5"
                 android:layout_alignBottom="@+id/textView5"
                 android:layout_alignParentRight="true"
-                android:text="TextView"  
-                android:textSize="17dp"/>
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView27"
@@ -314,8 +377,9 @@
                 android:layout_alignBaseline="@+id/textView7"
                 android:layout_alignBottom="@+id/textView7"
                 android:layout_alignParentRight="true"
-                android:text="TextView"  
-                android:textSize="17dp"/>
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView28"
@@ -323,8 +387,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/textView8"
                 android:layout_alignParentRight="true"
-                android:text="TextView"  
-                android:textSize="17dp"/>
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView29"
@@ -332,8 +397,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/textView10"
                 android:layout_alignParentRight="true"
-                android:text="TextView"  
-                android:textSize="17dp"/>
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView30"
@@ -341,8 +407,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/textView11"
                 android:layout_alignParentRight="true"
-                android:text="TextView"  
-                android:textSize="17dp"/>
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView31"
@@ -351,8 +418,9 @@
                 android:layout_alignBaseline="@+id/textView12"
                 android:layout_alignBottom="@+id/textView12"
                 android:layout_alignParentRight="true"
-                android:text="TextView"  
-                android:textSize="17dp"/>
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView32"
@@ -360,8 +428,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/textView13"
                 android:layout_alignParentRight="true"
-                android:text="TextView"  
-                android:textSize="17dp"/>
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView33"
@@ -369,7 +438,8 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/textView16"
                 android:layout_alignParentRight="true"
-                android:text="TextView" 
+                android:layout_marginRight="10dp"
+                android:text="TextView"
                 android:textSize="17dp" />
 
             <TextView
@@ -378,8 +448,9 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/textView17"
                 android:layout_alignParentRight="true"
-                android:text="TextView"  
-                android:textSize="17dp"/>
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView35"
@@ -387,8 +458,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/textView17"
                 android:layout_alignParentRight="true"
-                android:text="TextView"  
-                android:textSize="17dp"/>
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView36"
@@ -396,16 +468,18 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/textView19"
                 android:layout_alignParentRight="true"
-                android:text="TextView" 
-                android:textSize="17dp"/>
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView37"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/textView21"
+                android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/textView21"
-                android:text="TextView" 
+                android:text="TextView"
                 android:textSize="17dp" />
 
             <TextView
@@ -413,9 +487,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/textView22"
-                android:text="TextView" 
-                android:textSize="17dp"/>
+                android:text="TextView"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView4"
+                android:layout_toRightOf="@+id/textView3"
+                android:text="TextView"
+                android:textSize="17dp" 
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView4"
+                android:layout_toRightOf="@+id/textView40"
+                android:text="TextView"
+                android:textSize="17dp" 
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView4"
+                android:layout_toRightOf="@+id/textView41"
+                android:text="x"
+                android:textSize="17dp"
+                android:layout_marginLeft="5dp" />
 
         </RelativeLayout>
     </ScrollView>

@@ -19,7 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class b_1Activity extends Activity{
-	
+
 	private TextView volumenAplicacion;
 	private RadioButton volumenAplicacionCalculado;
 	private RadioButton volumenAplicacionSiguiente;
@@ -31,7 +31,7 @@ public class b_1Activity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.partebb);
-		
+
 		volumenAplicacion = (TextView) findViewById(R.id.textView2);
 		volumenAplicacionCalculado = (RadioButton) findViewById(R.id.textView1);
 		volumenAplicacionSiguiente = (RadioButton) findViewById(R.id.textView10);
@@ -39,15 +39,15 @@ public class b_1Activity extends Activity{
 		anchoTrabajoCalculado= (RadioButton) findViewById(R.id.RadioButton02);
 		anchoTrabajoSiguiente = (RadioButton) findViewById(R.id.RadioButton01);
 		velocidadAvance = (TextView) findViewById(R.id.TextView03);
-		
-		
-		
+
+
+
 		/*volumenAplicacionCalculado.setChecked(true);
 		volumenAplicacionSiguiente.setChecked(false);
-		
+
 		anchoTrabajoCalculado.setChecked(true);
 		anchoTrabajoSiguiente.setChecked(false);*/
-				
+
 		Button atras = (Button) findViewById(R.id.atras);
 		atras.setClickable(true);
 		atras.setOnClickListener(new OnClickListener() {
@@ -59,7 +59,7 @@ public class b_1Activity extends Activity{
 
 			}
 		});
-		
+
 		Button indice = (Button) findViewById(R.id.indice);
 		indice.setClickable(true);
 		indice.setOnClickListener(new OnClickListener() {
@@ -71,31 +71,31 @@ public class b_1Activity extends Activity{
 		});
 	}
 
-	
 
-private class ArrayAdapterMio<String> extends ArrayAdapter<String> {
 
-public ArrayAdapterMio(Context context, int resource,
-		List<String> objects) {
-	super(context, resource, objects);
-}
+	private class ArrayAdapterMio<String> extends ArrayAdapter<String> {
 
-@Override
-public View getView(int position, View convertView, ViewGroup parent) {
-	View v = super.getView(position, convertView, parent);
-	if (position == getCount()) {
-		((TextView)v.findViewById(R.id.text1)).setText("");
-		((TextView)v.findViewById(R.id.text1)).setHint((CharSequence) getItem(getCount())); //"Hint to be displayed"
+		public ArrayAdapterMio(Context context, int resource,
+				List<String> objects) {
+			super(context, resource, objects);
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			View v = super.getView(position, convertView, parent);
+			if (position == getCount()) {
+				((TextView)v.findViewById(R.id.text1)).setText("");
+				((TextView)v.findViewById(R.id.text1)).setHint((CharSequence) getItem(getCount())); //"Hint to be displayed"
+			}
+			return v;
+		}       
+		@Override
+		public int getCount() {
+			return super.getCount()-1; // you dont display last item. It is used as hint.
+		} 
 	}
-	return v;
-}       
-@Override
-public int getCount() {
-	return super.getCount()-1; // you dont display last item. It is used as hint.
-} 
-}
 
-	
-	
+
+
 }
 
