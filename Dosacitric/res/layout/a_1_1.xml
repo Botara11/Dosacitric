@@ -88,7 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/spinner1"
+                android:layout_below="@+id/densidadFoliar"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#00000000"
@@ -289,7 +289,7 @@
             </EditText>
 
             <Spinner
-                android:id="@+id/spinner1"
+                android:id="@+id/densidadFoliar"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_alignBottom="@+id/textView1"
@@ -307,15 +307,6 @@
                 android:layout_toRightOf="@+id/textView2"
                 android:src="@drawable/inter" />
 
-            <ImageView
-                android:id="@+id/ImageView01"
-                android:layout_width="25dp"
-                android:layout_height="30dp"
-                android:layout_above="@+id/textView6"
-                android:layout_alignLeft="@+id/spinner1"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/inter" />
-
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
@@ -324,6 +315,16 @@
                 android:layout_alignLeft="@+id/textView12"
                 android:text="m"
                 android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/ImageView01"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_above="@+id/textView6"
+                android:layout_toRightOf="@+id/textView6"
+                android:src="@drawable/inter"
+                android:layout_marginLeft="10dp" />
+
         </RelativeLayout>
     </ScrollView>
 

@@ -29,20 +29,24 @@
             android:label="@string/Indice" >            
         </activity> 
         <activity
-            android:name="a_1_1Activity"
+            android:name="A_1_1Activity"
             android:label="@string/A1" >            
         </activity> 
         <activity
-            android:name="a_1_2Activity"
+            android:name="A_1_2Activity"
             android:label="@string/A1" >            
         </activity>
         <activity
-            android:name="a_1_3Activity"
+            android:name="A_1_3Activity"
             android:label="@string/A3" >            
         </activity> 
         <activity
-            android:name="b_1Activity"
+            android:name="B_1Activity"
             android:label="@string/B1" >            
+        </activity>
+        <activity
+            android:name="B_2Activity"
+            android:label="@string/B2" >            
         </activity>
         <activity
             android:name="RadioButton"
@@ -59,6 +63,10 @@
          <activity
             android:name="Resultados1"
             android:label="@string/R1" >            
+        </activity>
+        <activity
+            android:name="Resultados2"
+            android:label="@string/R2" >            
         </activity>
         
     </application>

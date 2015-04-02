@@ -105,8 +105,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:maxLines="2"
-                android:text="¿Utiliza coadyuvantes 
-        (mojantes)?"
+                android:text="¿Utiliza coadyuvantes\n(mojantes)?"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 

@@ -33,13 +33,17 @@ public class Resultados1 extends Activity{
 		TextView formaArbol = (TextView) findViewById(R.id.textView26);
 		TextView fechaUltimaPoda = (TextView) findViewById(R.id.textView27);
 		TextView gradoPoda = (TextView) findViewById(R.id.textView28);
-		/*TextView anchocalle = (TextView) findViewById(R.id.anchocalle);	        
-		TextView distancia = (TextView)findViewById(R.id.distancia);
-		TextView longitudArb = (TextView)findViewById(R.id.longitudArb);
-		TextView anchuraArb = (TextView)findViewById(R.id.anchuraArb);
-		TextView alturaArb = (TextView) findViewById(R.id.alturaArb);
-
-		TextView alturaMeseta = (TextView) findViewById(R.id.alturaMeseta);*/
+		TextView productosAplicar = (TextView) findViewById(R.id.textView29);
+		TextView formaActuacion = (TextView) findViewById(R.id.textView30);
+		TextView utilizaMojantes = (TextView) findViewById(R.id.textView31);
+		TextView zonaCriticaATratar = (TextView) findViewById(R.id.textView32);
+		TextView temperatura = (TextView) findViewById(R.id.textView33);
+		TextView humedadRelativa = (TextView) findViewById(R.id.textView34);
+		TextView velocidadViento = (TextView) findViewById(R.id.textView35);
+		TextView tipoPulverizador = (TextView) findViewById(R.id.textView36);
+		TextView L_Ha = (TextView) findViewById(R.id.textView37);
+		TextView L_Hg = (TextView) findViewById(R.id.textView38);
+		
 
 		//Intent i = getIntent();
 		// Receiving the Data
@@ -61,25 +65,37 @@ public class Resultados1 extends Activity{
 		alturaArb.setText(StringAlturaArb);
 		alturaMeseta.setText(StringAlturaMeseta);*/
 
-		Intent ar = getIntent();
-		Intent a1 = getIntent();
-
-		ParteA resultados2 = (ParteA) a1.getSerializableExtra("parteaa");
-		ParteA resultados1 = (ParteA) ar.getSerializableExtra("parteaa");
+		Intent aR = getIntent();
+		//Intent a1 = getIntent();
+		//Intent a2 = getIntent();
+		//Intent a1 = getIntent();
+		//ParteA resultadosA1 = (ParteA) aR.getSerializableExtra("partea1");
+		//ParteA resultadosA2 = (ParteA) aR.getSerializableExtra("partea2");
+		ParteA resultadosA3 = (ParteA) aR.getSerializableExtra("partea3");
 		
-		densidadFoliar.setText(String.valueOf(resultados1.DensidadFoliar));
-		xAncho.setText(String.valueOf(resultados1.AnchoCalle));
-		yDistancia.setText(String.valueOf(resultados1.DistanciaArboles));
-		volumenArbol.setText(String.valueOf(resultados1.FormaArbol)); //MAL
-		formaArbol.setText(String.valueOf(resultados1.FormaArbol));
-		fechaUltimaPoda.setText(String.valueOf(resultados1.FechaUltimaPoda));
-		gradoPoda.setText(String.valueOf(resultados1.GradoPoda));
+		densidadFoliar.setText(String.valueOf(resultadosA3.DensidadFoliar));
+		xAncho.setText(String.valueOf(resultadosA3.AnchoCalle));
+		yDistancia.setText(String.valueOf(resultadosA3.DistanciaArboles));
+		volumenArbol.setText(String.valueOf(resultadosA3.FormaArbol)); //MAL
+		formaArbol.setText(String.valueOf(resultadosA3.FormaArbol));
+		fechaUltimaPoda.setText(String.valueOf(resultadosA3.FechaUltimaPoda));
+		gradoPoda.setText(String.valueOf(resultadosA3.GradoPoda));
+		productosAplicar.setText(String.valueOf(resultadosA3.ProductosAplicar));
+		formaActuacion.setText(String.valueOf(resultadosA3.FormaActuacion));
+		utilizaMojantes.setText(String.valueOf(resultadosA3.Mojantes));
+		zonaCriticaATratar.setText(String.valueOf(resultadosA3.ZonaCriticaTratar));
+		temperatura.setText(String.valueOf(resultadosA3.Temperatura));
+		humedadRelativa.setText(String.valueOf(resultadosA3.Humedad));
+		velocidadViento.setText(String.valueOf(resultadosA3.VelocidadViento));
+		tipoPulverizador.setText(String.valueOf(resultadosA3.TipoPulverizador));
+		L_Ha.setText(String.valueOf(resultadosA3.AnchoCalle));
+		L_Hg.setText(String.valueOf(resultadosA3.DistanciaArboles));
 
 
 
-		Log.e("didi", resultados1.DensidadFoliar+"");
-		Log.e("didi", resultados1.FormaArbol+"");
-		Log.e("didi", resultados1.AlturaMeseta+"");
+		Log.e("didi", resultadosA3.DensidadFoliar+"");
+		Log.e("didi", resultadosA3.FormaArbol+"");
+		Log.e("didi", resultadosA3.AlturaMeseta+"");
 		
 		
 		Button siguiente = (Button) findViewById(R.id.siguiente);
@@ -87,10 +103,9 @@ public class Resultados1 extends Activity{
 		siguiente.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(Resultados1.this, b_1Activity.class));
+				startActivity(new Intent(Resultados1.this, B_1Activity.class));
 			}
 		});
-		
 			
 
 		Button atras = (Button) findViewById(R.id.atras);

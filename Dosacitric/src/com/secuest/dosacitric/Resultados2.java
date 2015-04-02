@@ -87,7 +87,7 @@ public class Resultados2 extends Activity{
 		siguiente.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(Resultados2.this, b_2Activity.class));
+				startActivity(new Intent(Resultados2.this, B_2Activity.class));
 			}
 		});
 		

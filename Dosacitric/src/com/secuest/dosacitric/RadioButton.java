@@ -20,7 +20,7 @@ public class RadioButton extends Activity {
 
 
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.partebb);
+		setContentView(R.layout.b_1);
 
 		addListenerOnButton();
 
