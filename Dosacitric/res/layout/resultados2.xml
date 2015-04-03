@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="#ffcc99"
     android:orientation="vertical" >
-    
+
     <TableLayout
         android:id="@+id/table"
         android:layout_width="fill_parent"
@@ -62,7 +62,6 @@
                 android:textColor="#E65F00" />
         </TableRow>
     </TableLayout>
-    
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -81,8 +80,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:background="#afd2c0"
-                android:text="A.1. CARACTERISTICAS DEL CULTIVO"
+                android:background="#7D2181"
+                android:text="B. REGULACIÓN DEL PULVERIZADOR HIDRONEUMÁTICO (TURBO)"
+                android:textColor="@color/white"
                 android:textSize="17sp" />
 
             <TextView
@@ -93,7 +93,7 @@
                 android:layout_below="@+id/textView1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Densidad foliar del árbol"
+                android:text="Volumen de aplicación (V)"
                 android:textSize="17sp" />
 
             <TextView
@@ -104,7 +104,7 @@
                 android:layout_below="@+id/textView2"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Marco de plantación"
+                android:text="Velocidad de avance deseada (v)"
                 android:textSize="17dp" />
 
             <TextView
@@ -115,7 +115,7 @@
                 android:layout_below="@+id/textView3"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Volumen del árbol"
+                android:text="Ancho de trabajo (a)"
                 android:textSize="17dp" />
 
             <TextView
@@ -126,7 +126,7 @@
                 android:layout_below="@+id/textView4"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Forma del árbol"
+                android:text="Caudal de líquido total"
                 android:textSize="17dp" />
 
             <TextView
@@ -137,7 +137,7 @@
                 android:layout_below="@+id/textView5"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Poda"
+                android:text="Características del sistema hidráulico del equipo"
                 android:textSize="17dp" />
 
             <TextView
@@ -148,7 +148,7 @@
                 android:layout_below="@+id/textView6"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="- Fecha de la última poda"
+                android:text="- Número total de boquillas"
                 android:textSize="17dp" />
 
             <TextView
@@ -159,7 +159,7 @@
                 android:layout_below="@+id/textView7"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="- Grado de poda"
+                android:text="- Número de boquillas disponibles por sector"
                 android:textSize="17dp" />
 
             <TextView
@@ -334,7 +334,7 @@
                 android:layout_alignBottom="@+id/textView2"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:text="TextView"
+                android:text="L/Ha"
                 android:textSize="17dp" />
 
             <TextView
@@ -345,7 +345,7 @@
                 android:layout_alignBottom="@+id/textView3"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:text="m x m"
+                android:text="km/h"
                 android:textSize="17dp" />
 
             <TextView
@@ -356,7 +356,7 @@
                 android:layout_alignBottom="@+id/textView4"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:text="TextView"
+                android:text="m"
                 android:textSize="17dp" />
 
             <TextView
@@ -367,7 +367,7 @@
                 android:layout_alignBottom="@+id/textView5"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:text="TextView"
+                android:text="L/min"
                 android:textSize="17dp" />
 
             <TextView
@@ -496,32 +496,42 @@
                 android:id="@+id/textView41"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/textView4"
-                android:layout_toRightOf="@+id/textView3"
+                android:layout_above="@+id/textView3"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textView23"
                 android:text="TextView"
-                android:textSize="17dp" 
-                android:layout_marginLeft="10dp"/>
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView39"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/textView4"
-                android:layout_toRightOf="@+id/textView40"
+                android:layout_alignBaseline="@+id/textView24"
+                android:layout_alignBottom="@+id/textView24"
+                android:layout_alignRight="@+id/textView41"
                 android:text="TextView"
-                android:textSize="17dp" 
-                android:layout_marginLeft="5dp"/>
+                android:textSize="17dp" />
 
             <TextView
                 android:id="@+id/textView40"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/textView4"
-                android:layout_toRightOf="@+id/textView41"
-                android:text="x"
-                android:textSize="17dp"
-                android:layout_marginLeft="5dp" />
+                android:layout_above="@+id/textView5"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textView25"
+                android:text="TextView"
+                android:textSize="17dp" />
 
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView26"
+                android:layout_alignBottom="@+id/textView26"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textView26"
+                android:text="TextView"
+                android:textSize="17dp" />
         </RelativeLayout>
     </ScrollView>
 

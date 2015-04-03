@@ -1,6 +1,5 @@
 package com.secuest.dosacitric;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
@@ -13,15 +12,15 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.SeekBar;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.view.Menu;
+import android.view.MenuItem;
 
 public class B_2Activity extends Activity{
-	
-	
+
+
 	private EditText zonaAltaCerradas;
 	private EditText zonaBajaCerradas;
 	private EditText zonaAltaAbiertas;
@@ -35,11 +34,12 @@ public class B_2Activity extends Activity{
 	private TextView zonaBajaIntervaloCaudal;
 	private TextView variacionCaudalTextView;
 	private SeekBar variacionCaudalSeekbar;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.b_2);
+		seebbarr();
 
 		zonaAltaCerradas = (EditText) findViewById(R.id.zonaAltaCerradas);
 		zonaBajaCerradas = (EditText) findViewById(R.id.zonaBajaCerradas);
@@ -55,6 +55,15 @@ public class B_2Activity extends Activity{
 		variacionCaudalTextView = (TextView) findViewById(R.id.variacionCaudalTextView);
 		variacionCaudalSeekbar = (SeekBar) findViewById(R.id.variacionCaudalSeekBar);
 		
+		Button siguiente = (Button) findViewById(R.id.siguiente);
+		siguiente.setClickable(true);
+		siguiente.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(B_2Activity.this, Resultados2.class));
+			}
+		});
+
 		/*volumenAplicacionCalculado.setChecked(true);
 		volumenAplicacionSiguiente.setChecked(false);
 
@@ -84,7 +93,34 @@ public class B_2Activity extends Activity{
 		});
 	}
 
+	public void seebbarr( ){
+		variacionCaudalSeekbar = (SeekBar) findViewById(R.id.variacionCaudalSeekBar);
+		variacionCaudalTextView = (TextView) findViewById(R.id.variacionCaudalTextView);
+		variacionCaudalSeekbar.setProgress(0);
+		variacionCaudalSeekbar.incrementProgressBy(1);
+		variacionCaudalSeekbar.setMax(5);
 
+		variacionCaudalSeekbar.setOnSeekBarChangeListener(
+				new SeekBar.OnSeekBarChangeListener() {
+
+					int progress_value;
+					@Override
+					public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+						progress_value = progress;
+						variacionCaudalTextView.setText("" + progress);
+					}
+
+					@Override
+					public void onStartTrackingTouch(SeekBar seekBar) {
+					}
+
+					@Override
+					public void onStopTrackingTouch(SeekBar seekBar) {
+					}
+				}
+				);
+
+	}
 
 	private class ArrayAdapterMio<String> extends ArrayAdapter<String> {
 

@@ -16,6 +16,7 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,7 +34,7 @@ public class A_1_1Activity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.a_1_1);
-		
+
 		densidadFoliar = (Spinner) findViewById(R.id.densidadFoliar);
 		anchocalle = (EditText) findViewById(R.id.anchocalle);
 		distancia = (EditText) findViewById(R.id.distancia);
@@ -72,12 +73,12 @@ public class A_1_1Activity extends Activity{
 					Float densidadFoliar1 = (float) densidadFoliar.getSelectedItemPosition();
 					if(densidadFoliar1==3)
 						Double.parseDouble("p");
-					
+
 					/*revisando = "Densidad foliar del cultivo";
 					if(densidadFoliar.getSelectedItemPosition()==densidadFoliar.getCount())
 						Double.parseDouble("p");
 					float densidadFoliar1 = (float) Double.parseDouble(reemplazado);*/
-					
+
 					revisando = "Ancho de calle";
 					reemplazado = anchocalle.getText().toString().replace(',', '.');
 					float anchocalle1 = (float) Double.parseDouble(reemplazado);
@@ -135,6 +136,26 @@ public class A_1_1Activity extends Activity{
 			public void onClick(View v) {
 				System.out.println("CLICK");
 				startActivity(new Intent(A_1_1Activity.this, Indice.class));
+			}
+		});
+
+		ImageButton ayuda1 = (ImageButton) findViewById(R.id.ayuda1);
+		ayuda1.setClickable(true);
+		ayuda1.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				System.out.println("CLICK");
+				startActivity(new Intent(A_1_1Activity.this, Ayuda.class));
+			}
+		});
+
+		ImageButton ayuda2 = (ImageButton) findViewById(R.id.ayuda2);
+		ayuda2.setClickable(true);
+		ayuda2.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				System.out.println("CLICK");
+				startActivity(new Intent(A_1_1Activity.this, Ayuda.class));
 			}
 		});
 

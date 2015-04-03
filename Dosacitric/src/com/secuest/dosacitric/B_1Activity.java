@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,10 +30,13 @@ public class B_1Activity extends Activity{
 	private RadioButton anchoTrabajoCalculado;
 	private RadioButton anchoTrabajoSiguiente;
 	private TextView velocidadAvance;
+	private SeekBar velocidadAvanceSeekbar;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.b_1);
+		seebbarr();
 
 		volumenAplicacion = (TextView) findViewById(R.id.textView2);
 		volumenCalculado = (TextView) findViewById(R.id.textView13);
@@ -42,7 +46,8 @@ public class B_1Activity extends Activity{
 		anchoCalculado = (TextView) findViewById(R.id.textView14);
 		anchoTrabajoCalculado= (RadioButton) findViewById(R.id.RAncho1);
 		anchoTrabajoSiguiente = (RadioButton) findViewById(R.id.RAncho2);
-		velocidadAvance = (TextView) findViewById(R.id.TextView03);
+		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
+		velocidadAvanceSeekbar = (SeekBar) findViewById(R.id.seekBar1);
 
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
@@ -82,6 +87,38 @@ public class B_1Activity extends Activity{
 			}
 		});
 	}
+
+	public void seebbarr( ){
+		velocidadAvanceSeekbar = (SeekBar) findViewById(R.id.seekBar1);
+		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
+		velocidadAvanceSeekbar.setProgress(2);
+		velocidadAvanceSeekbar.incrementProgressBy(2);
+		velocidadAvanceSeekbar.setMax(6);
+
+		velocidadAvanceSeekbar.setOnSeekBarChangeListener(
+				new SeekBar.OnSeekBarChangeListener() {
+
+					int progress_value;
+					@Override
+					public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+						progress_value = progress;
+						velocidadAvance.setText("" + progress);
+					}
+
+					@Override
+					public void onStartTrackingTouch(SeekBar seekBar) {
+					}
+
+					@Override
+					public void onStopTrackingTouch(SeekBar seekBar) {
+					}
+				}
+				);
+
+	}
+
+
+
 
 
 
