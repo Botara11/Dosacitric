@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
@@ -41,6 +42,11 @@ public class B_2Activity extends Activity{
 		setContentView(R.layout.b_2);
 		seebbarr();
 
+		Intent b2 = getIntent();
+		ParteB parteb2 = (ParteB) b2.getSerializableExtra("parteb1");
+		
+		Log.e("didi", parteb2.toString());
+		
 		zonaAltaCerradas = (EditText) findViewById(R.id.zonaAltaCerradas);
 		zonaBajaCerradas = (EditText) findViewById(R.id.zonaBajaCerradas);
 		zonaAltaAbiertas = (EditText) findViewById(R.id.zonaAltaAbiertas);

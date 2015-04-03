@@ -55,16 +55,16 @@ public class Resultados2 extends Activity{
 
 		// Displaying Received data
 		anchocalle.setText(StringAnchocalle);
-		distancia.setText(StringDistancia);
+		distancia.setText(StringDistancia); 
 		longitudArb.setText(StringLongitudArb);
 		anchuraArb.setText(StringAnchuraArb);
-		alturaArb.setText(StringAlturaArb);
+		alturaArb.setText(StringAlturaArb);//si
 		alturaMeseta.setText(StringAlturaMeseta);*/
 
 		Intent ar = getIntent();
-		Intent a1 = getIntent();
+		//Intent a1 = getIntent();
 
-		ParteA resultados2 = (ParteA) a1.getSerializableExtra("parteaa");
+		//ParteA resultados2 = (ParteA) a1.getSerializableExtra("parteaa");
 		ParteA resultados1 = (ParteA) ar.getSerializableExtra("parteaa");
 		
 		densidadFoliar.setText(String.valueOf(resultados1.DensidadFoliar));

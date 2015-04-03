@@ -31,12 +31,19 @@ public class B_1Activity extends Activity{
 	private RadioButton anchoTrabajoSiguiente;
 	private TextView velocidadAvance;
 	private SeekBar velocidadAvanceSeekbar;
+	private EditText editAncho;
+	private EditText editVolumen;
+	private EditText editBoquillas;
+	private TextView caudalTotal;
+	private TextView caudalSector;
+	private ParteB pb;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.b_1);
 		seebbarr();
+		
 
 		volumenAplicacion = (TextView) findViewById(R.id.textView2);
 		volumenCalculado = (TextView) findViewById(R.id.textView13);
@@ -48,13 +55,45 @@ public class B_1Activity extends Activity{
 		anchoTrabajoSiguiente = (RadioButton) findViewById(R.id.RAncho2);
 		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
 		velocidadAvanceSeekbar = (SeekBar) findViewById(R.id.seekBar1);
+		
+		
+		caudalTotal = (TextView) findViewById(R.id.textView15);
+		caudalSector = (TextView) findViewById(R.id.textView16);
+		
+		editAncho = (EditText) findViewById(R.id.editText1);
+		editVolumen = (EditText) findViewById(R.id.editText3);
+		editBoquillas = (EditText) findViewById(R.id.editText4);
+				
 
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(B_1Activity.this, B_2Activity.class));
+				Float vol, ancho;
+				
+				if(volumenAplicacionCalculado.isChecked()){
+					vol = Float.parseFloat(volumenCalculado.toString());
+				}else{
+					vol = Float.parseFloat(editVolumen.toString());
+				}
+				
+				if(anchoTrabajoCalculado.isChecked()){
+					ancho = Float.parseFloat(anchoTrabajoCalculado.toString());
+				}else{
+					ancho = Float.parseFloat(editAncho.toString());
+				}
+				
+				pb.rellenarB1(vol,ancho,
+						Float.parseFloat(velocidadAvance.toString()),
+						
+						Float.parseFloat(caudalTotal.toString()),
+						Float.parseFloat(caudalSector.toString()),
+						
+						Integer.parseInt(editBoquillas.toString()));
+				Intent a3 = new Intent(B_1Activity.this, B_2Activity.class);
+				a3.putExtra("parteb1",pb);
+				startActivity(a3);
 			}
 		});
 

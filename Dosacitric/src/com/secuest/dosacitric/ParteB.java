@@ -1,8 +1,10 @@
 package com.secuest.dosacitric;
 
+import java.io.Serializable;
 
 
-public class ParteB {
+
+public class ParteB implements Serializable{
 
 	/**** B ****/
 	private float VolumenApp;
@@ -26,6 +28,19 @@ public class ParteB {
 	}
 	
 
+	public void rellenarB1(float VolumenApp, float AnchoTrabajo,
+			float VelocidadAvance, float CaudalLiquidoTotal,
+			float CaudalLiquidoSector, int NumeroTotalBoquillas){
+		
+		this.VolumenApp = VolumenApp;
+		this.AnchoTrabajo = AnchoTrabajo;
+		this.VelocidadAvance = VelocidadAvance;
+		this.CaudalLiquidoTotal = CaudalLiquidoTotal;
+		this.CaudalLiquidoSector = CaudalLiquidoSector;
+		this.NumeroTotalBoquillas = NumeroTotalBoquillas;
+		
+	}
+	
 	public void rellenarB(float VolumenApp, float AnchoTrabajo,
 			float VelocidadAvance, float CaudalLiquidoTotal,
 			float CaudalLiquidoSector, int NumeroTotalBoquillas,
