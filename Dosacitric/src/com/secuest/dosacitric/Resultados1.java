@@ -91,6 +91,7 @@ public class Resultados1 extends Activity{
 		L_Ha.setText(String.valueOf(resultadosA3.AnchoCalle));
 		L_Hg.setText(String.valueOf(resultadosA3.DistanciaArboles));
 
+		
 
 
 		Log.e("didi", resultadosA3.DensidadFoliar+"");

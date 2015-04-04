@@ -73,7 +73,10 @@ public class A_1_1Activity extends Activity{
 					Float densidadFoliar1 = (float) densidadFoliar.getSelectedItemPosition();
 					if(densidadFoliar1==3)
 						Double.parseDouble("p");
-
+					String ola = (String)densidadFoliar.getItemAtPosition(densidadFoliar.getSelectedItemPosition());
+					
+					Log.e("didi", ola+" densidadFoliar A_1_1");
+					
 					/*revisando = "Densidad foliar del cultivo";
 					if(densidadFoliar.getSelectedItemPosition()==densidadFoliar.getCount())
 						Double.parseDouble("p");

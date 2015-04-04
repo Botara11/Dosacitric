@@ -169,17 +169,29 @@ public class A_1_3Activity extends Activity{
 
 				try {
 
-					ParteA nuevo = new ParteA();
-
 					Intent a2 = getIntent();
 					ParteA partea3 = (ParteA) a2.getSerializableExtra("partea2");
 
 					Log.e("didi", partea3.toString());
 
 					revisando = "Productos a aplicar";
-					Float productosAplicar1 = (float) productosAplicar.getSelectedItemPosition();
-					if(productosAplicar1==5)
-						Double.parseDouble("p");
+					Float productosAplicar1 = (float) 999.999;
+					int camb = productosAplicar.getSelectedItemPosition();
+					switch(camb){
+
+					case 0: productosAplicar1=(float) 1.05;
+						break;
+					case 1:  productosAplicar1=(float) 1.05;
+						break;
+					case 2: productosAplicar1=(float) 1.00;
+						break;
+					case 3:  productosAplicar1=(float) 0.95;
+						break;
+					case 4:  productosAplicar1=(float) 0.95;
+						break;
+					case 5:  Double.parseDouble("p");
+						break;
+					}
 
 					revisando = "Forma de actuación";
 					Float formaActuacion1 = (float) formaActuacion.getSelectedItemPosition();
@@ -216,50 +228,9 @@ public class A_1_3Activity extends Activity{
 					if(tipoPulverizacion1==2)
 						Double.parseDouble("p");
 
-
-					/*revisando = "Productos a aplicar";
-					if(productosAplicar.getSelectedItemPosition()==productosAplicar.getCount())
-						Double.parseDouble("p");
-					float productosAplicar1 = (float) Double.parseDouble(reemplazado);
-
-					revisando = "Forma de actuación";
-					if(formaActuacion.getSelectedItemPosition()==formaActuacion.getCount())
-						Double.parseDouble("p");
-					float formaActuacion1 = (float) Double.parseDouble(reemplazado);
-
-					revisando = "¿Utiliza coadyuvantes (mojantes)?";
-					if(utilizaMojantes.getSelectedItemPosition()==utilizaMojantes.getCount())
-						Double.parseDouble("p");
-					float utilizaMojantes1 = (float) Double.parseDouble(reemplazado);
-
-					revisando = "Zona crítica a tratar";
-					if(zonaCritica.getSelectedItemPosition()==zonaCritica.getCount())
-						Double.parseDouble("p");
-					float zonaCritica1 = (float) Double.parseDouble(reemplazado);
-
-					revisando = "Temperatura";
-					if(temperatura.getSelectedItemPosition()==temperatura.getCount())
-						Double.parseDouble("p");
-					float temperatura1 = (float) Double.parseDouble(reemplazado);
-
-					revisando = "Humedad relativa";
-					if(humedadRelativa.getSelectedItemPosition()==humedadRelativa.getCount())
-						Double.parseDouble("p");
-					float humedadRelativa1 = (float) Double.parseDouble(reemplazado);
-
-					revisando = "Velocidad del viento";
-					if(velocidadViento.getSelectedItemPosition()==velocidadViento.getCount())
-						Double.parseDouble("p");
-					float velocidadViento1 = (float) Double.parseDouble(reemplazado);
-
-					revisando = "Tipo de pulverizador";
-					if(tipoPulverizacion.getSelectedItemPosition()==tipoPulverizacion.getCount())
-						Double.parseDouble("p");
-					float tipoPulverizacion1 = (float) Double.parseDouble(reemplazado);*/
-
-					nuevo.rellenarA2345(productosAplicar1, formaActuacion1, utilizaMojantes1, zonaCritica1, temperatura1, humedadRelativa1, velocidadViento1, tipoPulverizacion1);
+					partea3.rellenarA2345(productosAplicar1, formaActuacion1, utilizaMojantes1, zonaCritica1, temperatura1, humedadRelativa1, velocidadViento1, tipoPulverizacion1);
 					Intent a3 = new Intent(A_1_3Activity.this, Resultados1.class);
-					a3.putExtra("partea3",nuevo);
+					a3.putExtra("partea3",partea3);
 					startActivity(a3);
 
 				} catch (Exception e) {

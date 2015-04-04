@@ -73,24 +73,24 @@ public class B_1Activity extends Activity{
 				Float vol, ancho;
 				
 				if(volumenAplicacionCalculado.isChecked()){
-					vol = Float.parseFloat(volumenCalculado.toString());
+					vol = Float.parseFloat(volumenCalculado.getText().toString());
 				}else{
-					vol = Float.parseFloat(editVolumen.toString());
+					vol = Float.parseFloat(editVolumen.getText().toString());
 				}
 				
 				if(anchoTrabajoCalculado.isChecked()){
-					ancho = Float.parseFloat(anchoTrabajoCalculado.toString());
+					ancho = Float.parseFloat(anchoTrabajoCalculado.getText().toString());
 				}else{
-					ancho = Float.parseFloat(editAncho.toString());
+					ancho = Float.parseFloat(editAncho.getText().toString());
 				}
 				
 				pb.rellenarB1(vol,ancho,
-						Float.parseFloat(velocidadAvance.toString()),
+						Float.parseFloat(velocidadAvance.getText().toString()),
 						
-						Float.parseFloat(caudalTotal.toString()),
-						Float.parseFloat(caudalSector.toString()),
+						Float.parseFloat(caudalTotal.getText().toString()),
+						Float.parseFloat(caudalSector.getText().toString()),
 						
-						Integer.parseInt(editBoquillas.toString()));
+						Integer.parseInt(editBoquillas.getText().toString()));
 				Intent a3 = new Intent(B_1Activity.this, B_2Activity.class);
 				a3.putExtra("parteb1",pb);
 				startActivity(a3);

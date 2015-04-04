@@ -97,12 +97,10 @@ public class A_1_2Activity extends Activity{
 
 				try {
 
-					ParteA nuevo = new ParteA();
-
 					Intent a1 = getIntent();
 					ParteA partea2 = (ParteA) a1.getSerializableExtra("partea1");
 
-					Log.e("didi", partea2.toString());
+					Log.e("didi", partea2.AlturaArboles+" soy A_1_2");
 
 					revisando = "Altura de la Meseta";
 					reemplazado = alturaMeseta.getText().toString().replace(',', '.');
@@ -124,9 +122,9 @@ public class A_1_2Activity extends Activity{
 					float gradoPoda1 = (float) Double.parseDouble(reemplazado);
 
 
-					nuevo.rellenarA11(alturaMeseta1, formaArb1, fechaUltima1, gradoPoda1);
+					partea2.rellenarA11(alturaMeseta1, formaArb1, fechaUltima1, gradoPoda1);
 					Intent a2 = new Intent(A_1_2Activity.this, A_1_3Activity.class);
-					a2.putExtra("partea2",nuevo);
+					a2.putExtra("partea2",partea2);
 					startActivity(a2);
 
 				} catch (Exception e) {
