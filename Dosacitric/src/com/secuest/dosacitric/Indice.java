@@ -15,7 +15,16 @@ public class Indice extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.indice);
-		
+		TextView partB = (TextView) findViewById(R.id.textView7);
+		partB.setClickable(true);
+		partB.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				System.out.println("CLICK");
+				startActivity(new Intent(Indice.this, B_1Activity.class));
+
+			}
+		});
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {

@@ -172,7 +172,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#d7d7db"
-                android:text="A.2. TIPO DE TRATAMIENTO"
+                android:text="Boquillas a cerrar por zona"
                 android:textSize="17dp" />
 
             <TextView
@@ -183,7 +183,7 @@
                 android:layout_below="@+id/textView9"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Productos a aplicar"
+                android:text="Zona Alta"
                 android:textSize="17dp" />
 
             <TextView
@@ -194,7 +194,7 @@
                 android:layout_below="@+id/textView10"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Forma de actuación"
+                android:text="Zona Baja"
                 android:textSize="17dp" />
 
             <TextView
@@ -202,10 +202,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textView11"
+                android:layout_below="@+id/textView14"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="¿Utiliza coadyuvantes (mojantes)?"
+                android:text="Zona Alta (nA)"
                 android:textSize="17dp" />
 
             <TextView
@@ -216,7 +216,7 @@
                 android:layout_below="@+id/textView12"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona crítica a tratar"
+                android:text="Zona Media (nM)"
                 android:textSize="17dp" />
 
             <TextView
@@ -224,12 +224,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textView13"
+                android:layout_below="@+id/textView11"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#c3c3c8"
-                android:text="A.3. CONDICIONES METEREOLÓGICAS"
+                android:text="Numero boquillas abiertas por zona"
+                android:textSize="17dp" />
+            
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView15"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:background="#c3c3c8"
+                android:text="Porcentaje de vegetación a pulverizar por zona"
                 android:textSize="17dp" />
 
             <TextView
@@ -237,10 +250,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textView14"
+                android:layout_below="@+id/textView13"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Temperatura"
+                android:text="Zona Baja (nB)"
                 android:textSize="17dp" />
 
             <TextView
@@ -248,10 +261,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textView15"
+                android:layout_below="@+id/textView43"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Humedad Relativa"
+                android:text="Zona Alta (A%)"
                 android:textSize="17dp" />
 
             <TextView
@@ -262,20 +275,7 @@
                 android:layout_below="@+id/textView16"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Velocidad del viento"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textView17"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:background="#ff6600"
-                android:text="A.4. EQUIPO EMPLEADO"
+                android:text="Zona Media (%M)"
                 android:textSize="17dp" />
 
             <TextView
@@ -283,47 +283,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textView18"
+                android:layout_below="@+id/textView17"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Tipo de pulverizador"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textView19"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:background="#808080"
-                android:text="A.5. VOLUMEN DE APLICACIÓN"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/textView20"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:text="L/ha"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/textView22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/textView21"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:text="L/hg"
+                android:text="Zona Baja (%B)"
                 android:textSize="17dp" />
 
             <TextView
@@ -436,7 +399,7 @@
                 android:id="@+id/textView33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/textView16"
+                android:layout_alignTop="@+id/textView15"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
@@ -469,26 +432,6 @@
                 android:layout_alignBottom="@+id/textView19"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:text="TextView"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/textView37"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/textView21"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/textView21"
-                android:text="TextView"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/textView38"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/textView22"
                 android:text="TextView"
                 android:textSize="17dp" />
 
@@ -532,6 +475,9 @@
                 android:layout_toLeftOf="@+id/textView26"
                 android:text="TextView"
                 android:textSize="17dp" />
+
+            
+
         </RelativeLayout>
     </ScrollView>
 

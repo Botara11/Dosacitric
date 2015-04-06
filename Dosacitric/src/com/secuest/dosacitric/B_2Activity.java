@@ -43,21 +43,23 @@ public class B_2Activity extends Activity{
 		seebbarr();
 
 		Intent b2 = getIntent();
-		ParteB parteb2 = (ParteB) b2.getSerializableExtra("parteb1");
-		
-		Log.e("didi", parteb2.toString());
+		final ParteB parteb2 = (ParteB) b2.getSerializableExtra("parteb1");
 		
 		zonaAltaCerradas = (EditText) findViewById(R.id.zonaAltaCerradas);
 		zonaBajaCerradas = (EditText) findViewById(R.id.zonaBajaCerradas);
+		
 		zonaAltaAbiertas = (EditText) findViewById(R.id.zonaAltaAbiertas);
 		zonaMediaAbiertas = (EditText) findViewById(R.id.zonaMediaAbiertas);
 		zonaBajaAbiertas = (EditText) findViewById(R.id.zonaBajaAbiertas);
+		
 		zonaAltaPorcentaje = (EditText) findViewById(R.id.zonaAltaPorcentaje);
 		zonaMediaPorcentaje = (EditText) findViewById(R.id.zonaMediaPorcentanje);
 		zonaBajaPorcentaje = (EditText) findViewById(R.id.zonaBajaPorcentaje);
+		
 		zonaAltaIntervaloCaudal = (TextView) findViewById(R.id.zonaAltaIntervaloCaudal);
 		zonaMediaIntervaloCaudal = (TextView) findViewById(R.id.zonaMediaIntervaloCaudal);
 		zonaBajaIntervaloCaudal = (TextView) findViewById(R.id.zonaBajaIntervaloCaudal);
+		
 		variacionCaudalTextView = (TextView) findViewById(R.id.variacionCaudalTextView);
 		variacionCaudalSeekbar = (SeekBar) findViewById(R.id.variacionCaudalSeekBar);
 		
@@ -66,6 +68,34 @@ public class B_2Activity extends Activity{
 		siguiente.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				String quien = "";
+				String opt = "";
+				try{
+					quien="zonaAltaCerradas";
+					float zAltaCerr = Float.parseFloat(zonaAltaCerradas.getText().toString());
+					quien="zonaBajaCerradas";
+					float zBajaCerr = Float.parseFloat(zonaBajaCerradas.getText().toString());
+					
+					quien="zonaAltaAbiertas";
+					float zAltaAb = Float.parseFloat(zonaAltaAbiertas.getText().toString());
+					quien="zonaMediaAbiertas";
+					float zMediaAb = Float.parseFloat(zonaMediaAbiertas.getText().toString());
+					quien="zonaBajaAbiertas";
+					float zBajaAb = Float.parseFloat(zonaBajaAbiertas.getText().toString());
+					
+					float aux = parteb2.getNumTotBoq() - zBajaCerr - zAltaCerr;
+					
+					if (aux != (zAltaAb + zMediaAb + zBajaAb)){
+						quien = "Boquillas";
+						opt = " Comprobar Boquillas Totales - Cerra = Abiertas";
+						Float.parseFloat("h");
+					}
+
+				}catch(Exception e){
+					e.printStackTrace();
+					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+quien+'"'+" incorrecto"+opt, Toast.LENGTH_SHORT);
+					toast.show();
+				}
 				startActivity(new Intent(B_2Activity.this, Resultados2.class));
 			}
 		});

@@ -22,8 +22,25 @@ public class Resultados2 extends Activity{
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.resultados1);
-		/**** A1 ****/
+		setContentView(R.layout.resultados2);
+		
+		TextView VolAplicacion = (TextView) findViewById(R.id.textView41);
+		TextView VelAvance = (TextView) findViewById(R.id.textView39);
+		TextView AnchoTrabajo = (TextView) findViewById(R.id.textView40);
+		TextView CaudalLiqTotal = (TextView) findViewById(R.id.textView42);
+		TextView NumTotalBoq = (TextView) findViewById(R.id.textView27);
+		TextView NumBoqPorSector = (TextView) findViewById(R.id.textView28);
+		TextView ProdAplicar = (TextView) findViewById(R.id.textView29);
+		TextView FormActuacion = (TextView) findViewById(R.id.textView30);
+		TextView Coadyuvantes = (TextView) findViewById(R.id.textView31);
+		TextView ZonaCritTratar = (TextView) findViewById(R.id.textView32);
+		TextView Temperatura = (TextView) findViewById(R.id.textView33);
+		TextView HumedadRelat = (TextView) findViewById(R.id.textView34);
+		TextView VelViento = (TextView) findViewById(R.id.textView35);
+		TextView TipoPulveriz = (TextView) findViewById(R.id.textView36);
+		
+		
+		
 		
 		
 		TextView densidadFoliar = (TextView) findViewById(R.id.textView23);

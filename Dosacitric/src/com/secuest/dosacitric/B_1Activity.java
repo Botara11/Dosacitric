@@ -1,5 +1,6 @@
 package com.secuest.dosacitric;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +8,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
@@ -38,22 +41,41 @@ public class B_1Activity extends Activity{
 	private TextView caudalSector;
 	private ParteB pb;
 
+	public void actualizarCaudal(){
+		try{
+			float a = Float.parseFloat(velocidadAvance.getText().toString());
+			float b = Float.parseFloat(editVolumen.getText().toString());
+			float c = Float.parseFloat(editAncho.getText().toString());
+			DecimalFormat df = new DecimalFormat();
+			df.setMaximumFractionDigits(2);
+			caudalTotal.setText(df.format(a*b*c/0.6));
+			caudalSector.setText(df.format((a*b*c/0.6)/2));
+		}catch(Exception e){
+			caudalTotal.setText("0.0");
+		}
+		
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.b_1);
 		seebbarr();
 		
-
+		pb = new ParteB();
+		
 		volumenAplicacion = (TextView) findViewById(R.id.textView2);
 		volumenCalculado = (TextView) findViewById(R.id.textView13);
 		volumenAplicacionCalculado = (RadioButton) findViewById(R.id.RVolumen1);
 		volumenAplicacionSiguiente = (RadioButton) findViewById(R.id.RVolumen2);
+		volumenAplicacionSiguiente.setChecked(true);
 		anchoTrabajo = (TextView) findViewById(R.id.TextView01);
 		anchoCalculado = (TextView) findViewById(R.id.textView14);
 		anchoTrabajoCalculado= (RadioButton) findViewById(R.id.RAncho1);
 		anchoTrabajoSiguiente = (RadioButton) findViewById(R.id.RAncho2);
+		anchoTrabajoSiguiente.setChecked(true);
 		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
+		velocidadAvance.setText("0.99");
 		velocidadAvanceSeekbar = (SeekBar) findViewById(R.id.seekBar1);
 		
 		
@@ -61,7 +83,51 @@ public class B_1Activity extends Activity{
 		caudalSector = (TextView) findViewById(R.id.textView16);
 		
 		editAncho = (EditText) findViewById(R.id.editText1);
+		editAncho.setText("0.0");
+		editAncho.addTextChangedListener(new TextWatcher() {
+			
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void afterTextChanged(Editable s) {
+				// TODO Auto-generated method stub
+				actualizarCaudal();
+			}
+		});
 		editVolumen = (EditText) findViewById(R.id.editText3);
+		editVolumen.setText("0.0");
+		editVolumen.addTextChangedListener(new TextWatcher() {
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void afterTextChanged(Editable s) {
+				// TODO Auto-generated method stub
+				actualizarCaudal();
+			}
+		});
 		editBoquillas = (EditText) findViewById(R.id.editText4);
 				
 
@@ -70,30 +136,46 @@ public class B_1Activity extends Activity{
 		siguiente.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Float vol, ancho;
-				
-				if(volumenAplicacionCalculado.isChecked()){
-					vol = Float.parseFloat(volumenCalculado.getText().toString());
-				}else{
-					vol = Float.parseFloat(editVolumen.getText().toString());
+				String quien = "";
+				try{
+					
+					
+					Float vol, ancho;
+					
+					if(volumenAplicacionCalculado.isChecked()){
+						quien="volumenAplicacionCalculado";
+						vol = Float.parseFloat(volumenCalculado.getText().toString());
+					}else{
+						quien="volumenAplicacionSiguiente";
+						vol = Float.parseFloat(editVolumen.getText().toString());
+					}
+					
+					if(anchoTrabajoCalculado.isChecked()){
+						quien="anchoTrabajoCalculado";
+						ancho = Float.parseFloat(anchoTrabajoCalculado.getText().toString());
+					}else{
+						quien="anchoTrabajoSiguiente";
+						ancho = Float.parseFloat(editAncho.getText().toString());
+					}
+					quien="Numero de boquillas";
+					int boq = Integer.parseInt(editBoquillas.getText().toString());
+					
+					pb.rellenarB1(
+							vol,
+							ancho,
+							Float.parseFloat(velocidadAvance.getText().toString()),
+							(float)0.0,(float)0.0,
+							//Float.parseFloat(caudalTotal.getText().toString()),
+							//Float.parseFloat(caudalSector.getText().toString()),
+							boq);
+					Intent b1 = new Intent(B_1Activity.this, B_2Activity.class);
+					b1.putExtra("parteb1",pb);
+					startActivity(b1);
+				}catch(Exception e){
+					e.printStackTrace();
+					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+quien+'"'+" incorrecto", Toast.LENGTH_SHORT);
+					toast.show();
 				}
-				
-				if(anchoTrabajoCalculado.isChecked()){
-					ancho = Float.parseFloat(anchoTrabajoCalculado.getText().toString());
-				}else{
-					ancho = Float.parseFloat(editAncho.getText().toString());
-				}
-				
-				pb.rellenarB1(vol,ancho,
-						Float.parseFloat(velocidadAvance.getText().toString()),
-						
-						Float.parseFloat(caudalTotal.getText().toString()),
-						Float.parseFloat(caudalSector.getText().toString()),
-						
-						Integer.parseInt(editBoquillas.getText().toString()));
-				Intent a3 = new Intent(B_1Activity.this, B_2Activity.class);
-				a3.putExtra("parteb1",pb);
-				startActivity(a3);
 			}
 		});
 
@@ -130,18 +212,19 @@ public class B_1Activity extends Activity{
 	public void seebbarr( ){
 		velocidadAvanceSeekbar = (SeekBar) findViewById(R.id.seekBar1);
 		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
-		velocidadAvanceSeekbar.setProgress(2);
-		velocidadAvanceSeekbar.incrementProgressBy(2);
-		velocidadAvanceSeekbar.setMax(6);
+		velocidadAvanceSeekbar.setProgress(1);
+		velocidadAvanceSeekbar.incrementProgressBy(1);
+		velocidadAvanceSeekbar.setMax(502);
 
 		velocidadAvanceSeekbar.setOnSeekBarChangeListener(
 				new SeekBar.OnSeekBarChangeListener() {
 
-					int progress_value;
+					float progress_value;
 					@Override
 					public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-						progress_value = progress;
-						velocidadAvance.setText("" + progress);
+						progress_value = (float) progress;
+						velocidadAvance.setText("" + (float)((progress_value+99)/100));
+						actualizarCaudal();
 					}
 
 					@Override

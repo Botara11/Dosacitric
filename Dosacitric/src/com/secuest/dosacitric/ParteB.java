@@ -27,7 +27,10 @@ public class ParteB implements Serializable{
 	public ParteB() {
 	}
 	
-
+	public int getNumTotBoq(){
+		return NumeroTotalBoquillas;
+	}
+	
 	public void rellenarB1(float VolumenApp, float AnchoTrabajo,
 			float VelocidadAvance, float CaudalLiquidoTotal,
 			float CaudalLiquidoSector, int NumeroTotalBoquillas){
