@@ -97,7 +97,7 @@
                 android:textSize="17sp" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textView3AL"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -112,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textView3"
+                android:layout_below="@+id/textView3AL"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="Ancho de trabajo (a)"
@@ -231,7 +231,7 @@
                 android:background="#c3c3c8"
                 android:text="Numero boquillas abiertas por zona"
                 android:textSize="17dp" />
-            
+
             <TextView
                 android:id="@+id/textView43"
                 android:layout_width="match_parent"
@@ -304,8 +304,8 @@
                 android:id="@+id/textView24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textView3"
-                android:layout_alignBottom="@+id/textView3"
+                android:layout_alignBaseline="@+id/textView3AL"
+                android:layout_alignBottom="@+id/textView3AL"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="km/h"
@@ -399,8 +399,8 @@
                 android:id="@+id/textView33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/textView15"
                 android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textView15"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textSize="17dp" />
@@ -436,16 +436,6 @@
                 android:textSize="17dp" />
 
             <TextView
-                android:id="@+id/textView41"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/textView3"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/textView23"
-                android:text="TextView"
-                android:textSize="17dp" />
-
-            <TextView
                 android:id="@+id/textView39"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -476,9 +466,188 @@
                 android:text="TextView"
                 android:textSize="17dp" />
 
-            
+            <TextView
+                android:id="@+id/textView222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView777"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:text="Caudal liquido por sector"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView399"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView222"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:text="Variación de caudal admisible"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView699"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView399"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:background="#c3c3c8"
+                android:text="Caudal líquido por boquilla"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView777"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView19"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:background="#c3c3c8"
+                android:text="Características del caudal"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView122"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView699"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:text="Zona Alta (nA)"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView132"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView122"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:text="Zona Media (nM)"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView152"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView132"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:text="Zona Baja (nB)"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView2223"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView222"
+                android:layout_alignBottom="@+id/textView222"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="L/min"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView322"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView132"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="L/min"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView522"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView322"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textView322"
+                android:text="TextView"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textView152"
+                android:layout_marginRight="10dp"
+                android:text="L/min"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView532"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView333"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textView333"
+                android:text="TextView"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView412"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView399"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textView2223"
+                android:text="TextView"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView392"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView399"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView312"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView132"
+                android:layout_toRightOf="@+id/textView522"
+                android:text="L/min"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView512"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView312"
+                android:layout_alignBottom="@+id/textView312"
+                android:layout_alignLeft="@+id/textView522"
+                android:text="TextView"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView3AL"
+                android:layout_toLeftOf="@+id/textView26"
+                android:text="TextView"
+                android:textSize="17dp" />
 
         </RelativeLayout>
+
     </ScrollView>
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.secuest.dosacitric;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 import android.app.Activity;
@@ -35,6 +36,8 @@ public class B_2Activity extends Activity{
 	private TextView zonaBajaIntervaloCaudal;
 	private TextView variacionCaudalTextView;
 	private SeekBar variacionCaudalSeekbar;
+	private ParteB parteb2;
+	private DecimalFormat df;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +45,11 @@ public class B_2Activity extends Activity{
 		setContentView(R.layout.b_2);
 		seebbarr();
 
+		df = new DecimalFormat();
+		df.setMaximumFractionDigits(2);
+		
 		Intent b2 = getIntent();
-		final ParteB parteb2 = (ParteB) b2.getSerializableExtra("parteb1");
+		parteb2 = (ParteB) b2.getSerializableExtra("parteb1");
 		
 		zonaAltaCerradas = (EditText) findViewById(R.id.zonaAltaCerradas);
 		zonaBajaCerradas = (EditText) findViewById(R.id.zonaBajaCerradas);
@@ -62,6 +68,9 @@ public class B_2Activity extends Activity{
 		
 		variacionCaudalTextView = (TextView) findViewById(R.id.variacionCaudalTextView);
 		variacionCaudalSeekbar = (SeekBar) findViewById(R.id.variacionCaudalSeekBar);
+		variacionCaudalTextView.setText("3");
+		variacionCaudalSeekbar.setProgress(3);
+		
 		
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
@@ -72,31 +81,64 @@ public class B_2Activity extends Activity{
 				String opt = "";
 				try{
 					quien="zonaAltaCerradas";
-					float zAltaCerr = Float.parseFloat(zonaAltaCerradas.getText().toString());
+					int zAltaCerr = Integer.parseInt(zonaAltaCerradas.getText().toString());
 					quien="zonaBajaCerradas";
-					float zBajaCerr = Float.parseFloat(zonaBajaCerradas.getText().toString());
+					int zBajaCerr = Integer.parseInt(zonaBajaCerradas.getText().toString());
+					
+					int [] zCerr = {zAltaCerr,zBajaCerr};
 					
 					quien="zonaAltaAbiertas";
-					float zAltaAb = Float.parseFloat(zonaAltaAbiertas.getText().toString());
+					int zAltaAb = Integer.parseInt(zonaAltaAbiertas.getText().toString());
 					quien="zonaMediaAbiertas";
-					float zMediaAb = Float.parseFloat(zonaMediaAbiertas.getText().toString());
+					int zMediaAb = Integer.parseInt(zonaMediaAbiertas.getText().toString());
 					quien="zonaBajaAbiertas";
-					float zBajaAb = Float.parseFloat(zonaBajaAbiertas.getText().toString());
+					int zBajaAb = Integer.parseInt(zonaBajaAbiertas.getText().toString());
 					
-					float aux = parteb2.getNumTotBoq() - zBajaCerr - zAltaCerr;
+					int aux = parteb2.getNumTotBoq() - zBajaCerr - zAltaCerr;
 					
 					if (aux != (zAltaAb + zMediaAb + zBajaAb)){
 						quien = "Boquillas";
 						opt = " Comprobar Boquillas Totales - Cerra = Abiertas";
 						Float.parseFloat("h");
 					}
-
+					
+					int [] zAbi = {zAltaAb,zMediaAb,zBajaAb}; 
+					
+					quien="zonaAltaPorcentaje";
+					float zonaAltaPor = Float.parseFloat(zonaAltaPorcentaje.getText().toString());
+					quien="zonaMediaPorcentaje";
+					float zonaMediaPor = Float.parseFloat(zonaMediaPorcentaje.getText().toString());
+					quien="zonaBajaPorcentaje";
+					float zonaBajaPor = Float.parseFloat(zonaBajaPorcentaje.getText().toString());
+					
+					float [] zPorcentaje = {zonaAltaPor,zonaMediaPor,zonaBajaPor};
+					/*
+					quien="zonaAltaIntervaloCaudal";
+					float zonaAltaInt = Float.parseFloat(zonaAltaIntervaloCaudal.getText().toString());
+					quien="zonaMediaIntervaloCaudal";
+					float zonaMediaInt = Float.parseFloat(zonaMediaIntervaloCaudal.getText().toString());
+					quien="zonaBajaIntervaloCaudal";
+					float zonaBajaInt = Float.parseFloat(zonaBajaIntervaloCaudal.getText().toString());
+					
+					float[] zonaInt = {zonaAltaInt,zonaMediaInt,zonaBajaInt};
+					*/
+					
+					quien="variacionCaudal";
+					float variacionCaud = Float.parseFloat(variacionCaudalTextView.getText().toString());
+					
+					parteb2.rellenarB2(zCerr, zAbi, zPorcentaje, variacionCaud);
+					parteb2.calcularParteB();
+					
+					Intent b2 = new Intent(B_2Activity.this, Resultados2.class);
+					b2.putExtra("parteb2",parteb2);
+					startActivity(b2);
+					
 				}catch(Exception e){
 					e.printStackTrace();
 					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+quien+'"'+" incorrecto"+opt, Toast.LENGTH_SHORT);
 					toast.show();
 				}
-				startActivity(new Intent(B_2Activity.this, Resultados2.class));
+				
 			}
 		});
 
@@ -129,12 +171,80 @@ public class B_2Activity extends Activity{
 		});
 	}
 
+	private void calcularB() {
+		try{
+			Log.e("DIDI","calcularB");
+			String quien ="";
+			quien="zonaAltaCerradas";
+			int zAltaCerr = Integer.parseInt(zonaAltaCerradas.getText().toString());
+			quien="zonaBajaCerradas";
+			int zBajaCerr = Integer.parseInt(zonaBajaCerradas.getText().toString());
+			
+			int [] zCerr = {zAltaCerr,zBajaCerr};
+			
+			quien="zonaAltaAbiertas";
+			int zAltaAb = Integer.parseInt(zonaAltaAbiertas.getText().toString());
+			quien="zonaMediaAbiertas";
+			int zMediaAb = Integer.parseInt(zonaMediaAbiertas.getText().toString());
+			quien="zonaBajaAbiertas";
+			int zBajaAb = Integer.parseInt(zonaBajaAbiertas.getText().toString());
+			
+			int aux = parteb2.getNumTotBoq() - zBajaCerr - zAltaCerr;
+			
+			if (aux != (zAltaAb + zMediaAb + zBajaAb)){
+				quien = "Boquillas";
+				Float.parseFloat("h");
+			}
+			
+			int [] zAbi = {zAltaAb,zMediaAb,zBajaAb}; 
+			
+			quien="zonaAltaPorcentaje";
+			float zonaAltaPor = Float.parseFloat(zonaAltaPorcentaje.getText().toString());
+			quien="zonaMediaPorcentaje";
+			float zonaMediaPor = Float.parseFloat(zonaMediaPorcentaje.getText().toString());
+			quien="zonaBajaPorcentaje";
+			float zonaBajaPor = Float.parseFloat(zonaBajaPorcentaje.getText().toString());
+			
+			float [] zPorcentaje = {zonaAltaPor,zonaMediaPor,zonaBajaPor};
+			/*
+			quien="zonaAltaIntervaloCaudal";
+			float zonaAltaInt = Float.parseFloat(zonaAltaIntervaloCaudal.getText().toString());
+			quien="zonaMediaIntervaloCaudal";
+			float zonaMediaInt = Float.parseFloat(zonaMediaIntervaloCaudal.getText().toString());
+			quien="zonaBajaIntervaloCaudal";
+			float zonaBajaInt = Float.parseFloat(zonaBajaIntervaloCaudal.getText().toString());
+			
+			float[] zonaInt = {zonaAltaInt,zonaMediaInt,zonaBajaInt};
+			*/
+			quien="variacionCaudal";
+			float variacionCaud = Float.parseFloat(variacionCaudalTextView.getText().toString());
+			
+			parteb2.rellenarB2(zCerr, zAbi, zPorcentaje, variacionCaud);
+
+			parteb2.calcularParteB();
+			
+			float[] inter = parteb2.IntervaloCaudalAdmisible;
+			
+			System.out.println("inter:"+inter[0]);
+			
+			zonaAltaIntervaloCaudal.setText(df.format(inter[0])+"-"+df.format(inter[1]));
+			zonaMediaIntervaloCaudal.setText(df.format(inter[2])+"-"+df.format(inter[3]));
+			zonaBajaIntervaloCaudal.setText(df.format(inter[4])+"-"+df.format(inter[5]));
+			
+		}catch(Exception e){
+			e.printStackTrace();
+			Log.e("DIDI", 
+					e+"");
+		}
+		
+	}
+
 	public void seebbarr( ){
 		variacionCaudalSeekbar = (SeekBar) findViewById(R.id.variacionCaudalSeekBar);
 		variacionCaudalTextView = (TextView) findViewById(R.id.variacionCaudalTextView);
 		variacionCaudalSeekbar.setProgress(0);
 		variacionCaudalSeekbar.incrementProgressBy(1);
-		variacionCaudalSeekbar.setMax(5);
+		variacionCaudalSeekbar.setMax(10);
 
 		variacionCaudalSeekbar.setOnSeekBarChangeListener(
 				new SeekBar.OnSeekBarChangeListener() {
@@ -144,6 +254,10 @@ public class B_2Activity extends Activity{
 					public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 						progress_value = progress;
 						variacionCaudalTextView.setText("" + progress);
+						System.out.print("ANTESSS");
+						Log.e("DIDI","Ha entrado");
+						calcularB();
+						System.out.print("MI PUTA MADRE");
 					}
 
 					@Override

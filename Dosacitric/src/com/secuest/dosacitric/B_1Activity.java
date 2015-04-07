@@ -160,6 +160,7 @@ public class B_1Activity extends Activity{
 					quien="Numero de boquillas";
 					int boq = Integer.parseInt(editBoquillas.getText().toString());
 					
+					
 					pb.rellenarB1(
 							vol,
 							ancho,

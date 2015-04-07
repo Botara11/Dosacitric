@@ -1,5 +1,7 @@
 package com.secuest.dosacitric;
 
+import java.text.DecimalFormat;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,89 +16,69 @@ import android.widget.TextView;
 
 public class Resultados2 extends Activity{
 
-
-	private TextView densidadFoliar;
-	private TextView gradoPoda;
-	private ParteA parteA;
-	private String hola;
-
+	private DecimalFormat df;
+	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.resultados2);
+		setContentView(R.layout.resultados2_1);
+		
+		df = new DecimalFormat();
+		df.setMaximumFractionDigits(2);
 		
 		TextView VolAplicacion = (TextView) findViewById(R.id.textView41);
-		TextView VelAvance = (TextView) findViewById(R.id.textView39);
+		
+		TextView VelAvance = (TextView) findViewById(R.id.textView39); 
 		TextView AnchoTrabajo = (TextView) findViewById(R.id.textView40);
 		TextView CaudalLiqTotal = (TextView) findViewById(R.id.textView42);
 		TextView NumTotalBoq = (TextView) findViewById(R.id.textView27);
 		TextView NumBoqPorSector = (TextView) findViewById(R.id.textView28);
-		TextView ProdAplicar = (TextView) findViewById(R.id.textView29);
-		TextView FormActuacion = (TextView) findViewById(R.id.textView30);
-		TextView Coadyuvantes = (TextView) findViewById(R.id.textView31);
-		TextView ZonaCritTratar = (TextView) findViewById(R.id.textView32);
-		TextView Temperatura = (TextView) findViewById(R.id.textView33);
-		TextView HumedadRelat = (TextView) findViewById(R.id.textView34);
-		TextView VelViento = (TextView) findViewById(R.id.textView35);
-		TextView TipoPulveriz = (TextView) findViewById(R.id.textView36);
 		
+		TextView BoqCerrAlta = (TextView) findViewById(R.id.textView29);
+		TextView BoqCerrBaja = (TextView) findViewById(R.id.textView30);
 		
+		TextView BoqAbiAlta = (TextView) findViewById(R.id.textView31);
+		TextView BoqAbiMedia = (TextView) findViewById(R.id.textView32);
+		TextView BoqAbiBaja = (TextView) findViewById(R.id.textView33);
 		
+		TextView VegetaAlta = (TextView) findViewById(R.id.textView34);
+		TextView VegetaMedia = (TextView) findViewById(R.id.textView35);
+		TextView VegetaBaja = (TextView) findViewById(R.id.textView36);
 		
+		TextView CaudalLiqSector = (TextView) findViewById(R.id.textView412);
+		TextView VarCaudalAdmisible = (TextView) findViewById(R.id.textView392);
 		
-		TextView densidadFoliar = (TextView) findViewById(R.id.textView23);
-		TextView xAncho = (TextView) findViewById(R.id.textView41);
-		TextView yDistancia = (TextView) findViewById(R.id.textView39);
-		TextView volumenArbol = (TextView) findViewById(R.id.textView25);
-		TextView formaArbol = (TextView) findViewById(R.id.textView26);
-		TextView fechaUltimaPoda = (TextView) findViewById(R.id.textView27);
-		TextView gradoPoda = (TextView) findViewById(R.id.textView28);
-		/*TextView anchocalle = (TextView) findViewById(R.id.anchocalle);	        
-		TextView distancia = (TextView)findViewById(R.id.distancia);
-		TextView longitudArb = (TextView)findViewById(R.id.longitudArb);
-		TextView anchuraArb = (TextView)findViewById(R.id.anchuraArb);
-		TextView alturaArb = (TextView) findViewById(R.id.alturaArb);
-
-		TextView alturaMeseta = (TextView) findViewById(R.id.alturaMeseta);*/
-
-		//Intent i = getIntent();
-		// Receiving the Data
-		/*String StringAnchocalle = i.getStringExtra("anchocalle");
-		String StringDistancia = i.getStringExtra("distancia");
-		String StringLongitudArb = i.getStringExtra("longitudArb");
-		String StringAnchuraArb = i.getStringExtra("anchuraArb");
-		String StringAlturaArb = i.getStringExtra("alturaArb");
-		String StringAlturaMeseta = i.getStringExtra("alturaMeseta");
-		Log.e("Resultados 1", StringAnchocalle + "." + StringDistancia 
-				+ "." + StringLongitudArb + "." + StringAnchuraArb
-				+ "." + StringAlturaArb+ "." + StringAlturaMeseta);
-
-		// Displaying Received data
-		anchocalle.setText(StringAnchocalle);
-		distancia.setText(StringDistancia); 
-		longitudArb.setText(StringLongitudArb);
-		anchuraArb.setText(StringAnchuraArb);
-		alturaArb.setText(StringAlturaArb);//si
-		alturaMeseta.setText(StringAlturaMeseta);*/
-
-		Intent ar = getIntent();
-		//Intent a1 = getIntent();
-
-		//ParteA resultados2 = (ParteA) a1.getSerializableExtra("parteaa");
-		ParteA resultados1 = (ParteA) ar.getSerializableExtra("parteaa");
+		TextView CaudalLiqAlta = (TextView) findViewById(R.id.textView512);
+		TextView CaudalLiqMedia = (TextView) findViewById(R.id.textView522);
+		TextView CaudalLiqBaja = (TextView) findViewById(R.id.textView532);
 		
-		densidadFoliar.setText(String.valueOf(resultados1.DensidadFoliar));
-		xAncho.setText(String.valueOf(resultados1.AnchoCalle));
-		yDistancia.setText(String.valueOf(resultados1.DistanciaArboles));
-		volumenArbol.setText(String.valueOf(resultados1.FormaArbol)); //MAL
-		formaArbol.setText(String.valueOf(resultados1.FormaArbol));
-		fechaUltimaPoda.setText(String.valueOf(resultados1.FechaUltimaPoda));
-		gradoPoda.setText(String.valueOf(resultados1.GradoPoda));
+		Intent bres = getIntent();
+		ParteB resultados1 = (ParteB) bres.getSerializableExtra("parteb2");
+		
+		VolAplicacion.setText(String.valueOf(resultados1.VolumenApp));
+		VelAvance.setText(String.valueOf(resultados1.VelocidadAvance));
+		AnchoTrabajo.setText(String.valueOf(resultados1.AnchoTrabajo));
+		CaudalLiqTotal.setText(String.valueOf(df.format(resultados1.CaudalLiquidoTotal)));
+		NumTotalBoq.setText(String.valueOf(resultados1.NumeroTotalBoquillas));
+		NumBoqPorSector.setText(String.valueOf(resultados1.NumeroBoquillasSector));
+		
+		BoqCerrAlta.setText(String.valueOf(resultados1.NumeroBoquillasCerradas[0]));
+		BoqCerrBaja.setText(String.valueOf(resultados1.NumeroBoquillasCerradas[1]));
+		
+		BoqAbiAlta.setText(String.valueOf(resultados1.NumeroBoquillasAbiertas[0]));
+		BoqAbiMedia.setText(String.valueOf(resultados1.NumeroBoquillasAbiertas[1]));
+		BoqAbiBaja.setText(String.valueOf(resultados1.NumeroBoquillasAbiertas[2]));
+		
+		VegetaAlta.setText(String.valueOf(resultados1.PorcentajeVegetacion[0])+" %");
+		VegetaMedia.setText(String.valueOf(resultados1.PorcentajeVegetacion[1])+" %");
+		VegetaBaja.setText(String.valueOf(resultados1.PorcentajeVegetacion[2])+" %");
+		
+		CaudalLiqSector.setText(String.valueOf(df.format(resultados1.CaudalLiquidoSector)));
+		VarCaudalAdmisible.setText(String.valueOf((int)resultados1.VariacionCaudalAdmisible*100)+" %");
 
-
-
-		Log.e("didi", resultados1.DensidadFoliar+"");
-		Log.e("didi", resultados1.FormaArbol+"");
-		Log.e("didi", resultados1.AlturaMeseta+"");
+		float[] inter = resultados1.IntervaloCaudalAdmisible;
+		CaudalLiqAlta.setText(df.format(inter[0])+"-"+df.format(inter[1]));
+		CaudalLiqMedia.setText(df.format(inter[2])+"-"+df.format(inter[3]));
+		CaudalLiqBaja.setText(df.format(inter[4])+"-"+df.format(inter[5]));
 		
 		
 		Button siguiente = (Button) findViewById(R.id.siguiente);
@@ -131,8 +113,6 @@ public class Resultados2 extends Activity{
 				startActivity(new Intent(Resultados2.this, Indice.class));
 			}
 		});
-
-
 	}
 
 	public boolean onPrepareOptionsMenu(Menu menu) {
