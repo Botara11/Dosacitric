@@ -112,6 +112,13 @@ public class B_2Activity extends Activity{
 					float zonaBajaPor = Float.parseFloat(zonaBajaPorcentaje.getText().toString());
 					
 					float [] zPorcentaje = {zonaAltaPor,zonaMediaPor,zonaBajaPor};
+					
+					if ((zonaAltaPor + zonaMediaPor + zonaBajaPor) != 100){
+						quien = "Porcentaje";
+						opt = "Comprobar que la suma de porcentajes es igual a 100%";
+						Float.parseFloat("h");
+					}
+					
 					/*
 					quien="zonaAltaIntervaloCaudal";
 					float zonaAltaInt = Float.parseFloat(zonaAltaIntervaloCaudal.getText().toString());
@@ -135,7 +142,7 @@ public class B_2Activity extends Activity{
 					
 				}catch(Exception e){
 					e.printStackTrace();
-					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+quien+'"'+" incorrecto"+opt, Toast.LENGTH_SHORT);
+					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+quien+'"'+" incorrecto. "+opt, Toast.LENGTH_SHORT);
 					toast.show();
 				}
 				

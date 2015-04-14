@@ -18,25 +18,39 @@ public class ParteA implements Serializable{
 	public float FormaArbol;
 	public float FechaUltimaPoda;
 	public float GradoPoda;
+	public float VolumenArbol;
+	public int	 IndiceFormaArbol;
+	public int 	 IndiceGradoPoda;
+	public int	 IndiceFechaUltimaPoda;
+	public int	 IndiceDensidadFoliar;
 
 	/**** A2 ****/
 	public float ProductosAplicar;
 	public float FormaActuacion;
 	public float Mojantes;
 	public float ZonaCriticaTratar;
-
+	public int	 IndiceProductosAplicar;
+	public int	 IndiceFormaActuacion;
+	public int	 IndiceZonaCriticaTratar;
+	public int	 IndiceMojantes;
+	
 	/**** A3 ****/
 	public float Temperatura;
 	public float Humedad;
 	public float VelocidadViento;
-
+	public int   VolumenAppLHA;
+	public int   VolumenAppLHG;
+	public int 	 IndiceTemperatura;
+	public int 	 IndiceHumedad;
+	
+	
 	/**** A4 ****/
 	public float TipoPulverizador;
 	
 
 	public void rellenarA1(float DensidadFoliar, float AnchoCalle,
 			float DistanciaArboles, float LongitudArboles,
-			float AnchuraArboles, float AlturaArboles) {
+			float AnchuraArboles, float AlturaArboles, int IndiceDensidadFoliar) {
 
 		this.DensidadFoliar = DensidadFoliar;
 		this.AnchoCalle = AnchoCalle;
@@ -44,42 +58,66 @@ public class ParteA implements Serializable{
 		this.LongitudArboles = LongitudArboles;
 		this.AnchuraArboles = AnchuraArboles;
 		this.AlturaArboles = AlturaArboles;
+		this.IndiceDensidadFoliar = IndiceDensidadFoliar;
+		
 		
 	}
 	
 	public void rellenarA11(float AlturaMeseta,
-			float FormaArbol, float FechaUltimaPoda, float GradoPoda){
+			float FormaArbol, float FechaUltimaPoda, float GradoPoda, int IndiceFormaArbol, int IndiceGradoPoda, int IndiceFechaUltimaPoda){
 		
 		this.AlturaMeseta = AlturaMeseta;
 		this.FormaArbol = FormaArbol;
 		this.FechaUltimaPoda = FechaUltimaPoda;
 		this.GradoPoda = GradoPoda;
+		this.IndiceFormaArbol = IndiceFormaArbol;
+		this.IndiceGradoPoda = IndiceGradoPoda;
+		this.IndiceFechaUltimaPoda = IndiceFechaUltimaPoda;
 		
 	}
 
 	public void rellenarA2345(float ProductosAplicar, float FormaActuacion,
 			float Mojantes, float ZonaCriticaTratar, float Temperatura, float Humedad,
-			float VelocidadViento, float TipoPulverizador) {
+			float VelocidadViento, float TipoPulverizador, int IndiceProductosAplicar, int IndiceFormaActuacion, int IndiceZonaCriticaTratar, int IndiceMojantes,
+			int IndiceTemperatura, int IndiceHumedad) {
+		
 		this.ProductosAplicar = ProductosAplicar;
 		this.FormaActuacion = FormaActuacion;
-		this.FormaActuacion = FormaActuacion;
+		this.Mojantes = Mojantes;
 		this.ZonaCriticaTratar = ZonaCriticaTratar;
 		this.Temperatura = Temperatura;
 		this.Humedad = Humedad;
 		this.VelocidadViento = VelocidadViento;
 		this.TipoPulverizador = TipoPulverizador;
+		this.IndiceProductosAplicar = IndiceProductosAplicar;
+		this.IndiceFormaActuacion = IndiceFormaActuacion;
+		this.IndiceZonaCriticaTratar = IndiceZonaCriticaTratar;
+		this.IndiceMojantes = IndiceMojantes;
+		this.IndiceHumedad = IndiceHumedad;
+		this.IndiceTemperatura = IndiceTemperatura;
+		
 	}
 
 
 	// DEVUELVE A5 (VOLUMEN DE APLICACION) (L/HA L/HG)
 	public ArrayList<Integer> calcularParteA() {
 		ArrayList<Integer> Resultado = new ArrayList<Integer>();
-		float VolumenArbol, NumeroArbolesPorHect, VolumenSetoAsigArbol, TRV;
+		float NumeroArbolesPorHect, VolumenSetoAsigArbol, TRV;
 
-		VolumenArbol = LongitudArboles * AnchuraArboles * AlturaArboles / 6;
+		if (IndiceFormaArbol == 0){
+			VolumenArbol = (float) (3.14159 * LongitudArboles * AnchuraArboles * AlturaArboles / 6);
+		}else{
+			VolumenArbol = LongitudArboles * AnchuraArboles * AlturaArboles;
+		}
+		
 		NumeroArbolesPorHect = 10000 / (AnchoCalle * DistanciaArboles);
+		
+		//if (IndiceFormaArbol == 0){
+			//VolumenSetoAsigArbol=VolumenArbol*2;
+		//}else{
 		VolumenSetoAsigArbol = VolumenArbol * DistanciaArboles
 				/ LongitudArboles;
+		//}
 		TRV = NumeroArbolesPorHect * VolumenSetoAsigArbol;
 
 		float FactorA1, FactorA2, FactorA3, FactorA4, FactorEficiencia;
@@ -99,6 +137,8 @@ public class ParteA implements Serializable{
 		else
 			ent1 = ((int) (temp / 100)) * 100;
 
+		VolumenAppLHA = ent1;
+		VolumenAppLHG = ent1/12;
 		Resultado.add(0, ent1);
 		Resultado.add(1, ent1 / 12);
 

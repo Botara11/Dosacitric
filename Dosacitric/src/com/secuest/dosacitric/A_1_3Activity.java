@@ -29,6 +29,7 @@ public class A_1_3Activity extends Activity{
 	private Spinner velocidadViento;
 	private Spinner tipoPulverizacion;
 	private ParteA parteA;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -176,59 +177,135 @@ public class A_1_3Activity extends Activity{
 
 					revisando = "Productos a aplicar";
 					Float productosAplicar1 = (float) 999.999;
-					int camb = productosAplicar.getSelectedItemPosition();
-					switch(camb){
+					int pro = productosAplicar.getSelectedItemPosition();
+					switch(pro){
 
 					case 0: productosAplicar1=(float) 1.05;
-						break;
-					case 1:  productosAplicar1=(float) 1.05;
-						break;
+					break;
+					case 1: productosAplicar1=(float) 1.05;
+					break;
 					case 2: productosAplicar1=(float) 1.00;
-						break;
-					case 3:  productosAplicar1=(float) 0.95;
-						break;
-					case 4:  productosAplicar1=(float) 0.95;
-						break;
-					case 5:  Double.parseDouble("p");
-						break;
+					break;
+					case 3: productosAplicar1=(float) 0.95;
+					break;
+					case 4: productosAplicar1=(float) 0.95;
+					break;
+					case 5: Double.parseDouble("p");
+					break;
 					}
 
 					revisando = "Forma de actuación";
-					Float formaActuacion1 = (float) formaActuacion.getSelectedItemPosition();
-					if(formaActuacion1==6)
-						Double.parseDouble("p");
+					Float formaActuacion1 = (float) 999.999;
+					int form = formaActuacion.getSelectedItemPosition();
+					switch(form){
+
+					case 0: formaActuacion1=(float) 1.05;
+					break;
+					case 1: formaActuacion1=(float) 1.00;
+					break;
+					case 2: formaActuacion1=(float) 1.00;
+					break;
+					case 3: formaActuacion1=(float) 1.00;
+					break;
+					case 4: formaActuacion1=(float) 0.95;
+					break;
+					case 5: formaActuacion1=(float) 0.85;
+					break;
+					case 6: Double.parseDouble("p");
+					break;
+					}
 
 					revisando = "¿Utiliza coadyuvantes (mojantes)";
-					Float utilizaMojantes1 = (float) utilizaMojantes.getSelectedItemPosition();
-					if(utilizaMojantes1==2)
-						Double.parseDouble("p");
+					Float utilizaMojantes1 = (float) 999.999;
+					int uti = utilizaMojantes.getSelectedItemPosition();
+					switch(uti){
+
+					case 0: utilizaMojantes1=(float) 1.00;
+					break;
+					case 1: utilizaMojantes1=(float) 1.05;
+					break;
+					case 2: Double.parseDouble("p");
+					break;
+					}
 
 					revisando = "Zona crítica a tratar";
-					Float zonaCritica1 = (float) zonaCritica.getSelectedItemPosition();
-					if(zonaCritica1==3)
-						Double.parseDouble("p");
+					Float zonaCritica1 = (float) 999.999;
+					int zon = zonaCritica.getSelectedItemPosition();
+					switch(zon){
+
+					case 0: zonaCritica1=(float) 3.00;
+					break;
+					case 1: zonaCritica1=(float) 3.00;
+					break;
+					case 2: zonaCritica1=(float) 1.00;
+					break;
+					case 3: Double.parseDouble("p");
+					break;
+					}
 
 					revisando = "Temperatura";
-					Float temperatura1 = (float) temperatura.getSelectedItemPosition();
-					if(temperatura1==4)
-						Double.parseDouble("p");
+					Float temperatura1 = (float) 999.999;
+					int temp = temperatura.getSelectedItemPosition();
+					switch(temp){
+
+					case 0: temperatura1=(float) 1.00;
+					break;
+					case 1: temperatura1=(float) 1.025;
+					break;
+					case 2: temperatura1=(float) 1.05;
+					break;
+					case 3: Double.parseDouble("p");
+					break;
+					case 4: Double.parseDouble("p");
+					break;
+					}
 
 					revisando = "Humedad relativa";
-					Float humedadRelativa1 = (float) humedadRelativa.getSelectedItemPosition();
-					if(humedadRelativa1==4)
-						Double.parseDouble("p");
+					Float humedadRelativa1 = (float) 999.999;
+					int hum = humedadRelativa.getSelectedItemPosition();
+					switch(hum){
+
+					case 0: humedadRelativa1=(float) 1.05;
+					break;
+					case 1: humedadRelativa1=(float) 1.00;
+					break;
+					case 2: humedadRelativa1=(float) 0.97;
+					break;
+					case 3: Double.parseDouble("p");
+					break;
+					case 4: Double.parseDouble("p");
+					break;
+					}
 
 					revisando = "Velocidad del viento";
-					Float velocidadViento1 = (float) velocidadViento.getSelectedItemPosition();
-					if(velocidadViento1==3)
-						Double.parseDouble("p");
+					Float velocidadViento1 = (float) 999.999;
+					int vel = velocidadViento.getSelectedItemPosition();
+					switch(vel){
+
+					case 0: velocidadViento1=(float) 1.00;
+					break;
+					case 1: velocidadViento1=(float) 1.05;
+					break;
+					case 2: Double.parseDouble("p");
+					break;
+					}
 
 					revisando = "Tipo de pulverizador";
-					Float tipoPulverizacion1 = (float) tipoPulverizacion.getSelectedItemPosition();
-					if(tipoPulverizacion1==2)
-						Double.parseDouble("p");
+					Float tipoPulverizacion1 = (float) 999.999;
+					int tip = tipoPulverizacion.getSelectedItemPosition();
+					switch(tip){
 
-					partea3.rellenarA2345(productosAplicar1, formaActuacion1, utilizaMojantes1, zonaCritica1, temperatura1, humedadRelativa1, velocidadViento1, tipoPulverizacion1);
+					case 0: tipoPulverizacion1=(float) 1.00;
+					break;
+					case 1: tipoPulverizacion1=(float) 1.80;
+					break;
+					case 2: Double.parseDouble("p");
+					break;
+					}
+
+					partea3.rellenarA2345(productosAplicar1, formaActuacion1, utilizaMojantes1, zonaCritica1, temperatura1, humedadRelativa1, velocidadViento1, tipoPulverizacion1, pro, form, zon, uti, temp, hum);
+					partea3.calcularParteA();
+
 					Intent a3 = new Intent(A_1_3Activity.this, Resultados1.class);
 					a3.putExtra("partea3",partea3);
 					startActivity(a3);
@@ -264,7 +341,6 @@ public class A_1_3Activity extends Activity{
 			}
 		});
 	}
-
 
 
 	private class ArrayAdapterMio<String> extends ArrayAdapter<String> {

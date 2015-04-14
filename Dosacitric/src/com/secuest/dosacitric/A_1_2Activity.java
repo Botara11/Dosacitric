@@ -107,22 +107,52 @@ public class A_1_2Activity extends Activity{
 					float alturaMeseta1 = (float) Double.parseDouble(reemplazado);
 
 					revisando = "Forma del arbol";
-					if(formaArb.getSelectedItemPosition()==formaArb.getCount())
-						Double.parseDouble("p");
-					float formaArb1 = (float) Double.parseDouble(reemplazado);
+					Float formaArb1 = (float) 999.999;
+					int form = formaArb.getSelectedItemPosition();
+					switch(form){
+
+					case 0: formaArb1=(float) 1.00;
+					break;
+					case 1: formaArb1=(float) 1.00;
+					break;
+					case 2:  Double.parseDouble("p");
+					break;
+					}
 
 					revisando = "Fecha de la última poda";
-					if(fechaUltima.getSelectedItemPosition()==fechaUltima.getCount())
-						Double.parseDouble("p");
-					float fechaUltima1 = (float) Double.parseDouble(reemplazado);
+					Float fechaUltima1 = (float) 999.999;
+					int fech = fechaUltima.getSelectedItemPosition();
+					switch(fech){
+
+					case 0: fechaUltima1=(float) 0.95;
+					break;
+					case 1: fechaUltima1=(float) 1.00;
+					break;
+					case 2: fechaUltima1=(float) 1.075;
+					break;
+					case 3: fechaUltima1=(float) 1.15;
+					break;
+					case 4:  Double.parseDouble("p");
+					break;
+					}
 
 					revisando = "Grado de poda";
-					if(gradoPoda.getSelectedItemPosition()==gradoPoda.getCount())
-						Double.parseDouble("p");
-					float gradoPoda1 = (float) Double.parseDouble(reemplazado);
+					Float gradoPoda1 = (float) 999.999;
+					int gra = gradoPoda.getSelectedItemPosition();
+					switch(gra){
+
+					case 0: gradoPoda1=(float) 1.05;
+					break;
+					case 1: gradoPoda1=(float) 1.00;
+					break;
+					case 2: gradoPoda1=(float) 0.95;
+					break;
+					case 3:  Double.parseDouble("p");
+					break;
+					}
 
 
-					partea2.rellenarA11(alturaMeseta1, formaArb1, fechaUltima1, gradoPoda1);
+					partea2.rellenarA11(alturaMeseta1, formaArb1, fechaUltima1, gradoPoda1, form, gra, fech);
 					Intent a2 = new Intent(A_1_2Activity.this, A_1_3Activity.class);
 					a2.putExtra("partea2",partea2);
 					startActivity(a2);

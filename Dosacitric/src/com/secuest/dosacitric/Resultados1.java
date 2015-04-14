@@ -72,24 +72,174 @@ public class Resultados1 extends Activity{
 		//ParteA resultadosA1 = (ParteA) aR.getSerializableExtra("partea1");
 		//ParteA resultadosA2 = (ParteA) aR.getSerializableExtra("partea2");
 		ParteA resultadosA3 = (ParteA) aR.getSerializableExtra("partea3");
+		resultadosA3.calcularParteA();
 		
-		densidadFoliar.setText(String.valueOf(resultadosA3.DensidadFoliar));
+		System.out.println(resultadosA3.AlturaArboles);
+		System.out.println(resultadosA3.AlturaMeseta);
+		System.out.println(resultadosA3.AnchoCalle);
+		System.out.println(resultadosA3.AnchuraArboles);
+		System.out.println("Densidad Foliar" + resultadosA3.DensidadFoliar);
+		System.out.println(resultadosA3.DistanciaArboles);
+		System.out.println("Fecha Última Poda" + resultadosA3.FechaUltimaPoda);
+		System.out.println("Forma Actuación" + resultadosA3.FormaActuacion);
+		System.out.println("Forma Arbol" + resultadosA3.FormaArbol);
+		System.out.println("Grado de Poda" + resultadosA3.GradoPoda);
+		System.out.println("Humedad" + resultadosA3.Humedad);
+		System.out.println(resultadosA3.LongitudArboles);
+		System.out.println("Utiliza Mojantes" + resultadosA3.Mojantes);
+		System.out.println("Productos Aplicar" + resultadosA3.ProductosAplicar);
+		System.out.println("Temperatura" + resultadosA3.Temperatura);
+		System.out.println("Tipo de Pulverizador" + resultadosA3.TipoPulverizador);
+		System.out.println("Velocidad de Viento" + resultadosA3.VelocidadViento);
+		System.out.println(resultadosA3.VolumenArbol);
+		System.out.println("Zona Crítica" + resultadosA3.ZonaCriticaTratar);
+		System.out.println(resultadosA3.VolumenAppLHA);
+		
+		if (resultadosA3.IndiceDensidadFoliar == 0){
+			densidadFoliar.setText("Baja");
+        }
+        else if (resultadosA3.IndiceDensidadFoliar == 1){
+        	densidadFoliar.setText("Media");
+        }
+        else {
+            densidadFoliar.setText("Alta");
+        }
+		
+		//densidadFoliar.setText(String.valueOf(resultadosA3.DensidadFoliar));
 		xAncho.setText(String.valueOf(resultadosA3.AnchoCalle));
 		yDistancia.setText(String.valueOf(resultadosA3.DistanciaArboles));
-		volumenArbol.setText(String.valueOf(resultadosA3.FormaArbol)); //MAL
-		formaArbol.setText(String.valueOf(resultadosA3.FormaArbol));
-		fechaUltimaPoda.setText(String.valueOf(resultadosA3.FechaUltimaPoda));
-		gradoPoda.setText(String.valueOf(resultadosA3.GradoPoda));
-		productosAplicar.setText(String.valueOf(resultadosA3.ProductosAplicar));
-		formaActuacion.setText(String.valueOf(resultadosA3.FormaActuacion));
-		utilizaMojantes.setText(String.valueOf(resultadosA3.Mojantes));
-		zonaCriticaATratar.setText(String.valueOf(resultadosA3.ZonaCriticaTratar));
-		temperatura.setText(String.valueOf(resultadosA3.Temperatura));
-		humedadRelativa.setText(String.valueOf(resultadosA3.Humedad));
-		velocidadViento.setText(String.valueOf(resultadosA3.VelocidadViento));
-		tipoPulverizador.setText(String.valueOf(resultadosA3.TipoPulverizador));
-		L_Ha.setText(String.valueOf(resultadosA3.AnchoCalle));
-		L_Hg.setText(String.valueOf(resultadosA3.DistanciaArboles));
+		volumenArbol.setText(String.valueOf(resultadosA3.VolumenArbol));
+		
+		if (resultadosA3.IndiceFormaArbol == 0) {
+			formaArbol.setText("Esférica");
+        }
+        else{
+            formaArbol.setText("Seto");
+        }
+		//formaArbol.setText(String.valueOf(resultadosA3.FormaArbol));
+		
+		if (resultadosA3.IndiceFechaUltimaPoda == 0){
+            fechaUltimaPoda.setText("< 3 meses");
+        }
+        else if (resultadosA3.IndiceFechaUltimaPoda == 1){
+        	fechaUltimaPoda.setText("3 - 12 meses");
+        }
+        else if (resultadosA3.IndiceFechaUltimaPoda == 2){
+        	fechaUltimaPoda.setText("1 - 2 años");
+        }
+        else{
+        	fechaUltimaPoda.setText("> 2 años");
+        }
+		//fechaUltimaPoda.setText(String.valueOf(resultadosA3.FechaUltimaPoda));
+		
+		if (resultadosA3.IndiceGradoPoda == 0){
+            gradoPoda.setText("Bajo");
+        }
+        else if (resultadosA3.IndiceGradoPoda == 1){
+        	gradoPoda.setText("Medio");
+        }
+        else {
+        	gradoPoda.setText("Alto");
+        }
+		//gradoPoda.setText(String.valueOf(resultadosA3.GradoPoda));
+		
+		if (resultadosA3.IndiceProductosAplicar == 0){
+            productosAplicar.setText("Acaricidas");
+        }
+        else if (resultadosA3.IndiceProductosAplicar == 1){
+        	productosAplicar.setText("Fungicidas");
+        }
+        else if (resultadosA3.IndiceProductosAplicar == 2){
+        	productosAplicar.setText("Insecticidas");
+        }
+        else if (resultadosA3.IndiceProductosAplicar == 3){
+        	productosAplicar.setText("Abonos foliares");
+        }
+        else {
+        	productosAplicar.setText("Fitorreguladores");
+        }
+		//productosAplicar.setText(String.valueOf(resultadosA3.ProductosAplicar));
+		
+		if (resultadosA3.IndiceFormaActuacion == 0){
+            formaActuacion.setText("Por asfixia (aceite)");
+        }
+        else if (resultadosA3.IndiceFormaActuacion == 1){
+        	formaActuacion.setText("Por contacto");
+        }
+        else if (resultadosA3.IndiceFormaActuacion == 2){
+        	formaActuacion.setText("Por ingestión");
+        }
+        else if (resultadosA3.IndiceFormaActuacion == 3){
+        	formaActuacion.setText("Por inhalación");
+        }
+        else if (resultadosA3.IndiceFormaActuacion == 4){
+        	formaActuacion.setText("Traslaminar");
+        }
+        else {
+        	formaActuacion.setText("Sistémicos");
+        }
+		//formaActuacion.setText(String.valueOf(resultadosA3.FormaActuacion));
+		
+		if (resultadosA3.IndiceMojantes == 0){
+            utilizaMojantes.setText("Sí");
+        }
+        else {
+        	utilizaMojantes.setText("No");
+        }
+		//utilizaMojantes.setText(String.valueOf(resultadosA3.Mojantes));
+		
+		
+		if (resultadosA3.IndiceZonaCriticaTratar == 0){
+            zonaCriticaATratar.setText("Interior");
+        }
+        else if (resultadosA3.IndiceZonaCriticaTratar == 1){
+        	zonaCriticaATratar.setText("Interior y exterior");
+        }
+        if (resultadosA3.IndiceZonaCriticaTratar == 2){
+        	zonaCriticaATratar.setText("Exterior");
+        }
+		//zonaCriticaATratar.setText(String.valueOf(resultadosA3.ZonaCriticaTratar));
+        
+        if (resultadosA3.IndiceTemperatura == 0){
+            temperatura.setText("< 15 ºC");
+        }
+        else if (resultadosA3.IndiceTemperatura == 1){
+            temperatura.setText("De 15 a 25 ºC");
+        }
+        else {
+            temperatura.setText("De 25 a 30 ºC");
+        }
+		//temperatura.setText(String.valueOf(resultadosA3.Temperatura));
+		
+        if (resultadosA3.IndiceHumedad == 0){
+            humedadRelativa.setText("< 35% (muy seco)");
+        }
+        else if (resultadosA3.IndiceHumedad == 1){
+        	humedadRelativa.setText("35-60% (normal)");
+        }
+        else {
+        	humedadRelativa.setText("> 60% (muy húmedo)");
+        }
+        //humedadRelativa.setText(String.valueOf(resultadosA3.Humedad));
+        
+        if (resultadosA3.VelocidadViento == 1){
+            velocidadViento.setText("< 1m/s (sin viento)");
+        }
+        else {
+        	velocidadViento.setText("1-3 m/s (brisa suave)");
+        }
+		//velocidadViento.setText(String.valueOf(resultadosA3.VelocidadViento));
+        
+        if (resultadosA3.TipoPulverizador == 1){
+            tipoPulverizador.setText("Pulv. hidroneumático");
+        }
+        else {
+            tipoPulverizador.setText("Pistola");
+        }
+		//tipoPulverizador.setText(String.valueOf(resultadosA3.TipoPulverizador));
+        
+		L_Ha.setText(String.valueOf(resultadosA3.VolumenAppLHA));
+		L_Hg.setText(String.valueOf(resultadosA3.VolumenAppLHG));
 
 		
 

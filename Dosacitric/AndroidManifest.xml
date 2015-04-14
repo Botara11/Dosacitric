@@ -72,6 +72,18 @@
             android:name="Ayuda"
             android:label="Ayuda" >            
         </activity>
+        <activity
+            android:name="CatalogosListView"
+            android:label="Fabricantes" >            
+        </activity>
+         <activity
+            android:name="PresionesListView"
+            android:label="Presiones" >            
+        </activity>
+        <activity
+            android:name="BoquillasListView"
+            android:label="Boquillas" >            
+        </activity>
         
     </application>
 

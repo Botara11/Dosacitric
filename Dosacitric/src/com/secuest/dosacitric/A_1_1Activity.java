@@ -70,13 +70,23 @@ public class A_1_1Activity extends Activity{
 				try {
 
 					revisando = "Densidad foliar del cultivo";
-					Float densidadFoliar1 = (float) densidadFoliar.getSelectedItemPosition();
-					if(densidadFoliar1==3)
-						Double.parseDouble("p");
+					Float densidadFoliar1 = (float) 999.999;
+					int den = densidadFoliar.getSelectedItemPosition();
+					switch(den){
+
+					case 0: densidadFoliar1=(float) 0.9;
+					break;
+					case 1: densidadFoliar1=(float) 1.00;
+					break;
+					case 2: densidadFoliar1=(float) 1.15;
+					break;
+					case 3:  Double.parseDouble("p");
+					break;
+					}
 					String ola = (String)densidadFoliar.getItemAtPosition(densidadFoliar.getSelectedItemPosition());
-					
+
 					Log.e("didi", ola+" densidadFoliar A_1_1");
-					
+
 					/*revisando = "Densidad foliar del cultivo";
 					if(densidadFoliar.getSelectedItemPosition()==densidadFoliar.getCount())
 						Double.parseDouble("p");
@@ -105,7 +115,7 @@ public class A_1_1Activity extends Activity{
 
 					ParteA nuevo = new ParteA();
 
-					nuevo.rellenarA1(densidadFoliar1, anchocalle1, distancia1, longitudArb1, anchuraArb1, alturaArb1);
+					nuevo.rellenarA1(densidadFoliar1, anchocalle1, distancia1, longitudArb1, anchuraArb1, alturaArb1, den);
 					Intent a1 = new Intent(A_1_1Activity.this,A_1_2Activity.class);
 					a1.putExtra("partea1",nuevo);
 					startActivity(a1);
