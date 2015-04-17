@@ -16,6 +16,9 @@ public class PresionesListView extends ListActivity{
 	private ArrayList<String> mItems;
 	private int mTotal;
 	private int mPosition;
+	private float[] inter;
+	private ArrayList<String> presionesAdecu;
+	private String marca ;
 	
 	 ListView listView ;
      
@@ -28,13 +31,50 @@ public class PresionesListView extends ListActivity{
          listView = (ListView) findViewById(android.R.id.list);
 		
 		ArrayList<Lista_entrada> datos = new ArrayList<Lista_entrada>();  
+		
+		marca = (String) getIntent().getSerializableExtra("marca");
+		inter = (float[]) getIntent().getSerializableExtra("inter");
 
-		datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ "1 bar"}));
-		datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ "2 bares"}));
-		datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ "3 bares"}));
-		datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ "4 bares"}));
-		datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ "5 bares"}));
-		//datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ "Otros"}));
+
+		/*******************************************************************/
+		/*********************** PROCESAR PRESIONES ************************/
+		/*******************************************************************/
+		
+		
+		
+		String[] presiones = { "p6", "p7", "p8", "p9", "p10", "p11",
+				"p12", "p13", "p14", "p15", "p16" };
+
+		//Lista que va a contener las marcas y dentro de cada una las presiones que correspondan
+		presionesAdecu = new ArrayList<String>();
+
+		DatabaseHandler db = new DatabaseHandler(
+				getApplicationContext());
+		
+			for (String pres : presiones) {
+				ArrayList<String> boquillasZ1 = db.getBoquillas(marca,
+						inter[0], inter[1], pres);
+				ArrayList<String> boquillasZ2 = db.getBoquillas(marca,
+						inter[2], inter[3], pres);
+				ArrayList<String> boquillasZ3 = db.getBoquillas(marca,
+						inter[4], inter[5], pres);
+				if (boquillasZ1 != null && boquillasZ2 != null
+						&& boquillasZ3 != null) {
+					if (boquillasZ1.size() > 0
+							&& boquillasZ2.size() > 0
+							&& boquillasZ3.size() > 0) {
+						System.out.println("z1=" + boquillasZ1.size()
+								+ " z2=" + boquillasZ2.size() + " z3="
+								+ boquillasZ3.size());
+						// Se muestran
+						presionesAdecu.add(pres);
+					}
+				}
+			
+		}
+		for(int i=0;i<presionesAdecu.size();i++){
+			datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ presionesAdecu.get(i).replace("p", "")+" bares"}));
+		}
 		
 		
 		// you only need to instantiate these the first time your fragment is
@@ -69,9 +109,11 @@ public class PresionesListView extends ListActivity{
      @Override
          protected void onListItemClick(ListView list, View view, int position, long id) {
              super.onListItemClick(list, view, position, id);
-             //String selectedItem = (String) getListView().getItemAtPosition(position);
-             //String selectedItem = (String) getListAdapter().getItem(position);
-             //text.setText("You clicked " + selectedItem + " at position " + position);
-             startActivity(new Intent(PresionesListView.this, BoquillasListView.class));
+
+             Intent res = new Intent(PresionesListView.this, BoquillasListView.class);
+				res.putExtra("presion", presionesAdecu.get(position));
+				res.putExtra("inter", inter);
+				res.putExtra("marca", marca);
+				startActivity(res);
          }
 }

@@ -22,7 +22,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class B_1Activity extends Activity{
+public class B_1Activity extends Activity {
 
 	private TextView volumenAplicacion;
 	private TextView volumenCalculado;
@@ -41,29 +41,29 @@ public class B_1Activity extends Activity{
 	private TextView caudalSector;
 	private ParteB pb;
 
-	public void actualizarCaudal(){
-		try{
+	public void actualizarCaudal() {
+		try {
 			float a = Float.parseFloat(velocidadAvance.getText().toString());
 			float b = Float.parseFloat(editVolumen.getText().toString());
 			float c = Float.parseFloat(editAncho.getText().toString());
 			DecimalFormat df = new DecimalFormat();
 			df.setMaximumFractionDigits(2);
-			caudalTotal.setText(df.format(a*b*c/0.6));
-			caudalSector.setText(df.format((a*b*c/0.6)/2));
-		}catch(Exception e){
+			caudalTotal.setText(df.format(a * b * c / 0.6));
+			caudalSector.setText(df.format((a * b * c / 0.6) / 2));
+		} catch (Exception e) {
 			caudalTotal.setText("0.0");
 		}
-		
+
 	}
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.b_1);
 		seebbarr();
-		
+
 		pb = new ParteB();
-		
+
 		volumenAplicacion = (TextView) findViewById(R.id.textView2);
 		volumenCalculado = (TextView) findViewById(R.id.textView13);
 		volumenAplicacionCalculado = (RadioButton) findViewById(R.id.RVolumen1);
@@ -71,34 +71,34 @@ public class B_1Activity extends Activity{
 		volumenAplicacionSiguiente.setChecked(true);
 		anchoTrabajo = (TextView) findViewById(R.id.TextView01);
 		anchoCalculado = (TextView) findViewById(R.id.textView14);
-		anchoTrabajoCalculado= (RadioButton) findViewById(R.id.RAncho1);
+		anchoTrabajoCalculado = (RadioButton) findViewById(R.id.RAncho1);
 		anchoTrabajoSiguiente = (RadioButton) findViewById(R.id.RAncho2);
 		anchoTrabajoSiguiente.setChecked(true);
 		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
 		velocidadAvance.setText("0.99");
 		velocidadAvanceSeekbar = (SeekBar) findViewById(R.id.seekBar1);
-		
-		
+
 		caudalTotal = (TextView) findViewById(R.id.textView15);
 		caudalSector = (TextView) findViewById(R.id.textView16);
-		
+
 		editAncho = (EditText) findViewById(R.id.editText1);
 		editAncho.setText("0.0");
 		editAncho.addTextChangedListener(new TextWatcher() {
-			
+
 			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
 					int after) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public void afterTextChanged(Editable s) {
 				// TODO Auto-generated method stub
@@ -110,18 +110,19 @@ public class B_1Activity extends Activity{
 		editVolumen.addTextChangedListener(new TextWatcher() {
 
 			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
 					int after) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 			@Override
 			public void afterTextChanged(Editable s) {
 				// TODO Auto-generated method stub
@@ -129,7 +130,6 @@ public class B_1Activity extends Activity{
 			}
 		});
 		editBoquillas = (EditText) findViewById(R.id.editText4);
-				
 
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
@@ -137,55 +137,58 @@ public class B_1Activity extends Activity{
 			@Override
 			public void onClick(View v) {
 				String quien = "";
-				try{
-					
-					
+				try {
+
 					Float vol, ancho;
-					
-					if(volumenAplicacionCalculado.isChecked()){
-						quien="volumenAplicacionCalculado";
-						vol = Float.parseFloat(volumenCalculado.getText().toString());
-					}else{
-						quien="volumenAplicacionSiguiente";
-						vol = Float.parseFloat(editVolumen.getText().toString());
+
+					if (volumenAplicacionCalculado.isChecked()) {
+						quien = "volumenAplicacionCalculado";
+						vol = Float.parseFloat(volumenCalculado.getText()
+								.toString());
+					} else {
+						quien = "volumenAplicacionSiguiente";
+						vol = Float
+								.parseFloat(editVolumen.getText().toString());
 					}
-					
-					if(anchoTrabajoCalculado.isChecked()){
-						quien="anchoTrabajoCalculado";
-						ancho = Float.parseFloat(anchoTrabajoCalculado.getText().toString());
-					}else{
-						quien="anchoTrabajoSiguiente";
-						ancho = Float.parseFloat(editAncho.getText().toString());
+
+					if (anchoTrabajoCalculado.isChecked()) {
+						quien = "anchoTrabajoCalculado";
+						ancho = Float.parseFloat(anchoTrabajoCalculado
+								.getText().toString());
+					} else {
+						quien = "anchoTrabajoSiguiente";
+						ancho = Float
+								.parseFloat(editAncho.getText().toString());
 					}
-					quien="Numero de boquillas";
-					int boq = Integer.parseInt(editBoquillas.getText().toString());
-					
-					
-					pb.rellenarB1(
-							vol,
-							ancho,
-							Float.parseFloat(velocidadAvance.getText().toString()),
-							(float)0.0,(float)0.0,
-							//Float.parseFloat(caudalTotal.getText().toString()),
-							//Float.parseFloat(caudalSector.getText().toString()),
+					quien = "Numero de boquillas";
+					int boq = Integer.parseInt(editBoquillas.getText()
+							.toString());
+
+					pb.rellenarB1(vol, ancho, Float.parseFloat(velocidadAvance
+							.getText().toString()), (float) 0.0, (float) 0.0,
+					// Float.parseFloat(caudalTotal.getText().toString()),
+					// Float.parseFloat(caudalSector.getText().toString()),
 							boq);
 					Intent b1 = new Intent(B_1Activity.this, B_2Activity.class);
-					b1.putExtra("parteb1",pb);
+					b1.putExtra("parteb1", pb);
 					startActivity(b1);
-				}catch(Exception e){
+				} catch (Exception e) {
 					e.printStackTrace();
-					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+quien+'"'+" incorrecto", Toast.LENGTH_SHORT);
+					Toast toast = Toast.makeText(getApplicationContext(),
+							"Valor de " + '"' + quien + '"' + " incorrecto",
+							Toast.LENGTH_SHORT);
 					toast.show();
 				}
 			}
 		});
 
-
-		/*volumenAplicacionCalculado.setChecked(true);
-		volumenAplicacionSiguiente.setChecked(false);
-
-		anchoTrabajoCalculado.setChecked(true);
-		anchoTrabajoSiguiente.setChecked(false);*/
+		/*
+		 * volumenAplicacionCalculado.setChecked(true);
+		 * volumenAplicacionSiguiente.setChecked(false);
+		 * 
+		 * anchoTrabajoCalculado.setChecked(true);
+		 * anchoTrabajoSiguiente.setChecked(false);
+		 */
 
 		Button atras = (Button) findViewById(R.id.atras);
 		atras.setClickable(true);
@@ -193,7 +196,8 @@ public class B_1Activity extends Activity{
 			@Override
 			public void onClick(View v) {
 				System.out.println("CLICK");
-				//startActivity(new Intent(a_1_2Activity.this, a_1_1Activity.class));
+				// startActivity(new Intent(a_1_2Activity.this,
+				// a_1_1Activity.class));
 				finish();
 
 			}
@@ -208,23 +212,35 @@ public class B_1Activity extends Activity{
 				startActivity(new Intent(B_1Activity.this, Indice.class));
 			}
 		});
+
+		/********************** TEST **********************/
+		editVolumen.setText("1100");
+		editAncho.setText("5.0");
+		velocidadAvance.setText("1.80");
+		editBoquillas.setText("24");
+
+		/********************** TEST **********************/
+
 	}
 
-	public void seebbarr( ){
+	public void seebbarr() {
 		velocidadAvanceSeekbar = (SeekBar) findViewById(R.id.seekBar1);
 		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
 		velocidadAvanceSeekbar.setProgress(1);
 		velocidadAvanceSeekbar.incrementProgressBy(1);
 		velocidadAvanceSeekbar.setMax(502);
 
-		velocidadAvanceSeekbar.setOnSeekBarChangeListener(
-				new SeekBar.OnSeekBarChangeListener() {
+		velocidadAvanceSeekbar
+				.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
 					float progress_value;
+
 					@Override
-					public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+					public void onProgressChanged(SeekBar seekBar,
+							int progress, boolean fromUser) {
 						progress_value = (float) progress;
-						velocidadAvance.setText("" + (float)((progress_value+99)/100));
+						velocidadAvance.setText(""
+								+ (float) ((progress_value + 99) / 100));
 						actualizarCaudal();
 					}
 
@@ -235,15 +251,9 @@ public class B_1Activity extends Activity{
 					@Override
 					public void onStopTrackingTouch(SeekBar seekBar) {
 					}
-				}
-				);
+				});
 
 	}
-
-
-
-
-
 
 	private class ArrayAdapterMio<String> extends ArrayAdapter<String> {
 
@@ -256,18 +266,18 @@ public class B_1Activity extends Activity{
 		public View getView(int position, View convertView, ViewGroup parent) {
 			View v = super.getView(position, convertView, parent);
 			if (position == getCount()) {
-				((TextView)v.findViewById(R.id.text1)).setText("");
-				((TextView)v.findViewById(R.id.text1)).setHint((CharSequence) getItem(getCount())); //"Hint to be displayed"
+				((TextView) v.findViewById(R.id.text1)).setText("");
+				((TextView) v.findViewById(R.id.text1))
+						.setHint((CharSequence) getItem(getCount())); // "Hint to be displayed"
 			}
 			return v;
-		}       
+		}
+
 		@Override
 		public int getCount() {
-			return super.getCount()-1; // you dont display last item. It is used as hint.
-		} 
+			return super.getCount() - 1; // you dont display last item. It is
+											// used as hint.
+		}
 	}
 
-
-
 }
-

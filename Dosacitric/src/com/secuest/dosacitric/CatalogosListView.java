@@ -22,6 +22,8 @@ public class CatalogosListView extends ListActivity{
 	private ArrayList<String> mItems;
 	private int mTotal;
 	private int mPosition;
+	private ArrayList<String> marcasAdecu ;
+	private float[] inter;
 	
 	 ListView listView ;
      
@@ -32,16 +34,15 @@ public class CatalogosListView extends ListActivity{
          
          // Get ListView object from xml
          listView = (ListView) findViewById(android.R.id.list);
-		
-		ArrayList<Lista_entrada> datos = new ArrayList<Lista_entrada>();  
+			ArrayList<Lista_entrada> datos = new ArrayList<Lista_entrada>();  
 
-		datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ "Teejet"}));
-		datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ "Albuz"}));
-		datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ "Hardi"}));
-		datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ "Lechler"}));
-		datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ "Discos"}));
-		datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ "Otros"}));
-		
+			ArrayList<String> marcas = (ArrayList<String>) getIntent().getSerializableExtra("marcas");
+
+		inter = (float[]) getIntent().getSerializableExtra("inter");
+		for (String marc:marcas){
+			System.out.println(marc);
+			datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ marc}));
+		}
 		
 		// you only need to instantiate these the first time your fragment is
 				// created; then, the method above will do the rest
@@ -70,15 +71,22 @@ public class CatalogosListView extends ListActivity{
 				
 				getListView().setAdapter(mAdapter);
 				setListAdapter(mAdapter);
+				
+			
+				
+				
 	}
      
      @Override
          protected void onListItemClick(ListView list, View view, int position, long id) {
              super.onListItemClick(list, view, position, id);
-             //String selectedItem = (String) getListView().getItemAtPosition(position);
-             //String selectedItem = (String) getListAdapter().getItem(position);
-             //text.setText("You clicked " + selectedItem + " at position " + position);
-             startActivity(new Intent(CatalogosListView.this, PresionesListView.class));
+
+             String selectedItem = ((Lista_entrada) getListAdapter().getItem(position)).get_texto(0);
+             
+             Intent res = new Intent(CatalogosListView.this, PresionesListView.class);
+				res.putExtra("marca", selectedItem);
+				res.putExtra("inter", inter);
+				startActivity(res);
          }
 
 }

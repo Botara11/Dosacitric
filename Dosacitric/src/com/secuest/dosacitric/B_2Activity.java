@@ -176,6 +176,26 @@ public class B_2Activity extends Activity{
 				startActivity(new Intent(B_2Activity.this, Indice.class));
 			}
 		});
+		
+		/********************** TEST **********************/
+		zonaAltaCerradas.setText("0");
+		zonaBajaCerradas.setText("0");
+		
+		zonaAltaAbiertas.setText("6");
+		zonaMediaAbiertas.setText("10");
+		zonaBajaAbiertas.setText("8");
+		
+		zonaAltaPorcentaje.setText("30");
+		zonaMediaPorcentaje.setText("50");
+		zonaBajaPorcentaje.setText("20");
+		
+		
+		variacionCaudalTextView.setText("3");
+		variacionCaudalSeekbar.setProgress(3);
+		
+		calcularB();
+		/********************** TEST **********************/
+		
 	}
 
 	private void calcularB() {

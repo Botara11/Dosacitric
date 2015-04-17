@@ -1,5 +1,7 @@
 package com.secuest.dosacitric;
 
+import java.util.ArrayList;
+
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -43,11 +45,11 @@ public class MainActivity extends ActionBarActivity {
 		new Thread(new Runnable() {
 			public void run() {
 				
-/*
+
 				pagina = (new http()).connect("http://secuest.comuf.com/dosacitric/BBDD.html");
 				pagina = pagina.replace(",", ".");
 				String[] nuevo = pagina.split("<!-- Hosting24 Analytics Code -->");					//*****CAMBIAR CUANDO HAYA CAMBIADO EL HOSTING*****///
-/*				pagina = nuevo[0];
+				pagina = nuevo[0];
 				//System.out.println(pagina); 
 				
 				 String[] boquillas = pagina.split("\n");
@@ -78,18 +80,8 @@ public class MainActivity extends ActionBarActivity {
 				 }
 				 
 				 
-				 ArrayList<String> boquillasZ1 = db.getBoquillas("Teejet", 0.4, 0.99,"p6");
-				 ArrayList<String> boquillasZ2 = db.getBoquillas("Teejet", 0.4, 0.99,"p6");
-				 ArrayList<String> boquillasZ3 = db.getBoquillas("Teejet", 0.4, 0.99,"p6");
-				 if(boquillasZ1!=null && boquillasZ2!=null && boquillasZ3!=null){
-					 //Se muestran
-				 }
-				 else{
-					 //No se muestra ninguna
-				 }
-				 for(int i=0;i<boquillasZ1.size();i++)
-				 System.out.println(boquillasZ1.get(i));
-*/
+				
+
 				 DONE=true;
 				 
 			}

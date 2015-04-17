@@ -15,6 +15,9 @@ public class BoquillasListView extends ListActivity{
 	private ArrayList<String> mItems;
 	private int mTotal;
 	private int mPosition;
+	private String marca;
+	private float[] inter;
+	private String presion;
 	
 	 ListView listView ;
      
@@ -26,21 +29,40 @@ public class BoquillasListView extends ListActivity{
          // Get ListView object from xml
          listView = (ListView) findViewById(android.R.id.list);
 		
-         final ListViewItem[] items = new ListViewItem[9];
+         marca = (String) getIntent().getStringExtra("marca");
+  		inter = (float[]) getIntent().getSerializableExtra("inter");
+ 		presion = (String) getIntent().getStringExtra("presion");
+
+        
+ 		DatabaseHandler db = new DatabaseHandler(
+				getApplicationContext());
+ 		//Cogemos los datos de BD
+ 		ArrayList<String> boquillasZ1 = db.getBoquillas(marca,
+				inter[0], inter[1], presion);
+ 		ArrayList<String> boquillasZ2 = db.getBoquillas(marca,
+				inter[2], inter[3], presion);
+		ArrayList<String> boquillasZ3 = db.getBoquillas(marca,
+				inter[4], inter[5], presion);
 		
-         
-                 items[0] = new ListViewItem("Zona Alta ", CustomAdapter.TYPE_ODD);
-                 items[1] = new ListViewItem("D1.5/DC35 ", CustomAdapter.TYPE_EVEN);
-                 items[2] = new ListViewItem("D1/DC31 ", CustomAdapter.TYPE_EVEN);
-           
-                 items[3] = new ListViewItem("Zona Media ", CustomAdapter.TYPE_ODD);
-                 items[4] = new ListViewItem("D3/DC56 ", CustomAdapter.TYPE_EVEN);
-                 items[5] = new ListViewItem("D1.5/DC31 ", CustomAdapter.TYPE_EVEN);
-           
-                 items[6] = new ListViewItem("Zona Baja ", CustomAdapter.TYPE_ODD);
-                 items[7] = new ListViewItem("D1/DC31 ", CustomAdapter.TYPE_EVEN);
-                 items[8] = new ListViewItem("D3/DC56 ", CustomAdapter.TYPE_EVEN);
-             
+		
+        final ListViewItem[] items = new ListViewItem[3+boquillasZ1.size()+boquillasZ2.size()+boquillasZ3.size()];
+
+        
+        
+		//Los anadimos a la listView
+ 		int contador=0;
+ 		items[contador] = new ListViewItem("Zona Alta ", CustomAdapter.TYPE_ODD);
+ 		for(int i=0;i<boquillasZ1.size();i++){
+            items[++contador] = new ListViewItem(boquillasZ1.get(i), CustomAdapter.TYPE_EVEN);
+ 		}
+ 		items[++contador] = new ListViewItem("Zona Media ", CustomAdapter.TYPE_ODD);
+ 		for(int i=0;i<boquillasZ2.size();i++){
+            items[++contador] = new ListViewItem(boquillasZ2.get(i), CustomAdapter.TYPE_EVEN);
+ 		}
+ 		items[++contador] = new ListViewItem("Zona Baja ", CustomAdapter.TYPE_ODD);
+ 		for(int i=0;i<boquillasZ3.size();i++){
+            items[++contador] = new ListViewItem(boquillasZ3.get(i), CustomAdapter.TYPE_EVEN);
+ 		}
          
          
          CustomAdapter customAdapter = new CustomAdapter(this, R.id.textsuperior, items);
