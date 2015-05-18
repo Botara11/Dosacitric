@@ -20,7 +20,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	private static final String DATABASE_NAME = "android_api";
 
 	// Login table name
-	private static final String TABLE_LOGIN = "login";
+	private static final String TABLE_BOQUI = "login";
 
 	// Login Table Columns names
 	private static final String KEY_ID = "id";
@@ -48,7 +48,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	// Creating Tables
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_LOGIN + "("
+		String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_BOQUI + "("
 				+ KEY_ID + " INTEGER PRIMARY KEY," + KEY_MARCA + " TEXT,"
 				+ KEY_MODELO + " TEXT," + KEY_DIAMETRO + " DOUBLE,"
 				+ KEY_CAUDAL + " DOUBLE," + KEY_P6 + " DOUBLE," + KEY_P7
@@ -65,7 +65,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// Drop older table if existed
-		db.execSQL("DROP TABLE IF EXISTS " + TABLE_LOGIN);
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_BOQUI);
 
 		// Create tables again
 		onCreate(db);
@@ -81,11 +81,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		SQLiteDatabase db = this.getWritableDatabase();
 
 		ContentValues values = new ContentValues();
-		values.put(KEY_MARCA, marca);
-		values.put(KEY_MODELO, modelo);
-		values.put(KEY_DIAMETRO, diametro);
-		values.put(KEY_CAUDAL, caudal);
-		values.put(KEY_P6, p6);
+		values.put(KEY_MARCA, marca); //1
+		values.put(KEY_MODELO, modelo);//2
+		values.put(KEY_DIAMETRO, diametro); //3
+		values.put(KEY_CAUDAL, caudal);//4
+		values.put(KEY_P6, p6); //5
 		values.put(KEY_P7, p7);
 		values.put(KEY_P8, p8);
 		values.put(KEY_P9, p9);
@@ -99,18 +99,67 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		values.put(ACTIVE, active);
 
 		// Inserting Row
-		db.insert(TABLE_LOGIN, null, values);
+		db.insert(TABLE_BOQUI, null, values);
 		db.close(); // Closing database connection
 	}
+	
+	
+	//Conseguir el caudal de una boquilla a una determinada presion
+	public String getCaudalAunaPresionDeBoquilla(String marca, String modelo,int presion) {
+		String Boquillas = "";
 
+		String selectQuery = "SELECT * FROM " + TABLE_BOQUI + " WHERE "
+				+ KEY_MARCA + "=='" + marca + "'" + " AND " + KEY_MODELO +
+				"=='"+modelo+"' ";
+
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.rawQuery(selectQuery, null);
+		// Move to first row
+		cursor.moveToFirst();
+		System.out.println("Hay " + cursor.getCount() + " filas");
+		if (cursor.getCount() != 0) {
+			Boquillas = (cursor.getString(presion-1));
+			//System.out.println("anadido "+cursor.getString(2) + " " + cursor.getString(3));
+		}
+		return Boquillas;
+	}
+	
+	//Conseguir el modelo de una boquilla a una determinada presion y marca
+		public ArrayList<String> getModelo(String marca, int presion) {
+			ArrayList<String> modelo = new ArrayList<String>();
+
+			String selectQuery = "SELECT * FROM " + TABLE_BOQUI + " WHERE "
+				+ KEY_MARCA + "=='" + marca + "'";
+
+			SQLiteDatabase db = this.getReadableDatabase();
+			Cursor cursor = db.rawQuery(selectQuery, null);
+			// Move to first row
+			cursor.moveToFirst();
+			System.out.println("Hay " + cursor.getCount() + " filas");
+			if (cursor.getCount() != 0) {
+				modelo.add(cursor.getString(2)); // GET MODELO
+				//System.out.println("anadido "+cursor.getString(2) + " " + cursor.getString(3));
+
+				while (cursor.moveToNext()) {
+					modelo.add(cursor.getString(2)); // REVISAR SI SE PASA
+					//System.out.println("anadido "+cursor.getString(2) + " " + cursor.getString(3));
+				}
+				System.out.println(modelo.size());
+			}
+			return modelo;
+		}
+	
+	
+	
 	/**
 	 * Getting user data from database
 	 * */
+	
 	public ArrayList<String> getBoquillas(String marca, double presion1,
 			double presion2, String KEY) {
 		ArrayList<String> boquillas = new ArrayList<String>();
 
-		String selectQuery = "SELECT * FROM " + TABLE_LOGIN + " WHERE "
+		String selectQuery = "SELECT * FROM " + TABLE_BOQUI + " WHERE "
 				+ KEY_MARCA + "=='" + marca + "'" + " AND " + KEY
 				+ " BETWEEN " + presion1 + " AND " + presion2;
 
@@ -138,7 +187,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	 * */
 	public HashMap<String, String> getUserDetails() {
 		HashMap<String, String> user = new HashMap<String, String>();
-		String selectQuery = "SELECT  * FROM " + TABLE_LOGIN;
+		String selectQuery = "SELECT  * FROM " + TABLE_BOQUI;
 
 		SQLiteDatabase db = this.getReadableDatabase();
 		Cursor cursor = db.rawQuery(selectQuery, null);
@@ -164,7 +213,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	 * Getting user login status return true if rows are there in table
 	 * */
 	public int getRowCount() {
-		String countQuery = "SELECT  * FROM " + TABLE_LOGIN;
+		String countQuery = "SELECT  * FROM " + TABLE_BOQUI;
 		SQLiteDatabase db = this.getReadableDatabase();
 		Cursor cursor = db.rawQuery(countQuery, null);
 		int rowCount = cursor.getCount();
@@ -181,7 +230,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	public void resetTables() {
 		SQLiteDatabase db = this.getWritableDatabase();
 		// Delete All Rows
-		db.delete(TABLE_LOGIN, null, null);
+		db.delete(TABLE_BOQUI, null, null);
 		db.close();
 	}
 	/*
@@ -190,7 +239,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	 * 
 	 * String strFilter = "uid='" + string + "'"; ContentValues args = new
 	 * ContentValues(); args.put(KEY_IMG, "'" + string + "'");
-	 * db.update(TABLE_LOGIN, args, strFilter, null); db.close(); Log.d("",
+	 * db.update(TABLE_BOQUI, args, strFilter, null); db.close(); Log.d("",
 	 * "MODIFICADA BD");
 	 * 
 	 * }
@@ -200,10 +249,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	 * 
 	 * String strFilter = "uid='" + uid + "'"; ContentValues args = new
 	 * ContentValues(); args.put(KEY_NAME, "'" + name + "'"); args.put(KEY_CITY,
-	 * "'" + city + "'"); db.update(TABLE_LOGIN, args, strFilter, null);
+	 * "'" + city + "'"); db.update(TABLE_BOQUI, args, strFilter, null);
 	 * db.close(); Log.d("", "MODIFICADA namecity BD");
 	 * 
 	 * }
 	 */
 
 }
+

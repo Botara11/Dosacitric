@@ -24,7 +24,7 @@ public class MainActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.portada);
-		
+
 
 		final DatabaseHandler db = new DatabaseHandler(this);
 		db.resetTables();
@@ -41,54 +41,56 @@ public class MainActivity extends ActionBarActivity {
 
 			}
 		});
-		
+
 		new Thread(new Runnable() {
 			public void run() {
-				
+
 
 				pagina = (new http()).connect("http://secuest.comuf.com/dosacitric/BBDD.html");
-				pagina = pagina.replace(",", ".");
-				String[] nuevo = pagina.split("<!-- Hosting24 Analytics Code -->");					//*****CAMBIAR CUANDO HAYA CAMBIADO EL HOSTING*****///
-				pagina = nuevo[0];
-				//System.out.println(pagina); 
-				
-				 String[] boquillas = pagina.split("\n");
-				 for(int i=0;i<boquillas.length;i++){ 
-					 String[] boq = boquillas[i].split("%%%");
-					 
-					 //HAY DATOS QUE ESTAN VACIOS "" ASI QUE NO SE PUEDE HACER DOUBLE.PARSEDOUBLE()
-					 Double k = Double.parseDouble(boq[4])/java.lang.Math.pow(10.0,0.5);
-					 //MARCA - MODELO - DIAMETRO(puede no haber) - CAUDAL
-					 double dia;
-					 if(boq[2].compareTo("")!=0){
-						 dia = Double.parseDouble(boq[2]);
-					 }else 
-						 dia = 0.0;
-					 //System.out.println(boq[1] + " "+boq[4]+"/("+boq[4]+"^0,5) = " +k);
-					 db.addBoquilla(boq[0],boq[1],dia,Double.parseDouble(boq[4]),k*java.lang.Math.pow(6.0,0.5),
-							 k*java.lang.Math.pow(7.0,0.5),
-							 k*java.lang.Math.pow(8.0,0.5),
-							 k*java.lang.Math.pow(9.0,0.5),
-							 k*java.lang.Math.pow(10.0,0.5),
-							 k*java.lang.Math.pow(11.0,0.5),
-							 k*java.lang.Math.pow(12.0,0.5),
-							 k*java.lang.Math.pow(13.0,0.5),
-							 k*java.lang.Math.pow(14.0,0.5),
-							 k*java.lang.Math.pow(15.0,0.5),
-							 k*java.lang.Math.pow(16.0,0.5),
-							 1);
-				 }
-				 
-				 
-				
+				if(pagina == null){
+				}else{
+					pagina = pagina.replace(",", ".");
+					String[] nuevo = pagina.split("<!-- Hosting24 Analytics Code -->");					//*****CAMBIAR CUANDO HAYA CAMBIADO EL HOSTING*****///
+					pagina = nuevo[0];
+					//System.out.println(pagina);
 
-				 DONE=true;
-				 
+					String[] boquillas = pagina.split("\n");
+					for(int i=0;i<boquillas.length;i++){ 
+						String[] boq = boquillas[i].split("%%%");
+
+						//HAY DATOS QUE ESTAN VACIOS "" ASI QUE NO SE PUEDE HACER DOUBLE.PARSEDOUBLE()
+						Double k = Double.parseDouble(boq[4])/java.lang.Math.pow(10.0,0.5);
+						//MARCA - MODELO - DIAMETRO(puede no haber) - CAUDAL
+						double dia;
+						if(boq[2].compareTo("")!=0){
+							dia = Double.parseDouble(boq[2]);
+						}else 
+							dia = 0.0;
+						//System.out.println(boq[1] + " "+boq[4]+"/("+boq[4]+"^0,5) = " +k);
+						db.addBoquilla(boq[0],boq[1],dia,Double.parseDouble(boq[4]),k*java.lang.Math.pow(6.0,0.5),
+								k*java.lang.Math.pow(7.0,0.5),
+								k*java.lang.Math.pow(8.0,0.5),
+								k*java.lang.Math.pow(9.0,0.5),
+								k*java.lang.Math.pow(10.0,0.5),
+								k*java.lang.Math.pow(11.0,0.5),
+								k*java.lang.Math.pow(12.0,0.5),
+								k*java.lang.Math.pow(13.0,0.5),
+								k*java.lang.Math.pow(14.0,0.5),
+								k*java.lang.Math.pow(15.0,0.5),
+								k*java.lang.Math.pow(16.0,0.5),
+								1);
+					}
+
+
+
+
+					DONE=true;
+				}
 			}
 		}).start();    
 		check();
-		
-		
+
+
 		/*
 									// diamet,caudal
 		db.addBoquilla("NIKE", "zapas", null, null, 0.1, 0.2, 0.3, 0.4, 0.5,
@@ -103,38 +105,38 @@ public class MainActivity extends ActionBarActivity {
 				0.6, 0.7, 0.8, 0.9, 1.0, 1.2);
 		db.addBoquilla("NIKE", "nuevo", null, null, 0.1, 0.2, 0.3, 0.4, 0.5,
 				0.6, 0.7, 0.8, 0.9, 1.0, 1.2);
-		*/
-		
-		
+		 */
+
+
 
 	}
 
 	public void check(){
-        System.out.println("Entra en Check");
+		System.out.println("Entra en Check");
 
-	    if(DONE){
-            System.out.println("CHECK DONE");
+		if(DONE){
+			System.out.println("CHECK DONE");
 
-	    	tableLay.setVisibility(View.VISIBLE);
-			 barra.setVisibility(View.INVISIBLE);
-	    }
-	    else{
+			tableLay.setVisibility(View.VISIBLE);
+			barra.setVisibility(View.INVISIBLE);
+		}
+		else{
 
-	    new Handler().postDelayed(new Runnable() {
+			new Handler().postDelayed(new Runnable() {
 
-	        @Override
-	        public void run() {
-	            check();
-	            System.out.println("Lanza check");
-	        }
-	    }, 1000);
-	    }
-	    
+				@Override
+				public void run() {
+					check();
+					System.out.println("Lanza check");
+				}
+			}, 1000);
+		}
+
 	}
-	
-	
-	
-	
+
+
+
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -142,8 +144,8 @@ public class MainActivity extends ActionBarActivity {
 		return true;
 	}
 
-	
-	
+
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
@@ -156,8 +158,8 @@ public class MainActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 
-	
-	
+
+
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		return super.onPrepareOptionsMenu(menu);
