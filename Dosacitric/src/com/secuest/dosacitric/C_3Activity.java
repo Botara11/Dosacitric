@@ -38,7 +38,7 @@ public class C_3Activity extends ListActivity{
 		partec3 = (ParteC) c2.getSerializableExtra("presion");
 		partec3.rellenarC3(item);
 		
-		Intent c3 = new Intent(C_3Activity.this, C_4bActivity.class);
+		Intent c3 = new Intent(C_3Activity.this, C_4ZonaAlta.class);
 		c3.putExtra("marcas", partec3);
 		startActivity(c3);
 	}

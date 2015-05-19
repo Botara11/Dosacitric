@@ -64,9 +64,25 @@
             android:name="C_4Activity"
             android:label="@string/C4" >
         </activity>
-         <activity
+        <activity
             android:name="C_4bActivity"
             android:label="@string/C4" >
+        </activity>
+        <activity
+            android:name="C_4bbActivity"
+            android:label="@string/C4" >
+        </activity>
+        <activity
+            android:name="C_4ZonaAlta"
+            android:label="@string/ZA" >
+        </activity>
+        <activity
+            android:name="C_4ZonaMedia"
+            android:label="@string/ZM" >
+        </activity>
+        <activity
+            android:name="C_4ZonaBaja"
+            android:label="@string/ZB" >
         </activity>
         <activity
             android:name="RadioButton"
@@ -110,10 +126,6 @@
         </activity>
         <activity
             android:name="BoquillasListView"
-            android:label="Boquillas" >
-        </activity>
-        <activity
-            android:name="BoquillasListViewParteC"
             android:label="Boquillas" >
         </activity>
     </application>

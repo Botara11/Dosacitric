@@ -1,7 +1,9 @@
 package com.secuest.dosacitric;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -102,10 +104,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		db.insert(TABLE_BOQUI, null, values);
 		db.close(); // Closing database connection
 	}
-	
-	
+
 	//Conseguir el caudal de una boquilla a una determinada presion
-	public String getCaudalAunaPresionDeBoquilla(String marca, String modelo,int presion) {
+	public String getCaudalAunaPresionDeBoquilla(String marca, String modelo, int presion) {
 		String Boquillas = "";
 
 		String selectQuery = "SELECT * FROM " + TABLE_BOQUI + " WHERE "
@@ -123,38 +124,38 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		}
 		return Boquillas;
 	}
-	
-	//Conseguir el modelo de una boquilla a una determinada presion y marca
-		public ArrayList<String> getModelo(String marca, int presion) {
-			ArrayList<String> modelo = new ArrayList<String>();
 
-			String selectQuery = "SELECT * FROM " + TABLE_BOQUI + " WHERE "
+	//Conseguir el modelo de una boquilla a una determinada presion y marca
+	public ArrayList<String> getModelo(String marca, int presion) {
+		ArrayList<String> modelo = new ArrayList<String>();
+
+		String selectQuery = "SELECT * FROM " + TABLE_BOQUI + " WHERE "
 				+ KEY_MARCA + "=='" + marca + "'";
 
-			SQLiteDatabase db = this.getReadableDatabase();
-			Cursor cursor = db.rawQuery(selectQuery, null);
-			// Move to first row
-			cursor.moveToFirst();
-			System.out.println("Hay " + cursor.getCount() + " filas");
-			if (cursor.getCount() != 0) {
-				modelo.add(cursor.getString(2)); // GET MODELO
-				//System.out.println("anadido "+cursor.getString(2) + " " + cursor.getString(3));
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.rawQuery(selectQuery, null);
+		// Move to first row
+		cursor.moveToFirst();
+		System.out.println("Hay " + cursor.getCount() + " filas");
+		if (cursor.getCount() != 0) {
+			modelo.add(cursor.getString(2)); // GET MODELO
+			//System.out.println("anadido "+cursor.getString(2) + " " + cursor.getString(3));
 
-				while (cursor.moveToNext()) {
-					modelo.add(cursor.getString(2)); // REVISAR SI SE PASA
-					//System.out.println("anadido "+cursor.getString(2) + " " + cursor.getString(3));
-				}
-				System.out.println(modelo.size());
+			while (cursor.moveToNext()) {
+				modelo.add(cursor.getString(2)); // REVISAR SI SE PASA
+				//System.out.println("anadido "+cursor.getString(2) + " " + cursor.getString(3));
 			}
-			return modelo;
+			System.out.println(modelo.size());
 		}
-	
-	
-	
+		return modelo;
+	}
+
+
+
 	/**
 	 * Getting user data from database
 	 * */
-	
+
 	public ArrayList<String> getBoquillas(String marca, double presion1,
 			double presion2, String KEY) {
 		ArrayList<String> boquillas = new ArrayList<String>();

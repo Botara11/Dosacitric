@@ -18,6 +18,9 @@
 	<string name="C2">Presión de trabajo</string>
 	<string name="C3">Elección de la marca de boquilla</string>
 	<string name="C4">Elección del modelo de boquilla</string>
+	<string name="ZA">Elección del modelo de boquilla - Zona Alta</string>
+	<string name="ZM">Elección del modelo de boquilla - Zona Media</string>
+	<string name="ZB">Elección del modelo de boquilla - Zona Baja</string>
 	<string name="R3">Tabla de resultados III</string>
 	<string name="A">Parte A</string>
 	<string name="B">Parte B</string>

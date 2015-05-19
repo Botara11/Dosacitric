@@ -20,7 +20,10 @@ public class ParteC implements Serializable{
 	public int VolumenCaldoAplicadoHanegada;
 	public String PresionSeleccionada;
 	public String MarcaSeleccionada;
-	public ArrayList<String> ModeloSeleccionado;
+	public ArrayList<String> ModeloZonaAltaSeleccionado;
+	public ArrayList<String> ModeloZonaMediaSeleccionado;
+	public ArrayList<String> ModeloZonaBajaSeleccionado;
+	public Resultados3 resultados3;
 	
 	public ParteC() {
 	}
@@ -49,18 +52,27 @@ public class ParteC implements Serializable{
 	}
 	
 	public void rellenarC4(ArrayList<String> item) {
-		ModeloSeleccionado = item;
+		ModeloZonaAltaSeleccionado = item;
+	}
+	public void rellenarC5(ArrayList<String> item) {
+		ModeloZonaMediaSeleccionado = item;
+	}
+	public void rellenarC6(ArrayList<String> item) {
+		ModeloZonaBajaSeleccionado = item;
 	}
 	
-	public void calcularParteC() {
+	public void calcularParteC(Float ValorZonaAlta, Float ValorZonaMedia, Float ValorZonaBaja) {
+		
 		
 				
-		//CaudalZona[0] =  * NumeroBoquillasZona[0];
-		//CaudalZona[1] =  * NumeroBoquillasZona[1];
-		//CaudalZona[2] =  * NumeroBoquillasZona[2];
+		CaudalZona[0] = ValorZonaAlta * NumeroBoquillasZona[0];
+		CaudalZona[1] = ValorZonaMedia * NumeroBoquillasZona[1];
+		CaudalZona[2] = ValorZonaBaja * NumeroBoquillasZona[2];
 		
 		//Suma de los caudales por zona//
 		CaudalZonaTotal = CaudalZona[0] + CaudalZona[1] + CaudalZona[2];
+		
+		System.out.print(CaudalZonaTotal);
 		
 		CaudalSector = CaudalZonaTotal / 2;
 		CaudalTotal = CaudalSector * 2;
