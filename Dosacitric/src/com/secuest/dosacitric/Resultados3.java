@@ -9,6 +9,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -62,17 +64,17 @@ public class Resultados3 extends Activity {
 		Log.e("didi", modeloZonaAlta);
 		Log.e("didi", modeloZonaMedia);
 		Log.e("didi", modeloZonaBaja);
-		
+
 		Float ValorZonaAlta = Float.parseFloat(modeloZonaAlta);
 		Float ValorZonaMedia = Float.parseFloat(modeloZonaMedia);
 		Float ValorZonaBaja = Float.parseFloat(modeloZonaBaja);
-		
+
 		System.out.print(ValorZonaAlta);	
 		System.out.print(ValorZonaMedia);	
 		System.out.print(ValorZonaBaja);	
-		
+
 		partec7.calcularParteC(ValorZonaAlta, ValorZonaMedia, ValorZonaBaja);
-		
+
 		System.out.print(partec7.VolumenCaldoAplicado);		
 
 		TextView VolAplicacion = (TextView) findViewById(R.id.textView41);
@@ -112,4 +114,33 @@ public class Resultados3 extends Activity {
 		});
 
 	}
+
+	@Override
+	public boolean onPrepareOptionsMenu(Menu menu) {
+		return super.onPrepareOptionsMenu(menu);
+	}
+
+
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
 }

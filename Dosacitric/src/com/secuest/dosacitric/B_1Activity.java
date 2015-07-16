@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
@@ -166,8 +168,8 @@ public class B_1Activity extends Activity {
 
 					pb.rellenarB1(vol, ancho, Float.parseFloat(velocidadAvance
 							.getText().toString()), (float) 0.0, (float) 0.0,
-					// Float.parseFloat(caudalTotal.getText().toString()),
-					// Float.parseFloat(caudalSector.getText().toString()),
+							// Float.parseFloat(caudalTotal.getText().toString()),
+							// Float.parseFloat(caudalSector.getText().toString()),
 							boq);
 					Intent b1 = new Intent(B_1Activity.this, B_2Activity.class);
 					b1.putExtra("parteb1", pb);
@@ -231,27 +233,27 @@ public class B_1Activity extends Activity {
 		velocidadAvanceSeekbar.setMax(502);
 
 		velocidadAvanceSeekbar
-				.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+		.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
-					float progress_value;
+			float progress_value;
 
-					@Override
-					public void onProgressChanged(SeekBar seekBar,
-							int progress, boolean fromUser) {
-						progress_value = (float) progress;
-						velocidadAvance.setText(""
-								+ (float) ((progress_value + 99) / 100));
-						actualizarCaudal();
-					}
+			@Override
+			public void onProgressChanged(SeekBar seekBar,
+					int progress, boolean fromUser) {
+				progress_value = (float) progress;
+				velocidadAvance.setText(""
+						+ (float) ((progress_value + 99) / 100));
+				actualizarCaudal();
+			}
 
-					@Override
-					public void onStartTrackingTouch(SeekBar seekBar) {
-					}
+			@Override
+			public void onStartTrackingTouch(SeekBar seekBar) {
+			}
 
-					@Override
-					public void onStopTrackingTouch(SeekBar seekBar) {
-					}
-				});
+			@Override
+			public void onStopTrackingTouch(SeekBar seekBar) {
+			}
+		});
 
 	}
 
@@ -268,7 +270,7 @@ public class B_1Activity extends Activity {
 			if (position == getCount()) {
 				((TextView) v.findViewById(R.id.text1)).setText("");
 				((TextView) v.findViewById(R.id.text1))
-						.setHint((CharSequence) getItem(getCount())); // "Hint to be displayed"
+				.setHint((CharSequence) getItem(getCount())); // "Hint to be displayed"
 			}
 			return v;
 		}
@@ -276,8 +278,37 @@ public class B_1Activity extends Activity {
 		@Override
 		public int getCount() {
 			return super.getCount() - 1; // you dont display last item. It is
-											// used as hint.
+			// used as hint.
 		}
 	}
+
+	@Override
+	public boolean onPrepareOptionsMenu(Menu menu) {
+		return super.onPrepareOptionsMenu(menu);
+	}
+
+
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
 
 }

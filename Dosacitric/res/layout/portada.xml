@@ -30,7 +30,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="2015"
+            android:text="V.01."
             android:textColor="#FFFFFF"
             android:textSize="40sp" />
 
@@ -43,7 +43,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:gravity="center"
-            android:text="UNIVERSIDAD POLITECNICA DE VALENCIA"
+            android:text="UNIVERSIDAT POLITÈCNICA DE VALÈNCIA"
             android:textColor="#FFFFFF"
             android:textSize="16sp" />
 
@@ -56,7 +56,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:gravity="center"
-            android:text="Departamento de Macanización y Tecnología Agraria"
+            android:text="Unidad de Mecanización y Tecnología Agraria"
             android:textColor="#FFFFFF"
             android:textSize="16sp" />
 
@@ -68,7 +68,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="Camino de Vera, s/n 46022 - Valencia"
+            android:text="Dpto. de Ingeniería Rural y Agroalimentaria"
+            android:gravity="center"
             android:textColor="#FFFFFF"
             android:textSize="16sp" />
 
@@ -80,19 +81,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="Enrique Ortí"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView8"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:text="eorti@dmta.upv.es"
+            android:text="Camino de Vera, s/n 46022 - Valencia"
             android:textColor="#FFFFFF"
             android:textSize="16sp" />
         </RelativeLayout>

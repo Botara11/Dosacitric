@@ -24,8 +24,8 @@ public class Resultados1 extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.resultados1);
 		/**** A1 ****/
-		
-		
+
+
 		TextView densidadFoliar = (TextView) findViewById(R.id.textView23);
 		TextView xAncho = (TextView) findViewById(R.id.textView41);
 		TextView yDistancia = (TextView) findViewById(R.id.textView39);
@@ -43,7 +43,7 @@ public class Resultados1 extends Activity{
 		TextView tipoPulverizador = (TextView) findViewById(R.id.textView36);
 		TextView L_Ha = (TextView) findViewById(R.id.textView37);
 		TextView L_Hg = (TextView) findViewById(R.id.textView38);
-		
+
 
 		//Intent i = getIntent();
 		// Receiving the Data
@@ -73,7 +73,7 @@ public class Resultados1 extends Activity{
 		//ParteA resultadosA2 = (ParteA) aR.getSerializableExtra("partea2");
 		ParteA resultadosA3 = (ParteA) aR.getSerializableExtra("partea3");
 		resultadosA3.calcularParteA();
-		
+
 		System.out.println(resultadosA3.AlturaArboles);
 		System.out.println(resultadosA3.AlturaMeseta);
 		System.out.println(resultadosA3.AnchoCalle);
@@ -94,161 +94,161 @@ public class Resultados1 extends Activity{
 		System.out.println(resultadosA3.VolumenArbol);
 		System.out.println("Zona Crítica" + resultadosA3.ZonaCriticaTratar);
 		System.out.println(resultadosA3.VolumenAppLHA);
-		
+
 		if (resultadosA3.IndiceDensidadFoliar == 0){
 			densidadFoliar.setText("Baja");
-        }
-        else if (resultadosA3.IndiceDensidadFoliar == 1){
-        	densidadFoliar.setText("Media");
-        }
-        else {
-            densidadFoliar.setText("Alta");
-        }
-		
+		}
+		else if (resultadosA3.IndiceDensidadFoliar == 1){
+			densidadFoliar.setText("Media");
+		}
+		else {
+			densidadFoliar.setText("Alta");
+		}
+
 		//densidadFoliar.setText(String.valueOf(resultadosA3.DensidadFoliar));
 		xAncho.setText(String.valueOf(resultadosA3.AnchoCalle));
 		yDistancia.setText(String.valueOf(resultadosA3.DistanciaArboles));
 		volumenArbol.setText(String.valueOf(resultadosA3.VolumenArbol));
-		
+
 		if (resultadosA3.IndiceFormaArbol == 0) {
 			formaArbol.setText("Esférica");
-        }
-        else{
-            formaArbol.setText("Seto");
-        }
+		}
+		else{
+			formaArbol.setText("Seto");
+		}
 		//formaArbol.setText(String.valueOf(resultadosA3.FormaArbol));
-		
+
 		if (resultadosA3.IndiceFechaUltimaPoda == 0){
-            fechaUltimaPoda.setText("< 3 meses");
-        }
-        else if (resultadosA3.IndiceFechaUltimaPoda == 1){
-        	fechaUltimaPoda.setText("3 - 12 meses");
-        }
-        else if (resultadosA3.IndiceFechaUltimaPoda == 2){
-        	fechaUltimaPoda.setText("1 - 2 años");
-        }
-        else{
-        	fechaUltimaPoda.setText("> 2 años");
-        }
+			fechaUltimaPoda.setText("< 3 meses");
+		}
+		else if (resultadosA3.IndiceFechaUltimaPoda == 1){
+			fechaUltimaPoda.setText("3 - 12 meses");
+		}
+		else if (resultadosA3.IndiceFechaUltimaPoda == 2){
+			fechaUltimaPoda.setText("1 - 2 años");
+		}
+		else{
+			fechaUltimaPoda.setText("> 2 años");
+		}
 		//fechaUltimaPoda.setText(String.valueOf(resultadosA3.FechaUltimaPoda));
-		
+
 		if (resultadosA3.IndiceGradoPoda == 0){
-            gradoPoda.setText("Bajo");
-        }
-        else if (resultadosA3.IndiceGradoPoda == 1){
-        	gradoPoda.setText("Medio");
-        }
-        else {
-        	gradoPoda.setText("Alto");
-        }
+			gradoPoda.setText("Bajo");
+		}
+		else if (resultadosA3.IndiceGradoPoda == 1){
+			gradoPoda.setText("Medio");
+		}
+		else {
+			gradoPoda.setText("Alto");
+		}
 		//gradoPoda.setText(String.valueOf(resultadosA3.GradoPoda));
-		
+
 		if (resultadosA3.IndiceProductosAplicar == 0){
-            productosAplicar.setText("Acaricidas");
-        }
-        else if (resultadosA3.IndiceProductosAplicar == 1){
-        	productosAplicar.setText("Fungicidas");
-        }
-        else if (resultadosA3.IndiceProductosAplicar == 2){
-        	productosAplicar.setText("Insecticidas");
-        }
-        else if (resultadosA3.IndiceProductosAplicar == 3){
-        	productosAplicar.setText("Abonos foliares");
-        }
-        else {
-        	productosAplicar.setText("Fitorreguladores");
-        }
+			productosAplicar.setText("Acaricidas");
+		}
+		else if (resultadosA3.IndiceProductosAplicar == 1){
+			productosAplicar.setText("Fungicidas");
+		}
+		else if (resultadosA3.IndiceProductosAplicar == 2){
+			productosAplicar.setText("Insecticidas");
+		}
+		else if (resultadosA3.IndiceProductosAplicar == 3){
+			productosAplicar.setText("Abonos foliares");
+		}
+		else {
+			productosAplicar.setText("Fitorreguladores");
+		}
 		//productosAplicar.setText(String.valueOf(resultadosA3.ProductosAplicar));
-		
+
 		if (resultadosA3.IndiceFormaActuacion == 0){
-            formaActuacion.setText("Por asfixia (aceite)");
-        }
-        else if (resultadosA3.IndiceFormaActuacion == 1){
-        	formaActuacion.setText("Por contacto");
-        }
-        else if (resultadosA3.IndiceFormaActuacion == 2){
-        	formaActuacion.setText("Por ingestión");
-        }
-        else if (resultadosA3.IndiceFormaActuacion == 3){
-        	formaActuacion.setText("Por inhalación");
-        }
-        else if (resultadosA3.IndiceFormaActuacion == 4){
-        	formaActuacion.setText("Traslaminar");
-        }
-        else {
-        	formaActuacion.setText("Sistémicos");
-        }
+			formaActuacion.setText("Por asfixia (aceite)");
+		}
+		else if (resultadosA3.IndiceFormaActuacion == 1){
+			formaActuacion.setText("Por contacto");
+		}
+		else if (resultadosA3.IndiceFormaActuacion == 2){
+			formaActuacion.setText("Por ingestión");
+		}
+		else if (resultadosA3.IndiceFormaActuacion == 3){
+			formaActuacion.setText("Por inhalación");
+		}
+		else if (resultadosA3.IndiceFormaActuacion == 4){
+			formaActuacion.setText("Traslaminar");
+		}
+		else {
+			formaActuacion.setText("Sistémicos");
+		}
 		//formaActuacion.setText(String.valueOf(resultadosA3.FormaActuacion));
-		
+
 		if (resultadosA3.IndiceMojantes == 0){
-            utilizaMojantes.setText("Sí");
-        }
-        else {
-        	utilizaMojantes.setText("No");
-        }
+			utilizaMojantes.setText("Sí");
+		}
+		else {
+			utilizaMojantes.setText("No");
+		}
 		//utilizaMojantes.setText(String.valueOf(resultadosA3.Mojantes));
-		
-		
+
+
 		if (resultadosA3.IndiceZonaCriticaTratar == 0){
-            zonaCriticaATratar.setText("Interior");
-        }
-        else if (resultadosA3.IndiceZonaCriticaTratar == 1){
-        	zonaCriticaATratar.setText("Interior y exterior");
-        }
-        if (resultadosA3.IndiceZonaCriticaTratar == 2){
-        	zonaCriticaATratar.setText("Exterior");
-        }
+			zonaCriticaATratar.setText("Interior");
+		}
+		else if (resultadosA3.IndiceZonaCriticaTratar == 1){
+			zonaCriticaATratar.setText("Interior y exterior");
+		}
+		if (resultadosA3.IndiceZonaCriticaTratar == 2){
+			zonaCriticaATratar.setText("Exterior");
+		}
 		//zonaCriticaATratar.setText(String.valueOf(resultadosA3.ZonaCriticaTratar));
-        
-        if (resultadosA3.IndiceTemperatura == 0){
-            temperatura.setText("< 15 ºC");
-        }
-        else if (resultadosA3.IndiceTemperatura == 1){
-            temperatura.setText("De 15 a 25 ºC");
-        }
-        else {
-            temperatura.setText("De 25 a 30 ºC");
-        }
+
+		if (resultadosA3.IndiceTemperatura == 0){
+			temperatura.setText("< 15 ºC");
+		}
+		else if (resultadosA3.IndiceTemperatura == 1){
+			temperatura.setText("De 15 a 25 ºC");
+		}
+		else {
+			temperatura.setText("De 25 a 30 ºC");
+		}
 		//temperatura.setText(String.valueOf(resultadosA3.Temperatura));
-		
-        if (resultadosA3.IndiceHumedad == 0){
-            humedadRelativa.setText("< 35% (muy seco)");
-        }
-        else if (resultadosA3.IndiceHumedad == 1){
-        	humedadRelativa.setText("35-60% (normal)");
-        }
-        else {
-        	humedadRelativa.setText("> 60% (muy húmedo)");
-        }
-        //humedadRelativa.setText(String.valueOf(resultadosA3.Humedad));
-        
-        if (resultadosA3.VelocidadViento == 1){
-            velocidadViento.setText("< 1m/s (sin viento)");
-        }
-        else {
-        	velocidadViento.setText("1-3 m/s (brisa suave)");
-        }
+
+		if (resultadosA3.IndiceHumedad == 0){
+			humedadRelativa.setText("< 35% (muy seco)");
+		}
+		else if (resultadosA3.IndiceHumedad == 1){
+			humedadRelativa.setText("35-60% (normal)");
+		}
+		else {
+			humedadRelativa.setText("> 60% (muy húmedo)");
+		}
+		//humedadRelativa.setText(String.valueOf(resultadosA3.Humedad));
+
+		if (resultadosA3.VelocidadViento == 1){
+			velocidadViento.setText("< 1m/s (sin viento)");
+		}
+		else {
+			velocidadViento.setText("1-3 m/s (brisa suave)");
+		}
 		//velocidadViento.setText(String.valueOf(resultadosA3.VelocidadViento));
-        
-        if (resultadosA3.TipoPulverizador == 1){
-            tipoPulverizador.setText("Pulv. hidroneumático");
-        }
-        else {
-            tipoPulverizador.setText("Pistola");
-        }
+
+		if (resultadosA3.TipoPulverizador == 1){
+			tipoPulverizador.setText("Pulv. hidroneumático");
+		}
+		else {
+			tipoPulverizador.setText("Pistola");
+		}
 		//tipoPulverizador.setText(String.valueOf(resultadosA3.TipoPulverizador));
-        
+
 		L_Ha.setText(String.valueOf(resultadosA3.VolumenAppLHA));
 		L_Hg.setText(String.valueOf(resultadosA3.VolumenAppLHG));
 
-		
+
 
 
 		Log.e("didi", resultadosA3.DensidadFoliar+"");
 		Log.e("didi", resultadosA3.FormaArbol+"");
 		Log.e("didi", resultadosA3.AlturaMeseta+"");
-		
-		
+
+
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
@@ -257,7 +257,7 @@ public class Resultados1 extends Activity{
 				startActivity(new Intent(Resultados1.this, B_1Activity.class));
 			}
 		});
-			
+
 
 		Button atras = (Button) findViewById(R.id.atras);
 		atras.setClickable(true);
@@ -308,4 +308,6 @@ public class Resultados1 extends Activity{
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+
 }

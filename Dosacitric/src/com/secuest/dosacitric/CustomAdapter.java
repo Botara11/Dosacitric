@@ -10,9 +10,10 @@ import android.widget.TextView;
 public class CustomAdapter extends ArrayAdapter {
     public static final int TYPE_ODD = 0;
     public static final int TYPE_EVEN = 1;
-    public static final int TYPE_WHITE = 2;
-    public static final int TYPE_BLACK = 3;
+    public static final int TYPE_SELECTED = 2;
+    public static final int TYPE_DESELECTED = 3;
     private ListViewItem[] objects;
+    
     @Override
     public int getViewTypeCount() {
         return 4;
@@ -36,7 +37,11 @@ public class CustomAdapter extends ArrayAdapter {
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.siniconoslistview_layout , null);
             } else if (listViewItemType == TYPE_ODD) {
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.zonaslistview , null);
-            } 
+            } else if(listViewItemType == TYPE_SELECTED){
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.seleccionado_layout , null);
+            }else if(listViewItemType == TYPE_DESELECTED){
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.seleccionado_layout , null);
+            }
             TextView textView = (TextView) convertView.findViewById(R.id.textsuperior);
             viewHolder = new ViewHolder(textView);
             convertView.setTag(viewHolder);
@@ -46,4 +51,8 @@ public class CustomAdapter extends ArrayAdapter {
         viewHolder.getText().setText(listViewItem.getText());
         return convertView;
     }
+	public void toggleSelected(Integer integer) {
+		// TODO Auto-generated method stub
+		
+	}
 }
