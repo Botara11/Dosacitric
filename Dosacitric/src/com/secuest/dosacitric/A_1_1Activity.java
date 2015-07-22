@@ -112,9 +112,9 @@ public class A_1_1Activity extends Activity{
 					reemplazado = alturaArb.getText().toString().replace(',', '.');
 					float alturaArb1 = (float) Double.parseDouble(reemplazado);
 
-
-					ParteA nuevo = new ParteA();
-
+					Intent a = getIntent();
+					ParteA nuevo = (ParteA) a.getSerializableExtra("partea");
+					
 					nuevo.rellenarA1(densidadFoliar1, anchocalle1, distancia1, longitudArb1, anchuraArb1, alturaArb1, den);
 					Intent a1 = new Intent(A_1_1Activity.this,A_1_2Activity.class);
 					a1.putExtra("partea1",nuevo);

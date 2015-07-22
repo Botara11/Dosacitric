@@ -22,11 +22,23 @@ public class Indice extends Activity{
 			@Override
 			public void onClick(View v) {
 				System.out.println("CLICK");
-				startActivity(new Intent(Indice.this, A_1_1Activity.class));
+				startActivity(new Intent(Indice.this, A_1Activity.class));
 
 			}
 		});
 
+	//// Click to A_1Activity ////
+			TextView identificacionTratamiendo = (TextView) findViewById(R.id.identificacionTratamiendo);
+			identificacionTratamiendo.setClickable(true);
+			identificacionTratamiendo.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					System.out.println("CLICK");
+					startActivity(new Intent(Indice.this, A_1Activity.class));
+
+				}
+			});
+		
 		//// Click to A_1_3Activity ////
 		TextView volumendeapli = (TextView) findViewById(R.id.volumendeapli);
 		volumendeapli.setClickable(true);
@@ -34,7 +46,7 @@ public class Indice extends Activity{
 			@Override
 			public void onClick(View v) {
 				System.out.println("CLICK");
-				startActivity(new Intent(Indice.this, A_1_3Activity.class));
+				startActivity(new Intent(Indice.this, A_1_1Activity.class));
 
 			}
 		});

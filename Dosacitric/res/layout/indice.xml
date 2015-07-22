@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF8000" >
+    android:background="#000000" >
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -14,6 +14,20 @@
             android:layout_height="match_parent" >
 
             <TextView
+                android:id="@+id/identificacionTratamiendo"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="A. IDENTIFICACIÓN DEL TRATAMIENTO"
+                android:textColor="#E65F00"
+                android:textSize="20dp" />
+
+            <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -21,7 +35,7 @@
                 android:layout_below="@+id/volumendeapli"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="A.1. Datos del cultivo"
+                android:text="B.1. Caracteríticas del cultivo"
                 android:textColor="#FFFFFF"
                 android:textSize="20dp" />
 
@@ -33,7 +47,7 @@
                 android:layout_below="@+id/textView2"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="A.2. Datos del tratamiento"
+                android:text="B.2. Tipo del tratamiento"
                 android:textColor="#FFFFFF"
                 android:textSize="20dp" />
 
@@ -45,7 +59,7 @@
                 android:layout_below="@+id/textView3"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="A.3. Datos metereológicos"
+                android:text="B.3. Condiciones metereológicas"
                 android:textColor="#FFFFFF"
                 android:textSize="20dp" />
 
@@ -57,7 +71,7 @@
                 android:layout_below="@+id/textView4"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="A.4. Elección del equipo"
+                android:text="B.4. Equipo empleado"
                 android:textColor="#FFFFFF"
                 android:textSize="20dp" />
 
@@ -69,7 +83,7 @@
                 android:layout_below="@+id/textView5"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Tabla de resultados 1"
+                android:text="B.R. Resumen y resultados"
                 android:textColor="#FFFFFF"
                 android:textSize="20dp" />
 
@@ -84,7 +98,7 @@
                 android:background="#FFFFFF"
                 android:gravity="left|center"
                 android:paddingLeft="10dp"
-                android:text="B. ELECCIÓN DE BOQUILLAS"
+                android:text="C. ELECCIÓN DE BOQUILLAS"
                 android:textColor="#E65F00"
                 android:textSize="20dp" />
 
@@ -96,7 +110,7 @@
                 android:layout_below="@+id/textView7"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="B.1. Introducción de datos"
+                android:text="C.1. Introducción de datos"
                 android:textColor="#FFFFFF"
                 android:textSize="20dp" />
 
@@ -108,7 +122,7 @@
                 android:layout_below="@+id/textView8"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Tabla de resultados 2"
+                android:text="C.R. Resumen y resultados"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -118,11 +132,12 @@
                 android:layout_height="48dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
+                android:layout_below="@+id/identificacionTratamiendo"
+                android:layout_marginTop="16dp"
                 android:background="#FFFFFF"
                 android:gravity="left|center"
                 android:paddingLeft="10dp"
-                android:text="A. VOLUMEN DE APLICACIÓN (L/ha)"
+                android:text="B. VOLUMEN DE APLICACIÓN (L/ha)"
                 android:textColor="#E65F00"
                 android:textSize="20dp" />
 
@@ -137,10 +152,10 @@
                 android:background="#FFFFFF"
                 android:gravity="left|center"
                 android:paddingLeft="10dp"
-                android:text="C. VOLUMEN DE CALDO APLICADO"
+                android:text="D. DETERMINACIÓN DEL VOLUMEN DE CALDO APLICADO (L/ha)"
                 android:textColor="#E65F00"
                 android:textSize="20dp" />
-            
+
             <TextView
                 android:id="@+id/c1IntroduccionDeDatos"
                 android:layout_width="wrap_content"
@@ -149,7 +164,7 @@
                 android:layout_below="@+id/partC"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="C.1. Introducción de datos"
+                android:text="D.1. Introducción de datos"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -161,7 +176,7 @@
                 android:layout_below="@+id/c1IntroduccionDeDatos"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Tabla de resultados 3"
+                android:text="D.R. Resumen y resultados"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
         </RelativeLayout>

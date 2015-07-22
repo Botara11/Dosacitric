@@ -6,25 +6,26 @@
     <string name="Ajustes_boq">Ajustes de boquillas</string>
     <string name="Acerca">Acerca de</string>
     <string name="Indice">Indice</string>
-    <string name="A1">A1. Datos del cultivo</string>
-    <string name="A2">A2. Datos del tratamiento</string>
-    <string name="A3">A3. Datos meteorológicos</string>
-	<string name="A4">A4. Eleccion del equipo</string>
+    <string name="A">Identificación del tratamiento</string>
+    <string name="B1">B1. Datos del cultivo</string>
+    <string name="B2">B2. Datos del tratamiento</string>
+    <string name="B3">B3. Datos meteorológicos</string>
+	<string name="B4">B4. Eleccion del equipo</string>
 	<string name="R1">Tabla de resultados I</string>
-	<string name="B1">B1. Introducción de datos</string>
-	<string name="B2">B2. Introducción de datos</string>
+	<string name="C1">C1. Introducción de datos</string>
+	<string name="C2">C2. Introducción de datos</string>
 	<string name="R2">Tabla de resultados II</string>
-	<string name="C1">C1. Determinación del volumen de caldo aplicado</string>
-	<string name="C2">Presión de trabajo</string>
-	<string name="C3">Elección de la marca de boquilla</string>
-	<string name="C4">Elección del modelo de boquilla</string>
+	<string name="D1">D1. Determinación del volumen de caldo aplicado</string>
+	<string name="D2">Presión de trabajo</string>
+	<string name="D3">Elección de la marca de boquilla</string>
+	<string name="D4">Elección del modelo de boquilla</string>
 	<string name="ZA">Elección del modelo de boquilla - Zona Alta</string>
 	<string name="ZM">Elección del modelo de boquilla - Zona Media</string>
 	<string name="ZB">Elección del modelo de boquilla - Zona Baja</string>
 	<string name="R3">Tabla de resultados III</string>
-	<string name="A">Parte A</string>
-	<string name="B">Parte B</string>
-	<string name="C">Parte C</string>
+	<string name="ParteA">Parte A</string>
+	<string name="ParteB">Parte B</string>
+	<string name="ParteC">Parte C</string>
 	
         
 </resources>

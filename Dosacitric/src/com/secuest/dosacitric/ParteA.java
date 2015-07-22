@@ -7,6 +7,13 @@ import java.util.Vector;
 
 public class ParteA implements Serializable{
 	public float IndiceDosificacion = (float) 0.085; // HARDCODEADO -> TIENE QUE ESTAR EN LA NUBE
+	
+	/**** A ****/
+	public float Fecha;
+	public float idParcela;
+	public float idTratamiento;
+	public float Referencia;
+	
 	/**** A1 ****/
 	public float DensidadFoliar;
 	public float AnchoCalle;
@@ -47,6 +54,16 @@ public class ParteA implements Serializable{
 	/**** A4 ****/
 	public float TipoPulverizador;
 	
+	
+	public void rellenarA(float Fecha, float idParcela,
+			float idTratamiento, float Referencia) {
+
+		this.Fecha = Fecha;
+		this.idParcela = idParcela;
+		this.idTratamiento = idTratamiento;
+		this.Referencia = Referencia;
+
+	}
 
 	public void rellenarA1(float DensidadFoliar, float AnchoCalle,
 			float DistanciaArboles, float LongitudArboles,

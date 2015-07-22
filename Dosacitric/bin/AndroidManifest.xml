@@ -29,48 +29,52 @@
             android:label="@string/Indice" >
         </activity>
         <activity
+            android:name="A_1Activity"
+            android:label="@string/A" >
+        </activity>
+        <activity
             android:name="A_1_1Activity"
-            android:label="@string/A1" >
-        </activity>
-        <activity
-            android:name="A_1_2Activity"
-            android:label="@string/A1" >
-        </activity>
-        <activity
-            android:name="A_1_3Activity"
-            android:label="@string/A3" >
-        </activity>
-        <activity
-            android:name="B_1Activity"
             android:label="@string/B1" >
         </activity>
         <activity
-            android:name="B_2Activity"
-            android:label="@string/B2" >
+            android:name="A_1_2Activity"
+            android:label="@string/B1" >
         </activity>
         <activity
-            android:name="C_1Activity"
+            android:name="A_1_3Activity"
+            android:label="@string/B3" >
+        </activity>
+        <activity
+            android:name="B_1Activity"
             android:label="@string/C1" >
         </activity>
         <activity
-            android:name="C_2Activity"
+            android:name="B_2Activity"
             android:label="@string/C2" >
         </activity>
         <activity
+            android:name="C_1Activity"
+            android:label="@string/D1" >
+        </activity>
+        <activity
+            android:name="C_2Activity"
+            android:label="@string/D2" >
+        </activity>
+        <activity
             android:name="C_3Activity"
-            android:label="@string/C3" >
+            android:label="@string/D3" >
         </activity>
         <activity
             android:name="C_4Activity"
-            android:label="@string/C4" >
+            android:label="@string/D4" >
         </activity>
         <activity
             android:name="C_4bActivity"
-            android:label="@string/C4" >
+            android:label="@string/D4" >
         </activity>
         <activity
             android:name="C_4bbActivity"
-            android:label="@string/C4" >
+            android:label="@string/D4" >
         </activity>
         <activity
             android:name="C_4ZonaAlta"
@@ -90,15 +94,15 @@
         </activity>
         <activity
             android:name="ParteA"
-            android:label="@string/A" >
+            android:label="@string/ParteA" >
         </activity>
         <activity
             android:name="ParteB"
-            android:label="@string/B" >
+            android:label="@string/ParteB" >
         </activity>
         <activity
             android:name="ParteC"
-            android:label="@string/C" >
+            android:label="@string/ParteC" >
         </activity>
         <activity
             android:name="Resultados1"

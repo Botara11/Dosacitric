@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF8000" >
+    android:background="#000000" >
 
     <TableLayout
         android:id="@+id/table"
@@ -178,7 +178,8 @@
                 android:layout_below="@+id/textView8"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="8dp"
+                android:background="#FFFFFF" />
 
             <Spinner
                 android:id="@+id/temperatura"
@@ -189,7 +190,8 @@
                 android:layout_alignTop="@+id/textView1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_toRightOf="@+id/textView1" />
+                android:layout_toRightOf="@+id/textView1"
+                android:background="#FFFFFF" />
 
             <Spinner
                 android:id="@+id/humedadRelativa"
@@ -200,7 +202,8 @@
                 android:layout_alignTop="@+id/textView2"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_toRightOf="@+id/textView2" />
+                android:layout_toRightOf="@+id/textView2"
+                android:background="#FFFFFF" />
 
             <Spinner
                 android:id="@+id/velocidadViento"
@@ -211,7 +214,8 @@
                 android:layout_alignTop="@+id/textView5"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_toRightOf="@+id/textView5" />
+                android:layout_toRightOf="@+id/textView5"
+                android:background="#FFFFFF" />
 
             <Spinner
                 android:id="@+id/zonaCritica"
@@ -222,7 +226,8 @@
                 android:layout_alignTop="@+id/textView7"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_toRightOf="@+id/textView7" />
+                android:layout_toRightOf="@+id/textView7" 
+                android:background="#FFFFFF"/>
 
             <Spinner
                 android:id="@+id/utilizaMojantes"
@@ -233,7 +238,8 @@
                 android:layout_alignTop="@+id/textView6"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_toRightOf="@+id/textView6" />
+                android:layout_toRightOf="@+id/textView6"
+                android:background="#FFFFFF" />
 
             <Spinner
                 android:id="@+id/formaActuacion"
@@ -244,7 +250,8 @@
                 android:layout_alignTop="@+id/textView4"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_toRightOf="@+id/textView4" />
+                android:layout_toRightOf="@+id/textView4" 
+                android:background="#FFFFFF"/>
 
             <Spinner
                 android:id="@+id/productosAplicar"
@@ -255,7 +262,8 @@
                 android:layout_alignTop="@+id/textView3"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_toRightOf="@+id/textView3" />
+                android:layout_toRightOf="@+id/textView3" 
+                android:background="#FFFFFF"/>
         </RelativeLayout>
     </ScrollView>
 
