@@ -9,7 +9,9 @@ public class ParteA implements Serializable{
 	public float IndiceDosificacion = (float) 0.085; // HARDCODEADO -> TIENE QUE ESTAR EN LA NUBE
 	
 	/**** A ****/
-	public float Fecha;
+	public int day;
+	public int month;
+	public int year;
 	public float idParcela;
 	public float idTratamiento;
 	public float Referencia;
@@ -55,10 +57,12 @@ public class ParteA implements Serializable{
 	public float TipoPulverizador;
 	
 	
-	public void rellenarA(float Fecha, float idParcela,
+	public void rellenarA(int day, int month, int year, float idParcela,
 			float idTratamiento, float Referencia) {
 
-		this.Fecha = Fecha;
+		this.day = day;
+		this.month = month;
+		this.year = year;
 		this.idParcela = idParcela;
 		this.idTratamiento = idTratamiento;
 		this.Referencia = Referencia;

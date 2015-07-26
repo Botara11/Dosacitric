@@ -6,6 +6,7 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -21,7 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class A_1_2Activity extends Activity{
-
+	private int debug = 1;
 	private EditText alturaMeseta;
 	private Spinner formaArb;
 	private Spinner fechaUltima;
@@ -37,10 +38,15 @@ public class A_1_2Activity extends Activity{
 		fechaUltima = (Spinner) findViewById(R.id.fechaultima);
 		gradoPoda = (Spinner) findViewById(R.id.gradoPoda);
 
+		formaArb.setVisibility(View.VISIBLE);
 		//parteA = (ParteA) getIntent().getSerializableExtra("ParteA");
 
+		if (debug==1){
+			alturaMeseta.setText("6");
+		}
+		
 		ArrayList<String> lista = new ArrayList<String>();
-		lista.add("EsfÃ©rica (globo)");
+		lista.add("EsfŽrica (globo)");
 		lista.add("Seto");
 		lista.add("Seleccionar");
 		ArrayAdapterMio<String> adaptador = new ArrayAdapterMio<String>(this, 
@@ -52,9 +58,9 @@ public class A_1_2Activity extends Activity{
 
 		ArrayList<String> lista1 = new ArrayList<String>();
 		lista1.add("Hace menos de 3 meses");
-		lista1.add("Entre 3 meses y 1 aÃ±o");
-		lista1.add("Entre 1 aÃ±o y 2 aÃ±os");
-		lista1.add("Hace mÃ¡s de 2 aÃ±os");
+		lista1.add("Entre 3 meses y 1 a–o");
+		lista1.add("Entre 1 a–o y 2 a–os");
+		lista1.add("Hace m‡s de 2 a–os");
 		lista1.add("Seleccionar");
 		ArrayAdapterMio<String> adaptador1 = new ArrayAdapterMio<String>(this, 
 				R.layout.spinner_item, lista1);

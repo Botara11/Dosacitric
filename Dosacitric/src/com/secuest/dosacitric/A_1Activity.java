@@ -1,20 +1,26 @@
 package com.secuest.dosacitric;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnHoverListener;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
@@ -23,21 +29,50 @@ import android.widget.Toast;
 
 public class A_1Activity extends Activity{
 
-	private EditText fecha;
+	private int debug = 1;
+	private TextView fecha;
 	private EditText idparcela;
 	private EditText idtratamiento;
 	private EditText referencia;
 
+    private int year;
+    private int month;
+    private int day;
+ 
+    static final int DATE_PICKER_ID = 1111; 
+    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.a_1);
 
-		fecha = (EditText) findViewById(R.id.fecha);
+		fecha = (TextView) findViewById(R.id.fecha);
 		idparcela = (EditText) findViewById(R.id.idParcela);
 		idtratamiento = (EditText) findViewById(R.id.idTratamiento);
 		referencia = (EditText) findViewById(R.id.referencia);
+		
 
+		if (debug==1){
+			//fecha.setText("6");
+			idparcela.setText("6");
+			idtratamiento.setText("6");
+			referencia.setText("6");
+		}
+		
+		final Calendar c = Calendar.getInstance();
+        year  = c.get(Calendar.YEAR);
+        month = c.get(Calendar.MONTH);
+        day   = c.get(Calendar.DAY_OF_MONTH);
+		
+        
+		fecha.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // On button click show datepicker dialog 
+                showDialog(DATE_PICKER_ID);
+            }
+        });
+		
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
@@ -48,9 +83,10 @@ public class A_1Activity extends Activity{
 
 				try {
 
-					revisando = "Fecha";
-					reemplazado = fecha.getText().toString().replace(',', '.');
-					float fecha1 = (float) Double.parseDouble(reemplazado);
+					revisando = "FECHA";
+					if (fecha.getText().toString().compareTo("")==0){
+						Double.parseDouble("peta");
+					}
 
 					revisando = "Identificación de parcela";
 					reemplazado = idparcela.getText().toString().replace(',', '.');
@@ -66,7 +102,7 @@ public class A_1Activity extends Activity{
 
 					ParteA nuevoA = new ParteA();
 
-					nuevoA.rellenarA(fecha1, idparcela1, idtratamiento1, referencia1);
+					nuevoA.rellenarA(day,month,year, idparcela1, idtratamiento1, referencia1);
 					Intent a = new Intent(A_1Activity.this,A_1_1Activity.class);
 					a.putExtra("partea",nuevoA);
 					startActivity(a);
@@ -138,7 +174,37 @@ public class A_1Activity extends Activity{
 		return true;
 	}
 
-
+	 @Override
+	    protected Dialog onCreateDialog(int id) {
+	        switch (id) {
+	        case DATE_PICKER_ID:
+	             
+	            // open datepicker dialog. 
+	            // set date picker for current date 
+	            // add pickerListener listner to date picker
+	            return new DatePickerDialog(this, pickerListener, year, month,day);
+	        }
+	        return null;
+	    }
+	 
+	    private DatePickerDialog.OnDateSetListener pickerListener = new DatePickerDialog.OnDateSetListener() {
+	 
+	        // when dialog box is closed, below method will be called.
+	        @Override
+	        public void onDateSet(DatePicker view, int selectedYear,
+	                int selectedMonth, int selectedDay) {
+	             
+	            year  = selectedYear;
+	            month = selectedMonth;
+	            day   = selectedDay;
+	 
+	            // Show selected date 
+	            fecha.setText(new StringBuilder().append(month + 1)
+	                    .append("-").append(day).append("-").append(year)
+	                    .append(" "));
+	     
+	           }
+	        };
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

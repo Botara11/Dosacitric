@@ -22,7 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class A_1_1Activity extends Activity{
-
+	private int debug = 1;
 	private Spinner densidadFoliar;
 	private EditText anchocalle;
 	private EditText distancia;
@@ -42,6 +42,15 @@ public class A_1_1Activity extends Activity{
 		anchuraArb = (EditText) findViewById(R.id.anchuraArb);
 		alturaArb = (EditText) findViewById(R.id.alturaArb);
 
+		if (debug==1){
+		//PONIENDO VALORES PARA DEBUG
+		anchocalle.setText("6");
+		distancia.setText("6");
+		longitudArb.setText("6");
+		anchuraArb.setText("6");
+		alturaArb.setText("6");
+		}
+		
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {

@@ -16,6 +16,7 @@ import android.widget.TableRow;
 
 
 public class MainActivity extends ActionBarActivity {
+	int debug = 1;
 	String pagina;
 	private ProgressBar barra;
 	private TableRow tableLay;
@@ -41,7 +42,12 @@ public class MainActivity extends ActionBarActivity {
 
 			}
 		});
-
+		
+		//Para omitir la carga:
+		if (debug==1){
+		tableLay.setVisibility(View.VISIBLE);
+		barra.setVisibility(View.INVISIBLE);
+		}else{
 		new Thread(new Runnable() {
 			public void run() {
 
@@ -89,8 +95,8 @@ public class MainActivity extends ActionBarActivity {
 			}
 		}).start();    
 		check();
-
-
+		
+	}
 		/*
 									// diamet,caudal
 		db.addBoquilla("NIKE", "zapas", null, null, 0.1, 0.2, 0.3, 0.4, 0.5,
@@ -106,8 +112,6 @@ public class MainActivity extends ActionBarActivity {
 		db.addBoquilla("NIKE", "nuevo", null, null, 0.1, 0.2, 0.3, 0.4, 0.5,
 				0.6, 0.7, 0.8, 0.9, 1.0, 1.2);
 		 */
-
-
 
 	}
 
