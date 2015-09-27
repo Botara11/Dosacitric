@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.opengl.Visibility;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,9 +22,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class A_1_2Activity extends Activity{
-	private int debug = 1;
-	private EditText alturaMeseta;
+public class A_1_2Activity extends ActionBarActivity{
+	
+	//private int debug = 1;
+	//private EditText alturaMeseta;
 	private Spinner formaArb;
 	private Spinner fechaUltima;
 	private Spinner gradoPoda;
@@ -33,20 +35,20 @@ public class A_1_2Activity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.a_1_2);
 
-		alturaMeseta = (EditText) findViewById(R.id.alturaMeseta);
+		//alturaMeseta = (EditText) findViewById(R.id.alturaMeseta);
 		formaArb = (Spinner) findViewById(R.id.formaArb);
 		fechaUltima = (Spinner) findViewById(R.id.fechaultima);
 		gradoPoda = (Spinner) findViewById(R.id.gradoPoda);
 
-		formaArb.setVisibility(View.VISIBLE);
+		//formaArb.setVisibility(View.VISIBLE);
 		//parteA = (ParteA) getIntent().getSerializableExtra("ParteA");
 
-		if (debug==1){
+		/*if (debug==1){
 			alturaMeseta.setText("6");
-		}
+		}*/
 		
 		ArrayList<String> lista = new ArrayList<String>();
-		lista.add("EsfŽrica (globo)");
+		lista.add("EsfÃ©rica (globo)");
 		lista.add("Seto");
 		lista.add("Seleccionar");
 		ArrayAdapterMio<String> adaptador = new ArrayAdapterMio<String>(this, 
@@ -58,9 +60,9 @@ public class A_1_2Activity extends Activity{
 
 		ArrayList<String> lista1 = new ArrayList<String>();
 		lista1.add("Hace menos de 3 meses");
-		lista1.add("Entre 3 meses y 1 a–o");
-		lista1.add("Entre 1 a–o y 2 a–os");
-		lista1.add("Hace m‡s de 2 a–os");
+		lista1.add("Entre 3 meses y 1 aÃ±o");
+		lista1.add("Entre 1 aÃ±o y 2 aÃ±os");
+		lista1.add("Hace mÃ¡s de 2 aÃ±os");
 		lista1.add("Seleccionar");
 		ArrayAdapterMio<String> adaptador1 = new ArrayAdapterMio<String>(this, 
 				R.layout.spinner_item, lista1);
@@ -105,14 +107,11 @@ public class A_1_2Activity extends Activity{
 
 				try {
 
-					Intent a1 = getIntent();
-					ParteA partea2 = (ParteA) a1.getSerializableExtra("partea1");
-
-					Log.e("didi", partea2.AlturaArboles+" soy A_1_2");
-
-					revisando = "Altura de la Meseta";
+					//Log.e("didi", partea2.AlturaArboles+" soy A_1_2");
+					
+					/*revisando = "Altura de la Meseta";
 					reemplazado = alturaMeseta.getText().toString().replace(',', '.');
-					float alturaMeseta1 = (float) Double.parseDouble(reemplazado);
+					float alturaMeseta1 = (float) Double.parseDouble(reemplazado);*/
 
 					revisando = "Forma del arbol";
 					Float formaArb1 = (float) 999.999;
@@ -158,13 +157,19 @@ public class A_1_2Activity extends Activity{
 					case 3:  Double.parseDouble("p");
 					break;
 					}
+					/*
+					Intent a1 = getIntent();
+					ParteA partea2 = (ParteA) a1.getSerializableExtra("partea1");
 
-
-					partea2.rellenarA11(alturaMeseta1, formaArb1, fechaUltima1, gradoPoda1, form, gra, fech);
+					partea2.rellenarA11(/*alturaMeseta1, formaArb1, fechaUltima1, gradoPoda1, form, gra, fech);
 					Intent a2 = new Intent(A_1_2Activity.this, A_1_3Activity.class);
 					a2.putExtra("partea2",partea2);
 					startActivity(a2);
-
+					
+					Log.e("didi", partea2.idParcela);
+					Log.e("didi", partea2.idTratamiento);
+					Log.e("didi", partea2.Referencia);
+					 */
 				} catch (Exception e) {
 					e.printStackTrace();
 					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+revisando+'"'+" incorrecto", Toast.LENGTH_SHORT);
@@ -199,7 +204,7 @@ public class A_1_2Activity extends Activity{
 
 
 
-	private class ArrayAdapterMio<String> extends ArrayAdapter<String> {
+	public class ArrayAdapterMio<String> extends ArrayAdapter<String> {
 
 		public ArrayAdapterMio(Context context, int resource,
 				List<String> objects) {

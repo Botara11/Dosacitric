@@ -6,35 +6,40 @@
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" 
-        android:layout_above="@+id/tableLayout2">
-<RelativeLayout 	
-    android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Dosacítric"
-            android:textColor="#FFFFFF"
-            android:textSize="40sp" />
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/tableLayout2" >
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:text="V.01."
-            android:textColor="#FFFFFF"
-            android:textSize="40sp" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
 
-        <TextView
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="DOSACITRIC"
+                android:gravity="center"
+                android:textColor="#E65F00"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="V.01."
+                android:textColor="#E65F00"
+                android:gravity="center"
+                android:textSize="40sp" />
+
+            <!--
+			<TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,45 +50,56 @@
             android:gravity="center"
             android:text="UNIVERSIDAT POLITÈCNICA DE VALÈNCIA"
             android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:textSize="16sp" />            -->
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView4"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:text="Unidad de Mecanización y Tecnología Agraria"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Dpto. de Ingeniería Rural y Agroalimentaria"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView5"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Dpto. de Ingeniería Rural y Agroalimentaria"
-            android:gravity="center"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView6"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Camino de Vera, s/n 46022 - Valencia"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView6"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Camino de Vera, s/n 46022 - Valencia"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView8"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView6"
+                android:layout_below="@+id/textView3"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Unidad de Mecanización y Tecnología Agraria"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </RelativeLayout>
     </ScrollView>
 

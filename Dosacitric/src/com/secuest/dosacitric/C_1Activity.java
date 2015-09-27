@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -19,13 +20,14 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class C_1Activity extends Activity {
+public class C_1Activity extends ActionBarActivity {
 
 	private TextView anchoCalle;
 	private TextView anchoCalleCalculado;
@@ -41,13 +43,16 @@ public class C_1Activity extends Activity {
 	private EditText editAncho;
 	private EditText editVelocidad;
 	private ParteC partec1;
-	
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.c_1);
-		
+
+		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
+
 		editAncho = (EditText) findViewById(R.id.anchoCalculadoParteC);
 		editAncho.setText("0.0");
 		editAncho.addTextChangedListener(new TextWatcher() {
@@ -71,7 +76,7 @@ public class C_1Activity extends Activity {
 				// TODO Auto-generated method stub
 			}
 		});
-		
+
 		editVelocidad = (EditText) findViewById(R.id.editText1);
 		editVelocidad.setText("0.0");
 		editVelocidad.addTextChangedListener(new TextWatcher() {
@@ -95,7 +100,7 @@ public class C_1Activity extends Activity {
 				// TODO Auto-generated method stub
 			}
 		});
-		
+
 		partec1 = new ParteC();
 
 		anchoCalle = (TextView) findViewById(R.id.anchoCalleParteC);
@@ -122,14 +127,14 @@ public class C_1Activity extends Activity {
 				try {
 
 					Float ancho, velocidad;
-					
+
 					quien="Zona Alta";
 					int zAlta = Integer.parseInt(zonaAlta.getText().toString());
 					quien="Zona Media";
 					int zMedia = Integer.parseInt(zonaMedia.getText().toString());
 					quien="Zona Baja";
 					int zBaja = Integer.parseInt(zonaBaja.getText().toString());
-					
+
 					int [] zBoquillas = {zAlta,zMedia,zBaja};
 
 					if (RanchoCalle.isChecked()) {
@@ -151,11 +156,11 @@ public class C_1Activity extends Activity {
 						velocidad = Float
 								.parseFloat(velocidadAvanceCalculado.getText().toString());
 					}
-					
+
 					String ola ="ParteC1";
 					Log.e("didi", ola);
-					
-					
+
+
 					partec1.rellenarC1(ancho, zBoquillas, velocidad);
 					Intent c1 = new Intent(C_1Activity.this, C_2Activity.class);
 					c1.putExtra("partec1", partec1);
@@ -169,17 +174,6 @@ public class C_1Activity extends Activity {
 				}
 			}
 		});
-		
-		Button atras = (Button) findViewById(R.id.atras);
-		atras.setClickable(true);
-		atras.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				System.out.println("CLICK");
-				//startActivity(new Intent(C_1Activity.this, BoquillasListView.class));
-				finish();
-			}
-		});
 
 		Button indice = (Button) findViewById(R.id.indice);
 		indice.setClickable(true);
@@ -191,9 +185,18 @@ public class C_1Activity extends Activity {
 			}
 		});
 
+		ImageButton ayuda = (ImageButton) findViewById(R.id.ayuda);
+		ayuda.setClickable(true);
+		ayuda.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				System.out.println("CLICK");
+				startActivity(new Intent(C_1Activity.this, AyudaTipoTratamiento.class));
+			}
+		});
 
 	}
-	
+
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		return super.onPrepareOptionsMenu(menu);
@@ -215,11 +218,19 @@ public class C_1Activity extends Activity {
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
+		/*int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;
 		}
-		return super.onOptionsItemSelected(item);
+		return super.onOptionsItemSelected(item);*/
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			// app icon in action bar clicked; goto parent activity.
+			this.finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 
 }

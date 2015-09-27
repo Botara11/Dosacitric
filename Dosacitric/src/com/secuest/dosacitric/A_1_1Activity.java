@@ -3,10 +3,14 @@ package com.secuest.dosacitric;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.secuest.dosacitric.A_1_2Activity.ArrayAdapterMio;
+
 import android.app.Activity;
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,7 +25,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class A_1_1Activity extends Activity{
+public class A_1_1Activity extends ActionBarActivity{
 	private int debug = 1;
 	private Spinner densidadFoliar;
 	private EditText anchocalle;
@@ -29,11 +33,18 @@ public class A_1_1Activity extends Activity{
 	private EditText longitudArb;
 	private EditText anchuraArb;
 	private EditText alturaArb;
+	//private EditText alturaMeseta;
+	private Spinner formaArb;
+	private Spinner fechaUltima;
+	private Spinner gradoPoda;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.a_1_1);
+
+		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
 
 		densidadFoliar = (Spinner) findViewById(R.id.densidadFoliar);
 		anchocalle = (EditText) findViewById(R.id.anchocalle);
@@ -41,16 +52,55 @@ public class A_1_1Activity extends Activity{
 		longitudArb = (EditText) findViewById(R.id.longitudArb);
 		anchuraArb = (EditText) findViewById(R.id.anchuraArb);
 		alturaArb = (EditText) findViewById(R.id.alturaArb);
+		//alturaMeseta = (EditText) findViewById(R.id.alturaMeseta);
+		formaArb = (Spinner) findViewById(R.id.formaArb);
+		fechaUltima = (Spinner) findViewById(R.id.fechaultima);
+		gradoPoda = (Spinner) findViewById(R.id.gradoPoda);
+
+		ArrayList<String> lista0 = new ArrayList<String>();
+		lista0.add("Esférica (globo)");
+		lista0.add("Seto");
+		lista0.add("Seleccionar");
+		ArrayAdapterMio<String> adaptador0 = new ArrayAdapterMio<String>(this, 
+				R.layout.spinner_item, lista0);
+		adaptador0.setDropDownViewResource(R.layout.spinner_item);
+		formaArb.setAdapter(adaptador0);
+		formaArb.setSelection(adaptador0.getCount());
+
+
+		ArrayList<String> lista1 = new ArrayList<String>();
+		lista1.add("Hace menos de 3 meses");
+		lista1.add("Entre 3 meses y 1 año");
+		lista1.add("Entre 1 año y 2 años");
+		lista1.add("Hace más de 2 años");
+		lista1.add("Seleccionar");
+		ArrayAdapterMio<String> adaptador1 = new ArrayAdapterMio<String>(this, 
+				R.layout.spinner_item, lista1);
+		adaptador1.setDropDownViewResource(R.layout.spinner_item);
+		fechaUltima.setAdapter(adaptador1);
+		fechaUltima.setSelection(adaptador1.getCount());
+
+
+		ArrayList<String> lista2 = new ArrayList<String>();
+		lista2.add("Bajo");
+		lista2.add("Medio");
+		lista2.add("Alto");
+		lista2.add("Seleccionar");
+		ArrayAdapterMio<String> adaptador2 = new ArrayAdapterMio<String>(this, 
+				R.layout.spinner_item, lista2);
+		adaptador2.setDropDownViewResource(R.layout.spinner_item);
+		gradoPoda.setAdapter(adaptador2);
+		gradoPoda.setSelection(adaptador2.getCount());
 
 		if (debug==1){
-		//PONIENDO VALORES PARA DEBUG
-		anchocalle.setText("6");
-		distancia.setText("6");
-		longitudArb.setText("6");
-		anchuraArb.setText("6");
-		alturaArb.setText("6");
+			//PONIENDO VALORES PARA DEBUG
+			anchocalle.setText("6");
+			distancia.setText("6");
+			longitudArb.setText("6");
+			anchuraArb.setText("6");
+			alturaArb.setText("6");
 		}
-		
+
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
@@ -78,7 +128,7 @@ public class A_1_1Activity extends Activity{
 
 				try {
 
-					revisando = "Densidad foliar del cultivo";
+					revisando = "Densidad foliar del árbol";
 					Float densidadFoliar1 = (float) 999.999;
 					int den = densidadFoliar.getSelectedItemPosition();
 					switch(den){
@@ -121,24 +171,74 @@ public class A_1_1Activity extends Activity{
 					reemplazado = alturaArb.getText().toString().replace(',', '.');
 					float alturaArb1 = (float) Double.parseDouble(reemplazado);
 
+					/*revisando = "Altura de la Meseta";
+					reemplazado = alturaMeseta.getText().toString().replace(',', '.');
+					float alturaMeseta1 = (float) Double.parseDouble(reemplazado);*/
+
+					revisando = "Forma del arbol";
+					float formaArb1 = (float) 999.999;
+					int form = formaArb.getSelectedItemPosition();
+					switch(form){
+
+					case 0: formaArb1=(float) 1.00;
+					break;
+					case 1: formaArb1=(float) 1.00;
+					break;
+					case 2:  Double.parseDouble("p");
+					break;
+					}
+
+					revisando = "Fecha última poda";
+					float fechaUltima1 = (float) 999.999;
+					int fech = fechaUltima.getSelectedItemPosition();
+					switch(fech){
+
+					case 0: fechaUltima1=(float) 0.95;
+					break;
+					case 1: fechaUltima1=(float) 1.00;
+					break;
+					case 2: fechaUltima1=(float) 1.075;
+					break;
+					case 3: fechaUltima1=(float) 1.15;
+					break;
+					case 4:  Double.parseDouble("p");
+					break;
+					}
+
+					revisando = "Grado de la poda";
+					float gradoPoda1 = (float) 999.999;
+					int gra = gradoPoda.getSelectedItemPosition();
+					switch(gra){
+
+					case 0: gradoPoda1=(float) 1.05;
+					break;
+					case 1: gradoPoda1=(float) 1.00;
+					break;
+					case 2: gradoPoda1=(float) 0.95;
+					break;
+					case 3:  Double.parseDouble("p");
+					break;
+					}
+
 					Intent a = getIntent();
 					ParteA nuevo = (ParteA) a.getSerializableExtra("partea");
-					
-					nuevo.rellenarA1(densidadFoliar1, anchocalle1, distancia1, longitudArb1, anchuraArb1, alturaArb1, den);
-					Intent a1 = new Intent(A_1_1Activity.this,A_1_2Activity.class);
+
+					nuevo.rellenarA1(densidadFoliar1, anchocalle1, distancia1, longitudArb1, anchuraArb1, alturaArb1, den,/*alturaMeseta1,*/formaArb1, fechaUltima1, gradoPoda1, form, gra, fech);
+					Intent a1 = new Intent(A_1_1Activity.this,A_1_3Activity.class);
 					a1.putExtra("partea1",nuevo);
 					startActivity(a1);
+
+					Log.e("didi", nuevo.idParcela);
+					Log.e("didi", nuevo.idTratamiento);
+					Log.e("didi", nuevo.Referencia);
 
 				} catch (Exception e) {
 					e.printStackTrace();
 					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+revisando+'"'+" incorrecto", Toast.LENGTH_SHORT);
 					toast.show();
 				}
-
 			}
 		});
-
-
 
 		Button atras = (Button) findViewById(R.id.atras);
 		atras.setClickable(true);
@@ -151,7 +251,17 @@ public class A_1_1Activity extends Activity{
 			}
 		});
 
-		Button indice = (Button) findViewById(R.id.indice);
+		ImageButton ayuda = (ImageButton) findViewById(R.id.ayuda);
+		ayuda.setClickable(true);
+		ayuda.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				System.out.println("CLICK");
+				startActivity(new Intent(A_1_1Activity.this, Ayuda.class));
+			}
+		});
+
+		/*ImageButton indice = (ImageButton) findViewById(R.id.indice);
 		indice.setClickable(true);
 		indice.setOnClickListener(new OnClickListener() {
 			@Override
@@ -179,7 +289,7 @@ public class A_1_1Activity extends Activity{
 				System.out.println("CLICK");
 				startActivity(new Intent(A_1_1Activity.this, Ayuda.class));
 			}
-		});
+		});*/
 
 		densidadFoliar = (Spinner) findViewById(R.id.densidadFoliar);
 
@@ -233,18 +343,25 @@ public class A_1_1Activity extends Activity{
 		return true;
 	}
 
-
-
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
+		/*int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;
 		}
-		return super.onOptionsItemSelected(item);
+		return super.onOptionsItemSelected(item);*/
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			// app icon in action bar clicked; goto parent activity.
+			this.finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 
 }
+

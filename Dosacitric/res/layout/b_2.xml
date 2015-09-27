@@ -19,14 +19,14 @@
             android:gravity="center_horizontal" >
 
             <Button
-                android:id="@+id/atras"
+                android:id="@+id/indice"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="Atrás"
+                android:text="Índice"
                 android:textColor="#E65F00" />
 
             <View
@@ -35,15 +35,12 @@
                 android:layout_margin="10dp"
                 android:background="#E65F00" />
 
-            <Button
-                android:id="@+id/indice"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:padding="10dip"
-                android:text="Índice"
-                android:textColor="#E65F00" />
+            <ImageButton
+                android:id="@+id/ayuda"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/inter3"  />
 
             <View
                 android:layout_width="1dip"

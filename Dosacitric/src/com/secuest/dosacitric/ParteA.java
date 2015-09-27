@@ -12,9 +12,9 @@ public class ParteA implements Serializable{
 	public int day;
 	public int month;
 	public int year;
-	public float idParcela;
-	public float idTratamiento;
-	public float Referencia;
+	public String idParcela;
+	public String idTratamiento;
+	public String Referencia;
 	
 	/**** A1 ****/
 	public float DensidadFoliar;
@@ -23,7 +23,7 @@ public class ParteA implements Serializable{
 	public float LongitudArboles;
 	public float AnchuraArboles;
 	public float AlturaArboles;
-	public float AlturaMeseta;
+	//public float AlturaMeseta;
 	public float FormaArbol;
 	public float FechaUltimaPoda;
 	public float GradoPoda;
@@ -57,8 +57,8 @@ public class ParteA implements Serializable{
 	public float TipoPulverizador;
 	
 	
-	public void rellenarA(int day, int month, int year, float idParcela,
-			float idTratamiento, float Referencia) {
+	public void rellenarA(int day, int month, int year, String idParcela,
+			String idTratamiento, String Referencia) {
 
 		this.day = day;
 		this.month = month;
@@ -71,7 +71,10 @@ public class ParteA implements Serializable{
 
 	public void rellenarA1(float DensidadFoliar, float AnchoCalle,
 			float DistanciaArboles, float LongitudArboles,
-			float AnchuraArboles, float AlturaArboles, int IndiceDensidadFoliar) {
+			float AnchuraArboles, float AlturaArboles, int IndiceDensidadFoliar,
+			/*float AlturaMeseta,*/float FormaArbol, float FechaUltimaPoda, 
+			float GradoPoda, int IndiceFormaArbol, int IndiceGradoPoda, 
+			int IndiceFechaUltimaPoda) {
 
 		this.DensidadFoliar = DensidadFoliar;
 		this.AnchoCalle = AnchoCalle;
@@ -80,21 +83,14 @@ public class ParteA implements Serializable{
 		this.AnchuraArboles = AnchuraArboles;
 		this.AlturaArboles = AlturaArboles;
 		this.IndiceDensidadFoliar = IndiceDensidadFoliar;
-		
-		
-	}
-	
-	public void rellenarA11(float AlturaMeseta,
-			float FormaArbol, float FechaUltimaPoda, float GradoPoda, int IndiceFormaArbol, int IndiceGradoPoda, int IndiceFechaUltimaPoda){
-		
-		this.AlturaMeseta = AlturaMeseta;
+		//this.AlturaMeseta = AlturaMeseta;
 		this.FormaArbol = FormaArbol;
 		this.FechaUltimaPoda = FechaUltimaPoda;
 		this.GradoPoda = GradoPoda;
 		this.IndiceFormaArbol = IndiceFormaArbol;
 		this.IndiceGradoPoda = IndiceGradoPoda;
 		this.IndiceFechaUltimaPoda = IndiceFechaUltimaPoda;
-		
+				
 	}
 
 	public void rellenarA2345(float ProductosAplicar, float FormaActuacion,

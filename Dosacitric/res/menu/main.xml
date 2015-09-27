@@ -14,5 +14,11 @@
         android:orderInCategory="100"
         android:title="@string/Acerca"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/PDF"
+        android:orderInCategory="100"
+        android:title="PDF"
+        app:showAsAction="never"/>
+    
 
 </menu>

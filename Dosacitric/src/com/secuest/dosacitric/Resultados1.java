@@ -3,6 +3,7 @@ package com.secuest.dosacitric;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,9 +11,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class Resultados1 extends Activity{
+public class Resultados1 extends ActionBarActivity{
 
 
 	private TextView densidadFoliar;
@@ -23,6 +25,17 @@ public class Resultados1 extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.resultados1);
+
+		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);		
+
+		TextView fechaDiaResultados1 = (TextView) findViewById(R.id.fechaDiaResultados1);
+		TextView fechaMesResultados1 = (TextView) findViewById(R.id.fechaMesResultados1);
+		TextView fechaAnoResultados1 = (TextView) findViewById(R.id.fechaAnoResultados1);
+		TextView idParcelaResultados1 = (TextView) findViewById(R.id.idParcelaResultados1);
+		TextView idTratamientoResultados1 = (TextView) findViewById(R.id.idTratamientoResultados1);
+		TextView referenciaResultados1 = (TextView) findViewById(R.id.referenciaResultados1);
+
 		/**** A1 ****/
 
 
@@ -74,8 +87,13 @@ public class Resultados1 extends Activity{
 		ParteA resultadosA3 = (ParteA) aR.getSerializableExtra("partea3");
 		resultadosA3.calcularParteA();
 
-		System.out.println(resultadosA3.AlturaArboles);
-		System.out.println(resultadosA3.AlturaMeseta);
+		System.out.println(resultadosA3.day);
+		System.out.println(resultadosA3.month);
+		System.out.println(resultadosA3.year);
+		System.out.println(resultadosA3.idParcela);
+		System.out.println(resultadosA3.idTratamiento);
+		System.out.println(resultadosA3.Referencia);
+		//System.out.println(resultadosA3.AlturaMeseta);
 		System.out.println(resultadosA3.AnchoCalle);
 		System.out.println(resultadosA3.AnchuraArboles);
 		System.out.println("Densidad Foliar" + resultadosA3.DensidadFoliar);
@@ -94,6 +112,13 @@ public class Resultados1 extends Activity{
 		System.out.println(resultadosA3.VolumenArbol);
 		System.out.println("Zona Crítica" + resultadosA3.ZonaCriticaTratar);
 		System.out.println(resultadosA3.VolumenAppLHA);
+
+		fechaDiaResultados1.setText(String.valueOf(resultadosA3.day));
+		fechaMesResultados1.setText(String.valueOf(resultadosA3.month));
+		fechaAnoResultados1.setText(String.valueOf(resultadosA3.year));
+		idParcelaResultados1.setText(String.valueOf(resultadosA3.idParcela));
+		idTratamientoResultados1.setText(String.valueOf(resultadosA3.idTratamiento));
+		referenciaResultados1.setText(String.valueOf(resultadosA3.Referencia));
 
 		if (resultadosA3.IndiceDensidadFoliar == 0){
 			densidadFoliar.setText("Baja");
@@ -239,15 +264,11 @@ public class Resultados1 extends Activity{
 		//tipoPulverizador.setText(String.valueOf(resultadosA3.TipoPulverizador));
 
 		L_Ha.setText(String.valueOf(resultadosA3.VolumenAppLHA));
-		L_Hg.setText(String.valueOf(resultadosA3.VolumenAppLHG));
-
-
-
+		//L_Hg.setText(String.valueOf(resultadosA3.VolumenAppLHG));
 
 		Log.e("didi", resultadosA3.DensidadFoliar+"");
 		Log.e("didi", resultadosA3.FormaArbol+"");
-		Log.e("didi", resultadosA3.AlturaMeseta+"");
-
+		//Log.e("didi", resultadosA3.AlturaMeseta+"");
 
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
@@ -258,16 +279,14 @@ public class Resultados1 extends Activity{
 			}
 		});
 
-
-		Button atras = (Button) findViewById(R.id.atras);
-		atras.setClickable(true);
-		atras.setOnClickListener(new OnClickListener() {
+		ImageButton acercaDe = (ImageButton) findViewById(R.id.acercaDe);
+		acercaDe.setClickable(true);
+		acercaDe.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				System.out.println("CLICK");
-				//startActivity(new Intent(a_1_2Activity.this, a_1_1Activity.class));
+				startActivity(new Intent(Resultados1.this, AcercaDe_1.class));
 				finish();
-
 			}
 		});
 
@@ -280,15 +299,11 @@ public class Resultados1 extends Activity{
 				startActivity(new Intent(Resultados1.this, Indice.class));
 			}
 		});
-
-
 	}
 
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		return super.onPrepareOptionsMenu(menu);
 	}
-
-
 
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -296,18 +311,22 @@ public class Resultados1 extends Activity{
 		return true;
 	}
 
-
-
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
+		/*int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;
 		}
-		return super.onOptionsItemSelected(item);
+		return super.onOptionsItemSelected(item);*/
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			// app icon in action bar clicked; goto parent activity.
+			this.finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
-
-
 }

@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,13 +15,14 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class B_2Activity extends Activity{
+public class B_2Activity extends ActionBarActivity{
 
 
 	private EditText zonaAltaCerradas;
@@ -44,6 +46,9 @@ public class B_2Activity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.b_2);
 		seebbarr();
+
+		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
 
 		df = new DecimalFormat();
 		df.setMaximumFractionDigits(2);
@@ -155,18 +160,6 @@ public class B_2Activity extends Activity{
 		anchoTrabajoCalculado.setChecked(true);
 		anchoTrabajoSiguiente.setChecked(false);*/
 
-		Button atras = (Button) findViewById(R.id.atras);
-		atras.setClickable(true);
-		atras.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				System.out.println("CLICK");
-				//startActivity(new Intent(a_1_2Activity.this, a_1_1Activity.class));
-				finish();
-
-			}
-		});
-
 		Button indice = (Button) findViewById(R.id.indice);
 		indice.setClickable(true);
 		indice.setOnClickListener(new OnClickListener() {
@@ -174,6 +167,16 @@ public class B_2Activity extends Activity{
 			public void onClick(View v) {
 				System.out.println("CLICK");
 				startActivity(new Intent(B_2Activity.this, Indice.class));
+			}
+		});
+
+		ImageButton ayuda = (ImageButton) findViewById(R.id.ayuda);
+		ayuda.setClickable(true);
+		ayuda.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				System.out.println("CLICK");
+				startActivity(new Intent(B_2Activity.this, AyudaTipoTratamiento.class));
 			}
 		});
 
@@ -342,11 +345,19 @@ public class B_2Activity extends Activity{
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
+		/*int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;
 		}
-		return super.onOptionsItemSelected(item);
+		return super.onOptionsItemSelected(item);*/
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			// app icon in action bar clicked; goto parent activity.
+			this.finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 
 

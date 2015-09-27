@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffcc99"
+    android:background="#000000"
     android:orientation="vertical" >
 
     <TableLayout
@@ -20,13 +20,12 @@
             android:gravity="center_horizontal" >
 
             <Button
-                android:id="@+id/atras"
+                android:id="@+id/indice"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:gravity="center"
                 android:padding="10dip"
-                android:text="Atrás"
+                android:text="índice"
                 android:textColor="#E65F00" />
 
             <View
@@ -35,15 +34,22 @@
                 android:layout_margin="10dp"
                 android:background="#E65F00" />
 
-            <Button
-                android:id="@+id/indice"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:padding="10dip"
-                android:text="Índice"
-                android:textColor="#E65F00" />
+            <ImageButton
+                android:id="@+id/acercaDe"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/inter3"  />
+            <!--
+            android:id="@+id/ayuda1"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/textView3"
+                android:layout_alignTop="@+id/textView2"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/textView2"
+                android:background="@drawable/inter"
+            -->
 
             <View
                 android:layout_width="1dip"
@@ -58,7 +64,7 @@
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="Siguiente"
+                android:text="siguiente"
                 android:textColor="#E65F00" />
         </TableRow>
     </TableLayout>
@@ -74,17 +80,6 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:id="@+id/textView1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:background="#afd2c0"
-                android:text="A.1. CARACTERISTICAS DEL CULTIVO"
-                android:textSize="17sp" />
-
-            <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -93,6 +88,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="Densidad foliar del árbol"
+                android:textColor="@color/white"
                 android:textSize="17sp" />
 
             <TextView
@@ -104,6 +100,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="Marco de plantación"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -115,6 +112,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="Volumen del árbol"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -126,6 +124,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="Forma del árbol"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -137,6 +136,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="Poda"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -148,6 +148,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="- Fecha de la última poda"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -159,6 +160,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="- Grado de poda"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -170,8 +172,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:background="#d7d7db"
-                android:text="A.2. TIPO DE TRATAMIENTO"
+                android:background="#ff6600"
+                android:text="B.2. TIPO DE TRATAMIENTO"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -183,6 +186,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="Productos a aplicar"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -194,6 +198,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="Forma de actuación"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -205,6 +210,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="¿Utiliza coadyuvantes (mojantes)?"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -216,6 +222,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="Zona crítica a tratar"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -227,8 +234,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:background="#c3c3c8"
-                android:text="A.3. CONDICIONES METEREOLÓGICAS"
+                android:background="#ff6600"
+                android:text="B.3. CONDICIONES METEREOLÓGICAS"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -240,6 +248,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="Temperatura"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -250,7 +259,8 @@
                 android:layout_below="@+id/textView15"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Humedad Relativa"
+                android:text="Humedad\nRelativa"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -261,7 +271,8 @@
                 android:layout_below="@+id/textView16"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Velocidad del viento"
+                android:text="Velocidad del\n viento"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -274,7 +285,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#ff6600"
-                android:text="A.4. EQUIPO EMPLEADO"
+                android:text="B.4. EQUIPO EMPLEADO"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -286,6 +298,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="Tipo de pulverizador"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -297,8 +310,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:background="#808080"
-                android:text="A.5. VOLUMEN DE APLICACIÓN"
+                android:background="#ff6600"
+                android:text="B.5. VOLUMEN DE APLICACIÓN"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -311,8 +325,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:text="L/ha"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
+            <!--
             <TextView
                 android:id="@+id/textView22"
                 android:layout_width="wrap_content"
@@ -323,7 +339,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:text="L/hg"
-                android:textSize="17dp" />
+                android:textColor="@color/white"
+                android:textSize="17dp" />            -->
 
             <TextView
                 android:id="@+id/textView23"
@@ -334,17 +351,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textView3"
-                android:layout_alignBottom="@+id/textView3"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:text="m x m"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -356,6 +363,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -367,6 +375,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -377,6 +386,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -387,6 +397,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -397,6 +408,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -408,6 +420,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -418,6 +431,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -428,6 +442,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -438,6 +453,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -448,6 +464,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -458,6 +475,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -468,9 +486,11 @@
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/textView21"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
-            <TextView
+            <!--
+                <TextView
                 android:id="@+id/textView38"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -478,37 +498,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/textView22"
                 android:text="TextView"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/textView41"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/textView4"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/textView3"
-                android:text="TextView"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/textView39"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/textView4"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@+id/textView40"
-                android:text="TextView"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/textView40"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/textView4"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@+id/textView41"
-                android:text="x"
-                android:textSize="17dp" />
+                android:textColor="@color/white"
+                android:textSize="17dp" />            -->
 
             <TextView
                 android:id="@+id/textView42"
@@ -519,6 +510,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="m3/árbol"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <TextView
@@ -529,7 +521,231 @@
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/textView42"
                 android:text="TextView"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView4"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="m"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView4"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/textView24"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView39"
+                android:layout_alignBottom="@+id/textView39"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/textView39"
+                android:text="x"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView40"
+                android:layout_alignBottom="@+id/textView40"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/textView40"
+                android:text="m"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView4"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/TextView01"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:background="#ff6600"
+                android:text="B.0. IDENTIFICACIÓN DEL TRATAMIENTO"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/TextView03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/TextView02"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:text="Fecha"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TextView03"
+                android:layout_below="@+id/TextView03"
+                android:layout_marginTop="16dp"
+                android:text="Identificación de\nparcela"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/TextView05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TextView04"
+                android:layout_below="@+id/TextView04"
+                android:layout_marginTop="16dp"
+                android:text="Identificación de\ntratamiento"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/TextView06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TextView05"
+                android:layout_below="@+id/TextView05"
+                android:layout_marginTop="16dp"
+                android:text="Referencia"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TextView06"
+                android:layout_below="@+id/TextView06"
+                android:layout_marginTop="16dp"
+                android:background="#ff6600"
+                android:text="B.1. CARACTERISTICAS DEL CULTIVO"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/fechaAnoResultados1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TextView03"
+                android:layout_alignBottom="@+id/TextView03"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/idParcelaResultados1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TextView04"
+                android:layout_alignBottom="@+id/TextView04"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/idTratamientoResultados1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TextView05"
+                android:layout_alignBottom="@+id/TextView05"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/referenciaResultados1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TextView06"
+                android:layout_alignBottom="@+id/TextView06"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/fechaMesResultados1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/TextView04"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/TextView07"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/TextView09"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/TextView04"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/fechaMesResultados1"
+                android:text="/"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/fechaDiaResultados1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TextView09"
+                android:layout_alignBottom="@+id/TextView09"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/TextView09"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/TextView07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/fechaAnoResultados1"
+                android:layout_alignBottom="@+id/fechaAnoResultados1"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/textView42"
+                android:text="/"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
         </RelativeLayout>
     </ScrollView>
 

@@ -2,6 +2,7 @@ package com.secuest.dosacitric;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -9,7 +10,7 @@ import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class RadioButton extends Activity {
+public class RadioButton extends ActionBarActivity {
 
 	private RadioGroup radioSexGroup;
 	private RadioGroup radioGroup;

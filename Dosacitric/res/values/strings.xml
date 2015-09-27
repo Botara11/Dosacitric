@@ -6,26 +6,32 @@
     <string name="Ajustes_boq">Ajustes de boquillas</string>
     <string name="Acerca">Acerca de</string>
     <string name="Indice">Indice</string>
-    <string name="A">Identificación del tratamiento</string>
-    <string name="B1">B1. Datos del cultivo</string>
-    <string name="B2">B2. Datos del tratamiento</string>
-    <string name="B3">B3. Datos meteorológicos</string>
-	<string name="B4">B4. Eleccion del equipo</string>
-	<string name="R1">Tabla de resultados I</string>
-	<string name="C1">C1. Introducción de datos</string>
-	<string name="C2">C2. Introducción de datos</string>
+    <string name="A">IDENTIFICACION DEL TRATAMIENTO</string>
+    <string name="B1">B.1. CARACTERÍSTICAS DEL CULTIVO</string>
+    <string name="B2">B.2. TIPO DE TRATAMIENTO</string>
+    <string name="B3">B.3. CONDICIONES METEOROLÓGICAS</string>
+	<string name="B4">B.4. EQUIPO EMPLEADO</string>
+	<string name="R1">B.R. RESUMEN Y RESULTADO</string>
+	<string name="C1">C.1. Introducción de datos</string>
+	<string name="C2">C.2. Introducción de datos</string>
 	<string name="R2">Tabla de resultados II</string>
 	<string name="D1">D1. Determinación del volumen de caldo aplicado</string>
-	<string name="D2">Presión de trabajo</string>
-	<string name="D3">Elección de la marca de boquilla</string>
-	<string name="D4">Elección del modelo de boquilla</string>
-	<string name="ZA">Elección del modelo de boquilla - Zona Alta</string>
-	<string name="ZM">Elección del modelo de boquilla - Zona Media</string>
-	<string name="ZB">Elección del modelo de boquilla - Zona Baja</string>
+	<string name="D2">PRESIÓN DE TRABAJO</string>
+	<string name="D3">ELECCIÓN DE LA MARCA DE LA BOQUILLA</string>
+	<string name="D4">ELECCIÓN DEL MODELO DE BOQUILLA</string>
+	<string name="ZA">ELECCIÓN DEL MODELO DE BOQUILLA - ZONA ALTA</string>
+	<string name="ZM">ELECCIÓN DEL MODELO DE BOQUILLA - ZONA MEDIA</string>
+	<string name="ZB">ELECCIÓN DEL MODELO DE BOQUILLA - ZONA BAJA</string>
 	<string name="R3">Tabla de resultados III</string>
 	<string name="ParteA">Parte A</string>
 	<string name="ParteB">Parte B</string>
 	<string name="ParteC">Parte C</string>
-	
+	<string name="AcercaDeTITULO">Acerca de Dosacitric...</string>
+	<string name="AyudaTipoTratamiento"> B.2. TIPO DE TRATAMIENTO</string>
+	<string name="AjusteBoquillas"> B.2. TIPO DE TRATAMIENTO</string>
+	<string name="IngresarBoquillas"> INGRESAR BOQUILLAS</string>
+	<string name="MostrarBoquillas"> MOSTRAR BOQUILLAS</string>
+	<string name="BorrarBoquillas"> BORRAR BOQUILLAS</string>
+		
         
 </resources>

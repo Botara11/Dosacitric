@@ -17,15 +17,14 @@
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
             android:gravity="center_horizontal" >
-
+            
             <Button
                 android:id="@+id/atras"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:gravity="center"
                 android:padding="10dip"
-                android:text="Atrás"
+                android:text="índice"
                 android:textColor="#E65F00" />
 
             <View
@@ -34,15 +33,21 @@
                 android:layout_margin="10dp"
                 android:background="#E65F00" />
 
-            <Button
-                android:id="@+id/indice"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:padding="10dip"
-                android:text="Índice"
-                android:textColor="#E65F00" />
+            <ImageButton
+                android:id="@+id/ayuda"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/inter3"  />
+            
+            android:id="@+id/ayuda1"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/textView3"
+                android:layout_alignTop="@+id/textView2"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/textView2"
+                android:background="@drawable/inter" 
 
             <View
                 android:layout_width="1dip"
@@ -57,7 +62,7 @@
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="Siguiente"
+                android:text="siguiente"
                 android:textColor="#E65F00" />
         </TableRow>
     </TableLayout>
@@ -65,7 +70,8 @@
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_above="@+id/table" >
+        android:layout_above="@+id/table"
+        android:fillViewport="true" >
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -76,10 +82,11 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Densidad foliar del cultivo"
+                android:layout_marginTop="16dp"
+                android:text="DENSIDAD FOLIAR DEL ÁRBOL"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -90,9 +97,9 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/densidadFoliar"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 android:background="#00000000"
-                android:text="Marco de plantación"
+                android:text="MARCO DE PLANTACIÓN"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -103,7 +110,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView2"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="26dp"
+                android:layout_marginTop="16dp"
                 android:layout_toLeftOf="@+id/anchuraArb"
                 android:background="#00000000"
                 android:text="x: Ancho de la calle"
@@ -118,7 +125,7 @@
                 android:layout_below="@+id/textView3"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_toLeftOf="@+id/distancia"
+                android:layout_toLeftOf="@+id/ayuda1"
                 android:background="#00000000"
                 android:text="y: Distancia entre árboles"
                 android:textColor="#FFFFFF"
@@ -131,9 +138,9 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView4"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="39dp"
+                android:layout_marginTop="20dp"
                 android:background="#00000000"
-                android:text="Dimensiones de los árboles"
+                android:text="DIMENSIONES DE LOS ÁRBOLES"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -144,7 +151,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView5"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:layout_toLeftOf="@+id/anchuraArb"
                 android:background="#00000000"
                 android:text="I: Longitud de los árboles"
@@ -283,8 +290,10 @@
                 android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/textView4"
-                android:layout_marginRight="6sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/textView10"
+                android:layout_toRightOf="@+id/textView4"
                 android:background="#FFFFFF"
                 android:ems="10"
                 android:gravity="center"
@@ -292,16 +301,6 @@
                 android:minLines="1"
                 android:minWidth="40dp" >
             </EditText>
-
-            <Spinner
-                android:id="@+id/densidadFoliar"
-                android:layout_width="fill_parent"
-                android:layout_height="50dp"
-                android:layout_alignBottom="@+id/textView1"
-                android:layout_toRightOf="@+id/textView1"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp" 
-                android:background="#FFFFFF"/>
 
             <TextView
                 android:id="@+id/textView11"
@@ -312,6 +311,7 @@
                 android:text="m"
                 android:textColor="#FFFFFF" />
 
+            <!--
             <ImageButton
                 android:id="@+id/ayuda1"
                 android:layout_width="30dp"
@@ -321,7 +321,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/textView2"
                 android:background="@drawable/inter" />
-
+			
+            
             <ImageButton
                 android:id="@+id/ayuda2"
                 android:layout_width="30dp"
@@ -331,6 +332,123 @@
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/textView4"
                 android:background="@drawable/inter" />
+
+            
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView5"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="m"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />	
+                  
+            <Spinner
+                android:id="@+id/formaArb"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/textView5"
+                android:layout_toRightOf="@+id/textView5"
+                android:layout_alignLeft="@+id/gradoPoda"
+                android:layout_marginRight="10dp"
+                android:background="#FFFFFF" />
+            -->
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView5"
+                android:layout_below="@+id/textView8"
+                android:layout_marginTop="20dp"
+                android:background="#00000000"
+                android:text="FORMA DEL ÁRBOL"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView30"
+                android:layout_below="@+id/textView30"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="39dp"
+                android:background="#00000000"
+                android:text="Grado de la poda"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/textView33"
+                android:layout_below="@+id/textView32"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:background="#00000000"
+                android:text="Fecha última poda"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/fechaultima"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textView30"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/textView30"
+                android:background="#FFFFFF" />
+
+            <Spinner
+                android:id="@+id/formaArb"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/fechaultima"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView33"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:background="#FFFFFF"/>
+
+            <Spinner
+                android:id="@+id/densidadFoliar"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/formaArb"
+                android:layout_alignRight="@+id/textView9"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="16dp"
+                android:background="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView33"
+                android:layout_below="@+id/formaArb"
+                android:layout_marginTop="20dp"
+                android:background="#00000000"
+                android:text="PODA"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/gradoPoda"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/fechaultima"
+                android:layout_alignRight="@+id/fechaultima"
+                android:layout_alignTop="@+id/textView31"
+                android:background="#FFFFFF"
+                 />
+
         </RelativeLayout>
     </ScrollView>
 

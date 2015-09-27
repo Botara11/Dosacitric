@@ -72,6 +72,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" >
 
+            <!--
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
@@ -82,7 +83,7 @@
                 android:background="#00000000"
                 android:text="h: Altura de la meseta"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="20sp" />            -->
 
             <TextView
                 android:id="@+id/textView5"
@@ -124,24 +125,6 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/alturaMeseta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textView3"
-                android:layout_alignBottom="@+id/textView3"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/textView9"
-                android:layout_toRightOf="@+id/textView3"
-                android:background="#FFFFFF"
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                android:textSize="20sp" >
-            </EditText>
-
-
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
@@ -154,6 +137,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
+            <!--
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
@@ -163,9 +147,10 @@
                 android:layout_marginRight="10dp"
                 android:text="m"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-            
-            
+                android:textSize="20sp" />            -->
+
+
+            <!--
             <Spinner
                 android:id="@+id/formaArb"
                 android:layout_width="fill_parent"
@@ -174,7 +159,7 @@
                 android:layout_toRightOf="@+id/textView5"
                 android:layout_alignLeft="@+id/gradoPoda"
                 android:layout_marginRight="10dp"
-                android:background="#FFFFFF" />
+                android:background="#FFFFFF" />            -->
 
             <Spinner
                 android:id="@+id/gradoPoda"
@@ -192,11 +177,19 @@
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
                 android:layout_alignBottom="@+id/textView7"
-                android:layout_toRightOf="@+id/textView7"
-                android:layout_alignLeft="@+id/gradoPoda"
                 android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/textView7"
                 android:background="#FFFFFF" />
 
+            <Spinner
+                android:id="@+id/formaArb"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignTop="@+id/textView5"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/textView5"
+                android:background="#FFFFFF" />
         </RelativeLayout>
     </ScrollView>
 

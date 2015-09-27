@@ -1,6 +1,5 @@
 package com.secuest.dosacitric;
 
-import java.util.ArrayList;
 
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
@@ -43,6 +42,10 @@ public class MainActivity extends ActionBarActivity {
 			}
 		});
 		
+		pdfCreator mypdf = new pdfCreator();
+		//mypdf.create();
+		mypdf.test();
+		
 		//Para omitir la carga:
 		if (debug==1){
 		tableLay.setVisibility(View.VISIBLE);
@@ -52,7 +55,7 @@ public class MainActivity extends ActionBarActivity {
 			public void run() {
 
 
-				pagina = (new http()).connect("http://secuest.comuf.com/dosacitric/BBDD.html");
+				pagina = (new http()).connect("http://dosacitric.webs.upv.es/BBDD.txt");
 				if(pagina == null){
 				}else{
 					pagina = pagina.replace(",", ".");

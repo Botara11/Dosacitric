@@ -10,6 +10,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,7 +28,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class A_1Activity extends Activity{
+public class A_1Activity extends ActionBarActivity{
 
 	private int debug = 1;
 	private TextView fecha;
@@ -83,22 +84,22 @@ public class A_1Activity extends Activity{
 
 				try {
 
-					revisando = "FECHA";
+					revisando = "Fecha";
 					if (fecha.getText().toString().compareTo("")==0){
 						Double.parseDouble("peta");
 					}
 
 					revisando = "Identificación de parcela";
 					reemplazado = idparcela.getText().toString().replace(',', '.');
-					float idparcela1 = (float) Double.parseDouble(reemplazado);
+					String idparcela1 = reemplazado;
 
 					revisando = "Identificación del tratamiento";
 					reemplazado = idtratamiento.getText().toString().replace(',', '.');
-					float idtratamiento1 = (float) Double.parseDouble(reemplazado);
+					String idtratamiento1 = reemplazado;
 
 					revisando = "Referencia";
 					reemplazado = referencia.getText().toString().replace(',', '.');
-					float referencia1 = (float) Double.parseDouble(reemplazado);
+					String referencia1 = reemplazado;
 
 					ParteA nuevoA = new ParteA();
 

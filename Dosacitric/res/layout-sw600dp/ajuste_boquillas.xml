@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/ingresarBoquilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingresar Boquilla"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/botonIngresarBoquilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ingresarBoquilla"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/mostrarBoquilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/botonIngresarBoquilla"
+        android:text="Mostrar boquillas"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/botonMostrarBoquilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/mostrarBoquilla"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/borrarBoquilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/botonMostrarBoquilla"
+        android:text="Borrar boquilla"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/botonBorrarBoquilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/borrarBoquilla"
+        android:text="Button" />
+
+</RelativeLayout>

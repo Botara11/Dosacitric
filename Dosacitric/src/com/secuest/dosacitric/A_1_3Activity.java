@@ -1,12 +1,15 @@
 package com.secuest.dosacitric;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,11 +19,12 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class A_1_3Activity extends Activity{
+public class A_1_3Activity extends ActionBarActivity{
 
 	private Spinner productosAplicar;
 	private Spinner formaActuacion;
@@ -36,7 +40,9 @@ public class A_1_3Activity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.a_1_3);
-
+		
+		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
 
 		productosAplicar = (Spinner) findViewById(R.id.productosAplicar);
 		formaActuacion = (Spinner) findViewById(R.id.formaActuacion);
@@ -173,7 +179,7 @@ public class A_1_3Activity extends Activity{
 				try {
 
 					Intent a2 = getIntent();
-					ParteA partea3 = (ParteA) a2.getSerializableExtra("partea2");
+					ParteA partea3 = (ParteA) a2.getSerializableExtra("partea1");
 
 					Log.e("didi", partea3.toString());
 
@@ -321,15 +327,13 @@ public class A_1_3Activity extends Activity{
 			}
 		});
 
-		Button atras = (Button) findViewById(R.id.atras);
-		atras.setClickable(true);
-		atras.setOnClickListener(new OnClickListener() {
+		ImageButton ayuda = (ImageButton) findViewById(R.id.ayuda);
+		ayuda.setClickable(true);
+		ayuda.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				System.out.println("CLICK");
-				//startActivity(new Intent(a_1_2Activity.this, a_1_1Activity.class));
-				finish();
-
+				startActivity(new Intent(A_1_3Activity.this, AyudaTipoTratamiento.class));
 			}
 		});
 
@@ -340,10 +344,39 @@ public class A_1_3Activity extends Activity{
 			public void onClick(View v) {
 				System.out.println("CLICK");
 				startActivity(new Intent(A_1_3Activity.this, Indice.class));
+				finish();
+
 			}
 		});
+
 	}
 
+	 protected void onResume(){
+		    super.onResume();
+		    int pro = 0;
+			productosAplicar.setSelection(pro);
+		}
+	
+	
+	public void onSaveInstanceState(Bundle state) {
+		super.onSaveInstanceState(state);
+		// Save UI state changes to the savedInstanceState.
+		// This bundle will be passed to onCreate if the process is
+		// killed and restarted.
+		super.onSaveInstanceState(state);
+		//state.putInt("spinnerIndex", pro);
+		
+	}
+
+	@Override
+	public void onRestoreInstanceState(Bundle savedInstanceState) {
+		super.onRestoreInstanceState(savedInstanceState);
+		// Restore UI state from the savedInstanceState.
+		// This bundle has also been passed to onCreate.
+		//Log.v(tag, "Inside of onRestoreInstanceState");
+		
+
+	}
 
 	private class ArrayAdapterMio<String> extends ArrayAdapter<String> {
 
@@ -388,11 +421,19 @@ public class A_1_3Activity extends Activity{
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
+		/*int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;
 		}
-		return super.onOptionsItemSelected(item);
+		return super.onOptionsItemSelected(item);*/
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			// app icon in action bar clicked; goto parent activity.
+			this.finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 
 
