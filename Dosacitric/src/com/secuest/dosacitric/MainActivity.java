@@ -1,5 +1,6 @@
 package com.secuest.dosacitric;
 
+import java.util.ArrayList;
 
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
@@ -41,10 +42,6 @@ public class MainActivity extends ActionBarActivity {
 
 			}
 		});
-		
-		pdfCreator mypdf = new pdfCreator();
-		//mypdf.create();
-		mypdf.test();
 		
 		//Para omitir la carga:
 		if (debug==1){

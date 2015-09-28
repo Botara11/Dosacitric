@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.util.Calendar;
 import java.util.Date;
 
 import com.secuest.dosacitric.apw.PDFWriter;
@@ -52,16 +53,22 @@ public void writeFile(){
 	rw.write("B", B);
 }
 
-public void test(){
-	writeFile();
+public void crearAyB(){
+	//writeFile();
 	readFile("A");
 	readFile("B");
 	
-	mPDFWriter.addTextAsHex(30, line_pointer, 16, "d1d2d3d4");
-	incrementLinePointer();
-	mPDFWriter.addText(30, line_pointer, 16, "HOLA —‡ Û ¨ 234");
-	incrementLinePointer();
-	finish_document("AAFINAL");
+	//mPDFWriter.addTextAsHex(30, line_pointer, 16, "d1d2d3d4");
+	//incrementLinePointer();
+	//mPDFWriter.addText(30, line_pointer, 16, "HOLA —‡ Û ¨ 234");
+	//incrementLinePointer();
+	//long milis = Calendar().getTimeInMillis();
+	finish_document("Dosacitric_AB"+(new Date()).getDay()+"-"+(new Date()).getMonth()+"-"+(new Date()).getYear());
+	
+}
+public void crearC(){
+	readFile("C");
+	finish_document("Dosacitric_C"+(new Date()).getDay()+"-"+(new Date()).getMonth()+"-"+(new Date()).getYear());
 }
 
 public void readFile(String filename){
@@ -93,7 +100,7 @@ public void readFile(String filename){
   
   private void incrementLinePointer(){
 	  int aux = line_pointer-btw_lines;
-	  if (aux < 0){
+	  if (aux < 32){
 		  mPDFWriter.newPage();
 		  mPDFWriter.addRawContent("190 190 190 rg\n");
 	      mPDFWriter.addText(30, 90, 10, "© dosacitric", Transformation.DEGREES_270_ROTATION);

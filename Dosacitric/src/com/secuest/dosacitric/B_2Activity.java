@@ -6,6 +6,7 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -24,7 +25,7 @@ import android.view.MenuItem;
 
 public class B_2Activity extends ActionBarActivity{
 
-
+	private int debug = 0;
 	private EditText zonaAltaCerradas;
 	private EditText zonaBajaCerradas;
 	private EditText zonaAltaAbiertas;
@@ -165,7 +166,6 @@ public class B_2Activity extends ActionBarActivity{
 		indice.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("CLICK");
 				startActivity(new Intent(B_2Activity.this, Indice.class));
 			}
 		});
@@ -175,28 +175,29 @@ public class B_2Activity extends ActionBarActivity{
 		ayuda.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("CLICK");
 				startActivity(new Intent(B_2Activity.this, AyudaTipoTratamiento.class));
 			}
 		});
 
 		/********************** TEST **********************/
-		zonaAltaCerradas.setText("0");
-		zonaBajaCerradas.setText("0");
+		if(debug == 1){
+			zonaAltaCerradas.setText("0");
+			zonaBajaCerradas.setText("0");
 
-		zonaAltaAbiertas.setText("6");
-		zonaMediaAbiertas.setText("10");
-		zonaBajaAbiertas.setText("8");
+			zonaAltaAbiertas.setText("6");
+			zonaMediaAbiertas.setText("10");
+			zonaBajaAbiertas.setText("8");
 
-		zonaAltaPorcentaje.setText("30");
-		zonaMediaPorcentaje.setText("50");
-		zonaBajaPorcentaje.setText("20");
+			zonaAltaPorcentaje.setText("30");
+			zonaMediaPorcentaje.setText("50");
+			zonaBajaPorcentaje.setText("20");
 
 
-		variacionCaudalTextView.setText("3");
-		variacionCaudalSeekbar.setProgress(3);
+			variacionCaudalTextView.setText("3");
+			variacionCaudalSeekbar.setProgress(3);
 
-		calcularB();
+			calcularB();
+		}
 		/********************** TEST **********************/
 
 	}
@@ -284,10 +285,7 @@ public class B_2Activity extends ActionBarActivity{
 					public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 						progress_value = progress;
 						variacionCaudalTextView.setText("" + progress);
-						System.out.print("ANTESSS");
-						Log.e("DIDI","Ha entrado");
 						calcularB();
-						System.out.print("MI PUTA MADRE");
 					}
 
 					@Override
@@ -325,11 +323,52 @@ public class B_2Activity extends ActionBarActivity{
 	}
 
 	@Override
-	public boolean onPrepareOptionsMenu(Menu menu) {
-		return super.onPrepareOptionsMenu(menu);
+	protected void onResume(){
+		super.onResume();
+		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+
+		zonaAltaCerradas.setText(settings.getString("zonaAltaCerradas", ""));
+		zonaBajaCerradas.setText(settings.getString("zonaBajaCerradas", ""));
+		zonaAltaAbiertas.setText(settings.getString("zonaAltaAbiertas", ""));
+		zonaMediaAbiertas.setText(settings.getString("zonaMediaAbiertas", ""));
+		zonaBajaAbiertas.setText(settings.getString("zonaBajaAbiertas", ""));
+		zonaAltaPorcentaje.setText(settings.getString("zonaAltaPorcentaje", ""));
+		zonaMediaPorcentaje.setText(settings.getString("zonaMediaPorcentaje", ""));
+		zonaBajaPorcentaje.setText(settings.getString("zonaBajaPorcentaje", ""));
+		variacionCaudalTextView.setText(settings.getString("variacionCaudalTextView", ""));
+
+		//System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+
 	}
 
 
+	@Override
+	protected void onPause(){
+		super.onPause(); 
+
+		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+		SharedPreferences.Editor editor = settings.edit();
+
+		editor.putString("zonaAltaCerradas", zonaAltaCerradas.getText().toString());
+		editor.putString("zonaBajaCerradas", zonaBajaCerradas.getText().toString());
+		editor.putString("zonaAltaAbiertas", zonaAltaAbiertas.getText().toString());
+		editor.putString("zonaMediaAbiertas", zonaMediaAbiertas.getText().toString());
+		editor.putString("zonaBajaAbiertas", zonaBajaAbiertas.getText().toString());
+		editor.putString("zonaAltaPorcentaje", zonaAltaPorcentaje.getText().toString());
+		editor.putString("zonaMediaPorcentaje", zonaMediaPorcentaje.getText().toString());
+		editor.putString("zonaBajaPorcentaje", zonaBajaPorcentaje.getText().toString());
+		editor.putString("variacionCaudalTextView", variacionCaudalTextView.getText().toString());
+
+		// Commit the edits!
+		editor.commit();
+		//System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+
+	}
+
+	@Override
+	public boolean onPrepareOptionsMenu(Menu menu) {
+		return super.onPrepareOptionsMenu(menu);
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -337,8 +376,6 @@ public class B_2Activity extends ActionBarActivity{
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
-
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

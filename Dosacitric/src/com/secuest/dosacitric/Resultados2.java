@@ -16,11 +16,32 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Resultados2 extends ActionBarActivity {
 
 	private DecimalFormat df;
-
+	private TextView VolAplicacion;
+	private TextView VelAvance;
+	private TextView AnchoTrabajo;
+	private TextView CaudalLiqTotal;
+	private TextView NumTotalBoq;
+	private TextView NumBoqPorSector;
+	private TextView BoqCerrAlta;
+	private TextView BoqCerrBaja;
+	private TextView BoqAbiAlta;
+	private TextView BoqAbiMedia;
+	private TextView BoqAbiBaja;
+	private TextView VegetaAlta;
+	private TextView VegetaMedia;
+	private TextView VegetaBaja;
+	private TextView CaudalLiqSector;
+	private TextView VarCaudalAdmisible;
+	private TextView CaudalLiqAlta;
+	private TextView CaudalLiqMedia;
+	private TextView CaudalLiqBaja;
+	
+	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.resultados2_1);
@@ -31,31 +52,31 @@ public class Resultados2 extends ActionBarActivity {
 		df = new DecimalFormat();
 		df.setMaximumFractionDigits(2);
 
-		TextView VolAplicacion = (TextView) findViewById(R.id.textView41);
+		 VolAplicacion = (TextView) findViewById(R.id.textView41);
 
-		TextView VelAvance = (TextView) findViewById(R.id.textView39);
-		TextView AnchoTrabajo = (TextView) findViewById(R.id.textView40);
-		TextView CaudalLiqTotal = (TextView) findViewById(R.id.textView42);
-		TextView NumTotalBoq = (TextView) findViewById(R.id.textView27);
-		TextView NumBoqPorSector = (TextView) findViewById(R.id.textView28);
+		 VelAvance = (TextView) findViewById(R.id.textView39);
+		 AnchoTrabajo = (TextView) findViewById(R.id.textView40);
+		 CaudalLiqTotal = (TextView) findViewById(R.id.textView42);
+		 NumTotalBoq = (TextView) findViewById(R.id.textView27);
+		 NumBoqPorSector = (TextView) findViewById(R.id.textView28);
 
-		TextView BoqCerrAlta = (TextView) findViewById(R.id.textView29);
-		TextView BoqCerrBaja = (TextView) findViewById(R.id.textView30);
+		 BoqCerrAlta = (TextView) findViewById(R.id.textView29);
+		 BoqCerrBaja = (TextView) findViewById(R.id.textView30);
 
-		TextView BoqAbiAlta = (TextView) findViewById(R.id.textView31);
-		TextView BoqAbiMedia = (TextView) findViewById(R.id.textView32);
-		TextView BoqAbiBaja = (TextView) findViewById(R.id.textView33);
+		 BoqAbiAlta = (TextView) findViewById(R.id.textView31);
+		 BoqAbiMedia = (TextView) findViewById(R.id.textView32);
+		 BoqAbiBaja = (TextView) findViewById(R.id.textView33);
 
-		TextView VegetaAlta = (TextView) findViewById(R.id.textView34);
-		TextView VegetaMedia = (TextView) findViewById(R.id.textView35);
-		TextView VegetaBaja = (TextView) findViewById(R.id.textView36);
+		 VegetaAlta = (TextView) findViewById(R.id.textView34);
+		 VegetaMedia = (TextView) findViewById(R.id.textView35);
+		 VegetaBaja = (TextView) findViewById(R.id.textView36);
 
-		TextView CaudalLiqSector = (TextView) findViewById(R.id.textView412);
-		TextView VarCaudalAdmisible = (TextView) findViewById(R.id.textView392);
+		 CaudalLiqSector = (TextView) findViewById(R.id.textView412);
+		 VarCaudalAdmisible = (TextView) findViewById(R.id.textView392);
 
-		TextView CaudalLiqAlta = (TextView) findViewById(R.id.textView512);
-		TextView CaudalLiqMedia = (TextView) findViewById(R.id.textView522);
-		TextView CaudalLiqBaja = (TextView) findViewById(R.id.textView532);
+		 CaudalLiqAlta = (TextView) findViewById(R.id.textView512);
+		 CaudalLiqMedia = (TextView) findViewById(R.id.textView522);
+		 CaudalLiqBaja = (TextView) findViewById(R.id.textView532);
 
 		Intent bres = getIntent();
 		ParteB resultados1 = (ParteB) bres.getSerializableExtra("parteb2");
@@ -156,7 +177,6 @@ public class Resultados2 extends ActionBarActivity {
 		indice.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("CLICK");
 				startActivity(new Intent(Resultados2.this, Indice.class));
 			}
 		});
@@ -166,11 +186,53 @@ public class Resultados2 extends ActionBarActivity {
 		acercaDe.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("CLICK");
 				startActivity(new Intent(Resultados2.this, AcercaDe_1.class));
 				finish();
 			}
 		});
+		
+		
+		ImageButton printer = (ImageButton) findViewById(R.id.printer);
+		printer.setClickable(true);
+		printer.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				RWFile rw = new RWFile(); 
+				String C = ""+
+						"C. REGULACIOacuteN DEL PULVERIZADOR HIDRONEUM&AacuteTICO (TURBO)<tipo>1<n>"+
+						"Volumen de aplicaci&oacuten (V) "+Resultados2.this.VolAplicacion.getText().toString()+" L/Ha<tipo>3<n>"+
+						"Velocidad de avance deseada "+Resultados2.this.VelAvance.getText().toString()+" km/h<tipo>3<n>"+
+						"Ancho de trabajo (a)"+Resultados2.this.AnchoTrabajo.getText().toString()+"+ m<tipo>3<n>"+
+						"Caudal l&iacutequido total "+Resultados2.this.CaudalLiqTotal.getText().toString()+"L/min<tipo>3<n>"+
+						"Caracterl&iacutesticas del sistema hidrl&aacuteulico del equipo<tipo>3<n>"+
+						"- N¼ total boquillas "+Resultados2.this.NumTotalBoq.getText().toString()+"<tipo>3<n>"+
+						"- N¼ boquillas desponibles/sector "+Resultados2.this.NumBoqPorSector.getText().toString()+"+<tipo>3<n>"+
+						"Boquillas a cerrar por zona<tipo>2<n>"+
+						"Zona Alta (nA)"+Resultados2.this.BoqCerrAlta.getText().toString()+"<tipo>3<n> "+
+						"Zona Baja (nA)"+Resultados2.this.BoqCerrBaja.getText().toString()+"<tipo>3<n> "+
+						"N&uacutemero boquillas abiertas por zona<tipo>2<n>"+
+						"Zona Alta (nA)"+Resultados2.this.BoqAbiAlta.getText().toString()+"<tipo>3<n> "+
+						"Zona Media (nA)"+Resultados2.this.BoqAbiMedia.getText().toString()+"<tipo>3<n> "+
+						"Zona Baja (nA)"+Resultados2.this.BoqAbiBaja.getText().toString()+"<tipo>3<n> "+
+						"Porcentaje de vegetaci&oacuten a pulverizar por zona<tipo>2<n>"+
+						"Zona Alta (A%)"+Resultados2.this.VegetaAlta.getText().toString()+" %<tipo>3<n>"+
+						"Zona Media (A%)"+Resultados2.this.VegetaMedia.getText().toString()+" %<tipo>3<n>"+
+						"Zona Baja (A%)"+Resultados2.this.VegetaBaja.getText().toString()+" %<tipo>3<n>"+
+						"Caracterl&iacutesticas del cauda<tipo>2<n>"+
+						"Caudal l&iacutequido por sector"+Resultados2.this.CaudalLiqSector.getText().toString()+" L/min<tipo>3<n>"+
+						"Variaci&oacuten de caudal admisible"+Resultados2.this.VarCaudalAdmisible.getText().toString()+" %<tipo>3<n>"+
+						"Caudal l&iacutequido por boquilla<tipo>2<n>"+
+						"Zona Alta (nA)"+Resultados2.this.CaudalLiqAlta.getText().toString()+" L/min<tipo>3<n>"+
+						"Zona Media (nA)"+Resultados2.this.CaudalLiqMedia.getText().toString()+" L/min<tipo>3<n>"+
+						"Zona Baja (nA)"+Resultados2.this.CaudalLiqBaja.getText().toString()+" L/min<tipo>3";
+				rw.write("C", C);
+				pdfCreator mypdf = new pdfCreator();
+				mypdf.crearC();
+				Toast toast = Toast.makeText(getApplicationContext(), "El PDF sera guardado en DESCARGAS", Toast.LENGTH_SHORT);
+				toast.show();
+			}
+		});
+		
 	}
 
 	public boolean onPrepareOptionsMenu(Menu menu) {
@@ -178,23 +240,13 @@ public class Resultados2 extends ActionBarActivity {
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		/*int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);*/
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// app icon in action bar clicked; goto parent activity.
 			this.finish();
 			return true;
 		default:

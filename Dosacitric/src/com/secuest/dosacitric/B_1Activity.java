@@ -7,6 +7,7 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
@@ -28,6 +29,7 @@ import android.widget.Toast;
 
 public class B_1Activity extends ActionBarActivity {
 
+	private int debug = 0;
 	private TextView volumenAplicacion;
 	private TextView volumenCalculado;
 	private RadioButton volumenAplicacionCalculado;
@@ -202,7 +204,6 @@ public class B_1Activity extends ActionBarActivity {
 		indice.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("CLICK");
 				startActivity(new Intent(B_1Activity.this, Indice.class));
 			}
 		});
@@ -212,17 +213,17 @@ public class B_1Activity extends ActionBarActivity {
 		ayuda.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("CLICK");
 				startActivity(new Intent(B_1Activity.this, AyudaTipoTratamiento.class));
 			}
 		});
 
 		/********************** TEST **********************/
+		if(debug==1){
 		editVolumen.setText("1100");
 		editAncho.setText("5.0");
 		velocidadAvance.setText("1.80");
 		editBoquillas.setText("24");
-
+		}
 		/********************** TEST **********************/
 
 	}
@@ -282,6 +283,43 @@ public class B_1Activity extends ActionBarActivity {
 			return super.getCount() - 1; // you dont display last item. It is
 			// used as hint.
 		}
+	}
+	
+	@Override
+	protected void onResume(){
+		super.onResume();
+		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+		
+	      volumenCalculado.setText(settings.getString("volumenCalculado", ""));
+	      anchoCalculado.setText(settings.getString("anchoCalculado", ""));
+	      velocidadAvance.setText(settings.getString("velocidadAvance", ""));
+	      caudalTotal.setText(settings.getString("caudalTotal", ""));
+	      caudalSector.setText(settings.getString("caudalSector", ""));
+	      editBoquillas.setText(settings.getString("editBoquillas", ""));
+	     	      	      
+	      //System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+		
+	}
+	
+	
+	@Override
+	protected void onPause(){
+		  super.onPause(); 
+		  
+		  SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+	      SharedPreferences.Editor editor = settings.edit();
+	      
+	      editor.putString("volumenCalculado", volumenCalculado.getText().toString());
+	      editor.putString("anchoCalculado", anchoCalculado.getText().toString());
+	      editor.putString("velocidadAvance", velocidadAvance.getText().toString());
+	      editor.putString("caudalTotal", caudalTotal.getText().toString());
+	      editor.putString("caudalSector", caudalSector.getText().toString());
+	      editor.putString("editBoquillas", editBoquillas.getText().toString());
+	      	     	      
+	      // Commit the edits!
+	      editor.commit();
+	      //System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+
 	}
 
 	@Override

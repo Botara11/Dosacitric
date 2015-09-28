@@ -7,6 +7,7 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
@@ -157,10 +158,6 @@ public class C_1Activity extends ActionBarActivity {
 								.parseFloat(velocidadAvanceCalculado.getText().toString());
 					}
 
-					String ola ="ParteC1";
-					Log.e("didi", ola);
-
-
 					partec1.rellenarC1(ancho, zBoquillas, velocidad);
 					Intent c1 = new Intent(C_1Activity.this, C_2Activity.class);
 					c1.putExtra("partec1", partec1);
@@ -180,7 +177,6 @@ public class C_1Activity extends ActionBarActivity {
 		indice.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("CLICK");
 				startActivity(new Intent(C_1Activity.this, Indice.class));
 			}
 		});
@@ -190,10 +186,45 @@ public class C_1Activity extends ActionBarActivity {
 		ayuda.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("CLICK");
 				startActivity(new Intent(C_1Activity.this, AyudaTipoTratamiento.class));
 			}
 		});
+
+	}
+	
+	@Override
+	protected void onResume(){
+		super.onResume();
+		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+		
+	      anchoCalleCalculado.setText(settings.getString("anchoCalleCalculado", ""));
+	      zonaAlta.setText(settings.getString("zonaAlta", ""));
+	      zonaMedia.setText(settings.getString("zonaMedia", ""));
+	      zonaBaja.setText(settings.getString("zonaBaja", ""));
+	      velocidadAvanceCalculado.setText(settings.getString("velocidadAvanceCalculado", ""));
+	     	     	      	      
+	      //System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+		
+	}
+	
+	
+	@Override
+	protected void onPause(){
+		  super.onPause(); 
+		  
+		  SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+	      SharedPreferences.Editor editor = settings.edit();
+	      
+	      editor.putString("anchoCalleCalculado", anchoCalleCalculado.getText().toString());
+	      editor.putString("zonaAlta", zonaAlta.getText().toString());
+	      editor.putString("zonaMedia", zonaMedia.getText().toString());
+	      editor.putString("zonaBaja", zonaBaja.getText().toString());
+	      editor.putString("velocidadAvanceCalculado", velocidadAvanceCalculado.getText().toString());
+	      
+	      	     	      
+	      // Commit the edits!
+	      editor.commit();
+	      //System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
 
 	}
 

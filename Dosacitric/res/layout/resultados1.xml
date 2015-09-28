@@ -40,6 +40,17 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:background="@drawable/inter3"  />
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp"
+                android:background="#E65F00" />
+            <ImageButton
+                android:id="@+id/printer"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/printer"  />
             <!--
             android:id="@+id/ayuda1"
                 android:layout_width="30dp"

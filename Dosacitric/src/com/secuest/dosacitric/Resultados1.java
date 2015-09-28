@@ -13,51 +13,73 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Resultados1 extends ActionBarActivity{
 
 
-	private TextView densidadFoliar;
-	private TextView gradoPoda;
 	private ParteA parteA;
 	private String hola;
-
+	
+	private TextView fechaDiaResultados1;
+	private TextView fechaMesResultados1;
+	private TextView fechaAnoResultados1;
+	private TextView idParcelaResultados1;
+	private TextView idTratamientoResultados1;
+	private TextView referenciaResultados1;
+	private TextView densidadFoliar;
+	private TextView xAncho;
+	private TextView yDistancia; 
+	private TextView volumenArbol;
+	private TextView formaArbol; 
+	private TextView fechaUltimaPoda; 
+	private TextView gradoPoda ;
+	private TextView productosAplicar;
+	private TextView formaActuacion;
+	private TextView utilizaMojantes; 
+	private TextView zonaCriticaATratar;
+	private TextView temperatura;
+	private TextView humedadRelativa; 
+	private TextView velocidadViento;
+	private TextView tipoPulverizador;
+	private TextView L_Ha ;
+	private TextView L_Hg;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.resultados1);
 
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);		
-
-		TextView fechaDiaResultados1 = (TextView) findViewById(R.id.fechaDiaResultados1);
-		TextView fechaMesResultados1 = (TextView) findViewById(R.id.fechaMesResultados1);
-		TextView fechaAnoResultados1 = (TextView) findViewById(R.id.fechaAnoResultados1);
-		TextView idParcelaResultados1 = (TextView) findViewById(R.id.idParcelaResultados1);
-		TextView idTratamientoResultados1 = (TextView) findViewById(R.id.idTratamientoResultados1);
-		TextView referenciaResultados1 = (TextView) findViewById(R.id.referenciaResultados1);
+		fechaDiaResultados1 = (TextView) findViewById(R.id.fechaDiaResultados1);
+		 fechaMesResultados1 = (TextView) findViewById(R.id.fechaMesResultados1);
+		 fechaAnoResultados1 = (TextView) findViewById(R.id.fechaAnoResultados1);
+		 idParcelaResultados1 = (TextView) findViewById(R.id.idParcelaResultados1);
+		 idTratamientoResultados1 = (TextView) findViewById(R.id.idTratamientoResultados1);
+		 referenciaResultados1 = (TextView) findViewById(R.id.referenciaResultados1);
 
 		/**** A1 ****/
 
 
-		TextView densidadFoliar = (TextView) findViewById(R.id.textView23);
-		TextView xAncho = (TextView) findViewById(R.id.textView41);
-		TextView yDistancia = (TextView) findViewById(R.id.textView39);
-		TextView volumenArbol = (TextView) findViewById(R.id.textView25);
-		TextView formaArbol = (TextView) findViewById(R.id.textView26);
-		TextView fechaUltimaPoda = (TextView) findViewById(R.id.textView27);
-		TextView gradoPoda = (TextView) findViewById(R.id.textView28);
-		TextView productosAplicar = (TextView) findViewById(R.id.textView29);
-		TextView formaActuacion = (TextView) findViewById(R.id.textView30);
-		TextView utilizaMojantes = (TextView) findViewById(R.id.textView31);
-		TextView zonaCriticaATratar = (TextView) findViewById(R.id.textView32);
-		TextView temperatura = (TextView) findViewById(R.id.textView33);
-		TextView humedadRelativa = (TextView) findViewById(R.id.textView34);
-		TextView velocidadViento = (TextView) findViewById(R.id.textView35);
-		TextView tipoPulverizador = (TextView) findViewById(R.id.textView36);
-		TextView L_Ha = (TextView) findViewById(R.id.textView37);
-		TextView L_Hg = (TextView) findViewById(R.id.textView38);
+		 densidadFoliar = (TextView) findViewById(R.id.textView23);
+		 xAncho = (TextView) findViewById(R.id.textView41);
+		 yDistancia = (TextView) findViewById(R.id.textView39);
+		 volumenArbol = (TextView) findViewById(R.id.textView25);
+		 formaArbol = (TextView) findViewById(R.id.textView26);
+		 fechaUltimaPoda = (TextView) findViewById(R.id.textView27);
+		 gradoPoda = (TextView) findViewById(R.id.textView28);
+		 productosAplicar = (TextView) findViewById(R.id.textView29);
+		 formaActuacion = (TextView) findViewById(R.id.textView30);
+		 utilizaMojantes = (TextView) findViewById(R.id.textView31);
+		 zonaCriticaATratar = (TextView) findViewById(R.id.textView32);
+		 temperatura = (TextView) findViewById(R.id.textView33);
+		 humedadRelativa = (TextView) findViewById(R.id.textView34);
+		 velocidadViento = (TextView) findViewById(R.id.textView35);
+		 tipoPulverizador = (TextView) findViewById(R.id.textView36);
+		 L_Ha = (TextView) findViewById(R.id.textView37);
+		 L_Hg = (TextView) findViewById(R.id.textView38);
 
-
+		
+		
 		//Intent i = getIntent();
 		// Receiving the Data
 		/*String StringAnchocalle = i.getStringExtra("anchocalle");
@@ -79,11 +101,6 @@ public class Resultados1 extends ActionBarActivity{
 		alturaMeseta.setText(StringAlturaMeseta);*/
 
 		Intent aR = getIntent();
-		//Intent a1 = getIntent();
-		//Intent a2 = getIntent();
-		//Intent a1 = getIntent();
-		//ParteA resultadosA1 = (ParteA) aR.getSerializableExtra("partea1");
-		//ParteA resultadosA2 = (ParteA) aR.getSerializableExtra("partea2");
 		ParteA resultadosA3 = (ParteA) aR.getSerializableExtra("partea3");
 		resultadosA3.calcularParteA();
 
@@ -284,18 +301,58 @@ public class Resultados1 extends ActionBarActivity{
 		acercaDe.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("CLICK");
 				startActivity(new Intent(Resultados1.this, AcercaDe_1.class));
 				finish();
 			}
 		});
 
+		ImageButton printer = (ImageButton) findViewById(R.id.printer);
+		printer.setClickable(true);
+		printer.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				RWFile rw = new RWFile();
+				String A = ""+
+						"A IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
+						"Fecha "+fechaDiaResultados1.getText().toString()+"/"+fechaMesResultados1.getText().toString()+"/"+fechaAnoResultados1.getText().toString()+"<tipo>3<n>"+
+						"Identificaci&oacute;n de la parcela "+idParcelaResultados1.getText().toString()+"<tipo>3<n>"+
+						"Identificaci&oacute;n del tratamiento +"+idTratamientoResultados1.getText().toString()+"+<tipo>3<n>"+
+						"Refer&eacute;ncia "+referenciaResultados1.getText().toString()+"<tipo>3";
+				rw.write("A", A);
+				String B = "B VOLUMEN DE APLICACICI&Oacute;N<tipo>1<n>"+
+						"B.1 Caracter&iacute;sticas del cultivo<tipo>2<n>"+
+						"Densidad foliar del &aacute;rbol "+densidadFoliar.getText().toString()+"<tipo>3<n>"+
+						"Marco de plantaci&oacute;n "+xAncho.getText().toString()+" m x "+yDistancia.getText().toString()+" m<tipo>3<n>"+
+						"Volumen del &aacute;rbol "+volumenArbol.getText().toString()+"<tipo>3<n>"+
+						"Forma del &aacute;rbol "+formaArbol.getText().toString()+"<tipo>3<n>"+
+						"Fecha de la &uacute;ltima poda "+fechaUltimaPoda.getText().toString()+"<tipo>3<n>"+
+						"Grado de poda "+gradoPoda.getText().toString()+"<tipo>3<n>"+
+						"B.2 Tipo de tratamiento<tipo>2<n>"+
+						"Productos a aplicar "+productosAplicar.getText().toString()+"<tipo>3<n>"+
+						"Forma de actuaci&oacute;n "+formaActuacion.getText().toString()+"<tipo>3<n>"+
+						"Utiliza coadyuvantes (mojantes)? "+utilizaMojantes.getText().toString()+"<tipo>3<n>"+
+						"Zona cr&iacute;tica a tratar "+zonaCriticaATratar.getText().toString()+"<tipo>3<n>"+
+						"B.3 Condiciones meteorol&oacute;gicas<tipo>2<n>"+
+						"Temperatura "+temperatura.getText().toString()+"<tipo>3<n>"+
+						"Humedad relativa "+humedadRelativa.getText().toString()+"<tipo>3<n>"+
+						"Velocidad del viento "+velocidadViento.getText().toString()+"<tipo>3<n>"+
+						"B.4 Equipo empleado<tipo>2<n>"+
+						"Tipo de pulverizador "+tipoPulverizador.getText().toString()+"<tipo>3<n>"+
+						"B.5 Volumen de aplicaci&oacute;n <tipo>2<n>"+
+						L_Ha.getText().toString()+"L/ha<tipo>3";
+				rw.write("B", B);
+				pdfCreator mypdf = new pdfCreator();
+				mypdf.crearAyB();
+				Toast toast = Toast.makeText(getApplicationContext(), "El PDF sera guardado en DESCARGAS", Toast.LENGTH_SHORT);
+				toast.show();
+			}
+		});
+		
 		Button indice = (Button) findViewById(R.id.indice);
 		indice.setClickable(true);
 		indice.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("CLICK");
 				startActivity(new Intent(Resultados1.this, Indice.class));
 			}
 		});

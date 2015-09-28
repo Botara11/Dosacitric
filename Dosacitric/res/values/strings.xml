@@ -32,6 +32,7 @@
 	<string name="IngresarBoquillas"> INGRESAR BOQUILLAS</string>
 	<string name="MostrarBoquillas"> MOSTRAR BOQUILLAS</string>
 	<string name="BorrarBoquillas"> BORRAR BOQUILLAS</string>
+	<string name="ic_action_new">ANADIR</string>
 		
         
 </resources>
