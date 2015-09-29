@@ -199,29 +199,29 @@ public class Resultados2 extends ActionBarActivity {
 			public void onClick(View v) {
 				RWFile rw = new RWFile(); 
 				String C = ""+
-						"C. REGULACIOacuteN DEL PULVERIZADOR HIDRONEUM&AacuteTICO (TURBO)<tipo>1<n>"+
-						"Volumen de aplicaci&oacuten (V) "+Resultados2.this.VolAplicacion.getText().toString()+" L/Ha<tipo>3<n>"+
+						"C. REGULACI&Oacute;N DEL PULVERIZADOR HIDRONEUM&Aacute;TICO (TURBO)<tipo>1<n>"+
+						"Volumen de aplicaci&oacute;n (V) "+Resultados2.this.VolAplicacion.getText().toString()+" L/Ha<tipo>3<n>"+
 						"Velocidad de avance deseada "+Resultados2.this.VelAvance.getText().toString()+" km/h<tipo>3<n>"+
 						"Ancho de trabajo (a)"+Resultados2.this.AnchoTrabajo.getText().toString()+"+ m<tipo>3<n>"+
-						"Caudal l&iacutequido total "+Resultados2.this.CaudalLiqTotal.getText().toString()+"L/min<tipo>3<n>"+
-						"Caracterl&iacutesticas del sistema hidrl&aacuteulico del equipo<tipo>3<n>"+
+						"Caudal l&iacute;quido total "+Resultados2.this.CaudalLiqTotal.getText().toString()+"L/min<tipo>3<n>"+
+						"Caracterl&iacute;sticas del sistema hidrl&aacute;ulico del equipo<tipo>3<n>"+
 						"- N¼ total boquillas "+Resultados2.this.NumTotalBoq.getText().toString()+"<tipo>3<n>"+
 						"- N¼ boquillas desponibles/sector "+Resultados2.this.NumBoqPorSector.getText().toString()+"+<tipo>3<n>"+
 						"Boquillas a cerrar por zona<tipo>2<n>"+
 						"Zona Alta (nA)"+Resultados2.this.BoqCerrAlta.getText().toString()+"<tipo>3<n> "+
 						"Zona Baja (nA)"+Resultados2.this.BoqCerrBaja.getText().toString()+"<tipo>3<n> "+
-						"N&uacutemero boquillas abiertas por zona<tipo>2<n>"+
+						"N&uacute;mero boquillas abiertas por zona<tipo>2<n>"+
 						"Zona Alta (nA)"+Resultados2.this.BoqAbiAlta.getText().toString()+"<tipo>3<n> "+
 						"Zona Media (nA)"+Resultados2.this.BoqAbiMedia.getText().toString()+"<tipo>3<n> "+
 						"Zona Baja (nA)"+Resultados2.this.BoqAbiBaja.getText().toString()+"<tipo>3<n> "+
-						"Porcentaje de vegetaci&oacuten a pulverizar por zona<tipo>2<n>"+
+						"Porcentaje de vegetaci&oacute;n a pulverizar por zona<tipo>2<n>"+
 						"Zona Alta (A%)"+Resultados2.this.VegetaAlta.getText().toString()+" %<tipo>3<n>"+
 						"Zona Media (A%)"+Resultados2.this.VegetaMedia.getText().toString()+" %<tipo>3<n>"+
 						"Zona Baja (A%)"+Resultados2.this.VegetaBaja.getText().toString()+" %<tipo>3<n>"+
-						"Caracterl&iacutesticas del cauda<tipo>2<n>"+
-						"Caudal l&iacutequido por sector"+Resultados2.this.CaudalLiqSector.getText().toString()+" L/min<tipo>3<n>"+
-						"Variaci&oacuten de caudal admisible"+Resultados2.this.VarCaudalAdmisible.getText().toString()+" %<tipo>3<n>"+
-						"Caudal l&iacutequido por boquilla<tipo>2<n>"+
+						"Caracterl&iacute;sticas del cauda<tipo>2<n>"+
+						"Caudal l&iacute;quido por sector"+Resultados2.this.CaudalLiqSector.getText().toString()+" L/min<tipo>3<n>"+
+						"Variaci&oacute;n de caudal admisible"+Resultados2.this.VarCaudalAdmisible.getText().toString()+" %<tipo>3<n>"+
+						"Caudal l&iacute;quido por boquilla<tipo>2<n>"+
 						"Zona Alta (nA)"+Resultados2.this.CaudalLiqAlta.getText().toString()+" L/min<tipo>3<n>"+
 						"Zona Media (nA)"+Resultados2.this.CaudalLiqMedia.getText().toString()+" L/min<tipo>3<n>"+
 						"Zona Baja (nA)"+Resultados2.this.CaudalLiqBaja.getText().toString()+" L/min<tipo>3";

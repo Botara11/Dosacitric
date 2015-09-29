@@ -438,7 +438,7 @@ public class A_1_3Activity extends ActionBarActivity{
 	      editor.putInt("utilizaMojantesSpinner", utilizaMojantesPosition);
 	      
 	      int zonaCriticaPosition = zonaCritica.getSelectedItemPosition();
-	      editor.putInt("zonaCriticaPosition", zonaCriticaPosition);
+	      editor.putInt("zonaCriticaSpinner", zonaCriticaPosition);
 	      
 	      int temperaturaPosition = temperatura.getSelectedItemPosition();
 	      editor.putInt("temperaturaSpinner", temperaturaPosition);
