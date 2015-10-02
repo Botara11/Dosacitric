@@ -79,11 +79,14 @@ public class Resultados3 extends ActionBarActivity {
 
 		partec7.calcularParteC(ValorZonaAlta, ValorZonaMedia, ValorZonaBaja);
 
-		System.out.print(partec7.VolumenCaldoAplicado);		
+		System.out.println("Volumen caldo "+partec7.VolumenCaldoAplicado+" <--");		
 
-		TextView VolAplicacion = (TextView) findViewById(R.id.textView41);
-		TextView VelAvance = (TextView) findViewById(R.id.textView39);
+		TextView Volha = (TextView) findViewById(R.id.textView1);
+		TextView Volhg = (TextView) findViewById(R.id.textView2);
 
+		Volha.setText(partec7.VolumenCaldoAplicadoHanegada+"");
+		Volhg.setText(partec7.VolumenCaldoAplicado+"");
+		
 		Intent cres = getIntent();
 		ParteC resultados3 = (ParteC) cres.getSerializableExtra("parteb2");
 

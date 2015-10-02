@@ -13,7 +13,7 @@
         android:background="#FFFFFF" 
         android:gravity="center"
         android:padding="10dip"
-        android:text="Siguiente"
+        android:text="SIGUIENTE"
         android:textColor="#E65F00" />
 
     <RelativeLayout

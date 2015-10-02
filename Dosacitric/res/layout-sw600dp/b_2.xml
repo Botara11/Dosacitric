@@ -40,7 +40,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:background="@drawable/inter3"  />
+                android:background="@drawable/inter3" />
 
             <View
                 android:layout_width="1dip"
@@ -81,7 +81,7 @@
                 android:gravity="center"
                 android:text="Número de boquillas que deben cerrarse por zona"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -92,7 +92,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Número de boquillas abiertas por zona"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView37"
@@ -104,7 +104,7 @@
                 android:layout_marginRight="10dp"
                 android:text="L/min"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/zonaAltaCerradas"
@@ -118,7 +118,8 @@
                 android:background="@color/white"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" />
+                android:inputType="number|textVisiblePassword"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/zonaBajaCerradas"
@@ -133,7 +134,8 @@
                 android:background="@color/white"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" />
+                android:inputType="number|textVisiblePassword"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/zonaAltaAbiertas"
@@ -148,7 +150,8 @@
                 android:background="@color/white"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" />
+                android:inputType="number|textVisiblePassword"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/zonaMediaAbiertas"
@@ -162,7 +165,8 @@
                 android:background="@color/white"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" />
+                android:inputType="number|textVisiblePassword"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/zonaBajaAbiertas"
@@ -176,7 +180,8 @@
                 android:background="@color/white"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" />
+                android:inputType="number|textVisiblePassword"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/zonaAltaPorcentaje"
@@ -191,7 +196,8 @@
                 android:background="@color/white"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" />
+                android:inputType="number|textVisiblePassword"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/zonaMediaPorcentanje"
@@ -206,7 +212,8 @@
                 android:background="@color/white"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" />
+                android:inputType="number|textVisiblePassword"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/zonaBajaPorcentaje"
@@ -221,7 +228,8 @@
                 android:background="@color/white"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" />
+                android:inputType="number|textVisiblePassword"
+                android:textSize="20sp" />
 
             <SeekBar
                 android:id="@+id/variacionCaudalSeekBar"
@@ -243,7 +251,7 @@
                 android:layout_marginRight="10dp"
                 android:text="%"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView35"
@@ -255,7 +263,7 @@
                 android:layout_marginRight="10dp"
                 android:text="%"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/variacionCaudalTextView"
@@ -267,7 +275,8 @@
                 android:layout_toLeftOf="@+id/textView11"
                 android:layout_toRightOf="@+id/textView25"
                 android:background="@color/white"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -278,7 +287,7 @@
                 android:layout_alignRight="@+id/textView38"
                 android:text="%"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/imageView1"
@@ -299,7 +308,7 @@
                 android:layout_toRightOf="@+id/imageView1"
                 android:text="Zona Alta"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -319,7 +328,7 @@
                 android:layout_toRightOf="@+id/imageView2"
                 android:text="Zona Baja"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/ImageView01"
@@ -340,7 +349,7 @@
                 android:layout_toRightOf="@+id/ImageView01"
                 android:text="Zona Alta (nA)"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/ImageView02"
@@ -370,7 +379,7 @@
                 android:layout_alignLeft="@+id/textView15"
                 android:text="Zona Media (nM)"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView18"
@@ -382,7 +391,7 @@
                 android:gravity="center"
                 android:text="Porcentaje de vegetación a pulverizar por zona"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/ImageView04"
@@ -423,7 +432,7 @@
                 android:layout_toRightOf="@+id/ImageView04"
                 android:text="Zona Alta (A%)"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView23"
@@ -433,7 +442,7 @@
                 android:layout_alignLeft="@+id/textView22"
                 android:text="Zona Media (M%)"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView24"
@@ -443,7 +452,7 @@
                 android:layout_alignLeft="@+id/textView23"
                 android:text="Zona Baja (B%)"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView25"
@@ -455,7 +464,7 @@
                 android:layout_marginTop="8dp"
                 android:text="Intervalo de caudales admisibles"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView34"
@@ -467,7 +476,7 @@
                 android:layout_marginRight="10dp"
                 android:text="%"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/ImageView07"
@@ -508,7 +517,7 @@
                 android:layout_toRightOf="@+id/ImageView07"
                 android:text="Zona Alta"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/zonaAltaIntervaloCaudal"
@@ -521,7 +530,8 @@
                 android:layout_toLeftOf="@+id/textView36"
                 android:layout_toRightOf="@+id/textView2"
                 android:background="@color/white"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView36"
@@ -532,7 +542,7 @@
                 android:layout_marginRight="10dp"
                 android:text="L/min"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView31"
@@ -542,7 +552,7 @@
                 android:layout_alignLeft="@+id/textView30"
                 android:text="Zona Media"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/zonaMediaIntervaloCaudal"
@@ -555,7 +565,8 @@
                 android:layout_toLeftOf="@+id/textView37"
                 android:layout_toRightOf="@+id/textView31"
                 android:background="@color/white"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView32"
@@ -565,7 +576,7 @@
                 android:layout_toLeftOf="@+id/zonaBajaCerradas"
                 android:text="Zona Baja"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView17"
@@ -576,7 +587,7 @@
                 android:layout_toRightOf="@+id/ImageView03"
                 android:text="Zona Baja (nB)"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/zonaBajaIntervaloCaudal"
@@ -589,7 +600,8 @@
                 android:layout_toLeftOf="@+id/textView38"
                 android:layout_toRightOf="@+id/textView30"
                 android:background="@color/white"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView38"
@@ -600,7 +612,7 @@
                 android:layout_marginRight="10dp"
                 android:text="L/min"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView29"
@@ -613,7 +625,7 @@
                 android:maxLines="2"
                 android:text="Variación de caudal admisible"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
         </RelativeLayout>
     </ScrollView>
 

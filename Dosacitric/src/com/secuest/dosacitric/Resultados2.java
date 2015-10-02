@@ -2,9 +2,12 @@ package com.secuest.dosacitric;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -228,6 +231,77 @@ public class Resultados2 extends ActionBarActivity {
 				rw.write("C", C);
 				pdfCreator mypdf = new pdfCreator();
 				mypdf.crearC();
+				DatabaseHandler db = new DatabaseHandler(
+						getApplicationContext());
+
+				String[] marcas = { "Teejet", "Hardi", "Albuz", "Lechler",
+						"Discos", "Otros" };
+				String[] presiones = { "p6", "p7", "p8", "p9", "p10", "p11",
+						"p12", "p13", "p14", "p15", "p16" };
+
+				String resultadoBoquillas = "";
+				ArrayList<String> marcasAdecu = new ArrayList<String>();
+
+				bucleDentro: for (String mar : marcas) {
+					int marcaPrimera = 0;
+					for (String pres : presiones) {
+						ArrayList<String> boquillasZ1 = db.getBoquillas(mar,
+								inter[0], inter[1], pres);
+						ArrayList<String> boquillasZ2 = db.getBoquillas(mar,
+								inter[2], inter[3], pres);
+						ArrayList<String> boquillasZ3 = db.getBoquillas(mar,
+								inter[4], inter[5], pres);
+						if (boquillasZ1 != null && boquillasZ2 != null
+								&& boquillasZ3 != null) {
+							if (boquillasZ1.size() > 0
+									&& boquillasZ2.size() > 0
+									&& boquillasZ3.size() > 0) {
+								System.out.println("z1=" + boquillasZ1.size()
+										+ " z2=" + boquillasZ2.size() + " z3="
+										+ boquillasZ3.size());
+								if(marcaPrimera==0){
+									mypdf.insertarMarca(mar);
+									marcaPrimera=1;}
+								mypdf.insertarPresion(pres);
+
+								String boquillaDezona = "Zona alta:   ";
+								for (int u=0;u<boquillasZ1.size();u++){
+									boquillaDezona=boquillaDezona+boquillasZ1.get(u)+ "   ";
+									if(u%3==0 && u!=0){
+										mypdf.insertarZonas(boquillaDezona);
+										boquillaDezona = "            ";
+									}
+								}
+								
+								mypdf.insertarZonas(boquillaDezona);
+								boquillaDezona = "Zona media:   ";
+								for (int u=0;u<boquillasZ2.size();u++){
+									boquillaDezona=boquillaDezona+boquillasZ2.get(u)+ "   ";
+									if(u%3==0 && u!=0){
+										mypdf.insertarZonas(boquillaDezona);
+										boquillaDezona = "            ";
+									}
+								}
+								mypdf.insertarZonas(boquillaDezona);
+								boquillaDezona = "Zona baja:   ";
+								for (int u=0;u<boquillasZ3.size();u++){
+									boquillaDezona=boquillaDezona+boquillasZ3.get(u)+ "   ";
+									if(u%3==0 && u!=0){
+										mypdf.insertarZonas(boquillaDezona);
+										boquillaDezona = "            ";
+									}
+								}
+								mypdf.insertarZonas(boquillaDezona);
+								// Se muestran
+								marcasAdecu.add(mar);
+								continue bucleDentro;
+							}
+						}
+					}
+					
+				}
+				mypdf.finish_document("Dosacitric_C"+(new Date()).getDay()+"-"+(new Date()).getMonth()+"-"+(new Date()).getYear());
+
 				Toast toast = Toast.makeText(getApplicationContext(), "El PDF sera guardado en DESCARGAS", Toast.LENGTH_SHORT);
 				toast.show();
 			}

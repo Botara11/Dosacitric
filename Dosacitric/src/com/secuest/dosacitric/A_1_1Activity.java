@@ -46,7 +46,7 @@ public class A_1_1Activity extends ActionBarActivity{
 
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
-		
+
 		densidadFoliar = (Spinner) findViewById(R.id.densidadFoliar);
 		anchocalle = (EditText) findViewById(R.id.anchocalle);
 		distancia = (EditText) findViewById(R.id.distancia);
@@ -57,7 +57,7 @@ public class A_1_1Activity extends ActionBarActivity{
 		formaArb = (Spinner) findViewById(R.id.formaArb);
 		fechaUltima = (Spinner) findViewById(R.id.fechaultima);
 		gradoPoda = (Spinner) findViewById(R.id.gradoPoda);
-		
+
 		ArrayList<String> lista0 = new ArrayList<String>();
 		lista0.add("Esférica (globo)");
 		lista0.add("Seto");
@@ -223,20 +223,18 @@ public class A_1_1Activity extends ActionBarActivity{
 
 					Intent a = getIntent();
 					ParteA nuevo = (ParteA) a.getSerializableExtra("partea");
-					//if(nuevo== null){
-						//añadir Parte A
-					//}
+					if(nuevo== null){
+						nuevo = new ParteA();
+						System.out.println("ParteA NULL");
+					}
 					nuevo.rellenarA1(densidadFoliar1, anchocalle1, distancia1, longitudArb1, anchuraArb1, alturaArb1, den,/*alturaMeseta1,*/formaArb1, fechaUltima1, gradoPoda1, form, gra, fech);
 					Intent a1 = new Intent(A_1_1Activity.this,A_1_3Activity.class);
 					a1.putExtra("partea1",nuevo);
 					startActivity(a1);
 
-					Log.e("didi", nuevo.idParcela);
-					Log.e("didi", nuevo.idTratamiento);
-					Log.e("didi", nuevo.Referencia);
-
 				} catch (Exception e) {
 					e.printStackTrace();
+					System.out.println(e);
 					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+revisando+'"'+" incorrecto", Toast.LENGTH_SHORT);
 					toast.show();
 				}
@@ -261,33 +259,6 @@ public class A_1_1Activity extends ActionBarActivity{
 				startActivity(new Intent(A_1_1Activity.this, Ayuda.class));
 			}
 		});
-
-		/*ImageButton indice = (ImageButton) findViewById(R.id.indice);
-		indice.setClickable(true);
-		indice.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				startActivity(new Intent(A_1_1Activity.this, Indice.class));
-			}
-		});
-
-		ImageButton ayuda1 = (ImageButton) findViewById(R.id.ayuda1);
-		ayuda1.setClickable(true);
-		ayuda1.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				startActivity(new Intent(A_1_1Activity.this, Ayuda.class));
-			}
-		});
-
-		ImageButton ayuda2 = (ImageButton) findViewById(R.id.ayuda2);
-		ayuda2.setClickable(true);
-		ayuda2.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				startActivity(new Intent(A_1_1Activity.this, Ayuda.class));
-			}
-		});*/
 
 		densidadFoliar = (Spinner) findViewById(R.id.densidadFoliar);
 
@@ -326,67 +297,67 @@ public class A_1_1Activity extends ActionBarActivity{
 			return super.getCount()-1; // you dont display last item. It is used as hint.
 		} 
 	}
-	
-	
+
+
 	@Override
 	protected void onResume(){
 		super.onResume();
 		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-		
-	      int selectedPosition= densidadFoliar.getAdapter().getCount();
-	      selectedPosition = settings.getInt("selectedPosition",selectedPosition);
-	      densidadFoliar.setSelection(selectedPosition);
-	      
-	      int selectedPosition2 = formaArb.getAdapter().getCount(); 
-	      selectedPosition2 = settings.getInt("spinnerSelection2", selectedPosition2);
-	      formaArb.setSelection(selectedPosition2);
-	      
-	      int selectedPosition3 = fechaUltima.getAdapter().getCount();
-	      selectedPosition3 = settings.getInt("spinnerSelection3", selectedPosition3);
-	      fechaUltima.setSelection(selectedPosition3);
-	      
-	      int selectedPosition4 = gradoPoda.getAdapter().getCount();
-	      selectedPosition4 = settings.getInt("spinnerSelection4", selectedPosition4);
-	      gradoPoda.setSelection(selectedPosition4);
-	      
-	      anchocalle.setText(settings.getString("anchocalle", ""));
-	      distancia.setText(settings.getString("distanciaArboles", ""));
-	      longitudArb.setText(settings.getString("longitudArboles", ""));
-	      anchuraArb.setText(settings.getString("anchuraArboles", ""));
-	      alturaArb.setText(settings.getString("alturaArboles", ""));
-	      
-	      System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
-		
+
+		int selectedPosition= densidadFoliar.getAdapter().getCount();
+		selectedPosition = settings.getInt("selectedPosition",selectedPosition);
+		densidadFoliar.setSelection(selectedPosition);
+
+		int selectedPosition2 = formaArb.getAdapter().getCount(); 
+		selectedPosition2 = settings.getInt("spinnerSelection2", selectedPosition2);
+		formaArb.setSelection(selectedPosition2);
+
+		int selectedPosition3 = fechaUltima.getAdapter().getCount();
+		selectedPosition3 = settings.getInt("spinnerSelection3", selectedPosition3);
+		fechaUltima.setSelection(selectedPosition3);
+
+		int selectedPosition4 = gradoPoda.getAdapter().getCount();
+		selectedPosition4 = settings.getInt("spinnerSelection4", selectedPosition4);
+		gradoPoda.setSelection(selectedPosition4);
+
+		anchocalle.setText(settings.getString("anchocalle", ""));
+		distancia.setText(settings.getString("distanciaArboles", ""));
+		longitudArb.setText(settings.getString("longitudArboles", ""));
+		anchuraArb.setText(settings.getString("anchuraArboles", ""));
+		alturaArb.setText(settings.getString("alturaArboles", ""));
+
+		System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+
 	}
-	
-	
+
+
 	@Override
 	protected void onPause(){
-		  super.onPause(); 
-		  
-		  SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-	      SharedPreferences.Editor editor = settings.edit();
-	      int selectedPosition = densidadFoliar.getSelectedItemPosition();
-	      editor.putInt("selectedPosition", selectedPosition);
-	      int selectedPosition2 = formaArb.getSelectedItemPosition();
-	      editor.putInt("spinnerSelection2", selectedPosition2);
-	      int selectedPosition3 = fechaUltima.getSelectedItemPosition();
-	      editor.putInt("spinnerSelection3", selectedPosition3);
-	      int selectedPosition4 = gradoPoda.getSelectedItemPosition();
-	      editor.putInt("spinnerSelection4", selectedPosition4);
-	      
-	      editor.putString("anchocalle", anchocalle.getText().toString());
-	      editor.putString("distanciaArboles", distancia.getText().toString());
-	      editor.putString("longitudArboles", longitudArb.getText().toString());
-	      editor.putString("anchuraArboles", anchuraArb.getText().toString());
-	      editor.putString("alturaArboles", alturaArb.getText().toString());
-	      
-	      
-	      editor.commit();
+		super.onPause(); 
 
-	      // Commit the edits!
-	      editor.commit();
-	      System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+		SharedPreferences.Editor editor = settings.edit();
+		int selectedPosition = densidadFoliar.getSelectedItemPosition();
+		editor.putInt("selectedPosition", selectedPosition);
+		int selectedPosition2 = formaArb.getSelectedItemPosition();
+		editor.putInt("spinnerSelection2", selectedPosition2);
+		int selectedPosition3 = fechaUltima.getSelectedItemPosition();
+		editor.putInt("spinnerSelection3", selectedPosition3);
+		int selectedPosition4 = gradoPoda.getSelectedItemPosition();
+		editor.putInt("spinnerSelection4", selectedPosition4);
+
+		editor.putString("anchocalle", anchocalle.getText().toString());
+		editor.putString("distanciaArboles", distancia.getText().toString());
+		editor.putString("longitudArboles", longitudArb.getText().toString());
+		editor.putString("anchuraArboles", anchuraArb.getText().toString());
+		editor.putString("alturaArboles", alturaArb.getText().toString());
+
+
+		editor.commit();
+
+		// Commit the edits!
+		editor.commit();
+		System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
 
 	}
 

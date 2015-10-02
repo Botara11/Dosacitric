@@ -9,12 +9,12 @@ public class ParteA implements Serializable{
 	public float IndiceDosificacion = (float) 0.085; // HARDCODEADO -> TIENE QUE ESTAR EN LA NUBE
 	
 	/**** A ****/
-	public int day;
-	public int month;
-	public int year;
-	public String idParcela;
-	public String idTratamiento;
-	public String Referencia;
+	public int day = 0;
+	public int month = 0;
+	public int year = 1000;
+	public String idParcela = "";
+	public String idTratamiento= "";
+	public String Referencia= "";
 	
 	/**** A1 ****/
 	public float DensidadFoliar;

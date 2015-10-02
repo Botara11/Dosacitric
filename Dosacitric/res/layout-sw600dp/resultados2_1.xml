@@ -47,18 +47,7 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
                 android:background="#E65F00" />
-            <ImageButton
-                android:id="@+id/printer"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center"
-                android:background="@drawable/printer"  />
-            
-			<View
-                android:layout_width="1dip"
-                android:layout_height="fill_parent"
-                android:layout_margin="10dp"
-                android:background="#E65F00" />
+
             <Button
                 android:id="@+id/siguiente"
                 android:layout_width="0dp"

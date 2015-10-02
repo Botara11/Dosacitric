@@ -13,43 +13,43 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class C_3Activity extends ListActivity{
-	
+
 	private ParteC partec3;
 	ListView listView ;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.c_3);  
+		//setContentView(R.layout.c_3);  
+		setContentView(R.layout.catalogoslistview_layout);
 
 		String[] marcas = { "Teejet", "Albuz", "Hardi", "Discos",
 		"Otras" };
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1, marcas);
+				R.layout.item, marcas);
 		setListAdapter(adapter);
 	}
 
 	@Override
 	protected void onListItemClick(ListView list, View view, int position, long id) {
 		String item = (String) getListAdapter().getItem(position);
-		
+
 		String ola ="ParteC3";
 		Log.e("didi", ola);
-		
+
 		Intent c2 = getIntent();
 		partec3 = (ParteC) c2.getSerializableExtra("presion");
 		partec3.rellenarC3(item);
-		
+
 		Intent c3 = new Intent(C_3Activity.this, C_4ZonaAlta.class);
 		c3.putExtra("marcas", partec3);
 		startActivity(c3);
 	}
-	
+
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		return super.onPrepareOptionsMenu(menu);
 	}
-
 
 
 	@Override
@@ -60,18 +60,19 @@ public class C_3Activity extends ListActivity{
 	}
 
 
-
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			// app icon in action bar clicked; goto parent activity.
+			this.finish();
 			return true;
+		default:
+			return super.onOptionsItemSelected(item);
 		}
-		return super.onOptionsItemSelected(item);
 	}
 
-	
 }

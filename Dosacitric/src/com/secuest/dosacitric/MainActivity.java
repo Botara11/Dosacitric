@@ -16,7 +16,7 @@ import android.widget.TableRow;
 
 
 public class MainActivity extends ActionBarActivity {
-	int debug = 1;
+	int debug = 0;
 	String pagina;
 	private ProgressBar barra;
 	private TableRow tableLay;
@@ -28,7 +28,11 @@ public class MainActivity extends ActionBarActivity {
 
 
 		final DatabaseHandler db = new DatabaseHandler(this);
-		db.resetTables();
+		System.out.println("GEEEETTTT COUNT DB ="+db.getRowCount());
+		if(db.getRowCount()>0){
+			debug=1;
+		}
+		//db.resetTables();
 		barra = (ProgressBar) findViewById(R.id.progressBar1);
 		tableLay = (TableRow) findViewById(R.id.tableLayout1);
 		tableLay.setVisibility(View.INVISIBLE);
@@ -43,6 +47,23 @@ public class MainActivity extends ActionBarActivity {
 			}
 		});
 		
+		pdfCreator pdf = new pdfCreator();
+		//pdf.dibujarTabla("");
+		pdf.insertarMarca("Tejeet");
+		pdf.insertarPresion("7 bares");
+		pdf.insertarZonas("Zona alta:   YUH765   809JKJJ   89866hsh");
+		pdf.insertarZonas("Zona media:  YUH765   UUMMs   89866hsh");
+		pdf.insertarZonas("Zona baja:   809JKJJ   89866hsh");
+		pdf.insertarPresion("8 bares");
+		pdf.insertarZonas("Zona alta:    89866hsh");
+		pdf.insertarZonas("Zona media:   809JKJJ");
+		pdf.insertarZonas("Zona baja:   809JKJJ   89866hsh");
+		pdf.insertarMarca("ROCKA");
+		pdf.insertarPresion("9 bares");
+		pdf.insertarZonas("Zona alta:   YUH765   809JKJJ   89866hsh");
+		pdf.insertarZonas("Zona media:  YUH765   UUMMs   89866hsh");
+		pdf.insertarZonas("Zona baja:   809JKJJ   89866hsh");
+		pdf.finish_document("aaaaaaaa");
 		//Para omitir la carga:
 		if (debug==1){
 		tableLay.setVisibility(View.VISIBLE);

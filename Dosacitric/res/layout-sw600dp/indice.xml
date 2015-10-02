@@ -25,7 +25,7 @@
                 android:paddingLeft="10dp"
                 android:text="A. IDENTIFICACIÓN DEL TRATAMIENTO"
                 android:textColor="#E65F00"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -37,7 +37,7 @@
                 android:layout_marginTop="16dp"
                 android:text="B.1. Caracteríticas del cultivo"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -49,7 +49,7 @@
                 android:layout_marginTop="16dp"
                 android:text="B.2. Tipo del tratamiento"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -61,7 +61,7 @@
                 android:layout_marginTop="16dp"
                 android:text="B.3. Condiciones metereológicas"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -73,7 +73,7 @@
                 android:layout_marginTop="16dp"
                 android:text="B.4. Equipo empleado"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -85,7 +85,7 @@
                 android:layout_marginTop="16dp"
                 android:text="B.R. Resumen y resultados"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -100,7 +100,7 @@
                 android:paddingLeft="10dp"
                 android:text="C. ELECCIÓN DE BOQUILLAS"
                 android:textColor="#E65F00"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -112,7 +112,7 @@
                 android:layout_marginTop="16dp"
                 android:text="C.1. Introducción de datos"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -203,7 +203,7 @@
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="Siguiente"
+                android:text="SIGUIENTE"
                 android:textColor="#E65F00" />
         </TableRow>
     </TableLayout>

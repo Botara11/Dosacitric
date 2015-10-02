@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,20 +25,27 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.CompoundButton;
 
-public class B_1Activity extends ActionBarActivity {
+public class B_1Activity extends ActionBarActivity implements
+CompoundButton.OnCheckedChangeListener  {
 
-	private int debug = 0;
-	private TextView volumenAplicacion;
-	private TextView volumenCalculado;
-	private RadioButton volumenAplicacionCalculado;
-	private RadioButton volumenAplicacionSiguiente;
-	private TextView anchoTrabajo;
-	private TextView anchoCalculado;
-	private RadioButton anchoTrabajoCalculado;
-	private RadioButton anchoTrabajoSiguiente;
+	private int debug = 1;
+	private TextView volumenAplicacionCalculado;
+	//private TextView volumenAplicacionDeseado;
+	private Switch SwitchvolumenAplicacionCalculado;
+	private Switch SwitchvolumenAplicacionDeseado;
+	//private RadioButton volumenAplicacionCalculado;
+	//private RadioButton volumenAplicacionSiguiente;
+	private TextView anchoTrabajoCalculado;
+	//private TextView anchoTrabajoDeseado;
+	private Switch SwitchAnchoTrabajoCalculado;
+	private Switch SwitchAnchoTrabajoDeseado;
+	//private RadioButton anchoTrabajoCalculado;
+	//private RadioButton anchoTrabajoSiguiente;
 	private TextView velocidadAvance;
 	private SeekBar velocidadAvanceSeekbar;
 	private EditText editAncho;
@@ -46,6 +54,8 @@ public class B_1Activity extends ActionBarActivity {
 	private TextView caudalTotal;
 	private TextView caudalSector;
 	private ParteB pb;
+	public static final String PREFS_NAME = "Guarda";
+
 
 	public void actualizarCaudal() {
 		try {
@@ -72,17 +82,82 @@ public class B_1Activity extends ActionBarActivity {
 		actionBar.setDisplayHomeAsUpEnabled(true);
 
 		pb = new ParteB();
+		
+		volumenAplicacionCalculado = (TextView) findViewById(R.id.textViewVolumenAplicacionCalculado);
+		SwitchvolumenAplicacionCalculado = (Switch) findViewById(R.id.switchVolumenAplicacionCalculado);
 
-		volumenAplicacion = (TextView) findViewById(R.id.textView2);
-		volumenCalculado = (TextView) findViewById(R.id.textView13);
-		volumenAplicacionCalculado = (RadioButton) findViewById(R.id.RVolumen1);
-		volumenAplicacionSiguiente = (RadioButton) findViewById(R.id.RVolumen2);
-		volumenAplicacionSiguiente.setChecked(true);
-		anchoTrabajo = (TextView) findViewById(R.id.TextView01);
-		anchoCalculado = (TextView) findViewById(R.id.textView14);
-		anchoTrabajoCalculado = (RadioButton) findViewById(R.id.RAncho1);
-		anchoTrabajoSiguiente = (RadioButton) findViewById(R.id.RAncho2);
-		anchoTrabajoSiguiente.setChecked(true);
+		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+		String VolumenApp = settings.getString("volumenApp", "");
+		volumenAplicacionCalculado.setText(VolumenApp);
+		
+		SwitchvolumenAplicacionCalculado.setOnCheckedChangeListener(this);
+		SwitchvolumenAplicacionCalculado.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View v) {
+				
+				if(SwitchvolumenAplicacionCalculado.isChecked() == true){
+					SwitchvolumenAplicacionDeseado.setChecked(false);
+				}else{
+					 SwitchvolumenAplicacionDeseado.setChecked(true);
+				}
+			}
+		});
+
+
+		SwitchvolumenAplicacionDeseado = (Switch) findViewById(R.id.switchVolumenAplicacionDeseado);
+		SwitchvolumenAplicacionDeseado.setOnCheckedChangeListener(this);
+		SwitchvolumenAplicacionDeseado.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View v) {
+
+				if(SwitchvolumenAplicacionDeseado.isChecked() == true){
+					 SwitchvolumenAplicacionCalculado.setChecked(false);
+					 }else{
+					 SwitchvolumenAplicacionCalculado.setChecked(true);
+					 }
+				
+				// TODO Auto-generated method stub
+				/*if(SwitchvolumenAplicacionDeseado.isChecked() == true){
+					editVolumen.setText(AnchoTrabajo);
+				}else{
+				}*/
+
+			}
+		});
+
+		anchoTrabajoCalculado = (TextView) findViewById(R.id.textViewAnchoTrabajoCalculado);
+		SwitchAnchoTrabajoCalculado= (Switch) findViewById(R.id.switchAnchoTrabajoCalculado);
+		String AnchoTrabajo = settings.getString("anchocalle", "");
+		anchoTrabajoCalculado.setText(AnchoTrabajo);
+		SwitchAnchoTrabajoCalculado.setOnCheckedChangeListener(this);
+		SwitchAnchoTrabajoCalculado.setOnClickListener(new View.OnClickListener() {
+			
+
+			public void onClick(View v) {
+
+				if(SwitchAnchoTrabajoCalculado.isChecked() == true){
+					 SwitchAnchoTrabajoDeseado.setChecked(false);
+				}else{
+						 SwitchAnchoTrabajoDeseado.setChecked(true);
+				}
+			}
+		});
+
+		SwitchAnchoTrabajoDeseado = (Switch) findViewById(R.id.switchAnchoTrabajoDeseado);
+		SwitchAnchoTrabajoDeseado.setOnCheckedChangeListener(this);
+		SwitchAnchoTrabajoDeseado.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View v) {
+
+				
+				if(SwitchAnchoTrabajoDeseado.isChecked() == true){
+					 SwitchAnchoTrabajoCalculado.setChecked(false);
+					 }else{
+						 SwitchAnchoTrabajoCalculado.setChecked(true);
+					 }
+			}
+		});
+
 		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
 		velocidadAvance.setText("0.99");
 		velocidadAvanceSeekbar = (SeekBar) findViewById(R.id.seekBar1);
@@ -90,7 +165,7 @@ public class B_1Activity extends ActionBarActivity {
 		caudalTotal = (TextView) findViewById(R.id.textView15);
 		caudalSector = (TextView) findViewById(R.id.textView16);
 
-		editAncho = (EditText) findViewById(R.id.editText1);
+		editAncho = (EditText) findViewById(R.id.editTextAnchoTrabajoDesesado);
 		editAncho.setText("0.0");
 		editAncho.addTextChangedListener(new TextWatcher() {
 
@@ -114,7 +189,7 @@ public class B_1Activity extends ActionBarActivity {
 				actualizarCaudal();
 			}
 		});
-		editVolumen = (EditText) findViewById(R.id.editText3);
+		editVolumen = (EditText) findViewById(R.id.editTextVolumenAplicacionDeseado);
 		editVolumen.setText("0.0");
 		editVolumen.addTextChangedListener(new TextWatcher() {
 
@@ -150,22 +225,22 @@ public class B_1Activity extends ActionBarActivity {
 
 					Float vol, ancho;
 
-					if (volumenAplicacionCalculado.isChecked()) {
+					if (SwitchvolumenAplicacionCalculado.isChecked()) {
 						quien = "volumenAplicacionCalculado";
-						vol = Float.parseFloat(volumenCalculado.getText()
+						vol = Float.parseFloat(volumenAplicacionCalculado.getText()
 								.toString());
 					} else {
-						quien = "volumenAplicacionSiguiente";
+						quien = "volumenAplicacionDeseado";
 						vol = Float
 								.parseFloat(editVolumen.getText().toString());
 					}
 
-					if (anchoTrabajoCalculado.isChecked()) {
+					if (SwitchAnchoTrabajoCalculado.isChecked()) {
 						quien = "anchoTrabajoCalculado";
 						ancho = Float.parseFloat(anchoTrabajoCalculado
 								.getText().toString());
 					} else {
-						quien = "anchoTrabajoSiguiente";
+						quien = "anchoTrabajoDeseado";
 						ancho = Float
 								.parseFloat(editAncho.getText().toString());
 					}
@@ -219,10 +294,10 @@ public class B_1Activity extends ActionBarActivity {
 
 		/********************** TEST **********************/
 		if(debug==1){
-		editVolumen.setText("1100");
-		editAncho.setText("5.0");
-		velocidadAvance.setText("1.80");
-		editBoquillas.setText("24");
+			editVolumen.setText("1100");
+			editAncho.setText("5.0");
+			velocidadAvance.setText("1.80");
+			editBoquillas.setText("24");
 		}
 		/********************** TEST **********************/
 
@@ -284,41 +359,41 @@ public class B_1Activity extends ActionBarActivity {
 			// used as hint.
 		}
 	}
-	
+
 	@Override
 	protected void onResume(){
 		super.onResume();
 		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-		
-	      volumenCalculado.setText(settings.getString("volumenCalculado", ""));
-	      anchoCalculado.setText(settings.getString("anchoCalculado", ""));
-	      velocidadAvance.setText(settings.getString("velocidadAvance", ""));
-	      caudalTotal.setText(settings.getString("caudalTotal", ""));
-	      caudalSector.setText(settings.getString("caudalSector", ""));
-	      editBoquillas.setText(settings.getString("editBoquillas", ""));
-	     	      	      
-	      //System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
-		
+
+		editVolumen.setText(settings.getString("volumenCalculado", ""));
+		editAncho.setText(settings.getString("anchoCalculado", ""));
+		velocidadAvance.setText(settings.getString("velocidadAvance", ""));
+		caudalTotal.setText(settings.getString("caudalTotal", ""));
+		caudalSector.setText(settings.getString("caudalSector", ""));
+		editBoquillas.setText(settings.getString("editBoquillas", ""));
+
+		//System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+
 	}
-	
-	
+
+
 	@Override
 	protected void onPause(){
-		  super.onPause(); 
-		  
-		  SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-	      SharedPreferences.Editor editor = settings.edit();
-	      
-	      editor.putString("volumenCalculado", volumenCalculado.getText().toString());
-	      editor.putString("anchoCalculado", anchoCalculado.getText().toString());
-	      editor.putString("velocidadAvance", velocidadAvance.getText().toString());
-	      editor.putString("caudalTotal", caudalTotal.getText().toString());
-	      editor.putString("caudalSector", caudalSector.getText().toString());
-	      editor.putString("editBoquillas", editBoquillas.getText().toString());
-	      	     	      
-	      // Commit the edits!
-	      editor.commit();
-	      //System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+		super.onPause(); 
+
+		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+		SharedPreferences.Editor editor = settings.edit();
+
+		editor.putString("volumenAplicacionCalculado", editVolumen.getText().toString());
+		editor.putString("anchoTrabajoCalculado", editAncho.getText().toString());
+		editor.putString("velocidadAvance", velocidadAvance.getText().toString());
+		editor.putString("caudalTotal", caudalTotal.getText().toString());
+		editor.putString("caudalSector", caudalSector.getText().toString());
+		editor.putString("editBoquillas", editBoquillas.getText().toString());
+
+		// Commit the edits!
+		editor.commit();
+		//System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
 
 	}
 
@@ -356,6 +431,19 @@ public class B_1Activity extends ActionBarActivity {
 		default:
 			return super.onOptionsItemSelected(item);
 		}
+	}
+
+	@Override
+	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+		// TODO Auto-generated method stub
+		/*switch (buttonView.getId()) {
+		case R.id.switchVolumenAplicacionCalculado:
+			Log.i("switch_compat", isChecked + "");
+			break;
+		case R.id.switchVolumenAplicacionDeseado:
+			Log.i("switch_compat2", isChecked + "");
+			break;
+		}*/
 	}
 
 

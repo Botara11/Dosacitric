@@ -48,7 +48,7 @@ public class CatalogosListView extends ListActivity{
 				// created; then, the method above will do the rest
 				if (mAdapter == null) {
 					mItems = new ArrayList<String>();
-					mAdapter = new Lista_adaptador(this , R.layout.list_item_coniconos, datos){
+					mAdapter = new Lista_adaptador(this , R.layout.item, datos){
 						@Override
 						public void onEntrada(Object entrada, View view) {
 							if (entrada != null) {

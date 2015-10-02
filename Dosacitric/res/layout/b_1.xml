@@ -40,7 +40,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:background="@drawable/inter3"  />
+                android:background="@drawable/inter3" />
 
             <View
                 android:layout_width="1dip"
@@ -69,149 +69,17 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" >
 
-            <RadioGroup
-                android:id="@+id/radioVolumen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp" >
-
-                <RadioButton
-                    android:id="@+id/RVolumen1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="18dp"
-                    android:ems="10"
-                    android:text="Volumen aplicación calculado"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-                <RadioButton
-                    android:id="@+id/RVolumen2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:text="Volumen de aplicacion deseado"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-            </RadioGroup>
-
-            <RadioGroup
-                android:id="@+id/radioAncho"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/radioVolumen"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="48dp" >
-
-                <RadioButton
-                    android:id="@+id/RAncho1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/TextView10"
-                    android:layout_below="@+id/TextView01"
-                    android:ems="10"
-                    android:text="Ancho de trabajo calculado"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-                <RadioButton
-                    android:id="@+id/RAncho2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/RadioButton02"
-                    android:layout_below="@+id/RadioButton02"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:text="Ancho de trabajo deseado"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/TextView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/radioAncho"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/radioAncho"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="30dp"
-                android:text="Velocidad de avance deseada (v)"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/radioAncho"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="13dp"
-                android:text="m"
-                android:textColor="@color/white" />
-
-            <EditText
-                android:id="@+id/editText1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/TextView1"
-                android:layout_marginRight="16dp"
-                android:layout_toLeftOf="@+id/textView6"
-                android:layout_toRightOf="@+id/radioAncho"
-                android:background="#FFFFFF"
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number|textVisiblePassword" >
-            </EditText>
-
-            <EditText
-                android:id="@+id/editText3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/radioAncho"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/textView5"
-                android:layout_toRightOf="@+id/radioVolumen"
-                android:background="#FFFFFF"
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number|textVisiblePassword" >
-            </EditText>
-
-            <TextView
-                android:id="@+id/textViewVolum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="31dp"
-                android:text="L/ha"
-                android:textColor="@color/white" />
-
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/radioAncho"
+                android:layout_alignBottom="@+id/editTextVolumenAplicacionDeseado"
                 android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/editTextVolumenAplicacionDeseado"
                 android:layout_marginRight="10dp"
                 android:text="L/ha"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/TextView1"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:text="m"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -221,7 +89,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="km/h"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -262,29 +131,6 @@
                 android:gravity="center"
                 android:inputType="number|textVisiblePassword" >
             </EditText>
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/textView3"
-                android:layout_alignLeft="@+id/editText1"
-                android:layout_alignRight="@+id/editText1"
-                android:layout_alignTop="@+id/textView3"
-                android:background="@color/white"
-                android:gravity="center" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textViewVolum"
-                android:layout_alignBottom="@+id/textViewVolum"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/textViewVolum"
-                android:layout_toRightOf="@+id/radioVolumen"
-                android:background="@color/white"
-                android:gravity="center" />
 
             <SeekBar
                 android:id="@+id/seekBar1"
@@ -387,6 +233,165 @@
                 android:layout_below="@+id/textView16"
                 android:layout_marginTop="16dp"
                 android:text="Número total de boquillas"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <Switch
+                android:id="@+id/switchVolumenAplicacionCalculado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:checked="true"
+                android:onClick="onSwitchClicked "
+                android:text="Volumen de aplicacion \n calculado"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <Switch
+                android:id="@+id/switchVolumenAplicacionDeseado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/switchVolumenAplicacionCalculado"
+                android:layout_alignRight="@+id/switchVolumenAplicacionCalculado"
+                android:layout_below="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+                android:onClick="onSwitchClicked "
+                android:text="Volumen de aplicacion \n deseado"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <Switch
+                android:id="@+id/switchAnchoTrabajoCalculado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/switchVolumenAplicacionDeseado"
+                android:layout_below="@+id/editTextVolumenAplicacionDeseado"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:checked="true"
+                android:onClick="onSwitchClicked "
+                android:text="Ancho de trabajo \n calculado"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <Switch
+                android:id="@+id/switchAnchoTrabajoDeseado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/switchAnchoTrabajoCalculado"
+                android:layout_below="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+                android:onClick="onSwitchClicked "
+                android:text="Ancho de trabajo \n deseado"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editTextAnchoTrabajoDesesado"
+                android:layout_alignBottom="@+id/editTextAnchoTrabajoDesesado"
+                android:layout_alignRight="@+id/TextView1"
+                android:layout_marginRight="10dp"
+                android:text="m"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/TextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView6"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:text="Velocidad de avance deseada (v)"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/switchVolumenAplicacionCalculado"
+                android:layout_below="@+id/switchVolumenAplicacionCalculado"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/textViewVolum"
+                android:background="@color/white"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/textViewVolum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_alignBottom="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_alignLeft="@+id/textView5"
+                android:text="L/ha"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/editTextVolumenAplicacionDeseado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/switchVolumenAplicacionDeseado"
+                android:layout_below="@+id/switchVolumenAplicacionDeseado"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/textView5"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number|textVisiblePassword" />
+
+            <TextView
+                android:id="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/switchAnchoTrabajoDeseado"
+                android:layout_below="@+id/switchAnchoTrabajoCalculado"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/TextView01"
+                android:background="@color/white"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/editTextAnchoTrabajoDesesado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/switchAnchoTrabajoDeseado"
+                android:layout_alignRight="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_below="@+id/switchAnchoTrabajoDeseado"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number|textVisiblePassword" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/switchAnchoTrabajoDeseado"
+                android:layout_alignLeft="@+id/textView6"
+                android:layout_marginRight="10dp"
+                android:text="m"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
         </RelativeLayout>

@@ -39,18 +39,29 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:background="@drawable/inter3"  />
+                android:background="@drawable/inter3" />
+            <!--
+            android:id="@+id/ayuda1"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/textView3"
+                android:layout_alignTop="@+id/textView2"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/textView2"
+                android:background="@drawable/inter"            -->
+
             <View
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
                 android:background="#E65F00" />
+
             <ImageButton
                 android:id="@+id/printer"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
-                android:background="@drawable/printer"  />
+                android:background="@drawable/printer" />
             <!--
             android:id="@+id/ayuda1"
                 android:layout_width="30dp"
@@ -351,7 +362,8 @@
                 android:layout_marginTop="16dp"
                 android:text="L/hg"
                 android:textColor="@color/white"
-                android:textSize="17dp" />            -->
+                android:textSize="17dp" />
+            -->
 
             <TextView
                 android:id="@+id/textView23"
@@ -510,7 +522,8 @@
                 android:layout_toLeftOf="@+id/textView22"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="17dp" />            -->
+                android:textSize="17dp" />
+            -->
 
             <TextView
                 android:id="@+id/textView42"
@@ -756,7 +769,6 @@
                 android:text="/"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
-
         </RelativeLayout>
     </ScrollView>
 

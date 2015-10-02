@@ -325,7 +325,7 @@ public class A_1_3Activity extends ActionBarActivity{
 
 					partea3.rellenarA2345(productosAplicar1, formaActuacion1, utilizaMojantes1, zonaCritica1, temperatura1, humedadRelativa1, velocidadViento1, tipoPulverizacion1, pro, form, zon, uti, temp, hum);
 					partea3.calcularParteA();
-
+					System.out.println("VolumenAppLHA  "+partea3.VolumenAppLHA);
 					Intent a3 = new Intent(A_1_3Activity.this, Resultados1.class);
 					a3.putExtra("partea3",partea3);
 					startActivity(a3);

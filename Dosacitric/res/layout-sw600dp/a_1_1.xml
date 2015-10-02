@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewA_1_1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000" >
@@ -39,17 +40,6 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:background="@drawable/inter3" />
-
-            <!--
-            android:id="@+id/ayuda1"
-                android:layout_width="30dp"
-                android:layout_height="50dp"
-                android:layout_above="@+id/textView3"
-                android:layout_alignTop="@+id/textView2"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/textView2"
-                android:background="@drawable/inter"
-            -->
 
             <View
                 android:layout_width="1dip"
@@ -298,7 +288,6 @@
                 android:minWidth="40dp"
                 android:textColor="@color/black"
                 android:textStyle="bold" >
-
             </EditText>
 
             <TextView
@@ -355,6 +344,7 @@
                 android:layout_marginRight="10dp"
                 android:background="#FFFFFF" />
             -->
+
 
             <TextView
                 android:id="@+id/textView33"
@@ -415,7 +405,7 @@
                 android:layout_below="@+id/textView33"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:background="#FFFFFF" />
+                android:background="#FFFFFF"/>
 
             <Spinner
                 android:id="@+id/densidadFoliar"

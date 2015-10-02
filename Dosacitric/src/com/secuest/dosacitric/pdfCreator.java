@@ -68,6 +68,41 @@ public void crearAyB(){
 }
 public void crearC(){
 	readFile("C");
+	//finish_document("Dosacitric_C"+(new Date()).getDay()+"-"+(new Date()).getMonth()+"-"+(new Date()).getYear());
+}
+public void insertarMarca(String marca){
+	btw_lines = 40;
+	incrementLinePointer();
+	mPDFWriter.addRectangle(30, line_pointer-15, 410+80, 40);
+	insertLine("  "+marca,19);
+	line_pointer=line_pointer-10;
+	//incrementLinePointer();
+}
+public void insertarPresion(String presion){
+    mPDFWriter.addLine(30,line_pointer-3, 410+160,line_pointer-3);
+	insertLine(presion,19);
+}
+public void insertarZonas(String zona){
+	insertLine(zona,15);
+}
+
+public void dibujarTabla(String datos){
+	int maximoZsjuntas = 4;
+	mPDFWriter.addRectangle(80, line_pointer, 410+80, -40);
+	mPDFWriter.addRectangle(80, line_pointer-40, 410+80, -40);
+	mPDFWriter.addRectangle(40, line_pointer-40-40, 410+120, -40*4);
+	
+    mPDFWriter.addLine(80, line_pointer-40, 80, line_pointer-40-40-40*4);
+    mPDFWriter.addLine(80+69*1, line_pointer-40, 80+69*1, line_pointer-40-40-40*4);
+    mPDFWriter.addLine(80+69*2, line_pointer-40, 80+69*2, line_pointer-40-40-40*4);
+    mPDFWriter.addLine(80+69*3, line_pointer-40, 80+69*3, line_pointer-40-40-40*4);
+    mPDFWriter.addLine(80+69*4, line_pointer-40, 80+69*4, line_pointer-40-40-40*4);
+    mPDFWriter.addLine(80+69*5, line_pointer-40, 80+69*5, line_pointer-40-40-40*4);
+    mPDFWriter.addLine(80+69*6, line_pointer-40, 80+69*6, line_pointer-40-40-40*4);
+
+    mPDFWriter.addLine(40,line_pointer-40-40-40*2, 410+160,line_pointer-40-40-40*2);
+    mPDFWriter.addLine(40,line_pointer-40-40-40*3, 410+160,line_pointer-40-40-40*3);
+    
 	finish_document("Dosacitric_C"+(new Date()).getDay()+"-"+(new Date()).getMonth()+"-"+(new Date()).getYear());
 }
 
@@ -102,9 +137,11 @@ public void readFile(String filename){
 	  int aux = line_pointer-btw_lines;
 	  if (aux < 32){
 		  mPDFWriter.newPage();
+	      mPDFWriter.setFont(StandardFonts.SUBTYPE, StandardFonts.TIMES_ROMAN, StandardFonts.WIN_ANSI_ENCODING);
 		  mPDFWriter.addRawContent("190 190 190 rg\n");
 	      mPDFWriter.addText(30, 90, 10, "© dosacitric", Transformation.DEGREES_270_ROTATION);
 	      line_pointer = 842;
+	      mPDFWriter.addRawContent("0 0 0 rg\n");
 	  } else {
 	      line_pointer=line_pointer-btw_lines;
 	  }

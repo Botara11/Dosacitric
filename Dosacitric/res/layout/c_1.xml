@@ -40,7 +40,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:background="@drawable/inter3"  />
+                android:background="@drawable/inter3" />
 
             <View
                 android:layout_width="1dip"
@@ -70,91 +70,12 @@
             android:layout_width="fill_parent"
             android:layout_height="match_parent" >
 
-            <RadioGroup
-                android:id="@+id/radioAncho"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/radioVolumen"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="232dp" >
-
-                <RadioButton
-                    android:id="@+id/RVelocidad1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/TextView10"
-                    android:layout_below="@+id/TextView01"
-                    android:ems="10"
-                    android:text="Velocidad de avance calculada"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-                <RadioButton
-                    android:id="@+id/RVelocidad2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/RadioButton02"
-                    android:layout_below="@+id/RadioButton02"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:text="Velocidad de avance deseada"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/radioAncho"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="13dp"
-                android:text="km/h"
-                android:textColor="@color/white" />
-
-            <EditText
-                android:id="@+id/anchoCalculadoParteC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/radioAncho"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/textView5"
-                android:layout_toRightOf="@+id/radioVolumen"
-                android:background="#FFFFFF"
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number|textVisiblePassword" >
-            </EditText>
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/radioAncho"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:text="m"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/velocidadAvance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/textView3"
-                android:layout_alignLeft="@+id/editText1"
-                android:layout_alignRight="@+id/editText1"
-                android:layout_alignTop="@+id/textView3"
-                android:background="@color/white"
-                android:gravity="center" />
-
             <TextView
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/radioAncho"
+                android:layout_below="@+id/textView17"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
@@ -166,21 +87,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/radioAncho"
+                android:layout_below="@+id/textView17"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/white"
-                android:gravity="center" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/textViewVolum"
-                android:layout_alignRight="@+id/anchoCalculadoParteC"
-                android:layout_alignTop="@+id/radioVolumen"
-                android:layout_marginTop="24dp"
                 android:background="@color/white"
                 android:gravity="center" />
 
@@ -195,47 +105,6 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Ancho de trabajo"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <RadioGroup
-                android:id="@+id/radioVolumen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView17"
-                android:layout_below="@+id/textView17" >
-
-                <RadioButton
-                    android:id="@+id/RAncho1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="18dp"
-                    android:ems="10"
-                    android:text="Ancho de la calle calculado"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-                <RadioButton
-                    android:id="@+id/RAncho2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:text="Ancho de la calle deseado"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/anchoCalculadoParteC"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Características del sistema hidráulico del equipo"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -369,25 +238,6 @@
                 android:textSize="17sp" />
 
             <TextView
-                android:id="@+id/anchoCalleParteC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignRight="@+id/anchoCalculadoParteC"
-                android:layout_marginTop="60dp"
-                android:layout_toRightOf="@+id/radioVolumen"
-                android:background="@color/white" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/textView15"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:text="km/h"
-                android:textColor="@color/white" />
-
-            <TextView
                 android:id="@+id/textViewVolum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -396,22 +246,162 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="m"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <Switch
+                android:id="@+id/switchVelocidadAvanceCalculada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:checked="true"
+                android:onClick="onSwitchClicked "
+                android:text="Velocidad de avance \n calculada"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/velocidadAvance"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignLeft="@+id/switchVelocidadAvanceCalculada"
+                android:layout_below="@+id/switchVelocidadAvanceCalculada"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/textView3"
+                android:background="@color/white"
+                android:gravity="center" />
+
+            <Switch
+                android:id="@+id/switchVelocidadAvanceDeseada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/velocidadAvance"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+                android:onClick="onSwitchClicked "
+                android:text="Velocidad de avance \n deseada"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
 
             <EditText
                 android:id="@+id/editText1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/textView6"
-                android:layout_marginLeft="10dp"
+                android:layout_alignLeft="@+id/switchVelocidadAvanceDeseada"
+                android:layout_below="@+id/switchVelocidadAvanceDeseada"
                 android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_toLeftOf="@+id/textView6"
-                android:layout_toRightOf="@+id/radioAncho"
+                android:layout_toRightOf="@+id/ZonaMedia"
                 android:background="#FFFFFF"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" >
-            </EditText>
+                android:inputType="number|textVisiblePassword" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/switchVelocidadAvanceDeseada"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="km/h"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText1"
+                android:layout_alignBottom="@+id/editText1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="km/h"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <Switch
+                android:id="@+id/switchAnchoTrabajoCalculado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView17"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:checked="true"
+                android:onClick="onSwitchClicked "
+                android:text="Ancho de la calle \n calculado"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <Switch
+                android:id="@+id/switchAnchoTrabajoDeseado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewVolum"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+                android:onClick="onSwitchClicked "
+                android:text="Ancho de la calle \n deseado"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/anchoCalculadoParteC"
+                android:layout_below="@+id/anchoCalculadoParteC"
+                android:layout_marginTop="20dp"
+                android:text="Características del sistema hidráulico del equipo"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/anchoCalculadoParteC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/switchAnchoTrabajoDeseado"
+                android:layout_below="@+id/switchAnchoTrabajoDeseado"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/textView5"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number|textVisiblePassword" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/anchoCalculadoParteC"
+                android:layout_marginRight="10dp"
+                android:text="m"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/anchoCalleParteC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/switchAnchoTrabajoCalculado"
+                android:layout_below="@+id/switchAnchoTrabajoCalculado"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/textViewVolum"
+                android:background="@color/white"
+                android:gravity="center" />
         </RelativeLayout>
     </ScrollView>
 

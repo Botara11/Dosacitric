@@ -1,7 +1,9 @@
 package com.secuest.dosacitric;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -279,8 +281,11 @@ public class Resultados1 extends ActionBarActivity{
 			tipoPulverizador.setText("Pistola");
 		}
 		//tipoPulverizador.setText(String.valueOf(resultadosA3.TipoPulverizador));
-
-		L_Ha.setText(String.valueOf(resultadosA3.VolumenAppLHA));
+		String auxiliar = resultadosA3.VolumenAppLHA+"";
+		L_Ha.setText(auxiliar);
+		//L_Hg.setText(auxiliar);
+		
+		System.out.println("Resultado a: "+resultadosA3.VolumenAppLHA+"");
 		//L_Hg.setText(String.valueOf(resultadosA3.VolumenAppLHG));
 
 		Log.e("didi", resultadosA3.DensidadFoliar+"");
@@ -357,6 +362,33 @@ public class Resultados1 extends ActionBarActivity{
 			}
 		});
 	}
+	
+
+	@Override
+	protected void onResume(){
+		super.onResume();
+		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+
+		//L_Ha.setText(settings.getString("volumenApp", ""));
+		
+	}
+
+
+	@Override
+	protected void onPause(){
+		super.onPause(); 
+
+		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+		SharedPreferences.Editor editor = settings.edit();
+
+		editor.putString("volumenApp", L_Ha.getText().toString());
+		System.out.println( "La anegado "+ L_Ha.getText().toString());
+		// Commit the edits!
+		editor.commit();
+		//System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+
+	}
+	
 
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		return super.onPrepareOptionsMenu(menu);

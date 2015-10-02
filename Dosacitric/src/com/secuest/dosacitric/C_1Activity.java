@@ -14,36 +14,44 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class C_1Activity extends ActionBarActivity {
+public class C_1Activity extends ActionBarActivity implements
+CompoundButton.OnCheckedChangeListener{
 
-	private TextView anchoCalle;
-	private TextView anchoCalleCalculado;
-	private RadioButton RanchoCalle;
-	private RadioButton RanchoCalleCalculado;
+	private TextView anchoTrabajoCalculado;
+	private EditText anchoTrabajoDeseado;
+	private Switch SwitchAnchoTrabajoCalculado;
+	private Switch SwitchAnchoTrabajoDeseado;
+	//private RadioButton RanchoCalle;
+	//private RadioButton RanchoCalleCalculado;
 	private EditText zonaAlta;
 	private EditText zonaMedia;
 	private EditText zonaBaja;	
-	private TextView velocidadAvance;
-	private TextView velocidadAvanceCalculado;
-	private RadioButton RvelocidadAvance;
-	private RadioButton RvelocidadAvanceCalculado;
-	private EditText editAncho;
-	private EditText editVelocidad;
+	private TextView velocidadAvanceCalculada;
+	private EditText velocidadAvanceDeseada;
+	private Switch SwitchVelocidadAvanceCalculada;
+	private Switch SwitchVelocidadAvanceDeseada;
+	//private RadioButton RvelocidadAvance;
+	//private RadioButton RvelocidadAvanceCalculado;
 	private ParteC partec1;
+	public static final String PREFS_NAME = "Guarda";
 
 
 	@Override
@@ -54,9 +62,9 @@ public class C_1Activity extends ActionBarActivity {
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 
-		editAncho = (EditText) findViewById(R.id.anchoCalculadoParteC);
-		editAncho.setText("0.0");
-		editAncho.addTextChangedListener(new TextWatcher() {
+		anchoTrabajoDeseado = (EditText) findViewById(R.id.anchoCalculadoParteC);
+		anchoTrabajoDeseado.setText("0.0");
+		anchoTrabajoDeseado.addTextChangedListener(new TextWatcher() {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
@@ -78,9 +86,9 @@ public class C_1Activity extends ActionBarActivity {
 			}
 		});
 
-		editVelocidad = (EditText) findViewById(R.id.editText1);
-		editVelocidad.setText("0.0");
-		editVelocidad.addTextChangedListener(new TextWatcher() {
+		velocidadAvanceDeseada = (EditText) findViewById(R.id.editText1);
+		velocidadAvanceDeseada.setText("0.0");
+		velocidadAvanceDeseada.addTextChangedListener(new TextWatcher() {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
@@ -104,21 +112,104 @@ public class C_1Activity extends ActionBarActivity {
 
 		partec1 = new ParteC();
 
-		anchoCalle = (TextView) findViewById(R.id.anchoCalleParteC);
-		anchoCalleCalculado = (EditText) findViewById(R.id.anchoCalculadoParteC);
-		RanchoCalle= (RadioButton) findViewById(R.id.RAncho1);
-		RanchoCalleCalculado = (RadioButton) findViewById(R.id.RAncho2);
-		RanchoCalleCalculado.setChecked(true);
+		anchoTrabajoCalculado = (TextView) findViewById(R.id.anchoCalleParteC);
+		anchoTrabajoDeseado = (EditText) findViewById(R.id.anchoCalculadoParteC);
+		SwitchAnchoTrabajoCalculado = (Switch) findViewById(R.id.switchAnchoTrabajoCalculado);
+
+		SwitchAnchoTrabajoCalculado.setOnCheckedChangeListener(this);
+		SwitchAnchoTrabajoCalculado.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View v) {
+
+				SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+				String VolumenApp = settings.getString("volumenAplicacion", "");
+
+				// TODO Auto-generated method stub
+				if(SwitchAnchoTrabajoCalculado.isChecked() == true){
+					SwitchAnchoTrabajoDeseado.setChecked(false);
+				}else{
+
+					SwitchAnchoTrabajoDeseado.setChecked(true);
+				}
+
+			}
+		});
+
+		SwitchAnchoTrabajoDeseado = (Switch) findViewById(R.id.switchAnchoTrabajoDeseado);
+		SwitchAnchoTrabajoDeseado.setOnCheckedChangeListener(this);
+		SwitchAnchoTrabajoDeseado.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View v) {
+
+				SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+				String VolumenApp = settings.getString("volumenAplicacion", "");
+
+				// TODO Auto-generated method stub
+				if(SwitchAnchoTrabajoDeseado.isChecked() == true){
+					SwitchAnchoTrabajoCalculado.setChecked(false);
+				}else{
+					SwitchAnchoTrabajoCalculado.setChecked(true);
+				}
+
+			}
+		});
+
+
+		//SwitchAnchoTrabajoCalculado.setChecked(true);
+		//SwitchAnchoTrabajoDeseado.setChecked(true);
+		//RanchoCalle= (RadioButton) findViewById(R.id.RAncho1);
+		//RanchoCalleCalculado = (RadioButton) findViewById(R.id.RAncho2);
+		//RanchoCalleCalculado.setChecked(true);
 		zonaAlta = (EditText) findViewById(R.id.textoZonaAlta);
 		zonaMedia = (EditText) findViewById(R.id.textoZonaMedia);
 		zonaBaja = (EditText) findViewById(R.id.textoZonaBaja);
-		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
-		velocidadAvanceCalculado = (EditText) findViewById(R.id.editText1);
-		RvelocidadAvance= (RadioButton) findViewById(R.id.RVelocidad1);
-		RvelocidadAvanceCalculado = (RadioButton) findViewById(R.id.RVelocidad2);
-		RvelocidadAvanceCalculado.setChecked(true);
+		velocidadAvanceCalculada = (TextView) findViewById(R.id.velocidadAvance);
+		velocidadAvanceDeseada = (EditText) findViewById(R.id.editText1);
+		//RvelocidadAvance= (RadioButton) findViewById(R.id.RVelocidad1);
+		//RvelocidadAvanceCalculado = (RadioButton) findViewById(R.id.RVelocidad2);
+		//RvelocidadAvanceCalculado.setChecked(true);
+		SwitchVelocidadAvanceCalculada = (Switch) findViewById(R.id.switchVelocidadAvanceCalculada);
+		SwitchVelocidadAvanceCalculada.setOnCheckedChangeListener(this);
+		SwitchVelocidadAvanceCalculada.setOnClickListener(new View.OnClickListener() {
 
+			public void onClick(View v) {
 
+				SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+				String VolumenApp = settings.getString("volumenAplicacion", "");
+
+				// TODO Auto-generated method stub
+				if(SwitchVelocidadAvanceCalculada.isChecked() == true){
+					SwitchVelocidadAvanceDeseada.setChecked(false);
+				}else{
+					SwitchVelocidadAvanceDeseada.setChecked(true);
+				}
+
+			}
+		});
+
+		SwitchVelocidadAvanceDeseada = (Switch) findViewById(R.id.switchVelocidadAvanceDeseada);
+		SwitchVelocidadAvanceDeseada.setOnCheckedChangeListener(this);
+		SwitchVelocidadAvanceDeseada.setChecked(false);
+		SwitchVelocidadAvanceDeseada.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View v) {
+
+				SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+				String VolumenApp = settings.getString("volumenAplicacion", "");
+
+				// TODO Auto-generated method stub
+				if(SwitchVelocidadAvanceDeseada.isChecked() == true){
+					SwitchVelocidadAvanceCalculada.setChecked(false);
+
+				}else{
+					SwitchVelocidadAvanceCalculada.setChecked(true);
+				}
+
+			}
+		});
+		//SwitchVelocidadAvanceCalculada.setChecked(true);
+		//SwitchVelocidadAvanceDeseada.setChecked(true);
+		
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
@@ -138,24 +229,24 @@ public class C_1Activity extends ActionBarActivity {
 
 					int [] zBoquillas = {zAlta,zMedia,zBaja};
 
-					if (RanchoCalle.isChecked()) {
-						quien = "Ancho de la calle";
-						ancho = Float.parseFloat(anchoCalle.getText()
+					if (SwitchAnchoTrabajoCalculado.isChecked()) {
+						quien = "Ancho de la calle calculado";
+						ancho = Float.parseFloat(anchoTrabajoCalculado.getText()
 								.toString());
 					} else {
-						quien = "Ancho de la calle calculado";
+						quien = "Ancho de la calle deseado";
 						ancho = Float
-								.parseFloat(anchoCalleCalculado.getText().toString());
+								.parseFloat(anchoTrabajoDeseado.getText().toString());
 					}
 
-					if (RvelocidadAvance.isChecked()) {
-						quien = "Velocidad de avance";
-						velocidad = Float.parseFloat(velocidadAvance
+					if (SwitchVelocidadAvanceCalculada.isChecked()) {
+						quien = "Velocidad de avance calculada";
+						velocidad = Float.parseFloat(velocidadAvanceCalculada
 								.getText().toString());
 					} else {
-						quien = "Velocidad de avance calculada";
+						quien = "Velocidad de avance deseada";
 						velocidad = Float
-								.parseFloat(velocidadAvanceCalculado.getText().toString());
+								.parseFloat(velocidadAvanceDeseada.getText().toString());
 					}
 
 					partec1.rellenarC1(ancho, zBoquillas, velocidad);
@@ -190,41 +281,243 @@ public class C_1Activity extends ActionBarActivity {
 			}
 		});
 
+
+
+		/*public void onSwitchClicked(View view) {
+			switch(view.getId()){
+			case R.id.switchAnchoTrabajoCalculado:
+				if(SwitchAnchoTrabajoCalculado.isChecked()) {
+					anchoTrabajoCalculado.setText("Switch 1 check ON by click on it"); 
+				}
+				else {
+					anchoTrabajoCalculado.setText("Switch 1 check OFF by click on it");
+
+				}
+				break;
+			case R.id.switchAnchoTrabajoDeseado:
+				if(SwitchAnchoTrabajoDeseado.isChecked()) {
+					editAncho.setText("Switch 2 check ON by click on it");
+
+				}
+				else {
+					editAncho.setText("Switch 2 check OFF by click on it");
+				}
+				break;
+			case R.id.switchVelocidadAvanceCalculada:
+				if(SwitchVelocidadAvanceCalculada.isChecked()) {
+					velocidadAvanceCalculada.setText("Switch 2 check ON by click on it");
+
+				}
+				else {
+					velocidadAvanceCalculada.setText("Switch 2 check OFF by click on it");
+				}
+				break;
+			case R.id.switchVelocidadAvanceDeseada:
+				if(SwitchVelocidadAvanceDeseada.isChecked()) {
+					editVelocidad.setText("Switch 2 check ON by click on it");
+
+				}
+				else {
+					editVelocidad.setText("Switch 2 check OFF by click on it");
+				}
+				break;
+			}
+
+			SwitchAnchoTrabajoCalculado.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+				@Override
+				public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+					// TODO Auto-generated method stub
+					if (buttonView.isChecked()){
+						anchoTrabajoCalculado.setText("Switch 1 check ON by drag thumb");
+					}
+					else{
+						anchoTrabajoCalculado.setText("Switch 1 check OFF by drag thumb");
+
+					}
+				}
+			});
+
+			SwitchAnchoTrabajoDeseado.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+				@Override
+				public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+					// TODO Auto-generated method stub
+					if (buttonView.isChecked()){
+						anchoTrabajoDeseado.setText("Switch 2 check ON by drag thumb");
+
+					}
+					else{
+						anchoTrabajoDeseado.setText("Switch 2 check OFF by drag thumb");
+
+					}
+				}
+			}); 
+
+			SwitchVelocidadAvanceCalculada.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+				@Override
+				public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+					// TODO Auto-generated method stub
+					if (buttonView.isChecked()){
+						velocidadAvanceCalculada.setText("Switch 1 check ON by drag thumb");
+					}
+					else{
+						velocidadAvanceCalculada.setText("Switch 1 check OFF by drag thumb");
+
+					}
+				}
+			});
+
+			SwitchVelocidadAvanceDeseada.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+				@Override
+				public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+					// TODO Auto-generated method stub
+					if (buttonView.isChecked()){
+						velocidadAvanceDeseada.setText("Switch 2 check ON by drag thumb");
+
+					}
+					else{
+						velocidadAvanceDeseada.setText("Switch 2 check OFF by drag thumb");
+
+					}
+				}
+			}); 
+		}*/
+
+
 	}
-	
+
+	/*public void onSwitchClicked(View view) {
+		switch(view.getId()){
+		case R.id.switchAnchoTrabajoCalculado:
+			if(SwitchAnchoTrabajoCalculado.isChecked()) {
+				anchoTrabajoCalculado.setText("Switch 1 check ON by click on it"); 
+			}
+			else {
+				anchoTrabajoCalculado.setText("Switch 1 check OFF by click on it");
+
+			}
+			break;
+		case R.id.switchAnchoTrabajoDeseado:
+			if(SwitchAnchoTrabajoDeseado.isChecked()) {
+				anchoTrabajoDeseado.setText("Switch 2 check ON by click on it");
+
+			}
+			else {
+				anchoTrabajoDeseado.setText("Switch 2 check OFF by click on it");
+			}
+			break;
+		case R.id.switchVelocidadAvanceCalculada:
+			if(SwitchVelocidadAvanceCalculada.isChecked()) {
+				velocidadAvanceCalculada.setText("Switch 2 check ON by click on it");
+
+			}
+			else {
+				velocidadAvanceCalculada.setText("Switch 2 check OFF by click on it");
+			}
+			break;
+		case R.id.switchVelocidadAvanceDeseada:
+			if(SwitchVelocidadAvanceDeseada.isChecked()) {
+				editVelocidad.setText("Switch 2 check ON by click on it");
+
+			}
+			else {
+				editVelocidad.setText("Switch 2 check OFF by click on it");
+			}
+			break;
+		}
+
+		SwitchAnchoTrabajoCalculado.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				// TODO Auto-generated method stub
+				if (buttonView.isChecked()){
+					anchoTrabajoCalculado.setText("Switch 1 check ON by drag thumb");
+				}
+				else{
+					anchoTrabajoCalculado.setText("Switch 1 check OFF by drag thumb");
+
+				}
+			}
+		});
+
+		SwitchAnchoTrabajoDeseado.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				// TODO Auto-generated method stub
+				if (buttonView.isChecked()){
+					anchoTrabajoDeseado.setText("Switch 2 check ON by drag thumb");
+
+				}
+				else{
+					anchoTrabajoDeseado.setText("Switch 2 check OFF by drag thumb");
+
+				}
+			}
+		}); 
+
+		SwitchVelocidadAvanceCalculada.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				// TODO Auto-generated method stub
+				if (buttonView.isChecked()){
+					velocidadAvanceCalculada.setText("Switch 1 check ON by drag thumb");
+				}
+				else{
+					velocidadAvanceCalculada.setText("Switch 1 check OFF by drag thumb");
+
+				}
+			}
+		});
+
+		SwitchVelocidadAvanceDeseada.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				// TODO Auto-generated method stub
+				if (buttonView.isChecked()){
+					velocidadAvanceDeseada.setText("Switch 2 check ON by drag thumb");
+
+				}
+				else{
+					velocidadAvanceDeseada.setText("Switch 2 check OFF by drag thumb");
+
+				}
+			}
+		}); 
+	}*/
+
+
+
 	@Override
 	protected void onResume(){
 		super.onResume();
 		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-		
-	      anchoCalleCalculado.setText(settings.getString("anchoCalleCalculado", ""));
-	      zonaAlta.setText(settings.getString("zonaAlta", ""));
-	      zonaMedia.setText(settings.getString("zonaMedia", ""));
-	      zonaBaja.setText(settings.getString("zonaBaja", ""));
-	      velocidadAvanceCalculado.setText(settings.getString("velocidadAvanceCalculado", ""));
-	     	     	      	      
-	      //System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
-		
+
+		anchoTrabajoDeseado.setText(settings.getString("anchoCalleDeseado", ""));
+		zonaAlta.setText(settings.getString("zonaAlta", ""));
+		zonaMedia.setText(settings.getString("zonaMedia", ""));
+		zonaBaja.setText(settings.getString("zonaBaja", ""));
+		velocidadAvanceDeseada.setText(settings.getString("velocidadAvanceDeseada", ""));
+
+		//System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+
 	}
-	
 	
 	@Override
 	protected void onPause(){
-		  super.onPause(); 
-		  
-		  SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-	      SharedPreferences.Editor editor = settings.edit();
-	      
-	      editor.putString("anchoCalleCalculado", anchoCalleCalculado.getText().toString());
-	      editor.putString("zonaAlta", zonaAlta.getText().toString());
-	      editor.putString("zonaMedia", zonaMedia.getText().toString());
-	      editor.putString("zonaBaja", zonaBaja.getText().toString());
-	      editor.putString("velocidadAvanceCalculado", velocidadAvanceCalculado.getText().toString());
-	      
-	      	     	      
-	      // Commit the edits!
-	      editor.commit();
-	      //System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+		super.onPause(); 
+
+		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+		SharedPreferences.Editor editor = settings.edit();
+
+		editor.putString("anchoCalleDeseado", anchoTrabajoDeseado.getText().toString());
+		editor.putString("zonaAlta", zonaAlta.getText().toString());
+		editor.putString("zonaMedia", zonaMedia.getText().toString());
+		editor.putString("zonaBaja", zonaBaja.getText().toString());
+		editor.putString("velocidadAvanceDeseada", velocidadAvanceDeseada.getText().toString());
+
+
+		// Commit the edits!
+		editor.commit();
+		//System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
 
 	}
 
@@ -238,8 +531,9 @@ public class C_1Activity extends ActionBarActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.main, menu);
+		return super.onCreateOptionsMenu(menu);
 	}
 
 
@@ -255,13 +549,49 @@ public class C_1Activity extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);*/
 		switch (item.getItemId()) {
+		case R.id.action_settings:
+			System.out.println("AJUSTES");
+			return true;
+
+
 		case android.R.id.home:
 			// app icon in action bar clicked; goto parent activity.
 			this.finish();
 			return true;
+
+
 		default:
 			return super.onOptionsItemSelected(item);
 		}
+
+	}
+
+	public Boolean onMenuItemClick(MenuItem item) {
+		AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
+		switch (item.getItemId()) {
+
+		case R.id.action_settings:	
+			Intent ajusteBoquillas = new Intent(C_1Activity.this, AjusteBoquillas.class);
+			startActivity(ajusteBoquillas);
+			return true;
+
+		default:
+			return super.onContextItemSelected(item);
+
+		}
+	}
+
+	@Override
+	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+		switch (buttonView.getId()) {
+		case R.id.switchAnchoTrabajoCalculado:
+			Log.i("switch_compat", isChecked + "");
+			break;
+		case R.id.switchAnchoTrabajoDeseado:
+			Log.i("switch_compat2", isChecked + "");
+			break;
+		}
+
 	}
 
 }
