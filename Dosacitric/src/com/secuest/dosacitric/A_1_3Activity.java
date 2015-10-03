@@ -5,13 +5,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,7 +17,6 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -165,34 +162,11 @@ public class A_1_3Activity extends ActionBarActivity{
 				String revisando = "";
 				String reemplazado = "";
 
-				/*Intent i =new Intent(a_1_2Activity.this, ParteA.class);
-			    //String alturaM = alturaMeseta.getText().toString();
-			    //i.putExtra("alturaMeseta", alturaM);
-				//startActivity(i);
-
-				Intent i =new Intent(a_1_2Activity.this, Resultados1.class);
-				i.putExtra("alturaMeseta", alturaMeseta.getText().toString());
-
-				//Log.e("n", alturaMeseta.getText());
-				startActivity(i);*/
-
 
 				try {
 
 					Intent a2 = getIntent();
 					ParteA partea3 = (ParteA) a2.getSerializableExtra("partea1");
-					
-					Log.e("didi", Float.toString(partea3.DensidadFoliar));
-					Log.e("didi", Float.toString(partea3.AnchoCalle));
-					Log.e("didi", Float.toString(partea3.DistanciaArboles));
-					Log.e("didi", Float.toString(partea3.LongitudArboles));
-					Log.e("didi", Float.toString(partea3.AnchuraArboles));
-					Log.e("didi", Float.toString(partea3.AlturaArboles));
-					Log.e("didi", Float.toString(partea3.FormaArbol));
-					Log.e("didi", Float.toString(partea3.FechaUltimaPoda));
-					Log.e("didi", Float.toString(partea3.GradoPoda));
-
-					Log.e("didi", partea3.toString());
 
 					revisando = "Productos a aplicar";
 					Float productosAplicar1 = (float) 999.999;
@@ -472,9 +446,6 @@ public class A_1_3Activity extends ActionBarActivity{
 	@Override
 	public void onRestoreInstanceState(Bundle savedInstanceState) {
 		super.onRestoreInstanceState(savedInstanceState);
-		// Restore UI state from the savedInstanceState.
-		// This bundle has also been passed to onCreate.
-		//Log.v(tag, "Inside of onRestoreInstanceState");
 		
 
 	}

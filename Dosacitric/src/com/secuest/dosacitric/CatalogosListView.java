@@ -48,18 +48,14 @@ public class CatalogosListView extends ListActivity{
 				// created; then, the method above will do the rest
 				if (mAdapter == null) {
 					mItems = new ArrayList<String>();
-					mAdapter = new Lista_adaptador(this , R.layout.item, datos){
+					mAdapter = new Lista_adaptador(this , R.layout.list_item_coniconos, datos){
 						@Override
 						public void onEntrada(Object entrada, View view) {
 							if (entrada != null) {
 								TextView texto_superior_entrada = (TextView) view.findViewById(R.id.textsuperior); 
 					            if (texto_superior_entrada != null) 
 					            	texto_superior_entrada.setText(((Lista_entrada) entrada).get_texto(0)); 
-								  
-								//TextView texto_inferior_entrada = (TextView) view.findViewById(R.id.textinferior); 
-								//if (texto_inferior_entrada != null)
-									//texto_inferior_entrada.setText(((Lista_entrada) entrada).get_texto(1)); 
-
+							
 								ImageView imagen_entrada = (ImageView) view.findViewById(R.id.image); 
 								if (imagen_entrada != null)
 									imagen_entrada.setImageResource(((Lista_entrada) entrada).get_idImagen());

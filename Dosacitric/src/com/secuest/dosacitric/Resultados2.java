@@ -2,21 +2,18 @@ package com.secuest.dosacitric;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -115,8 +112,9 @@ public class Resultados2 extends ActionBarActivity {
 		CaudalLiqSector.setText(String.valueOf(df
 				.format(resultados1.CaudalLiquidoSector)));
 		VarCaudalAdmisible.setText(String
-				.valueOf((int) resultados1.VariacionCaudalAdmisible * 100)
+				.valueOf((int) (resultados1.VariacionCaudalAdmisible * 100))
 				+ " %");
+
 
 		final float[] inter = resultados1.IntervaloCaudalAdmisible;
 		CaudalLiqAlta.setText(df.format(inter[0]) + "-" + df.format(inter[1]));
@@ -201,6 +199,19 @@ public class Resultados2 extends ActionBarActivity {
 			@Override
 			public void onClick(View v) {
 				RWFile rw = new RWFile(); 
+				pdfCreator mypdf = new pdfCreator();
+
+				SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+				if(!settings.getString("fecha", "").equals("")){
+					String A = ""+
+						"A IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
+						"Fecha "+settings.getString("fecha", "")+"<tipo>3<n>"+
+						"Identificaci&oacute;n de la parcela "+settings.getString("idparcela", "")+"<tipo>3<n>"+
+						"Identificaci&oacute;n del tratamiento +"+settings.getString("idtratamiento", "")+"+<tipo>3<n>"+
+						"Refer&eacute;ncia "+settings.getString("referencia", "")+"<tipo>3";
+					rw.write("A", A);
+					mypdf.readFile("A");
+				}
 				String C = ""+
 						"C. REGULACI&Oacute;N DEL PULVERIZADOR HIDRONEUM&Aacute;TICO (TURBO)<tipo>1<n>"+
 						"Volumen de aplicaci&oacute;n (V) "+Resultados2.this.VolAplicacion.getText().toString()+" L/Ha<tipo>3<n>"+
@@ -229,8 +240,7 @@ public class Resultados2 extends ActionBarActivity {
 						"Zona Media (nA)"+Resultados2.this.CaudalLiqMedia.getText().toString()+" L/min<tipo>3<n>"+
 						"Zona Baja (nA)"+Resultados2.this.CaudalLiqBaja.getText().toString()+" L/min<tipo>3";
 				rw.write("C", C);
-				pdfCreator mypdf = new pdfCreator();
-				mypdf.crearC();
+				mypdf.readFile("C");
 				DatabaseHandler db = new DatabaseHandler(
 						getApplicationContext());
 
@@ -239,7 +249,6 @@ public class Resultados2 extends ActionBarActivity {
 				String[] presiones = { "p6", "p7", "p8", "p9", "p10", "p11",
 						"p12", "p13", "p14", "p15", "p16" };
 
-				String resultadoBoquillas = "";
 				ArrayList<String> marcasAdecu = new ArrayList<String>();
 
 				bucleDentro: for (String mar : marcas) {
@@ -300,7 +309,8 @@ public class Resultados2 extends ActionBarActivity {
 					}
 					
 				}
-				mypdf.finish_document("Dosacitric_C"+(new Date()).getDay()+"-"+(new Date()).getMonth()+"-"+(new Date()).getYear());
+				Calendar cal = Calendar.getInstance();
+				mypdf.finish_document("Dosacitric_C"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
 
 				Toast toast = Toast.makeText(getApplicationContext(), "El PDF sera guardado en DESCARGAS", Toast.LENGTH_SHORT);
 				toast.show();

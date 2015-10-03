@@ -381,7 +381,6 @@
                 android:gravity="center"
                 android:inputType="number|textVisiblePassword" >
 
-                <requestFocus />
             </EditText>
 
             <TextView

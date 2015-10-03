@@ -1,12 +1,11 @@
 package com.secuest.dosacitric;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Calendar;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -15,16 +14,30 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Resultados3 extends ActionBarActivity {
 
 	private ParteC partec7;
 	private DecimalFormat df;
+	private TextView AnchoDeTrabajo;
+	private TextView VelocidadDeAvance;
+	private TextView BoquillaZonaAlta;
+	private TextView BoquillaZonaMedia;
+	private TextView BoquillaZonaBaja;
+	private TextView Presion;
+	private TextView Marca;
+	private TextView EleccionBoquillaZonaAlta;
+	private TextView EleccionBoquillaZonaMedia;
+	private TextView EleccionBoquillaZonaBaja;
+	private TextView VolumenCaldoAplicado;
+	public static final String PREFS_NAME = "Guarda";
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.resultados3);
+		setContentView(R.layout.resultados3_copia);
 
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
@@ -79,33 +92,42 @@ public class Resultados3 extends ActionBarActivity {
 
 		partec7.calcularParteC(ValorZonaAlta, ValorZonaMedia, ValorZonaBaja);
 
-		System.out.println("Volumen caldo "+partec7.VolumenCaldoAplicado+" <--");		
-
-		TextView Volha = (TextView) findViewById(R.id.textView1);
-		TextView Volhg = (TextView) findViewById(R.id.textView2);
-
-		Volha.setText(partec7.VolumenCaldoAplicadoHanegada+"");
-		Volhg.setText(partec7.VolumenCaldoAplicado+"");
 		
-		Intent cres = getIntent();
-		ParteC resultados3 = (ParteC) cres.getSerializableExtra("parteb2");
+		AnchoDeTrabajo = (TextView) findViewById(R.id.AnchoTrabajoTextView);
+		VelocidadDeAvance = (TextView) findViewById(R.id.VelocidadAvanceTextView);
+		BoquillaZonaAlta = (TextView) findViewById(R.id.BoquillaZAltaTextView);
+		BoquillaZonaMedia = (TextView) findViewById(R.id.BoquillaZMediaTextView);
+		BoquillaZonaBaja = (TextView) findViewById(R.id.BoquillaZBajaTextView);
+		Presion = (TextView) findViewById(R.id.PresionTextView);
+		Marca = (TextView) findViewById(R.id.MarcaTextView);
+		EleccionBoquillaZonaAlta = (TextView) findViewById(R.id.BoquillaEleccionZAltaTextView);
+		EleccionBoquillaZonaMedia = (TextView) findViewById(R.id.BoquillaEleccionZMediaTextView);
+		EleccionBoquillaZonaBaja = (TextView) findViewById(R.id.BoquillaEleccionZBajaTextView);
+		VolumenCaldoAplicado = (TextView)findViewById(R.id.VolumenCaldoTextView);
 
-		//VolAplicacion.setText(String.valueOf(resultados3.VolumenApp));
-		//VelAvance.setText(String.valueOf(resultados3.VelocidadAvance));
-		//AnchoTrabajo.setText(String.valueOf(resultados3.AnchoTrabajo));
+		AnchoDeTrabajo.setText(String.valueOf(partec7.AnchoCalle));
+		VelocidadDeAvance.setText(String.valueOf(partec7.VelocidadAvance));
+		BoquillaZonaAlta.setText(String.valueOf(partec7.NumeroBoquillasZona[0]));
+		BoquillaZonaMedia.setText(String.valueOf(partec7.NumeroBoquillasZona[1]));
+		BoquillaZonaBaja.setText(String.valueOf(partec7.NumeroBoquillasZona[2]));
+		Presion.setText(String.valueOf(String.valueOf(partec7.PresionSeleccionada)));;
+		Marca.setText(String.valueOf(partec7.MarcaSeleccionada));;
+		EleccionBoquillaZonaAlta.setText(String.valueOf(partec7.ModeloZonaAltaSeleccionado));;
+		EleccionBoquillaZonaMedia.setText(String.valueOf(partec7.ModeloZonaMediaSeleccionado));;
+		EleccionBoquillaZonaBaja.setText(String.valueOf(partec7.ModeloZonaBajaSeleccionado));;
+		VolumenCaldoAplicado.setText(String.valueOf(partec7.VolumenCaldoAplicado));;
 
-
-		//DatabaseHandler db = new DatabaseHandler(this);
-		//db.getCaudalAunaPresionDeBoquilla(marca, modelo, presion)
-
-
-		Button atras = (Button) findViewById(R.id.atras);
-		atras.setClickable(true);
-		atras.setOnClickListener(new OnClickListener() {
+		Button nuevoTratamiento = (Button) findViewById(R.id.nuevoTratamiento);
+		nuevoTratamiento.setClickable(true);
+		nuevoTratamiento.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("CLICK");
-				//startActivity(new Intent(C_1Activity.this, BoquillasListView.class));
+				SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+				SharedPreferences.Editor editor = settings.edit();
+				editor.clear();
+				editor.commit();
+				
+				startActivity(new Intent(Resultados3.this, Indice.class));
 				finish();
 			}
 		});
@@ -115,13 +137,64 @@ public class Resultados3 extends ActionBarActivity {
 		indice.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("CLICK");
 				startActivity(new Intent(Resultados3.this, Indice.class));
 			}
 		});
+		
+		
 
+		
+		ImageButton printer = (ImageButton) findViewById(R.id.printer);
+		printer.setClickable(true);
+		printer.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				RWFile rw = new RWFile(); 
+				pdfCreator mypdf = new pdfCreator();
+				SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+				if(!settings.getString("fecha", "").equals("")){
+					String A = ""+
+						"A IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
+						"Fecha "+settings.getString("fecha", "")+"<tipo>3<n>"+
+						"Identificaci&oacute;n de la parcela "+settings.getString("idparcela", "")+"<tipo>3<n>"+
+						"Identificaci&oacute;n del tratamiento +"+settings.getString("idtratamiento", "")+"+<tipo>3<n>"+
+						"Refer&eacute;ncia "+settings.getString("referencia", "")+"<tipo>3";
+					rw.write("A", A);
+					mypdf.readFile("A");
+				}
+				String D = ""+
+						"D. Determinaci&oacute;n del volumen de caldo aplicado <tipo>1<n>"+
+						"Ancho de trabajo "+AnchoDeTrabajo.getText().toString()+" m<tipo>3<n>"+
+						"Velocidad de avance "+VelocidadDeAvance.getText().toString()+" km/h<tipo>3<n>"+
+						"Caracter&iacute;sticas del sistema hidr&aacute;ulico del equipo "+"<tipo>2<n>"+
+						"Num. de boquillas por zona<tipo>3<n>"+
+						"    Zona Alta(nA)"+BoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
+						"    Zona Media(nM)"+BoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
+						"    Zona Baja(nB)"+BoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
+						"Presi&oacute;n seleccionada "+Presion.getText().toString()+" bares<tipo>3<n> "+
+						"Marca seleccionada "+Marca.getText().toString()+"<tipo>3<n> "+
+						"Elecci&oacute;n del modelo de boquilla<tipo>2<n> "+
+						"    Zona Alta "+EleccionBoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
+						"    Zona Media "+EleccionBoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
+						"    Zona Baja "+EleccionBoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
+						"Caracter&iacute;sticas del caudal <tipo>2<n> "+
+						"Volumen de caldo aplicado "+VolumenCaldoAplicado.getText().toString()+" L/ha<tipo>3";
+				
+				rw.write("D", D);
+				mypdf.readFile("D");
+
+				Calendar cal = Calendar.getInstance();
+				mypdf.finish_document("Dosacitric_D"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
+				
+				Toast toast = Toast.makeText(getApplicationContext(), "El PDF sera guardado en DESCARGAS", Toast.LENGTH_SHORT);
+				toast.show();
+			}
+		});
+	
+	
 	}
 
+	
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		return super.onPrepareOptionsMenu(menu);
@@ -129,24 +202,14 @@ public class Resultados3 extends ActionBarActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		/*int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);*/
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// app icon in action bar clicked; goto parent activity.
 			this.finish();
 			return true;
 		default:

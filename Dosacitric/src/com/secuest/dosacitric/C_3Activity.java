@@ -9,30 +9,58 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class C_3Activity extends ListActivity{
-
+	private com.secuest.dosacitric.Lista_adaptador mAdapter;
+	private String[] marcas2;
 	private ParteC partec3;
 	ListView listView ;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.c_3);  
 		setContentView(R.layout.catalogoslistview_layout);
 
 		String[] marcas = { "Teejet", "Albuz", "Hardi", "Discos",
 		"Otras" };
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-				R.layout.item, marcas);
-		setListAdapter(adapter);
+		marcas2=marcas;
+		
+		ArrayList<Lista_entrada> datos = new ArrayList<Lista_entrada>();  
+
+
+		for(int i=0;i<marcas.length;i++){
+			datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ marcas[i]}));
+		}
+		
+		if (mAdapter == null) {
+			mAdapter = new Lista_adaptador(this , R.layout.list_item_coniconos, datos){
+				@Override
+				public void onEntrada(Object entrada, View view) {
+					if (entrada != null) {
+						TextView texto_superior_entrada = (TextView) view.findViewById(R.id.textsuperior); 
+			            if (texto_superior_entrada != null) 
+			            	texto_superior_entrada.setText(((Lista_entrada) entrada).get_texto(0)); 
+						
+						ImageView imagen_entrada = (ImageView) view.findViewById(R.id.image); 
+						if (imagen_entrada != null)
+							imagen_entrada.setImageResource(((Lista_entrada) entrada).get_idImagen());
+					}
+				}
+			};		
+
+		}
+		
+		getListView().setAdapter(mAdapter);
+		setListAdapter(mAdapter);
+
 	}
 
 	@Override
 	protected void onListItemClick(ListView list, View view, int position, long id) {
-		String item = (String) getListAdapter().getItem(position);
+		String item = marcas2[position];
 
 		String ola ="ParteC3";
 		Log.e("didi", ola);
@@ -54,7 +82,6 @@ public class C_3Activity extends ListActivity{
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
@@ -62,12 +89,8 @@ public class C_3Activity extends ListActivity{
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// app icon in action bar clicked; goto parent activity.
 			this.finish();
 			return true;
 		default:

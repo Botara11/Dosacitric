@@ -1,9 +1,7 @@
 package com.secuest.dosacitric;
 
 import java.text.DecimalFormat;
-import java.util.List;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,9 +9,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -125,17 +121,6 @@ public class B_2Activity extends ActionBarActivity{
 						Float.parseFloat("h");
 					}
 
-					/*
-					quien="zonaAltaIntervaloCaudal";
-					float zonaAltaInt = Float.parseFloat(zonaAltaIntervaloCaudal.getText().toString());
-					quien="zonaMediaIntervaloCaudal";
-					float zonaMediaInt = Float.parseFloat(zonaMediaIntervaloCaudal.getText().toString());
-					quien="zonaBajaIntervaloCaudal";
-					float zonaBajaInt = Float.parseFloat(zonaBajaIntervaloCaudal.getText().toString());
-
-					float[] zonaInt = {zonaAltaInt,zonaMediaInt,zonaBajaInt};
-					 */
-
 					quien="variacionCaudal";
 					float variacionCaud = Float.parseFloat(variacionCaudalTextView.getText().toString());
 
@@ -204,7 +189,7 @@ public class B_2Activity extends ActionBarActivity{
 
 	private void calcularB() {
 		try{
-			Log.e("DIDI","calcularB");
+			@SuppressWarnings("unused")
 			String quien ="";
 			quien="zonaAltaCerradas";
 			int zAltaCerr = Integer.parseInt(zonaAltaCerradas.getText().toString());
@@ -237,16 +222,7 @@ public class B_2Activity extends ActionBarActivity{
 			float zonaBajaPor = Float.parseFloat(zonaBajaPorcentaje.getText().toString());
 
 			float [] zPorcentaje = {zonaAltaPor,zonaMediaPor,zonaBajaPor};
-			/*
-			quien="zonaAltaIntervaloCaudal";
-			float zonaAltaInt = Float.parseFloat(zonaAltaIntervaloCaudal.getText().toString());
-			quien="zonaMediaIntervaloCaudal";
-			float zonaMediaInt = Float.parseFloat(zonaMediaIntervaloCaudal.getText().toString());
-			quien="zonaBajaIntervaloCaudal";
-			float zonaBajaInt = Float.parseFloat(zonaBajaIntervaloCaudal.getText().toString());
-
-			float[] zonaInt = {zonaAltaInt,zonaMediaInt,zonaBajaInt};
-			 */
+			
 			quien="variacionCaudal";
 			float variacionCaud = Float.parseFloat(variacionCaudalTextView.getText().toString());
 
@@ -255,8 +231,6 @@ public class B_2Activity extends ActionBarActivity{
 			parteb2.calcularParteB();
 
 			float[] inter = parteb2.IntervaloCaudalAdmisible;
-
-			System.out.println("inter:"+inter[0]);
 
 			zonaAltaIntervaloCaudal.setText(df.format(inter[0])+"-"+df.format(inter[1]));
 			zonaMediaIntervaloCaudal.setText(df.format(inter[2])+"-"+df.format(inter[3]));
@@ -276,16 +250,20 @@ public class B_2Activity extends ActionBarActivity{
 		variacionCaudalSeekbar.setProgress(0);
 		variacionCaudalSeekbar.incrementProgressBy(1);
 		variacionCaudalSeekbar.setMax(10);
-
+		variacionCaudalTextView.setFocusable(true);
+		variacionCaudalTextView.setFocusableInTouchMode(true);
+		
 		variacionCaudalSeekbar.setOnSeekBarChangeListener(
 				new SeekBar.OnSeekBarChangeListener() {
 
+					@SuppressWarnings("unused")
 					int progress_value;
 					@Override
 					public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 						progress_value = progress;
 						variacionCaudalTextView.setText("" + progress);
 						calcularB();
+						variacionCaudalTextView.requestFocus();
 					}
 
 					@Override
@@ -298,28 +276,6 @@ public class B_2Activity extends ActionBarActivity{
 				}
 				);
 
-	}
-
-	private class ArrayAdapterMio<String> extends ArrayAdapter<String> {
-
-		public ArrayAdapterMio(Context context, int resource,
-				List<String> objects) {
-			super(context, resource, objects);
-		}
-
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
-			View v = super.getView(position, convertView, parent);
-			if (position == getCount()) {
-				((TextView)v.findViewById(R.id.text1)).setText("");
-				((TextView)v.findViewById(R.id.text1)).setHint((CharSequence) getItem(getCount())); //"Hint to be displayed"
-			}
-			return v;
-		}       
-		@Override
-		public int getCount() {
-			return super.getCount()-1; // you dont display last item. It is used as hint.
-		} 
 	}
 
 	@Override

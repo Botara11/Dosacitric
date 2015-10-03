@@ -4,23 +4,20 @@ import java.util.ArrayList;
 
 import android.app.ListActivity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class C_2Activity extends ListActivity {
-
+	private com.secuest.dosacitric.Lista_adaptador mAdapter;
 	private ParteC partec2;
 	ListView listView ;
+	private String[] presiones2;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,28 +28,41 @@ public class C_2Activity extends ListActivity {
 		String[] presiones = { "6 bares", "7 bares", "8 bares", "9 bares",
 				"10 bares", "11 bares", "12 bares", "13 bares", "14 bares",
 				"15 bares", "16 bares" };
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-				R.layout.item, presiones);
+		presiones2 = presiones;
 
-		setListAdapter(adapter);
+		ArrayList<Lista_entrada> datos = new ArrayList<Lista_entrada>();  
 
+		for(int i=0;i<presiones.length;i++){
+			datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ presiones[i]}));
+		}
+		
+		if (mAdapter == null) {
+			mAdapter = new Lista_adaptador(this , R.layout.list_item_coniconos, datos){
+				@Override
+				public void onEntrada(Object entrada, View view) {
+					if (entrada != null) {
+						TextView texto_superior_entrada = (TextView) view.findViewById(R.id.textsuperior); 
+			            if (texto_superior_entrada != null) 
+			            	texto_superior_entrada.setText(((Lista_entrada) entrada).get_texto(0)); 
+						
+						ImageView imagen_entrada = (ImageView) view.findViewById(R.id.image); 
+						if (imagen_entrada != null)
+							imagen_entrada.setImageResource(((Lista_entrada) entrada).get_idImagen());
+					}
+				}
+			};		
+
+		}
+		
+		getListView().setAdapter(mAdapter);
+		setListAdapter(mAdapter);
 
 	}
 
-	/*@Override
-	public View getView(int position, View convertView, ViewGroup parent){
-		View view = this.getView(position, convertView, parent);
-		TextView textview = (TextView) view.findViewById(android.R.layout.simple_list_item_1);
-		textview.setTextColor(Color.WHITE);
-
-		return view;
-
-	}*/
-
 	@Override
 	protected void onListItemClick(ListView list, View view, int position, long id) {
-		String item = (String) getListAdapter().getItem(position);
-
+		String item = presiones2[position];
+		
 		String ola ="ParteC2";
 		Log.e("didi", ola);
 
@@ -64,6 +74,7 @@ public class C_2Activity extends ListActivity {
 		c2.putExtra("presion", partec2);
 		startActivity(c2);
 	}
+	
 
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
@@ -73,19 +84,14 @@ public class C_2Activity extends ListActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// app icon in action bar clicked; goto parent activity.
 			this.finish();
 			return true;
 		default:

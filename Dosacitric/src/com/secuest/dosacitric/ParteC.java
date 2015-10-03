@@ -3,10 +3,9 @@ package com.secuest.dosacitric;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import android.content.Context;
-
 public class ParteC implements Serializable{
 
+	private static final long serialVersionUID = 9017987621798917121L;
 	/**** C ****/
 	public float AnchoCalle;
 	public int[] NumeroBoquillasZona; // Z.Alta Z.Media y Z.Baja
@@ -40,7 +39,6 @@ public class ParteC implements Serializable{
 		this.NumeroBoquillasZona = NumeroBoquillasZona; // Z.Alta// Z.Media y
 		// Z.Baja
 		this.VelocidadAvance = VelocidadAvance;
-		this.NumeroTotalBoquillas = NumeroTotalBoquillas;
 	}
 	
 	public void rellenarC2(String item) {

@@ -136,7 +136,6 @@ public class A_1Activity extends ActionBarActivity{
 		indice.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("CLICK");
 				startActivity(new Intent(A_1Activity.this, Indice.class));
 			}
 		});
@@ -207,8 +206,6 @@ public class A_1Activity extends ActionBarActivity{
 		idtratamiento.setText(settings.getString("idtratamiento", ""));
 		referencia.setText(settings.getString("referencia", ""));
 
-		//System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
-
 	}
 
 
@@ -223,10 +220,7 @@ public class A_1Activity extends ActionBarActivity{
 		editor.putString("idparcela", idparcela.getText().toString());
 		editor.putString("idtratamiento", idtratamiento.getText().toString());
 		editor.putString("referencia", referencia.getText().toString());
-
-		// Commit the edits!
 		editor.commit();
-		//System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
 
 	}
 

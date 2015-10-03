@@ -298,7 +298,6 @@
                 android:inputType="number|textVisiblePassword"
                 android:textSize="20sp" >
 
-                <requestFocus />
             </EditText>
 
             <TextView

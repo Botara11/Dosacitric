@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 public class ParteB implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8476927016811564932L;
 	/**** B ****/
 	public float VolumenApp;
 	public float AnchoTrabajo;
@@ -95,9 +99,7 @@ public class ParteB implements Serializable {
 		NumeroBoquillasSector = NumeroTotalBoquillas / 2;
 		NumeroTotalBoquillasAbiertas = NumeroTotalBoquillas
 				- NumeroBoquillasCerradas[0] - NumeroBoquillasCerradas[1];
-		
-		System.out.println("  "+PorcentajeVegetacion[0]+" " +CaudalLiquidoTotal);
-		
+				
 		CaudalLiquidoZona[0] = CaudalLiquidoTotal * PorcentajeVegetacion[0] / 100;
 		CaudalLiquidoZona[1] = CaudalLiquidoTotal * PorcentajeVegetacion[1]
 				/ 100;

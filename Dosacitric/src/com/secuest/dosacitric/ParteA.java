@@ -2,10 +2,12 @@ package com.secuest.dosacitric;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Vector;
 
 
 public class ParteA implements Serializable{
+
+	private static final long serialVersionUID = -8034845210747968378L;
+
 	public float IndiceDosificacion = (float) 0.085; // HARDCODEADO -> TIENE QUE ESTAR EN LA NUBE
 	
 	/**** A ****/

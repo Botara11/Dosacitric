@@ -2,6 +2,7 @@ package com.secuest.dosacitric;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("unused")
 public class Lista_entrada {
 	private int idImagen; 
 	public String [] array; 

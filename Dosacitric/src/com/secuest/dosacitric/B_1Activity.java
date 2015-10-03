@@ -1,10 +1,8 @@
 package com.secuest.dosacitric;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,7 +10,6 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,9 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.RadioButton;
 import android.widget.SeekBar;
-import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,17 +30,11 @@ CompoundButton.OnCheckedChangeListener  {
 
 	private int debug = 1;
 	private TextView volumenAplicacionCalculado;
-	//private TextView volumenAplicacionDeseado;
 	private Switch SwitchvolumenAplicacionCalculado;
 	private Switch SwitchvolumenAplicacionDeseado;
-	//private RadioButton volumenAplicacionCalculado;
-	//private RadioButton volumenAplicacionSiguiente;
 	private TextView anchoTrabajoCalculado;
-	//private TextView anchoTrabajoDeseado;
 	private Switch SwitchAnchoTrabajoCalculado;
 	private Switch SwitchAnchoTrabajoDeseado;
-	//private RadioButton anchoTrabajoCalculado;
-	//private RadioButton anchoTrabajoSiguiente;
 	private TextView velocidadAvance;
 	private SeekBar velocidadAvanceSeekbar;
 	private EditText editAncho;
@@ -90,11 +79,12 @@ CompoundButton.OnCheckedChangeListener  {
 		String VolumenApp = settings.getString("volumenApp", "");
 		volumenAplicacionCalculado.setText(VolumenApp);
 		
+
 		SwitchvolumenAplicacionCalculado.setOnCheckedChangeListener(this);
 		SwitchvolumenAplicacionCalculado.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				
+				actualizarCaudal();
 				if(SwitchvolumenAplicacionCalculado.isChecked() == true){
 					SwitchvolumenAplicacionDeseado.setChecked(false);
 				}else{
@@ -109,7 +99,7 @@ CompoundButton.OnCheckedChangeListener  {
 		SwitchvolumenAplicacionDeseado.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-
+				actualizarCaudal();
 				if(SwitchvolumenAplicacionDeseado.isChecked() == true){
 					 SwitchvolumenAplicacionCalculado.setChecked(false);
 					 }else{
@@ -124,17 +114,26 @@ CompoundButton.OnCheckedChangeListener  {
 
 			}
 		});
-
+		if (VolumenApp==""){
+			SwitchAnchoTrabajoCalculado.setChecked(false);
+			SwitchvolumenAplicacionDeseado.setChecked(true);
+		}else{
+			SwitchAnchoTrabajoCalculado.setChecked(true);
+			SwitchvolumenAplicacionDeseado.setChecked(false);
+		}
+		
+		
 		anchoTrabajoCalculado = (TextView) findViewById(R.id.textViewAnchoTrabajoCalculado);
 		SwitchAnchoTrabajoCalculado= (Switch) findViewById(R.id.switchAnchoTrabajoCalculado);
 		String AnchoTrabajo = settings.getString("anchocalle", "");
 		anchoTrabajoCalculado.setText(AnchoTrabajo);
 		SwitchAnchoTrabajoCalculado.setOnCheckedChangeListener(this);
+		
+
+		
 		SwitchAnchoTrabajoCalculado.setOnClickListener(new View.OnClickListener() {
-			
-
 			public void onClick(View v) {
-
+				actualizarCaudal();
 				if(SwitchAnchoTrabajoCalculado.isChecked() == true){
 					 SwitchAnchoTrabajoDeseado.setChecked(false);
 				}else{
@@ -148,8 +147,7 @@ CompoundButton.OnCheckedChangeListener  {
 		SwitchAnchoTrabajoDeseado.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-
-				
+				actualizarCaudal();
 				if(SwitchAnchoTrabajoDeseado.isChecked() == true){
 					 SwitchAnchoTrabajoCalculado.setChecked(false);
 					 }else{
@@ -157,10 +155,15 @@ CompoundButton.OnCheckedChangeListener  {
 					 }
 			}
 		});
-
+		if (AnchoTrabajo==""){
+			SwitchAnchoTrabajoCalculado.setChecked(false);
+			SwitchAnchoTrabajoDeseado.setChecked(true);
+		}else{
+			SwitchAnchoTrabajoCalculado.setChecked(true);
+			SwitchAnchoTrabajoDeseado.setChecked(false);
+		}
 		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
 		velocidadAvance.setText("0.99");
-		velocidadAvanceSeekbar = (SeekBar) findViewById(R.id.seekBar1);
 
 		caudalTotal = (TextView) findViewById(R.id.textView15);
 		caudalSector = (TextView) findViewById(R.id.textView16);
@@ -306,6 +309,10 @@ CompoundButton.OnCheckedChangeListener  {
 	public void seebbarr() {
 		velocidadAvanceSeekbar = (SeekBar) findViewById(R.id.seekBar1);
 		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
+
+		velocidadAvance.setFocusable(true);
+		velocidadAvance.setFocusableInTouchMode(true);
+		
 		velocidadAvanceSeekbar.setProgress(1);
 		velocidadAvanceSeekbar.incrementProgressBy(1);
 		velocidadAvanceSeekbar.setMax(502);
@@ -318,10 +325,12 @@ CompoundButton.OnCheckedChangeListener  {
 			@Override
 			public void onProgressChanged(SeekBar seekBar,
 					int progress, boolean fromUser) {
+				actualizarCaudal();
 				progress_value = (float) progress;
 				velocidadAvance.setText(""
 						+ (float) ((progress_value + 99) / 100));
 				actualizarCaudal();
+				velocidadAvance.requestFocus();
 			}
 
 			@Override
@@ -372,8 +381,6 @@ CompoundButton.OnCheckedChangeListener  {
 		caudalSector.setText(settings.getString("caudalSector", ""));
 		editBoquillas.setText(settings.getString("editBoquillas", ""));
 
-		//System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
-
 	}
 
 
@@ -390,11 +397,8 @@ CompoundButton.OnCheckedChangeListener  {
 		editor.putString("caudalTotal", caudalTotal.getText().toString());
 		editor.putString("caudalSector", caudalSector.getText().toString());
 		editor.putString("editBoquillas", editBoquillas.getText().toString());
-
-		// Commit the edits!
 		editor.commit();
-		//System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
-
+		
 	}
 
 	@Override
@@ -436,14 +440,7 @@ CompoundButton.OnCheckedChangeListener  {
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 		// TODO Auto-generated method stub
-		/*switch (buttonView.getId()) {
-		case R.id.switchVolumenAplicacionCalculado:
-			Log.i("switch_compat", isChecked + "");
-			break;
-		case R.id.switchVolumenAplicacionDeseado:
-			Log.i("switch_compat2", isChecked + "");
-			break;
-		}*/
+		
 	}
 
 

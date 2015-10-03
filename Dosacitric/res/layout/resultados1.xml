@@ -40,15 +40,7 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:background="@drawable/inter3" />
-            <!--
-            android:id="@+id/ayuda1"
-                android:layout_width="30dp"
-                android:layout_height="50dp"
-                android:layout_above="@+id/textView3"
-                android:layout_alignTop="@+id/textView2"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/textView2"
-                android:background="@drawable/inter"            -->
+         
 
             <View
                 android:layout_width="1dip"
@@ -765,7 +757,7 @@
                 android:layout_alignBaseline="@+id/fechaAnoResultados1"
                 android:layout_alignBottom="@+id/fechaAnoResultados1"
                 android:layout_marginRight="5dp"
-                android:layout_toLeftOf="@+id/textView42"
+                android:layout_toLeftOf="@+id/fechaAnoResultados1"
                 android:text="/"
                 android:textColor="@color/white"
                 android:textSize="17dp" />

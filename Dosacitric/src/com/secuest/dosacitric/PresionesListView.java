@@ -13,9 +13,6 @@ import android.widget.TextView;
 public class PresionesListView extends ListActivity{
 	
 	private com.secuest.dosacitric.Lista_adaptador mAdapter;
-	private ArrayList<String> mItems;
-	private int mTotal;
-	private int mPosition;
 	private float[] inter;
 	private ArrayList<String> presionesAdecu;
 	private String marca ;
@@ -80,7 +77,6 @@ public class PresionesListView extends ListActivity{
 		// you only need to instantiate these the first time your fragment is
 				// created; then, the method above will do the rest
 				if (mAdapter == null) {
-					mItems = new ArrayList<String>();
 					mAdapter = new Lista_adaptador(this , R.layout.list_item_coniconos, datos){
 						@Override
 						public void onEntrada(Object entrada, View view) {

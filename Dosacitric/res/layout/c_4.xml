@@ -4,27 +4,9 @@
     android:layout_height="fill_parent"
     android:background="#000000" >
 
-    <Button
-        android:id="@+id/siguiente"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:background="#FFFFFF" 
-        android:gravity="center"
-        android:padding="10dip"
-        android:text="SIGUIENTE"
-        android:textColor="#E65F00" />
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/siguiente" >
-
-        <ListView
-            android:id="@android:id/list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>

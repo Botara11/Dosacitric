@@ -1,18 +1,17 @@
 package com.secuest.dosacitric;
 
-import android.app.Activity;
+import java.util.Calendar;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,8 +19,6 @@ import android.widget.Toast;
 public class Resultados1 extends ActionBarActivity{
 
 
-	private ParteA parteA;
-	private String hola;
 	
 	private TextView fechaDiaResultados1;
 	private TextView fechaMesResultados1;
@@ -45,7 +42,6 @@ public class Resultados1 extends ActionBarActivity{
 	private TextView velocidadViento;
 	private TextView tipoPulverizador;
 	private TextView L_Ha ;
-	private TextView L_Hg;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.resultados1);
@@ -78,66 +74,22 @@ public class Resultados1 extends ActionBarActivity{
 		 velocidadViento = (TextView) findViewById(R.id.textView35);
 		 tipoPulverizador = (TextView) findViewById(R.id.textView36);
 		 L_Ha = (TextView) findViewById(R.id.textView37);
-		 L_Hg = (TextView) findViewById(R.id.textView38);
 
 		
 		
-		//Intent i = getIntent();
-		// Receiving the Data
-		/*String StringAnchocalle = i.getStringExtra("anchocalle");
-		String StringDistancia = i.getStringExtra("distancia");
-		String StringLongitudArb = i.getStringExtra("longitudArb");
-		String StringAnchuraArb = i.getStringExtra("anchuraArb");
-		String StringAlturaArb = i.getStringExtra("alturaArb");
-		String StringAlturaMeseta = i.getStringExtra("alturaMeseta");
-		Log.e("Resultados 1", StringAnchocalle + "." + StringDistancia 
-				+ "." + StringLongitudArb + "." + StringAnchuraArb
-				+ "." + StringAlturaArb+ "." + StringAlturaMeseta);
-
-		// Displaying Received data
-		anchocalle.setText(StringAnchocalle);
-		distancia.setText(StringDistancia);
-		longitudArb.setText(StringLongitudArb);
-		anchuraArb.setText(StringAnchuraArb);
-		alturaArb.setText(StringAlturaArb);
-		alturaMeseta.setText(StringAlturaMeseta);*/
-
 		Intent aR = getIntent();
 		ParteA resultadosA3 = (ParteA) aR.getSerializableExtra("partea3");
 		resultadosA3.calcularParteA();
-
-		System.out.println(resultadosA3.day);
-		System.out.println(resultadosA3.month);
-		System.out.println(resultadosA3.year);
-		System.out.println(resultadosA3.idParcela);
-		System.out.println(resultadosA3.idTratamiento);
-		System.out.println(resultadosA3.Referencia);
-		//System.out.println(resultadosA3.AlturaMeseta);
-		System.out.println(resultadosA3.AnchoCalle);
-		System.out.println(resultadosA3.AnchuraArboles);
-		System.out.println("Densidad Foliar" + resultadosA3.DensidadFoliar);
-		System.out.println(resultadosA3.DistanciaArboles);
-		System.out.println("Fecha Última Poda" + resultadosA3.FechaUltimaPoda);
-		System.out.println("Forma Actuación" + resultadosA3.FormaActuacion);
-		System.out.println("Forma Arbol" + resultadosA3.FormaArbol);
-		System.out.println("Grado de Poda" + resultadosA3.GradoPoda);
-		System.out.println("Humedad" + resultadosA3.Humedad);
-		System.out.println(resultadosA3.LongitudArboles);
-		System.out.println("Utiliza Mojantes" + resultadosA3.Mojantes);
-		System.out.println("Productos Aplicar" + resultadosA3.ProductosAplicar);
-		System.out.println("Temperatura" + resultadosA3.Temperatura);
-		System.out.println("Tipo de Pulverizador" + resultadosA3.TipoPulverizador);
-		System.out.println("Velocidad de Viento" + resultadosA3.VelocidadViento);
-		System.out.println(resultadosA3.VolumenArbol);
-		System.out.println("Zona Crítica" + resultadosA3.ZonaCriticaTratar);
-		System.out.println(resultadosA3.VolumenAppLHA);
-
-		fechaDiaResultados1.setText(String.valueOf(resultadosA3.day));
-		fechaMesResultados1.setText(String.valueOf(resultadosA3.month));
-		fechaAnoResultados1.setText(String.valueOf(resultadosA3.year));
-		idParcelaResultados1.setText(String.valueOf(resultadosA3.idParcela));
-		idTratamientoResultados1.setText(String.valueOf(resultadosA3.idTratamiento));
-		referenciaResultados1.setText(String.valueOf(resultadosA3.Referencia));
+		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+		
+		String[] fech = settings.getString("fecha", "").split("-");
+		
+		fechaDiaResultados1.setText(String.valueOf(fech[0]));
+		fechaMesResultados1.setText(String.valueOf(fech[1]));
+		fechaAnoResultados1.setText(String.valueOf(fech[2]));
+		idParcelaResultados1.setText(String.valueOf(settings.getString("idparcela", "")));
+		idTratamientoResultados1.setText(String.valueOf(settings.getString("idtratamiento", "")));
+		referenciaResultados1.setText(String.valueOf(settings.getString("referencia", "")));
 
 		if (resultadosA3.IndiceDensidadFoliar == 0){
 			densidadFoliar.setText("Baja");
@@ -280,18 +232,10 @@ public class Resultados1 extends ActionBarActivity{
 		else {
 			tipoPulverizador.setText("Pistola");
 		}
-		//tipoPulverizador.setText(String.valueOf(resultadosA3.TipoPulverizador));
+		
 		String auxiliar = resultadosA3.VolumenAppLHA+"";
 		L_Ha.setText(auxiliar);
-		//L_Hg.setText(auxiliar);
 		
-		System.out.println("Resultado a: "+resultadosA3.VolumenAppLHA+"");
-		//L_Hg.setText(String.valueOf(resultadosA3.VolumenAppLHG));
-
-		Log.e("didi", resultadosA3.DensidadFoliar+"");
-		Log.e("didi", resultadosA3.FormaArbol+"");
-		//Log.e("didi", resultadosA3.AlturaMeseta+"");
-
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
@@ -313,17 +257,23 @@ public class Resultados1 extends ActionBarActivity{
 
 		ImageButton printer = (ImageButton) findViewById(R.id.printer);
 		printer.setClickable(true);
+		
 		printer.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				pdfCreator mypdf = new pdfCreator();
 				RWFile rw = new RWFile();
-				String A = ""+
+				SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+				if(!settings.getString("fecha", "").equals("")){
+					String A = ""+
 						"A IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
-						"Fecha "+fechaDiaResultados1.getText().toString()+"/"+fechaMesResultados1.getText().toString()+"/"+fechaAnoResultados1.getText().toString()+"<tipo>3<n>"+
-						"Identificaci&oacute;n de la parcela "+idParcelaResultados1.getText().toString()+"<tipo>3<n>"+
-						"Identificaci&oacute;n del tratamiento +"+idTratamientoResultados1.getText().toString()+"+<tipo>3<n>"+
-						"Refer&eacute;ncia "+referenciaResultados1.getText().toString()+"<tipo>3";
-				rw.write("A", A);
+						"Fecha "+settings.getString("fecha", "")+"<tipo>3<n>"+
+						"Identificaci&oacute;n de la parcela "+settings.getString("idparcela", "")+"<tipo>3<n>"+
+						"Identificaci&oacute;n del tratamiento +"+settings.getString("idtratamiento", "")+"+<tipo>3<n>"+
+						"Refer&eacute;ncia "+settings.getString("referencia", "")+"<tipo>3";
+					rw.write("A", A);
+					mypdf.readFile("A");
+				}
 				String B = "B VOLUMEN DE APLICACICI&Oacute;N<tipo>1<n>"+
 						"B.1 Caracter&iacute;sticas del cultivo<tipo>2<n>"+
 						"Densidad foliar del &aacute;rbol "+densidadFoliar.getText().toString()+"<tipo>3<n>"+
@@ -346,8 +296,9 @@ public class Resultados1 extends ActionBarActivity{
 						"B.5 Volumen de aplicaci&oacute;n <tipo>2<n>"+
 						L_Ha.getText().toString()+"L/ha<tipo>3";
 				rw.write("B", B);
-				pdfCreator mypdf = new pdfCreator();
-				mypdf.crearAyB();
+				mypdf.readFile("B");
+				Calendar cal = Calendar.getInstance();
+				mypdf.finish_document("Dosacitric_B"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
 				Toast toast = Toast.makeText(getApplicationContext(), "El PDF sera guardado en DESCARGAS", Toast.LENGTH_SHORT);
 				toast.show();
 			}
@@ -366,11 +317,7 @@ public class Resultados1 extends ActionBarActivity{
 
 	@Override
 	protected void onResume(){
-		super.onResume();
-		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-
-		//L_Ha.setText(settings.getString("volumenApp", ""));
-		
+		super.onResume();		
 	}
 
 
@@ -382,11 +329,7 @@ public class Resultados1 extends ActionBarActivity{
 		SharedPreferences.Editor editor = settings.edit();
 
 		editor.putString("volumenApp", L_Ha.getText().toString());
-		System.out.println( "La anegado "+ L_Ha.getText().toString());
-		// Commit the edits!
 		editor.commit();
-		//System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
-
 	}
 	
 
@@ -395,23 +338,14 @@ public class Resultados1 extends ActionBarActivity{
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		/*int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);*/
+
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// app icon in action bar clicked; goto parent activity.
 			this.finish();
 			return true;
 		default:

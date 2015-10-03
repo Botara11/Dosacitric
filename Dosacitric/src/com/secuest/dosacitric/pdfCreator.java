@@ -2,20 +2,14 @@ package com.secuest.dosacitric;
 
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.Calendar;
-import java.util.Date;
-
 import com.secuest.dosacitric.apw.PDFWriter;
 import com.secuest.dosacitric.apw.PaperSize;
 import com.secuest.dosacitric.apw.StandardFonts;
 import com.secuest.dosacitric.apw.Transformation;
 
 import android.os.Environment;
-import android.widget.TextView;
 
 
 public class pdfCreator {
@@ -53,23 +47,7 @@ public void writeFile(){
 	rw.write("B", B);
 }
 
-public void crearAyB(){
-	//writeFile();
-	readFile("A");
-	readFile("B");
-	
-	//mPDFWriter.addTextAsHex(30, line_pointer, 16, "d1d2d3d4");
-	//incrementLinePointer();
-	//mPDFWriter.addText(30, line_pointer, 16, "HOLA —‡ Û ¨ 234");
-	//incrementLinePointer();
-	//long milis = Calendar().getTimeInMillis();
-	finish_document("Dosacitric_AB"+(new Date()).getDay()+"-"+(new Date()).getMonth()+"-"+(new Date()).getYear());
-	
-}
-public void crearC(){
-	readFile("C");
-	//finish_document("Dosacitric_C"+(new Date()).getDay()+"-"+(new Date()).getMonth()+"-"+(new Date()).getYear());
-}
+
 public void insertarMarca(String marca){
 	btw_lines = 40;
 	incrementLinePointer();
@@ -87,7 +65,6 @@ public void insertarZonas(String zona){
 }
 
 public void dibujarTabla(String datos){
-	int maximoZsjuntas = 4;
 	mPDFWriter.addRectangle(80, line_pointer, 410+80, -40);
 	mPDFWriter.addRectangle(80, line_pointer-40, 410+80, -40);
 	mPDFWriter.addRectangle(40, line_pointer-40-40, 410+120, -40*4);
@@ -102,8 +79,8 @@ public void dibujarTabla(String datos){
 
     mPDFWriter.addLine(40,line_pointer-40-40-40*2, 410+160,line_pointer-40-40-40*2);
     mPDFWriter.addLine(40,line_pointer-40-40-40*3, 410+160,line_pointer-40-40-40*3);
-    
-	finish_document("Dosacitric_C"+(new Date()).getDay()+"-"+(new Date()).getMonth()+"-"+(new Date()).getYear());
+	Calendar cal = Calendar.getInstance();
+	finish_document("Dosacitric_C"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
 }
 
 public void readFile(String filename){
