@@ -25,7 +25,7 @@
                 android:layout_weight="1"
                 android:background="#FFFFFF"
                 android:padding="10dip"
-                android:text="índice"
+                android:text="INDICE"
                 android:textColor="#E65F00" />
 
             <View
@@ -40,7 +40,6 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:background="@drawable/inter3" />
-         
 
             <View
                 android:layout_width="1dip"
@@ -54,16 +53,6 @@
                 android:layout_height="35dp"
                 android:layout_gravity="center"
                 android:background="@drawable/printer" />
-            <!--
-            android:id="@+id/ayuda1"
-                android:layout_width="30dp"
-                android:layout_height="50dp"
-                android:layout_above="@+id/textView3"
-                android:layout_alignTop="@+id/textView2"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/textView2"
-                android:background="@drawable/inter"
-            -->
 
             <View
                 android:layout_width="1dip"
@@ -78,7 +67,7 @@
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="siguiente"
+                android:text="SIGUIENTE"
                 android:textColor="#E65F00" />
         </TableRow>
     </TableLayout>
@@ -342,21 +331,6 @@
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
-            <!--
-            <TextView
-                android:id="@+id/textView22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/textView21"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:text="L/hg"
-                android:textColor="@color/white"
-                android:textSize="17dp" />
-            -->
-
             <TextView
                 android:id="@+id/textView23"
                 android:layout_width="wrap_content"
@@ -503,19 +477,6 @@
                 android:text="TextView"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
-
-            <!--
-                <TextView
-                android:id="@+id/textView38"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/textView22"
-                android:text="TextView"
-                android:textColor="@color/white"
-                android:textSize="17dp" />
-            -->
 
             <TextView
                 android:id="@+id/textView42"

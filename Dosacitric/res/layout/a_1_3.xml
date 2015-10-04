@@ -24,7 +24,7 @@
                 android:layout_weight="1"
                 android:background="#FFFFFF"
                 android:padding="10dip"
-                android:text="índice"
+                android:text="INDICE"
                 android:textColor="#E65F00" />
 
             <View
@@ -34,19 +34,15 @@
                 android:background="#E65F00" />
 
             <ImageButton
-                android:id="@+id/ayuda"
+                android:id="@+id/ayuda1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:background="@drawable/inter3" />
-            android:id="@+id/ayuda1"
-                android:layout_width="30dp"
-                android:layout_height="50dp"
                 android:layout_above="@+id/textView3"
                 android:layout_alignTop="@+id/textView2"
+                android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/textView2"
-                android:background="@drawable/inter" 
+                android:background="@drawable/inter3" />
 
             <View
                 android:layout_width="1dip"
@@ -61,7 +57,7 @@
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="siguiente"
+                android:text="SIGUIENTE"
                 android:textColor="#E65F00" />
         </TableRow>
     </TableLayout>
@@ -252,7 +248,6 @@
                 android:layout_marginRight="10dp"
                 android:layout_toRightOf="@+id/textView3"
                 android:background="#FFFFFF" />
-
         </RelativeLayout>
     </ScrollView>
 

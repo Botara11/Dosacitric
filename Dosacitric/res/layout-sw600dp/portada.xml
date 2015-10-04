@@ -128,7 +128,7 @@
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="Comenzar"
+                android:text="COMENZAR"
                 android:textColor="#E65F00" />
         </TableRow>
     </TableLayout>

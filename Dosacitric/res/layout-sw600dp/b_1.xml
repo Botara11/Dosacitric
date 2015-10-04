@@ -26,7 +26,7 @@
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="Índice"
+                android:text="INDICE"
                 android:textColor="#E65F00" />
 
             <View
@@ -55,7 +55,7 @@
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="Siguiente"
+                android:text="SIGUIENTE"
                 android:textColor="#E65F00" />
         </TableRow>
     </TableLayout>

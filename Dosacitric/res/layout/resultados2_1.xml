@@ -26,7 +26,7 @@
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="índice"
+                android:text="INDICE"
                 android:textColor="#E65F00" />
 
             <View
@@ -40,26 +40,27 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:background="@drawable/inter3"  />
+                android:background="@drawable/inter3" />
 
             <View
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
                 android:background="#E65F00" />
-            
+
             <ImageButton
                 android:id="@+id/printer"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
-                android:background="@drawable/printer"  />
-            
-			<View
+                android:background="@drawable/printer" />
+
+            <View
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
                 android:background="#E65F00" />
+
             <Button
                 android:id="@+id/siguiente"
                 android:layout_width="0dp"
@@ -67,7 +68,7 @@
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="Siguiente"
+                android:text="SIGUIENTE"
                 android:textColor="#E65F00" />
         </TableRow>
     </TableLayout>
@@ -250,7 +251,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#ff6600"
-                android:text="Numero boquillas abiertas por zona"
+                android:text="Número de boquillas por zona"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
