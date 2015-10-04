@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/table" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/identificacionTratamiendo"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="A. IDENTIFICACIÓN DEL TRATAMIENTO"
+                android:textColor="#E65F00"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/volumendeapli"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="B.1. Caracteríticas del cultivo"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView2"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="B.2. Tipo del tratamiento"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView3"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="B.3. Condiciones metereológicas"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView4"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="B.4. Equipo empleado"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView5"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="B.R. Resumen y resultados"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView6"
+                android:layout_marginTop="16dp"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="C. ELECCIÓN DE BOQUILLAS"
+                android:textColor="#E65F00"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView7"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="C.1. Introducción de datos"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView8"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="C.R. Resumen y resultados"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/volumendeapli"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/identificacionTratamiendo"
+                android:layout_marginTop="16dp"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="B. VOLUMEN DE APLICACIÓN (L/ha)"
+                android:textColor="#E65F00"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/partC"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView9"
+                android:layout_marginTop="16dp"
+                android:background="#FFFFFF"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="D. DETERMINACIÓN DEL VOLUMEN DE CALDO APLICADO (L/ha)"
+                android:textColor="#E65F00"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/c1IntroduccionDeDatos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/partC"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="D.1. Introducción de datos"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/resultados3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/c1IntroduccionDeDatos"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="D.R. Resumen y resultados"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="bottom" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/siguiente"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="SIGUIENTE"
+                android:textColor="#E65F00" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
