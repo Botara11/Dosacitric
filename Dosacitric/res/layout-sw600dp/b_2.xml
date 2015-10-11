@@ -36,7 +36,7 @@
                 android:background="#E65F00" />
 
             <ImageButton
-                android:id="@+id/acercaDe"
+                android:id="@+id/ayuda"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imageView2"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="40dp"
                 android:text="Número de boquillas abiertas por zona"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -119,7 +119,10 @@
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="number|textVisiblePassword"
-                android:textSize="20sp" />
+                android:textSize="20sp" >
+
+                <requestFocus />
+            </EditText>
 
             <EditText
                 android:id="@+id/zonaBajaCerradas"
@@ -239,7 +242,7 @@
                 android:layout_alignRight="@+id/textView29"
                 android:layout_below="@+id/textView29"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="20dp" />
 
             <TextView
                 android:id="@+id/textView33"
@@ -315,7 +318,7 @@
                 android:layout_width="50dp"
                 android:layout_height="25dp"
                 android:layout_below="@+id/imageView1"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:layout_toLeftOf="@+id/textView2"
                 android:background="@color/green" />
 
@@ -337,7 +340,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView6"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/red" />
 
             <TextView
@@ -358,7 +361,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/ImageView01"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/orange" />
 
             <ImageView
@@ -368,7 +371,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/ImageView02"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/green" />
 
             <TextView
@@ -387,7 +390,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView6"
                 android:layout_below="@+id/zonaBajaAbiertas"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="40dp"
                 android:gravity="center"
                 android:text="Porcentaje de vegetación a pulverizar por zona"
                 android:textColor="@color/white"
@@ -400,7 +403,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView18"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/red" />
 
             <ImageView
@@ -410,7 +413,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/ImageView04"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/orange" />
 
             <ImageView
@@ -420,7 +423,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/ImageView05"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/green" />
 
             <TextView
@@ -461,7 +464,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/zonaBajaPorcentaje"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="40dp"
                 android:text="Intervalo de caudales admisibles"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -485,7 +488,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView25"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/red" />
 
             <ImageView
@@ -495,7 +498,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/ImageView07"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/orange" />
 
             <ImageView
@@ -505,7 +508,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/ImageView08"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/green" />
 
             <TextView
@@ -621,7 +624,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/ImageView09"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="40dp"
                 android:maxLines="2"
                 android:text="Variación de caudal admisible"
                 android:textColor="@color/white"

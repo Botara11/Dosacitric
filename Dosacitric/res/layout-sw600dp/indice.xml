@@ -20,6 +20,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
+                android:layout_marginTop="125dp"
                 android:background="#FFFFFF"
                 android:gravity="left|center"
                 android:paddingLeft="10dp"
@@ -35,7 +36,7 @@
                 android:layout_below="@+id/volumendeapli"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="B.1. Caracteríticas del cultivo"
+                android:text="B.1. Características del cultivo"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -47,7 +48,7 @@
                 android:layout_below="@+id/textView2"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="B.2. Tipo del tratamiento"
+                android:text="B.2. Tipo de tratamiento"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -59,7 +60,7 @@
                 android:layout_below="@+id/textView3"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="B.3. Condiciones metereológicas"
+                android:text="B.3. Condiciones meteorológicas"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -83,7 +84,7 @@
                 android:layout_below="@+id/textView5"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="B.R. Resumen y resultados"
+                android:text="B.R. Resumen y resultados I"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -122,7 +123,7 @@
                 android:layout_below="@+id/textView8"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="C.R. Resumen y resultados"
+                android:text="C.R. Resumen y resultados II"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -139,7 +140,7 @@
                 android:paddingLeft="10dp"
                 android:text="B. VOLUMEN DE APLICACIÓN (L/ha)"
                 android:textColor="#E65F00"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/partC"
@@ -152,9 +153,9 @@
                 android:background="#FFFFFF"
                 android:gravity="left|center"
                 android:paddingLeft="10dp"
-                android:text="D. DETERMINACIÓN DEL VOLUMEN DE CALDO APLICADO (L/ha)"
+                android:text="D. VOLUMEN DE CALDO APLICADO (L/ha)"
                 android:textColor="#E65F00"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/c1IntroduccionDeDatos"
@@ -176,7 +177,7 @@
                 android:layout_below="@+id/c1IntroduccionDeDatos"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="D.R. Resumen y resultados"
+                android:text="D.R. Resumen y resultados III"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
         </RelativeLayout>

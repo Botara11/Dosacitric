@@ -44,7 +44,7 @@ public class Resultados2 extends ActionBarActivity {
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.resultados2_1);
+		setContentView(R.layout.resultados2);
 
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
@@ -219,8 +219,8 @@ public class Resultados2 extends ActionBarActivity {
 						"Ancho de trabajo (a)"+Resultados2.this.AnchoTrabajo.getText().toString()+"+ m<tipo>3<n>"+
 						"Caudal l&iacute;quido total "+Resultados2.this.CaudalLiqTotal.getText().toString()+"L/min<tipo>3<n>"+
 						"Caracterl&iacute;sticas del sistema hidrl&aacute;ulico del equipo<tipo>3<n>"+
-						"- N¼ total boquillas "+Resultados2.this.NumTotalBoq.getText().toString()+"<tipo>3<n>"+
-						"- N¼ boquillas desponibles/sector "+Resultados2.this.NumBoqPorSector.getText().toString()+"+<tipo>3<n>"+
+						"- Nï¿½ total boquillas "+Resultados2.this.NumTotalBoq.getText().toString()+"<tipo>3<n>"+
+						"- Nï¿½ boquillas desponibles/sector "+Resultados2.this.NumBoqPorSector.getText().toString()+"+<tipo>3<n>"+
 						"Boquillas a cerrar por zona<tipo>2<n>"+
 						"Zona Alta (nA)"+Resultados2.this.BoqCerrAlta.getText().toString()+"<tipo>3<n> "+
 						"Zona Baja (nA)"+Resultados2.this.BoqCerrBaja.getText().toString()+"<tipo>3<n> "+

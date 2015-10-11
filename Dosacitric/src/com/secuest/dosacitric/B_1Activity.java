@@ -115,10 +115,10 @@ CompoundButton.OnCheckedChangeListener  {
 			}
 		});
 		if (VolumenApp==""){
-			SwitchAnchoTrabajoCalculado.setChecked(false);
+			SwitchvolumenAplicacionCalculado.setChecked(false);
 			SwitchvolumenAplicacionDeseado.setChecked(true);
 		}else{
-			SwitchAnchoTrabajoCalculado.setChecked(true);
+			SwitchvolumenAplicacionCalculado.setChecked(true);
 			SwitchvolumenAplicacionDeseado.setChecked(false);
 		}
 		

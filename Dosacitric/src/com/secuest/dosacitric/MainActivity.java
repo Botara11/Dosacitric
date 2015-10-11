@@ -1,7 +1,9 @@
 package com.secuest.dosacitric;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
@@ -39,6 +41,21 @@ public class MainActivity extends ActionBarActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(new Intent(MainActivity.this, Indice.class));
+			}
+		});
+		
+		Button nuevoTratamiento = (Button) findViewById(R.id.nuevoTratamiento);
+		nuevoTratamiento.setClickable(true);
+		nuevoTratamiento.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+				SharedPreferences.Editor editor = settings.edit();
+				editor.clear();
+				editor.commit();
+				
+				startActivity(new Intent(MainActivity.this, Indice.class));
+				finish();
 			}
 		});
 		

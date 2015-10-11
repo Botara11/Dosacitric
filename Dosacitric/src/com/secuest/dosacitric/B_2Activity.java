@@ -19,6 +19,7 @@ import android.widget.Toast;
 import android.view.Menu;
 import android.view.MenuItem;
 
+@SuppressWarnings("deprecation")
 public class B_2Activity extends ActionBarActivity{
 
 	private int debug = 0;
@@ -140,12 +141,6 @@ public class B_2Activity extends ActionBarActivity{
 			}
 		});
 
-		/*volumenAplicacionCalculado.setChecked(true);
-		volumenAplicacionSiguiente.setChecked(false);
-
-		anchoTrabajoCalculado.setChecked(true);
-		anchoTrabajoSiguiente.setChecked(false);*/
-
 		Button indice = (Button) findViewById(R.id.indice);
 		indice.setClickable(true);
 		indice.setOnClickListener(new OnClickListener() {
@@ -160,7 +155,7 @@ public class B_2Activity extends ActionBarActivity{
 		ayuda.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(B_2Activity.this, AyudaTipoTratamiento.class));
+				startActivity(new Intent(B_2Activity.this, Ayuda.class));
 			}
 		});
 
@@ -222,7 +217,7 @@ public class B_2Activity extends ActionBarActivity{
 			float zonaBajaPor = Float.parseFloat(zonaBajaPorcentaje.getText().toString());
 
 			float [] zPorcentaje = {zonaAltaPor,zonaMediaPor,zonaBajaPor};
-			
+
 			quien="variacionCaudal";
 			float variacionCaud = Float.parseFloat(variacionCaudalTextView.getText().toString());
 
@@ -245,6 +240,7 @@ public class B_2Activity extends ActionBarActivity{
 	}
 
 	public void seebbarr( ){
+
 		variacionCaudalSeekbar = (SeekBar) findViewById(R.id.variacionCaudalSeekBar);
 		variacionCaudalTextView = (TextView) findViewById(R.id.variacionCaudalTextView);
 		variacionCaudalSeekbar.setProgress(0);
@@ -252,7 +248,7 @@ public class B_2Activity extends ActionBarActivity{
 		variacionCaudalSeekbar.setMax(10);
 		variacionCaudalTextView.setFocusable(true);
 		variacionCaudalTextView.setFocusableInTouchMode(true);
-		
+
 		variacionCaudalSeekbar.setOnSeekBarChangeListener(
 				new SeekBar.OnSeekBarChangeListener() {
 
@@ -293,8 +289,6 @@ public class B_2Activity extends ActionBarActivity{
 		zonaBajaPorcentaje.setText(settings.getString("zonaBajaPorcentaje", ""));
 		variacionCaudalTextView.setText(settings.getString("variacionCaudalTextView", ""));
 
-		//System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
-
 	}
 
 
@@ -315,9 +309,7 @@ public class B_2Activity extends ActionBarActivity{
 		editor.putString("zonaBajaPorcentaje", zonaBajaPorcentaje.getText().toString());
 		editor.putString("variacionCaudalTextView", variacionCaudalTextView.getText().toString());
 
-		// Commit the edits!
 		editor.commit();
-		//System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
 
 	}
 

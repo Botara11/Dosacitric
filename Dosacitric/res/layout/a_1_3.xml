@@ -34,7 +34,7 @@
                 android:background="#E65F00" />
 
             <ImageButton
-                android:id="@+id/ayuda1"
+                android:id="@+id/ayuda"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_above="@+id/textView3"

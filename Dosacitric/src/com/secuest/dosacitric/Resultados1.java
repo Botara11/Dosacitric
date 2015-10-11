@@ -16,10 +16,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+@SuppressWarnings("deprecation")
 public class Resultados1 extends ActionBarActivity{
 
-
-	
 	private TextView fechaDiaResultados1;
 	private TextView fechaMesResultados1;
 	private TextView fechaAnoResultados1;
@@ -48,42 +47,39 @@ public class Resultados1 extends ActionBarActivity{
 
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);		
-		fechaDiaResultados1 = (TextView) findViewById(R.id.fechaDiaResultados1);
-		 fechaMesResultados1 = (TextView) findViewById(R.id.fechaMesResultados1);
-		 fechaAnoResultados1 = (TextView) findViewById(R.id.fechaAnoResultados1);
-		 idParcelaResultados1 = (TextView) findViewById(R.id.idParcelaResultados1);
-		 idTratamientoResultados1 = (TextView) findViewById(R.id.idTratamientoResultados1);
-		 referenciaResultados1 = (TextView) findViewById(R.id.referenciaResultados1);
+		fechaDiaResultados1 = (TextView) findViewById(R.id.fechaMesResultados1);
+		fechaMesResultados1 = (TextView) findViewById(R.id.fechaDiaResultados1);
+		fechaAnoResultados1 = (TextView) findViewById(R.id.fechaAnoResultados1);
+		idParcelaResultados1 = (TextView) findViewById(R.id.idParcelaResultados1);
+		idTratamientoResultados1 = (TextView) findViewById(R.id.idTratamientoResultados1);
+		referenciaResultados1 = (TextView) findViewById(R.id.referenciaResultados1);
 
 		/**** A1 ****/
 
+		densidadFoliar = (TextView) findViewById(R.id.textView23);
+		xAncho = (TextView) findViewById(R.id.textView41);
+		yDistancia = (TextView) findViewById(R.id.textView39);
+		volumenArbol = (TextView) findViewById(R.id.textView25);
+		formaArbol = (TextView) findViewById(R.id.textView26);
+		fechaUltimaPoda = (TextView) findViewById(R.id.textView27);
+		gradoPoda = (TextView) findViewById(R.id.textView28);
+		productosAplicar = (TextView) findViewById(R.id.textView29);
+		formaActuacion = (TextView) findViewById(R.id.textView30);
+		utilizaMojantes = (TextView) findViewById(R.id.textView31);
+		zonaCriticaATratar = (TextView) findViewById(R.id.textView32);
+		temperatura = (TextView) findViewById(R.id.textView33);
+		humedadRelativa = (TextView) findViewById(R.id.textView34);
+		velocidadViento = (TextView) findViewById(R.id.textView35);
+		tipoPulverizador = (TextView) findViewById(R.id.textView36);
+		L_Ha = (TextView) findViewById(R.id.textView37);
 
-		 densidadFoliar = (TextView) findViewById(R.id.textView23);
-		 xAncho = (TextView) findViewById(R.id.textView41);
-		 yDistancia = (TextView) findViewById(R.id.textView39);
-		 volumenArbol = (TextView) findViewById(R.id.textView25);
-		 formaArbol = (TextView) findViewById(R.id.textView26);
-		 fechaUltimaPoda = (TextView) findViewById(R.id.textView27);
-		 gradoPoda = (TextView) findViewById(R.id.textView28);
-		 productosAplicar = (TextView) findViewById(R.id.textView29);
-		 formaActuacion = (TextView) findViewById(R.id.textView30);
-		 utilizaMojantes = (TextView) findViewById(R.id.textView31);
-		 zonaCriticaATratar = (TextView) findViewById(R.id.textView32);
-		 temperatura = (TextView) findViewById(R.id.textView33);
-		 humedadRelativa = (TextView) findViewById(R.id.textView34);
-		 velocidadViento = (TextView) findViewById(R.id.textView35);
-		 tipoPulverizador = (TextView) findViewById(R.id.textView36);
-		 L_Ha = (TextView) findViewById(R.id.textView37);
-
-		
-		
 		Intent aR = getIntent();
 		ParteA resultadosA3 = (ParteA) aR.getSerializableExtra("partea3");
 		resultadosA3.calcularParteA();
 		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-		
+
 		String[] fech = settings.getString("fecha", "").split("-");
-		
+
 		fechaDiaResultados1.setText(String.valueOf(fech[0]));
 		fechaMesResultados1.setText(String.valueOf(fech[1]));
 		fechaAnoResultados1.setText(String.valueOf(fech[2]));
@@ -101,7 +97,6 @@ public class Resultados1 extends ActionBarActivity{
 			densidadFoliar.setText("Alta");
 		}
 
-		//densidadFoliar.setText(String.valueOf(resultadosA3.DensidadFoliar));
 		xAncho.setText(String.valueOf(resultadosA3.AnchoCalle));
 		yDistancia.setText(String.valueOf(resultadosA3.DistanciaArboles));
 		volumenArbol.setText(String.valueOf(resultadosA3.VolumenArbol));
@@ -112,7 +107,6 @@ public class Resultados1 extends ActionBarActivity{
 		else{
 			formaArbol.setText("Seto");
 		}
-		//formaArbol.setText(String.valueOf(resultadosA3.FormaArbol));
 
 		if (resultadosA3.IndiceFechaUltimaPoda == 0){
 			fechaUltimaPoda.setText("< 3 meses");
@@ -126,7 +120,6 @@ public class Resultados1 extends ActionBarActivity{
 		else{
 			fechaUltimaPoda.setText("> 2 años");
 		}
-		//fechaUltimaPoda.setText(String.valueOf(resultadosA3.FechaUltimaPoda));
 
 		if (resultadosA3.IndiceGradoPoda == 0){
 			gradoPoda.setText("Bajo");
@@ -137,7 +130,6 @@ public class Resultados1 extends ActionBarActivity{
 		else {
 			gradoPoda.setText("Alto");
 		}
-		//gradoPoda.setText(String.valueOf(resultadosA3.GradoPoda));
 
 		if (resultadosA3.IndiceProductosAplicar == 0){
 			productosAplicar.setText("Acaricidas");
@@ -154,7 +146,6 @@ public class Resultados1 extends ActionBarActivity{
 		else {
 			productosAplicar.setText("Fitorreguladores");
 		}
-		//productosAplicar.setText(String.valueOf(resultadosA3.ProductosAplicar));
 
 		if (resultadosA3.IndiceFormaActuacion == 0){
 			formaActuacion.setText("Por asfixia (aceite)");
@@ -174,7 +165,6 @@ public class Resultados1 extends ActionBarActivity{
 		else {
 			formaActuacion.setText("Sistémicos");
 		}
-		//formaActuacion.setText(String.valueOf(resultadosA3.FormaActuacion));
 
 		if (resultadosA3.IndiceMojantes == 0){
 			utilizaMojantes.setText("Sí");
@@ -182,8 +172,6 @@ public class Resultados1 extends ActionBarActivity{
 		else {
 			utilizaMojantes.setText("No");
 		}
-		//utilizaMojantes.setText(String.valueOf(resultadosA3.Mojantes));
-
 
 		if (resultadosA3.IndiceZonaCriticaTratar == 0){
 			zonaCriticaATratar.setText("Interior");
@@ -194,7 +182,6 @@ public class Resultados1 extends ActionBarActivity{
 		if (resultadosA3.IndiceZonaCriticaTratar == 2){
 			zonaCriticaATratar.setText("Exterior");
 		}
-		//zonaCriticaATratar.setText(String.valueOf(resultadosA3.ZonaCriticaTratar));
 
 		if (resultadosA3.IndiceTemperatura == 0){
 			temperatura.setText("< 15 ºC");
@@ -205,7 +192,6 @@ public class Resultados1 extends ActionBarActivity{
 		else {
 			temperatura.setText("De 25 a 30 ºC");
 		}
-		//temperatura.setText(String.valueOf(resultadosA3.Temperatura));
 
 		if (resultadosA3.IndiceHumedad == 0){
 			humedadRelativa.setText("< 35% (muy seco)");
@@ -216,7 +202,6 @@ public class Resultados1 extends ActionBarActivity{
 		else {
 			humedadRelativa.setText("> 60% (muy húmedo)");
 		}
-		//humedadRelativa.setText(String.valueOf(resultadosA3.Humedad));
 
 		if (resultadosA3.VelocidadViento == 1){
 			velocidadViento.setText("< 1m/s (sin viento)");
@@ -224,7 +209,6 @@ public class Resultados1 extends ActionBarActivity{
 		else {
 			velocidadViento.setText("1-3 m/s (brisa suave)");
 		}
-		//velocidadViento.setText(String.valueOf(resultadosA3.VelocidadViento));
 
 		if (resultadosA3.TipoPulverizador == 1){
 			tipoPulverizador.setText("Pulv. hidroneumático");
@@ -232,10 +216,10 @@ public class Resultados1 extends ActionBarActivity{
 		else {
 			tipoPulverizador.setText("Pistola");
 		}
-		
+
 		String auxiliar = resultadosA3.VolumenAppLHA+"";
 		L_Ha.setText(auxiliar);
-		
+
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
@@ -257,7 +241,7 @@ public class Resultados1 extends ActionBarActivity{
 
 		ImageButton printer = (ImageButton) findViewById(R.id.printer);
 		printer.setClickable(true);
-		
+
 		printer.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -266,11 +250,11 @@ public class Resultados1 extends ActionBarActivity{
 				SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
 				if(!settings.getString("fecha", "").equals("")){
 					String A = ""+
-						"A IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
-						"Fecha "+settings.getString("fecha", "")+"<tipo>3<n>"+
-						"Identificaci&oacute;n de la parcela "+settings.getString("idparcela", "")+"<tipo>3<n>"+
-						"Identificaci&oacute;n del tratamiento +"+settings.getString("idtratamiento", "")+"+<tipo>3<n>"+
-						"Refer&eacute;ncia "+settings.getString("referencia", "")+"<tipo>3";
+							"A IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
+							"Fecha "+settings.getString("fecha", "")+"<tipo>3<n>"+
+							"Identificaci&oacute;n de la parcela "+settings.getString("idparcela", "")+"<tipo>3<n>"+
+							"Identificaci&oacute;n del tratamiento +"+settings.getString("idtratamiento", "")+"+<tipo>3<n>"+
+							"Refer&eacute;ncia "+settings.getString("referencia", "")+"<tipo>3";
 					rw.write("A", A);
 					mypdf.readFile("A");
 				}
@@ -303,7 +287,7 @@ public class Resultados1 extends ActionBarActivity{
 				toast.show();
 			}
 		});
-		
+
 		Button indice = (Button) findViewById(R.id.indice);
 		indice.setClickable(true);
 		indice.setOnClickListener(new OnClickListener() {
@@ -313,7 +297,7 @@ public class Resultados1 extends ActionBarActivity{
 			}
 		});
 	}
-	
+
 
 	@Override
 	protected void onResume(){
@@ -331,7 +315,7 @@ public class Resultados1 extends ActionBarActivity{
 		editor.putString("volumenApp", L_Ha.getText().toString());
 		editor.commit();
 	}
-	
+
 
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		return super.onPrepareOptionsMenu(menu);

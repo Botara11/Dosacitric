@@ -26,7 +26,7 @@
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="ÍNDICE"
+                android:text="INDICE"
                 android:textColor="#E65F00" />
 
             <View
@@ -55,7 +55,7 @@
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="NUEVO TRAT"
+                android:text="NUEVO TRATAMIENTO"
                 android:textColor="#E65F00" />
         </TableRow>
     </TableLayout>
@@ -78,7 +78,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#ff6600"
-                android:text="D. DETERMINACIÓN DEL VOLUMEN DE CALDO APLICADO"
+                android:text="D. VOLUMEN DE CALDO APLICADO"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 

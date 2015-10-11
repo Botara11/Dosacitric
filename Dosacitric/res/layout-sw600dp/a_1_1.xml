@@ -20,7 +20,7 @@
             android:gravity="center_horizontal" >
 
             <Button
-                android:id="@+id/atras"
+                android:id="@+id/indice"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
@@ -77,7 +77,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 android:text="DENSIDAD FOLIAR DEL ÁRBOL"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -272,7 +272,7 @@
 
             <EditText
                 android:id="@+id/distancia"
-                android:layout_width="40sp"
+                android:layout_width="40dp"
                 android:layout_height="30dp"
                 android:layout_alignBottom="@+id/textView4"
                 android:layout_alignTop="@+id/textView4"
@@ -299,52 +299,6 @@
                 android:text="m"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
-
-            <!--
-            <ImageButton
-                android:id="@+id/ayuda1"
-                android:layout_width="30dp"
-                android:layout_height="50dp"
-                android:layout_above="@+id/textView3"
-                android:layout_alignTop="@+id/textView2"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/textView2"
-                android:background="@drawable/inter" />
-			
-            
-            <ImageButton
-                android:id="@+id/ayuda2"
-                android:layout_width="30dp"
-                android:layout_height="50dp"
-                android:layout_alignBottom="@+id/textView5"
-                android:layout_alignTop="@+id/textView5"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/textView4"
-                android:background="@drawable/inter" />
-
-            
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/textView5"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:text="m"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />	
-                  
-            <Spinner
-                android:id="@+id/formaArb"
-                android:layout_width="fill_parent"
-                android:layout_height="50dp"
-                android:layout_alignBottom="@+id/textView5"
-                android:layout_toRightOf="@+id/textView5"
-                android:layout_alignLeft="@+id/gradoPoda"
-                android:layout_marginRight="10dp"
-                android:background="#FFFFFF" />
-            -->
-
 
             <TextView
                 android:id="@+id/textView33"
@@ -375,10 +329,9 @@
                 android:id="@+id/textView30"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignRight="@+id/textView33"
+                android:layout_alignLeft="@+id/textView8"
+                android:layout_alignRight="@+id/textView2"
                 android:layout_below="@+id/textView32"
-                android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:background="#00000000"
                 android:text="Fecha última poda"
@@ -405,7 +358,7 @@
                 android:layout_below="@+id/textView33"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:background="#FFFFFF"/>
+                android:background="#FFFFFF" />
 
             <Spinner
                 android:id="@+id/densidadFoliar"
@@ -441,7 +394,7 @@
 
             <EditText
                 android:id="@+id/anchocalle"
-                android:layout_width="40sp"
+                android:layout_width="40dp"
                 android:layout_height="30dp"
                 android:layout_above="@+id/textView4"
                 android:layout_alignLeft="@+id/distancia"

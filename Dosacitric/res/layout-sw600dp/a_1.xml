@@ -62,11 +62,11 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 android:background="#00000000"
                 android:text="FECHA"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -77,16 +77,16 @@
                 android:layout_below="@+id/textView4"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:background="#00000000"
                 android:text="IDENTIFICACIÓN DE PARCELA"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/fecha"
-                android:layout_width="fill_parent"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_above="@+id/textView6"
                 android:layout_alignParentRight="true"
                 android:layout_marginLeft="16dp"
@@ -97,7 +97,8 @@
                 android:gravity="center"
                 android:inputType="number|textVisiblePassword"
                 android:minLines="1"
-                android:minWidth="40dp" />
+                android:minWidth="40dp"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/idTratamiento"
@@ -110,7 +111,8 @@
                 android:background="#FFFFFF"
                 android:digits=" /-ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz1234567890"
                 android:ems="10"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/idParcela"
@@ -124,20 +126,23 @@
                 android:digits=" /-ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz1234567890"
                 android:ems="10"
                 android:gravity="center"
-                android:maxLines="1" />
+                android:maxLines="1"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/referencia"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_alignRight="@+id/idTratamiento"
-                android:layout_alignTop="@+id/textView8"
+                android:layout_below="@+id/textView8"
                 android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
                 android:layout_toRightOf="@+id/textView8"
                 android:background="#FFFFFF"
                 android:digits=" /-ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz1234567890"
                 android:ems="10"
-                android:gravity="center" >
+                android:gravity="center"
+                android:textSize="20sp" >
             </EditText>
 
             <TextView
@@ -147,11 +152,11 @@
                 android:layout_alignLeft="@+id/textView6"
                 android:layout_alignRight="@+id/idParcela"
                 android:layout_below="@+id/idParcela"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:background="#00000000"
                 android:text="IDENTIFICACIÓN DEL TRATAMIENTO"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -159,11 +164,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView6"
                 android:layout_below="@+id/idTratamiento"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:background="#00000000"
                 android:text="REFERENCIA"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
         </RelativeLayout>
     </ScrollView>
 

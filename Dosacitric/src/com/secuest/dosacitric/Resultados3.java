@@ -37,7 +37,7 @@ public class Resultados3 extends ActionBarActivity {
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.resultados3_copia);
+		setContentView(R.layout.resultados3);
 
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);

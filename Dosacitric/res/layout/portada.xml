@@ -20,8 +20,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="DOSACITRIC"
                 android:gravity="center"
+                android:text="DOSACITRIC"
                 android:textColor="#E65F00"
                 android:textSize="50sp" />
 
@@ -33,24 +33,10 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="10dp"
+                android:gravity="center"
                 android:text="V.01."
                 android:textColor="#E65F00"
-                android:gravity="center"
                 android:textSize="40sp" />
-
-            <!--
-			<TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView3"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:text="UNIVERSIDAT POLITÈCNICA DE VALÈNCIA"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />            -->
 
             <TextView
                 android:id="@+id/textView6"
@@ -118,6 +104,22 @@
             android:background="#FFFFFF"
             android:clickable="true"
             android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/nuevoTratamiento"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="0dip"
+                android:text="  NUEVO TRATAMIENTO"
+                android:textColor="#E65F00" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp"
+                android:background="#E65F00" />
 
             <Button
                 android:id="@+id/siguiente"

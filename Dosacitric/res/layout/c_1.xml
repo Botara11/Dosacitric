@@ -272,7 +272,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_toLeftOf="@+id/textView3"
-                android:background="@color/white"
+                android:background="@color/greylight"
                 android:gravity="center" />
 
             <Switch
@@ -400,7 +400,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_toLeftOf="@+id/textViewVolum"
-                android:background="@color/white"
+                android:background="@color/greylight"
                 android:gravity="center" />
         </RelativeLayout>
     </ScrollView>

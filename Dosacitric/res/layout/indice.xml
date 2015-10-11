@@ -59,7 +59,7 @@
                 android:layout_below="@+id/textView3"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="B.3. Condiciones metereológicas"
+                android:text="B.3. Condiciones meteorológicas"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -83,7 +83,7 @@
                 android:layout_below="@+id/textView5"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="B.R. Resumen y resultados"
+                android:text="B.R. Resumen y resultados I"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -122,7 +122,7 @@
                 android:layout_below="@+id/textView8"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="C.R. Resumen y resultados"
+                android:text="C.R. Resumen y resultados II"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -152,7 +152,7 @@
                 android:background="#FFFFFF"
                 android:gravity="left|center"
                 android:paddingLeft="10dp"
-                android:text="D. DETERMINACIÓN DEL VOLUMEN DE CALDO APLICADO (L/ha)"
+                android:text="D. VOLUMEN DE CALDO APLICADO (L/ha)"
                 android:textColor="#E65F00"
                 android:textSize="20sp" />
 
@@ -176,7 +176,7 @@
                 android:layout_below="@+id/c1IntroduccionDeDatos"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="D.R. Resumen y resultados"
+                android:text="D.R. Resumen y resultados III"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
         </RelativeLayout>

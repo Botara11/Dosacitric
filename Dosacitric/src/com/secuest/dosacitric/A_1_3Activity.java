@@ -310,15 +310,15 @@ public class A_1_3Activity extends ActionBarActivity{
 					int hum = humedadRelativa.getSelectedItemPosition();
 					int vel = velocidadViento.getSelectedItemPosition();
 					if(temp == 3 ){
-						Toast toast = Toast.makeText(getApplicationContext(), "ERROR: NO SE PUEDE APLICAR EL TRATAMIENTO CON TANTA TEMPERATURA", Toast.LENGTH_SHORT);
+						Toast toast = Toast.makeText(getApplicationContext(), "ERROR: NO SE DEBE REALIZAR EL TRATAMIENTO CUANDO Tª > 30º", Toast.LENGTH_SHORT);
 						toast.show();
 					}else
 						if(hum == 3 ){
-						Toast toast = Toast.makeText(getApplicationContext(), "ERROR: NO SE PUEDE APLICAR EL TRATAMIENTO CON LLUVIA", Toast.LENGTH_SHORT);
+						Toast toast = Toast.makeText(getApplicationContext(), "ERROR: NO SE DEBE REALIZAR EL TRATAMIENTO CON LLUVIA", Toast.LENGTH_SHORT);
 						toast.show();
 					}else 
 						if(vel == 2 ){
-						Toast toast = Toast.makeText(getApplicationContext(), "ERROR: NO SE PUEDE APLICAR EL TRATAMIENTO CON TANTO VIENTO", Toast.LENGTH_SHORT);
+						Toast toast = Toast.makeText(getApplicationContext(), "ERROR: NO SE DEBE REALIZAR EL TRATAMIENTO CUANDO V > 3 m/s", Toast.LENGTH_SHORT);
 						toast.show();}
 					else{
 					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+revisando+'"'+" incorrecto", Toast.LENGTH_SHORT);

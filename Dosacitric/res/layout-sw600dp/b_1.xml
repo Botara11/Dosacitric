@@ -36,7 +36,7 @@
                 android:background="#E65F00" />
 
             <ImageButton
-                android:id="@+id/acercaDe"
+                android:id="@+id/ayuda"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
@@ -70,20 +70,6 @@
             android:layout_height="fill_parent" >
 
             <TextView
-                android:id="@+id/TextView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/switchAnchoTrabajoDeseado"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="40dp"
-                android:text="Velocidad de avance deseada (v)"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -101,7 +87,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/TextView2"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:gravity="center"
                 android:text="Características del sistema hidráulico del equipo"
                 android:textColor="@color/white"
@@ -113,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView4"
                 android:layout_below="@+id/textView4"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:text="Caudal de líquido total"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -121,7 +107,7 @@
             <EditText
                 android:id="@+id/editText4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_alignBottom="@+id/textView10"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/textView10"
@@ -131,8 +117,7 @@
                 android:background="@color/white"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                android:textSize="20sp" >
+                android:inputType="number|textVisiblePassword" >
             </EditText>
 
             <SeekBar
@@ -140,11 +125,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignRight="@+id/textView8"
+                android:layout_alignRight="@+id/switchAnchoTrabajoDeseado"
                 android:layout_below="@+id/TextView1"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:id="@+id/TextView2"
@@ -160,12 +144,12 @@
             <TextView
                 android:id="@+id/velocidadAvance"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_alignBottom="@+id/textView7"
+                android:layout_alignLeft="@+id/editTextAnchoTrabajoDesesado"
                 android:layout_alignTop="@+id/seekBar1"
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/textView7"
-                android:layout_toRightOf="@+id/seekBar1"
                 android:background="@color/white"
                 android:gravity="center"
                 android:textSize="20sp" />
@@ -173,21 +157,21 @@
             <TextView
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignRight="@+id/velocidadAvance"
                 android:layout_below="@+id/textView8"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
-                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:background="@color/greylight"
                 android:gravity="center"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_alignBottom="@+id/textView15"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
@@ -209,14 +193,14 @@
             <TextView
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignRight="@+id/velocidadAvance"
                 android:layout_below="@+id/textView9"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
-                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:background="@color/greylight"
                 android:gravity="center"
                 android:textSize="20sp" />
 
@@ -237,7 +221,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView16"
                 android:layout_below="@+id/textView16"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:text="Número total de boquillas"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -245,36 +229,24 @@
             <Switch
                 android:id="@+id/switchVolumenAplicacionCalculado"
                 android:layout_width="wrap_content"
-                android:layout_height="25dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
                 android:checked="true"
                 android:onClick="onSwitchClicked "
                 android:text="Volumen de aplicacion \n calculado"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/switchVolumenAplicacionCalculado"
-                android:layout_alignTop="@+id/switchVolumenAplicacionCalculado"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/textViewVolum"
-                android:layout_toRightOf="@+id/switchVolumenAplicacionCalculado"
-                android:background="@color/white"
-                android:gravity="center"
-                android:textSize="20sp" />
-
             <Switch
                 android:id="@+id/switchVolumenAplicacionDeseado"
                 android:layout_width="wrap_content"
-                android:layout_height="25dp"
+                android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/switchVolumenAplicacionCalculado"
-                android:layout_below="@+id/textView13"
+                android:layout_alignRight="@+id/switchVolumenAplicacionCalculado"
+                android:layout_below="@+id/textViewVolumenAplicacionCalculado"
                 android:layout_marginTop="20dp"
                 android:checked="false"
                 android:onClick="onSwitchClicked "
@@ -282,41 +254,13 @@
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/editText3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/switchVolumenAplicacionDeseado"
-                android:layout_alignTop="@+id/switchVolumenAplicacionDeseado"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/textView5"
-                android:layout_toRightOf="@+id/switchVolumenAplicacionDeseado"
-                android:background="#FFFFFF"
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                android:textSize="20sp" >
-
-            </EditText>
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/editText3"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:text="L/ha"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
             <Switch
                 android:id="@+id/switchAnchoTrabajoCalculado"
                 android:layout_width="wrap_content"
-                android:layout_height="25dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/switchVolumenAplicacionDeseado"
+                android:layout_alignRight="@+id/switchVolumenAplicacionDeseado"
+                android:layout_below="@+id/editTextVolumenAplicacionDeseado"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="30dp"
                 android:checked="true"
@@ -325,37 +269,14 @@
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/switchAnchoTrabajoCalculado"
-                android:layout_alignTop="@+id/switchAnchoTrabajoCalculado"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/textView3"
-                android:layout_toRightOf="@+id/switchAnchoTrabajoCalculado"
-                android:background="@color/white"
-                android:gravity="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/textView14"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:text="m"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
             <Switch
                 android:id="@+id/switchAnchoTrabajoDeseado"
                 android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_alignLeft="@+id/switchAnchoTrabajoCalculado"
-                android:layout_below="@+id/switchAnchoTrabajoCalculado"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/switchAnchoTrabajoCalculado"
+                android:layout_below="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:checked="false"
                 android:onClick="onSwitchClicked "
@@ -363,10 +284,68 @@
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/editText1"
+            <TextView
+                android:id="@+id/TextView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView6"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:text="Velocidad de avance deseada (v)"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/switchVolumenAplicacionCalculado"
+                android:layout_alignLeft="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_alignTop="@+id/switchVolumenAplicacionCalculado"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textViewVolum"
+                android:background="@color/greylight"
+                android:gravity="center"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextVolumenAplicacionDeseado"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/switchVolumenAplicacionDeseado"
+                android:layout_alignLeft="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_alignTop="@+id/switchVolumenAplicacionDeseado"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/textView5"
+                android:background="#FFFFFF"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number|textVisiblePassword"
+                android:textSize="20sp" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/switchAnchoTrabajoCalculado"
+                android:layout_alignTop="@+id/switchAnchoTrabajoCalculado"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/TextView01"
+                android:layout_toRightOf="@+id/switchAnchoTrabajoCalculado"
+                android:background="@color/greylight"
+                android:gravity="center"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextAnchoTrabajoDesesado"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
                 android:layout_alignBottom="@+id/switchAnchoTrabajoDeseado"
                 android:layout_alignTop="@+id/switchAnchoTrabajoDeseado"
                 android:layout_marginLeft="10dp"
@@ -380,23 +359,46 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textViewVolum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/editText1"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
+                android:layout_alignBaseline="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_alignBottom="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_alignLeft="@+id/textView5"
+                android:text="L/ha"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editTextVolumenAplicacionDeseado"
+                android:layout_alignBottom="@+id/editTextVolumenAplicacionDeseado"
+                android:layout_alignRight="@+id/TextView01"
+                android:text="L/ha"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_alignBottom="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_alignLeft="@+id/textView6"
                 android:text="m"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textViewVolum"
+                android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/switchVolumenAplicacionDeseado"
-                android:layout_alignLeft="@+id/textView5"
-                android:text="L/ha"
+                android:layout_alignBaseline="@+id/editTextAnchoTrabajoDesesado"
+                android:layout_alignBottom="@+id/editTextAnchoTrabajoDesesado"
+                android:layout_alignRight="@+id/textView7"
+                android:text="m"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </RelativeLayout>
