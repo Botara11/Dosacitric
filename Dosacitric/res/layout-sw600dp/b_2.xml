@@ -532,9 +532,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/textView36"
                 android:layout_toRightOf="@+id/textView2"
-                android:background="@color/white"
+                android:background="@color/greylight"
                 android:gravity="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView36"
@@ -567,9 +568,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/textView37"
                 android:layout_toRightOf="@+id/textView31"
-                android:background="@color/white"
+                android:background="@color/greylight"
                 android:gravity="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView32"
@@ -602,9 +604,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/textView38"
                 android:layout_toRightOf="@+id/textView30"
-                android:background="@color/white"
+                android:background="@color/greylight"
                 android:gravity="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView38"

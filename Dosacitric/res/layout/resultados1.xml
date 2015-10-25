@@ -90,7 +90,7 @@
                 android:layout_below="@+id/textView1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Densidad foliar del árbol"
+                android:text="Densidad foliar del árbol:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -102,7 +102,7 @@
                 android:layout_below="@+id/textView2"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Marco de plantación"
+                android:text="Marco de plantación:"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -114,7 +114,7 @@
                 android:layout_below="@+id/textView3"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Volumen del árbol"
+                android:text="Volumen del árbol:"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -126,7 +126,7 @@
                 android:layout_below="@+id/textView4"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Forma del árbol"
+                android:text="Forma del árbol:"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -150,7 +150,7 @@
                 android:layout_below="@+id/textView6"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="- Fecha de la última poda"
+                android:text="- Fecha de la última poda:"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -162,7 +162,7 @@
                 android:layout_below="@+id/textView7"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="- Grado de poda"
+                android:text="- Grado de poda:"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -188,7 +188,7 @@
                 android:layout_below="@+id/textView9"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Productos a aplicar"
+                android:text="Productos a aplicar:"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -200,7 +200,7 @@
                 android:layout_below="@+id/textView10"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Forma de actuación"
+                android:text="Forma de actuación:"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -212,7 +212,7 @@
                 android:layout_below="@+id/textView11"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="¿Utiliza coadyuvantes (mojantes)?"
+                android:text="¿Utiliza coadyuvantes (mojantes)?:"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -224,7 +224,7 @@
                 android:layout_below="@+id/textView12"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona crítica a tratar"
+                android:text="Zona crítica a tratar:"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -250,7 +250,7 @@
                 android:layout_below="@+id/textView14"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Temperatura"
+                android:text="Temperatura:"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -262,7 +262,7 @@
                 android:layout_below="@+id/textView15"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Humedad relativa"
+                android:text="Humedad relativa:"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -274,7 +274,7 @@
                 android:layout_below="@+id/textView16"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Velocidad del viento"
+                android:text="Velocidad del viento:"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -300,7 +300,7 @@
                 android:layout_below="@+id/textView18"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Tipo de pulverizador"
+                android:text="Tipo de pulverizador:"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -472,7 +472,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/textView21"
-                android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/textView21"
                 android:text="TextView"
                 android:textColor="@color/white"
@@ -481,11 +480,11 @@
             <TextView
                 android:id="@+id/textView42"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textView25"
+                android:layout_height="30dp"
                 android:layout_alignBottom="@+id/textView25"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
+                android:gravity="bottom"
                 android:text="m3/árbol"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
@@ -580,7 +579,7 @@
                 android:layout_below="@+id/TextView02"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Fecha"
+                android:text="Fecha:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -591,7 +590,7 @@
                 android:layout_alignLeft="@+id/TextView03"
                 android:layout_below="@+id/TextView03"
                 android:layout_marginTop="16dp"
-                android:text="Identificación de parcela"
+                android:text="Identificación\nde parcela:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -602,7 +601,7 @@
                 android:layout_alignLeft="@+id/TextView04"
                 android:layout_below="@+id/TextView04"
                 android:layout_marginTop="16dp"
-                android:text="Identificación de tratamiento"
+                android:text="Identificación\nde tratamiento:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -613,7 +612,7 @@
                 android:layout_alignLeft="@+id/TextView05"
                 android:layout_below="@+id/TextView05"
                 android:layout_marginTop="16dp"
-                android:text="Referencia"
+                android:text="Referencia:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 

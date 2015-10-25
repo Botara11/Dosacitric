@@ -164,7 +164,7 @@
                 android:layout_toLeftOf="@+id/textView7"
                 android:layout_toRightOf="@+id/seekBar1"
                 android:background="@color/white"
-                android:gravity="center_vertical" />
+                android:gravity="center" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -177,7 +177,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/greylight"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -212,7 +213,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/greylight"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -329,7 +331,8 @@
                 android:layout_marginTop="10dp"
                 android:layout_toLeftOf="@+id/textViewVolum"
                 android:background="@color/greylight"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewVolum"
@@ -366,7 +369,8 @@
                 android:layout_marginTop="10dp"
                 android:layout_toLeftOf="@+id/TextView01"
                 android:background="@color/greylight"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editTextAnchoTrabajoDesesado"

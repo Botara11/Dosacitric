@@ -329,7 +329,8 @@
                 android:layout_toRightOf="@+id/switchVelocidadAvanceCalculada"
                 android:background="@color/greylight"
                 android:gravity="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Switch
                 android:id="@+id/switchVelocidadAvanceDeseada"
@@ -371,7 +372,8 @@
                 android:layout_toRightOf="@+id/switchAnchoTrabajoCalculado"
                 android:background="@color/greylight"
                 android:gravity="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewVolum"

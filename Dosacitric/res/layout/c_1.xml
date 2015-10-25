@@ -273,7 +273,8 @@
                 android:layout_marginTop="10dp"
                 android:layout_toLeftOf="@+id/textView3"
                 android:background="@color/greylight"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textStyle="bold" />
 
             <Switch
                 android:id="@+id/switchVelocidadAvanceDeseada"
@@ -401,7 +402,8 @@
                 android:layout_marginTop="10dp"
                 android:layout_toLeftOf="@+id/textViewVolum"
                 android:background="@color/greylight"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textStyle="bold" />
         </RelativeLayout>
     </ScrollView>
 

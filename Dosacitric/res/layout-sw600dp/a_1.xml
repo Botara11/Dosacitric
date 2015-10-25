@@ -98,6 +98,7 @@
                 android:inputType="number|textVisiblePassword"
                 android:minLines="1"
                 android:minWidth="40dp"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <EditText

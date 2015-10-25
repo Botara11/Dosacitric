@@ -1,14 +1,11 @@
 package com.secuest.dosacitric;
 
 import java.text.DecimalFormat;
-import java.util.Calendar;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,6 +15,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+@SuppressWarnings("deprecation")
 public class Resultados3 extends ActionBarActivity {
 
 	private ParteC partec7;
@@ -50,20 +48,12 @@ public class Resultados3 extends ActionBarActivity {
 
 		DatabaseHandler db = new DatabaseHandler(this);
 
-		//Log.e("didi", partec7.ModeloZonaAltaSeleccionado.toString());
-
 		//String[] lv_arr = new String[partec7.ModeloZonaAltaSeleccionado.size()];
 		//lv_arr = partec7.ModeloZonaAltaSeleccionado.toArray(lv_arr);
-
-		//Log.e("didi", Arrays.toString(lv_arr));
 
 		String resultmodeloZonaAlta = partec7.ModeloZonaAltaSeleccionado.get(0);
 		String resultmodeloZonaMedia = partec7.ModeloZonaMediaSeleccionado.get(0);
 		String resultmodeloZonaBaja = partec7.ModeloZonaBajaSeleccionado.get(0);
-
-		Log.e("didi", resultmodeloZonaAlta);
-		Log.e("didi", resultmodeloZonaMedia);
-		Log.e("didi", resultmodeloZonaBaja);
 
 		String modeloZonaAlta = db.getCaudalAunaPresionDeBoquilla(
 				partec7.MarcaSeleccionada,  resultmodeloZonaAlta, 
@@ -77,22 +67,12 @@ public class Resultados3 extends ActionBarActivity {
 				partec7.MarcaSeleccionada,  resultmodeloZonaBaja, 
 				Integer.parseInt(partec7.PresionSeleccionada.replace(" bares", "")));
 
-
-		Log.e("didi", modeloZonaAlta);
-		Log.e("didi", modeloZonaMedia);
-		Log.e("didi", modeloZonaBaja);
-
 		Float ValorZonaAlta = Float.parseFloat(modeloZonaAlta);
 		Float ValorZonaMedia = Float.parseFloat(modeloZonaMedia);
 		Float ValorZonaBaja = Float.parseFloat(modeloZonaBaja);
 
-		System.out.print(ValorZonaAlta);	
-		System.out.print(ValorZonaMedia);	
-		System.out.print(ValorZonaBaja);	
-
 		partec7.calcularParteC(ValorZonaAlta, ValorZonaMedia, ValorZonaBaja);
 
-		
 		AnchoDeTrabajo = (TextView) findViewById(R.id.AnchoTrabajoTextView);
 		VelocidadDeAvance = (TextView) findViewById(R.id.VelocidadAvanceTextView);
 		BoquillaZonaAlta = (TextView) findViewById(R.id.BoquillaZAltaTextView);
@@ -105,7 +85,7 @@ public class Resultados3 extends ActionBarActivity {
 		EleccionBoquillaZonaBaja = (TextView) findViewById(R.id.BoquillaEleccionZBajaTextView);
 		VolumenCaldoAplicado = (TextView)findViewById(R.id.VolumenCaldoTextView);
 
-		AnchoDeTrabajo.setText(String.valueOf(partec7.AnchoCalle));
+		AnchoDeTrabajo.setText(String.valueOf(df.format(partec7.AnchoCalle)));
 		VelocidadDeAvance.setText(String.valueOf(partec7.VelocidadAvance));
 		BoquillaZonaAlta.setText(String.valueOf(partec7.NumeroBoquillasZona[0]));
 		BoquillaZonaMedia.setText(String.valueOf(partec7.NumeroBoquillasZona[1]));
@@ -154,37 +134,40 @@ public class Resultados3 extends ActionBarActivity {
 				SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
 				if(!settings.getString("fecha", "").equals("")){
 					String A = ""+
-						"A IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
-						"Fecha "+settings.getString("fecha", "")+"<tipo>3<n>"+
-						"Identificaci&oacute;n de la parcela "+settings.getString("idparcela", "")+"<tipo>3<n>"+
-						"Identificaci&oacute;n del tratamiento +"+settings.getString("idtratamiento", "")+"+<tipo>3<n>"+
-						"Refer&eacute;ncia "+settings.getString("referencia", "")+"<tipo>3";
+						"A. IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
+						"Fecha: "+settings.getString("fecha", "")+"<tipo>3<n>"+
+						"Identificaci&oacute;n de la parcela: "+settings.getString("idparcela", "")+"<tipo>3<n>"+
+						"Identificaci&oacute;n del tratamiento: "+settings.getString("idtratamiento", "")+"<tipo>3<n>"+
+						"Referencia: "+settings.getString("referencia", "")+"<tipo>3";
 					rw.write("A", A);
 					mypdf.readFile("A");
 				}
 				String D = ""+
-						"D. Determinaci&oacute;n del volumen de caldo aplicado <tipo>1<n>"+
-						"Ancho de trabajo "+AnchoDeTrabajo.getText().toString()+" m<tipo>3<n>"+
-						"Velocidad de avance "+VelocidadDeAvance.getText().toString()+" km/h<tipo>3<n>"+
+						"D. DETERMINACI&Oacute;N DEL VOLUMEN<tipo>1<n>"+
+						"   DE CALDO APLICADO<tipo>1<n>"+
+						"Ancho de trabajo: "+AnchoDeTrabajo.getText().toString()+" m<tipo>3<n>"+
+						"Velocidad de avance: "+VelocidadDeAvance.getText().toString()+" km/h<tipo>3<n>"+
 						"Caracter&iacute;sticas del sistema hidr&aacute;ulico del equipo "+"<tipo>2<n>"+
 						"Num. de boquillas por zona<tipo>3<n>"+
-						"    Zona Alta(nA)"+BoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
-						"    Zona Media(nM)"+BoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
-						"    Zona Baja(nB)"+BoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
-						"Presi&oacute;n seleccionada "+Presion.getText().toString()+" bares<tipo>3<n> "+
-						"Marca seleccionada "+Marca.getText().toString()+"<tipo>3<n> "+
+						"    Zona Alta (nA): "+BoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
+						"   Zona Media (nM): "+BoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
+						"   Zona Baja (nB): "+BoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
+						"Presi&oacute;n seleccionada: "+Presion.getText().toString()+"<tipo>3<n> "+
+						"Marca seleccionada: "+Marca.getText().toString()+"<tipo>3<n> "+
 						"Elecci&oacute;n del modelo de boquilla<tipo>2<n> "+
-						"    Zona Alta "+EleccionBoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
-						"    Zona Media "+EleccionBoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
-						"    Zona Baja "+EleccionBoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
+						"    Zona Alta:   "+EleccionBoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
+						"    Zona Media:   "+EleccionBoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
+						"    Zona Baja:   "+EleccionBoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
 						"Caracter&iacute;sticas del caudal <tipo>2<n> "+
-						"Volumen de caldo aplicado "+VolumenCaldoAplicado.getText().toString()+" L/ha<tipo>3";
+						"Volumen de caldo aplicado: "+VolumenCaldoAplicado.getText().toString()+" L/ha<tipo>3";
 				
 				rw.write("D", D);
 				mypdf.readFile("D");
 
-				Calendar cal = Calendar.getInstance();
-				mypdf.finish_document("Dosacitric_D"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
+				//Calendar cal = Calendar.getInstance();
+				String referencia = settings.getString("referencia", "");
+				mypdf.finish_document("DosacitricD"+referencia);
+				//mypdf.finish_document("Dosacitric_D"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
 				
 				Toast toast = Toast.makeText(getApplicationContext(), "El PDF sera guardado en DESCARGAS", Toast.LENGTH_SHORT);
 				toast.show();

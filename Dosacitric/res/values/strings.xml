@@ -10,29 +10,28 @@
     <string name="B1">B.1. CARACTERISTICAS DEL CULTIVO</string>
     <string name="B2">B.2. TIPO DE TRATAMIENTO</string>
     <string name="B3">B.2. TIPO DE TRATAMIENTO</string>
-	<string name="B4">B.4. EQUIPO EMPLEADO</string>
-	<string name="R1">B.R. RESUMEN Y RESULTADOS I</string>
-	<string name="C1">C.1. INTRODUCCION DE DATOS</string>
-	<string name="C2">C.2. INTRODUCCION DE DATOS</string>
-	<string name="R2">C.R. RESUMEN Y RESULTADOS II</string>
-	<string name="D1">D.1. VOLUMEN DE CALDO APLICADO</string>
-	<string name="D2">D.2. PRESIONES</string>
-	<string name="D3">D.3. FABRICANTES</string>
-	<string name="D4">ELECCIÓN DEL MODELO DE BOQUILLA</string>
-	<string name="ZA">D.4. ELECCION DE BOQUILLA ZONA ALTA</string>
-	<string name="ZM">D.5. ELECCION DE BOQUILLA ZONA MEDIA</string>
-	<string name="ZB">D.6. ELECCION DE BOQUILLA ZONA BAJA</string>
-	<string name="R3">D.R. RESUMEN Y RESULTADOS III</string>
-	<string name="ParteA">Parte A</string>
-	<string name="ParteB">Parte B</string>
-	<string name="ParteC">Parte C</string>
-	<string name="AcercaDeTITULO">Acerca de Dosacitric...</string>
-	<string name="AyudaTipoTratamiento"> B.2. TIPO DE TRATAMIENTO</string>
-	<string name="AjusteBoquillas"> B.2. TIPO DE TRATAMIENTO</string>
-	<string name="IngresarBoquillas"> INGRESAR BOQUILLAS</string>
-	<string name="MostrarBoquillas"> MOSTRAR BOQUILLAS</string>
-	<string name="BorrarBoquillas"> BORRAR BOQUILLAS</string>
-	<string name="ic_action_new">ANADIR</string>
-		
-        
+    <string name="B4">B.4. EQUIPO EMPLEADO</string>
+    <string name="R1">B.R. RESUMEN Y RESULTADOS I</string>
+    <string name="C1">C.1. INTRODUCCION DE DATOS</string>
+    <string name="C2">C.2. INTRODUCCION DE DATOS</string>
+    <string name="R2">C.R. RESUMEN Y RESULTADOS II</string>
+    <string name="D1">D.1. VOLUMEN DE CALDO APLICADO</string>
+    <string name="D2">D.2. PRESIONES</string>
+    <string name="D3">D.3. FABRICANTES</string>
+    <string name="D4">ELECCIÓN DEL MODELO DE BOQUILLA</string>
+    <string name="ZA">D.4. ELECCION DE BOQUILLA ZONA ALTA</string>
+    <string name="ZM">D.5. ELECCION DE BOQUILLA ZONA MEDIA</string>
+    <string name="ZB">D.6. ELECCION DE BOQUILLA ZONA BAJA</string>
+    <string name="R3">D.R. RESUMEN Y RESULTADOS III</string>
+    <string name="ParteA">Parte A</string>
+    <string name="ParteB">Parte B</string>
+    <string name="ParteC">Parte C</string>
+    <string name="AcercaDeTITULO">Acerca de Dosacitric...</string>
+    <string name="AyudaTipoTratamiento"> B.2. TIPO DE TRATAMIENTO</string>
+    <string name="AjusteBoquillas"> B.2. TIPO DE TRATAMIENTO</string>
+    <string name="IngresarBoquillas"> INGRESAR BOQUILLAS</string>
+    <string name="MostrarBoquillas"> MOSTRAR BOQUILLAS</string>
+    <string name="BorrarBoquillas"> BORRAR BOQUILLAS</string>
+    <string name="ic_action_new">ANADIR</string>
+
 </resources>

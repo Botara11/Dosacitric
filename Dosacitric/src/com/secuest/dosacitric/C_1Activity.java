@@ -1,6 +1,5 @@
 package com.secuest.dosacitric;
 
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;

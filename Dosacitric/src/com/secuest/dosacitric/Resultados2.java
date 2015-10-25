@@ -2,8 +2,6 @@ package com.secuest.dosacitric;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+@SuppressWarnings("deprecation")
 public class Resultados2 extends ActionBarActivity {
 
 	private DecimalFormat df;
@@ -40,8 +39,8 @@ public class Resultados2 extends ActionBarActivity {
 	private TextView CaudalLiqAlta;
 	private TextView CaudalLiqMedia;
 	private TextView CaudalLiqBaja;
-	
-	
+
+
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.resultados2);
@@ -52,38 +51,40 @@ public class Resultados2 extends ActionBarActivity {
 		df = new DecimalFormat();
 		df.setMaximumFractionDigits(2);
 
-		 VolAplicacion = (TextView) findViewById(R.id.textView41);
+		VolAplicacion = (TextView) findViewById(R.id.textView41);
 
-		 VelAvance = (TextView) findViewById(R.id.textView39);
-		 AnchoTrabajo = (TextView) findViewById(R.id.textView40);
-		 CaudalLiqTotal = (TextView) findViewById(R.id.textView42);
-		 NumTotalBoq = (TextView) findViewById(R.id.textView27);
-		 NumBoqPorSector = (TextView) findViewById(R.id.textView28);
+		VelAvance = (TextView) findViewById(R.id.textView39);
+		AnchoTrabajo = (TextView) findViewById(R.id.textView40);
+		CaudalLiqTotal = (TextView) findViewById(R.id.textView42);
+		NumTotalBoq = (TextView) findViewById(R.id.textView27);
+		NumBoqPorSector = (TextView) findViewById(R.id.textView28);
 
-		 BoqCerrAlta = (TextView) findViewById(R.id.textView29);
-		 BoqCerrBaja = (TextView) findViewById(R.id.textView30);
+		BoqCerrAlta = (TextView) findViewById(R.id.textView29);
+		BoqCerrBaja = (TextView) findViewById(R.id.textView30);
 
-		 BoqAbiAlta = (TextView) findViewById(R.id.textView31);
-		 BoqAbiMedia = (TextView) findViewById(R.id.textView32);
-		 BoqAbiBaja = (TextView) findViewById(R.id.textView33);
+		BoqAbiAlta = (TextView) findViewById(R.id.textView31);
+		BoqAbiMedia = (TextView) findViewById(R.id.textView32);
+		BoqAbiBaja = (TextView) findViewById(R.id.textView33);
 
-		 VegetaAlta = (TextView) findViewById(R.id.textView34);
-		 VegetaMedia = (TextView) findViewById(R.id.textView35);
-		 VegetaBaja = (TextView) findViewById(R.id.textView36);
+		VegetaAlta = (TextView) findViewById(R.id.textView34);
+		VegetaMedia = (TextView) findViewById(R.id.textView35);
+		VegetaBaja = (TextView) findViewById(R.id.textView36);
 
-		 CaudalLiqSector = (TextView) findViewById(R.id.textView412);
-		 VarCaudalAdmisible = (TextView) findViewById(R.id.textView392);
+		CaudalLiqSector = (TextView) findViewById(R.id.textView412);
+		VarCaudalAdmisible = (TextView) findViewById(R.id.textView392);
 
-		 CaudalLiqAlta = (TextView) findViewById(R.id.textView512);
-		 CaudalLiqMedia = (TextView) findViewById(R.id.textView522);
-		 CaudalLiqBaja = (TextView) findViewById(R.id.textView532);
+		CaudalLiqAlta = (TextView) findViewById(R.id.textView512);
+		CaudalLiqMedia = (TextView) findViewById(R.id.textView522);
+		CaudalLiqBaja = (TextView) findViewById(R.id.textView532);
 
 		Intent bres = getIntent();
 		ParteB resultados1 = (ParteB) bres.getSerializableExtra("parteb2");
 
-		VolAplicacion.setText(String.valueOf(resultados1.VolumenApp));
-		VelAvance.setText(String.valueOf(resultados1.VelocidadAvance));
-		AnchoTrabajo.setText(String.valueOf(resultados1.AnchoTrabajo));
+		VolAplicacion.setText(String.format("%.0f", resultados1.VolumenApp));
+		VelAvance.setText(String.valueOf(df
+				.format(resultados1.VelocidadAvance)));
+		AnchoTrabajo.setText(String.valueOf(df
+				.format(resultados1.AnchoTrabajo)));
 		CaudalLiqTotal.setText(String.valueOf(df
 				.format(resultados1.CaudalLiquidoTotal)));
 		NumTotalBoq.setText(String.valueOf(resultados1.NumeroTotalBoquillas));
@@ -114,7 +115,6 @@ public class Resultados2 extends ActionBarActivity {
 		VarCaudalAdmisible.setText(String
 				.valueOf((int) (resultados1.VariacionCaudalAdmisible * 100))
 				+ " %");
-
 
 		final float[] inter = resultados1.IntervaloCaudalAdmisible;
 		CaudalLiqAlta.setText(df.format(inter[0]) + "-" + df.format(inter[1]));
@@ -151,8 +151,8 @@ public class Resultados2 extends ActionBarActivity {
 									&& boquillasZ2.size() > 0
 									&& boquillasZ3.size() > 0) {
 								System.out.println("z1=" + boquillasZ1.size()
-										+ " z2=" + boquillasZ2.size() + " z3="
-										+ boquillasZ3.size());
+								+ " z2=" + boquillasZ2.size() + " z3="
+								+ boquillasZ3.size());
 								// Se muestran
 								marcasAdecu.add(mar);
 								continue bucleDentro;
@@ -191,8 +191,8 @@ public class Resultados2 extends ActionBarActivity {
 				finish();
 			}
 		});
-		
-		
+
+
 		ImageButton printer = (ImageButton) findViewById(R.id.printer);
 		printer.setClickable(true);
 		printer.setOnClickListener(new OnClickListener() {
@@ -204,41 +204,42 @@ public class Resultados2 extends ActionBarActivity {
 				SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
 				if(!settings.getString("fecha", "").equals("")){
 					String A = ""+
-						"A IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
-						"Fecha "+settings.getString("fecha", "")+"<tipo>3<n>"+
-						"Identificaci&oacute;n de la parcela "+settings.getString("idparcela", "")+"<tipo>3<n>"+
-						"Identificaci&oacute;n del tratamiento +"+settings.getString("idtratamiento", "")+"+<tipo>3<n>"+
-						"Refer&eacute;ncia "+settings.getString("referencia", "")+"<tipo>3";
+							"A. IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
+							"Fecha: "+settings.getString("fecha", "")+"<tipo>3<n>"+
+							"Identificaci&oacute;n de la parcela: "+settings.getString("idparcela", "")+"<tipo>3<n>"+
+							"Identificaci&oacute;n del tratamiento: "+settings.getString("idtratamiento", "")+"<tipo>3<n>"+
+							"Refer&eacute;ncia: "+settings.getString("referencia", "")+"<tipo>3";
 					rw.write("A", A);
 					mypdf.readFile("A");
 				}
 				String C = ""+
-						"C. REGULACI&Oacute;N DEL PULVERIZADOR HIDRONEUM&Aacute;TICO (TURBO)<tipo>1<n>"+
-						"Volumen de aplicaci&oacute;n (V) "+Resultados2.this.VolAplicacion.getText().toString()+" L/Ha<tipo>3<n>"+
-						"Velocidad de avance deseada "+Resultados2.this.VelAvance.getText().toString()+" km/h<tipo>3<n>"+
-						"Ancho de trabajo (a)"+Resultados2.this.AnchoTrabajo.getText().toString()+"+ m<tipo>3<n>"+
-						"Caudal l&iacute;quido total "+Resultados2.this.CaudalLiqTotal.getText().toString()+"L/min<tipo>3<n>"+
+						"C. REGULACI&Oacute;N DEL PULVERIZADOR<tipo>1<n>"+ 
+						"   HIDRONEUM&Aacute;TICO (TURBO)<tipo>1<n>"+
+						"Volumen de aplicaci&oacute;n (V): "+Resultados2.this.VolAplicacion.getText().toString()+" L/Ha<tipo>3<n>"+
+						"Velocidad de avance deseada: "+Resultados2.this.VelAvance.getText().toString()+" km/h<tipo>3<n>"+
+						"Ancho de trabajo (a): "+Resultados2.this.AnchoTrabajo.getText().toString()+" m<tipo>3<n>"+
+						"Caudal l&iacute;quido total: "+Resultados2.this.CaudalLiqTotal.getText().toString()+" L/min<tipo>3<n>"+
 						"Caracterl&iacute;sticas del sistema hidrl&aacute;ulico del equipo<tipo>3<n>"+
-						"- N� total boquillas "+Resultados2.this.NumTotalBoq.getText().toString()+"<tipo>3<n>"+
-						"- N� boquillas desponibles/sector "+Resultados2.this.NumBoqPorSector.getText().toString()+"+<tipo>3<n>"+
+						"- Nº total boquillas: "+Resultados2.this.NumTotalBoq.getText().toString()+"<tipo>3<n>"+
+						"- Nº boquillas desponibles/sector: "+Resultados2.this.NumBoqPorSector.getText().toString()+"<tipo>3<n>"+
 						"Boquillas a cerrar por zona<tipo>2<n>"+
-						"Zona Alta (nA)"+Resultados2.this.BoqCerrAlta.getText().toString()+"<tipo>3<n> "+
-						"Zona Baja (nA)"+Resultados2.this.BoqCerrBaja.getText().toString()+"<tipo>3<n> "+
-						"N&uacute;mero boquillas abiertas por zona<tipo>2<n>"+
-						"Zona Alta (nA)"+Resultados2.this.BoqAbiAlta.getText().toString()+"<tipo>3<n> "+
-						"Zona Media (nA)"+Resultados2.this.BoqAbiMedia.getText().toString()+"<tipo>3<n> "+
-						"Zona Baja (nA)"+Resultados2.this.BoqAbiBaja.getText().toString()+"<tipo>3<n> "+
+						"Zona Alta: "+Resultados2.this.BoqCerrAlta.getText().toString()+"<tipo>3<n> "+
+						"Zona Baja: "+Resultados2.this.BoqCerrBaja.getText().toString()+"<tipo>3<n> "+
+						"N&uacute;mero de boquillas abiertas por zona<tipo>2<n>"+
+						"Zona Alta (nA): "+Resultados2.this.BoqAbiAlta.getText().toString()+"<tipo>3<n> "+
+						"Zona Media (nM): "+Resultados2.this.BoqAbiMedia.getText().toString()+"<tipo>3<n> "+
+						"Zona Baja (nB): "+Resultados2.this.BoqAbiBaja.getText().toString()+"<tipo>3<n> "+
 						"Porcentaje de vegetaci&oacute;n a pulverizar por zona<tipo>2<n>"+
-						"Zona Alta (A%)"+Resultados2.this.VegetaAlta.getText().toString()+" %<tipo>3<n>"+
-						"Zona Media (A%)"+Resultados2.this.VegetaMedia.getText().toString()+" %<tipo>3<n>"+
-						"Zona Baja (A%)"+Resultados2.this.VegetaBaja.getText().toString()+" %<tipo>3<n>"+
+						"Zona Alta (%A): "+Resultados2.this.VegetaAlta.getText().toString()+"<tipo>3<n>"+
+						"Zona Media (%M): "+Resultados2.this.VegetaMedia.getText().toString()+"<tipo>3<n>"+
+						"Zona Baja (%B): "+Resultados2.this.VegetaBaja.getText().toString()+"<tipo>3<n>"+
 						"Caracterl&iacute;sticas del cauda<tipo>2<n>"+
-						"Caudal l&iacute;quido por sector"+Resultados2.this.CaudalLiqSector.getText().toString()+" L/min<tipo>3<n>"+
-						"Variaci&oacute;n de caudal admisible"+Resultados2.this.VarCaudalAdmisible.getText().toString()+" %<tipo>3<n>"+
+						"Caudal l&iacute;quido por sector: "+Resultados2.this.CaudalLiqSector.getText().toString()+" L/min<tipo>3<n>"+
+						"Variaci&oacute;n de caudal admisible: "+Resultados2.this.VarCaudalAdmisible.getText().toString()+"<tipo>3<n>"+
 						"Caudal l&iacute;quido por boquilla<tipo>2<n>"+
-						"Zona Alta (nA)"+Resultados2.this.CaudalLiqAlta.getText().toString()+" L/min<tipo>3<n>"+
-						"Zona Media (nA)"+Resultados2.this.CaudalLiqMedia.getText().toString()+" L/min<tipo>3<n>"+
-						"Zona Baja (nA)"+Resultados2.this.CaudalLiqBaja.getText().toString()+" L/min<tipo>3";
+						"Zona Alta (nA): "+Resultados2.this.CaudalLiqAlta.getText().toString()+" L/min<tipo>3<n>"+
+						"Zona Media (nM): "+Resultados2.this.CaudalLiqMedia.getText().toString()+" L/min<tipo>3<n>"+
+						"Zona Baja (nB): "+Resultados2.this.CaudalLiqBaja.getText().toString()+" L/min<tipo>3";
 				rw.write("C", C);
 				mypdf.readFile("C");
 				DatabaseHandler db = new DatabaseHandler(
@@ -266,8 +267,8 @@ public class Resultados2 extends ActionBarActivity {
 									&& boquillasZ2.size() > 0
 									&& boquillasZ3.size() > 0) {
 								System.out.println("z1=" + boquillasZ1.size()
-										+ " z2=" + boquillasZ2.size() + " z3="
-										+ boquillasZ3.size());
+								+ " z2=" + boquillasZ2.size() + " z3="
+								+ boquillasZ3.size());
 								if(marcaPrimera==0){
 									mypdf.insertarMarca(mar);
 									marcaPrimera=1;}
@@ -281,7 +282,7 @@ public class Resultados2 extends ActionBarActivity {
 										boquillaDezona = "            ";
 									}
 								}
-								
+
 								mypdf.insertarZonas(boquillaDezona);
 								boquillaDezona = "Zona media:   ";
 								for (int u=0;u<boquillasZ2.size();u++){
@@ -307,16 +308,18 @@ public class Resultados2 extends ActionBarActivity {
 							}
 						}
 					}
-					
+
 				}
-				Calendar cal = Calendar.getInstance();
-				mypdf.finish_document("Dosacitric_C"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
+				//Calendar cal = Calendar.getInstance();
+				String referencia = settings.getString("referencia", "");
+				mypdf.finish_document("DosacitricC"+referencia);
+				//mypdf.finish_document("Dosacitric_C"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
 
 				Toast toast = Toast.makeText(getApplicationContext(), "El PDF sera guardado en DESCARGAS", Toast.LENGTH_SHORT);
 				toast.show();
 			}
 		});
-		
+
 	}
 
 	public boolean onPrepareOptionsMenu(Menu menu) {

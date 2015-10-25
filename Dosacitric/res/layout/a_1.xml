@@ -97,7 +97,8 @@
                 android:gravity="center"
                 android:inputType="number|textVisiblePassword"
                 android:minLines="1"
-                android:minWidth="40dp" />
+                android:minWidth="40dp"
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/idTratamiento"
