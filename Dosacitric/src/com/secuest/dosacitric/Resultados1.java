@@ -47,7 +47,8 @@ public class Resultados1 extends ActionBarActivity{
 		setContentView(R.layout.resultados1);
 
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);		
+		actionBar.setDisplayHomeAsUpEnabled(true);	
+		
 		fechaDiaResultados1 = (TextView) findViewById(R.id.fechaMesResultados1);
 		fechaMesResultados1 = (TextView) findViewById(R.id.fechaDiaResultados1);
 		fechaAnoResultados1 = (TextView) findViewById(R.id.fechaAnoResultados1);
@@ -232,13 +233,13 @@ public class Resultados1 extends ActionBarActivity{
 			}
 		});
 
-		ImageButton acercaDe = (ImageButton) findViewById(R.id.acercaDe);
-		acercaDe.setClickable(true);
-		acercaDe.setOnClickListener(new OnClickListener() {
+		ImageButton ayuda = (ImageButton) findViewById(R.id.ayuda);
+		ayuda.setClickable(true);
+		ayuda.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(Resultados1.this, AcercaDe_1.class));
-				finish();
+				startActivity(new Intent(Resultados1.this, AyudaResultados1.class));
+				//finish();
 			}
 		});
 
@@ -286,7 +287,7 @@ public class Resultados1 extends ActionBarActivity{
 				mypdf.readFile("B");
 				//Calendar cal = Calendar.getInstance();
 				String referencia = settings.getString("referencia", "");
-				mypdf.finish_document("DosacitricB"+referencia);
+				mypdf.finish_document("DosacitricB"+referencia, getApplicationContext());
 				//mypdf.finish_document("Dosacitric_B"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
 				Toast toast = Toast.makeText(getApplicationContext(), "El PDF sera guardado en DESCARGAS", Toast.LENGTH_SHORT);
 				toast.show();

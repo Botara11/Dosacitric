@@ -70,7 +70,7 @@ public class PresionesListView extends ListActivity{
 			
 		}
 		for(int i=0;i<presionesAdecu.size();i++){
-			datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ presionesAdecu.get(i).replace("p", "")+" bares"}));
+			datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ presionesAdecu.get(i).replace("p", "")+" bar"}));
 		}
 		
 		

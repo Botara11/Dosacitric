@@ -155,7 +155,7 @@ public class B_2Activity extends ActionBarActivity{
 		ayuda.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(B_2Activity.this, Ayuda.class));
+				startActivity(new Intent(B_2Activity.this, AyudaB_2Activity.class));
 			}
 		});
 

@@ -37,7 +37,7 @@ OnClickListener {
 		DatabaseHandler db = new DatabaseHandler(this);
 
 		ArrayList<String> modelosZ1 = db.getModelo(partec4.MarcaSeleccionada,
-				Integer.parseInt(partec4.PresionSeleccionada.replace(" bares", "")));
+				Integer.parseInt(partec4.PresionSeleccionada.replace(" bar", "")));
 
 		items = new ListViewItem[3+modelosZ1.size()];
 

@@ -129,7 +129,8 @@
                 android:background="@color/white"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" >
+                android:inputType="number|textVisiblePassword"
+                 >
             </EditText>
 
             <SeekBar
@@ -236,7 +237,8 @@
                 android:layout_marginTop="16dp"
                 android:text="Número total de boquillas"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="17sp"
+                android:layout_marginBottom="32dp" />
 
             <Switch
                 android:id="@+id/switchVolumenAplicacionCalculado"
@@ -245,7 +247,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:checked="true"
                 android:onClick="onSwitchClicked "
                 android:text="Volumen de aplicacion \n calculado"

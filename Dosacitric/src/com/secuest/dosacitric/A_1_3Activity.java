@@ -1,10 +1,7 @@
 package com.secuest.dosacitric;
 
-import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,8 +10,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -22,6 +19,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+@SuppressWarnings("deprecation")
 public class A_1_3Activity extends ActionBarActivity{
 
 	private Spinner productosAplicar;
@@ -32,13 +30,12 @@ public class A_1_3Activity extends ActionBarActivity{
 	private Spinner humedadRelativa;
 	private Spinner velocidadViento;
 	private Spinner tipoPulverizacion;
-	private ParteA parteA;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.a_1_3);
-		
+
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -151,8 +148,6 @@ public class A_1_3Activity extends ActionBarActivity{
 		tipoPulverizacion.setAdapter(adaptador7);
 		tipoPulverizacion.setSelection(adaptador7.getCount());
 
-
-
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
@@ -160,8 +155,6 @@ public class A_1_3Activity extends ActionBarActivity{
 			public void onClick(View v) {
 
 				String revisando = "";
-				String reemplazado = "";
-
 
 				try {
 
@@ -252,7 +245,6 @@ public class A_1_3Activity extends ActionBarActivity{
 					case 4: Double.parseDouble("p");
 					break;
 					}
-					
 
 					revisando = "Humedad relativa";
 					Float humedadRelativa1 = (float) 999.999;
@@ -314,16 +306,16 @@ public class A_1_3Activity extends ActionBarActivity{
 						toast.show();
 					}else
 						if(hum == 3 ){
-						Toast toast = Toast.makeText(getApplicationContext(), "ERROR: NO SE DEBE REALIZAR EL TRATAMIENTO CON LLUVIA", Toast.LENGTH_SHORT);
-						toast.show();
-					}else 
-						if(vel == 2 ){
-						Toast toast = Toast.makeText(getApplicationContext(), "ERROR: NO SE DEBE REALIZAR EL TRATAMIENTO CUANDO V > 3 m/s", Toast.LENGTH_SHORT);
-						toast.show();}
-					else{
-					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+revisando+'"'+" incorrecto", Toast.LENGTH_SHORT);
-					toast.show();
-					}
+							Toast toast = Toast.makeText(getApplicationContext(), "ERROR: NO SE DEBE REALIZAR EL TRATAMIENTO CON LLUVIA", Toast.LENGTH_SHORT);
+							toast.show();
+						}else 
+							if(vel == 2 ){
+								Toast toast = Toast.makeText(getApplicationContext(), "ERROR: NO SE DEBE REALIZAR EL TRATAMIENTO CUANDO V > 3 m/s", Toast.LENGTH_SHORT);
+								toast.show();}
+							else{
+								Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+revisando+'"'+" incorrecto", Toast.LENGTH_SHORT);
+								toast.show();
+							}
 				}
 
 			}
@@ -335,7 +327,7 @@ public class A_1_3Activity extends ActionBarActivity{
 			@Override
 			public void onClick(View v) {
 				System.out.println("CLICK");
-				startActivity(new Intent(A_1_3Activity.this, AyudaTipoTratamiento.class));
+				startActivity(new Intent(A_1_3Activity.this, AyudaA_1_3Activity.class));
 			}
 		});
 
@@ -357,99 +349,86 @@ public class A_1_3Activity extends ActionBarActivity{
 	protected void onResume(){
 		super.onResume();
 		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-		
-	      int productosAplicarPosition = productosAplicar.getAdapter().getCount();
-	      productosAplicarPosition = settings.getInt("productosAplicarSpinner",productosAplicarPosition);
-	      productosAplicar.setSelection(productosAplicarPosition);
-	      
-	      int formaActuacionPosition = formaActuacion.getAdapter().getCount(); 
-	      formaActuacionPosition = settings.getInt("formaActuacionSpinner", formaActuacionPosition);
-	      formaActuacion.setSelection(formaActuacionPosition);
-	      
-	      int utilizaMojantesPosition = utilizaMojantes.getAdapter().getCount();
-	      utilizaMojantesPosition = settings.getInt("utilizaMojantesSpinner", utilizaMojantesPosition);
-	      utilizaMojantes.setSelection(utilizaMojantesPosition);
-	      
-	      int zonaCriticaPosition = zonaCritica.getAdapter().getCount();
-	      zonaCriticaPosition = settings.getInt("zonaCriticaSpinner", zonaCriticaPosition);
-	      zonaCritica.setSelection(zonaCriticaPosition);
-	      
-	      int temperaturaPosition = temperatura.getAdapter().getCount();
-	      temperaturaPosition = settings.getInt("temperaturaSpinner", temperaturaPosition);
-	      temperatura.setSelection(temperaturaPosition);
-	      
-	      int humedadRelativaPosition = humedadRelativa.getAdapter().getCount();
-	      humedadRelativaPosition = settings.getInt("humedadRelativaSpinner", humedadRelativaPosition);
-	      humedadRelativa.setSelection(humedadRelativaPosition);
-	      
-	      int velocidadVientoPosition = velocidadViento.getAdapter().getCount();
-	      velocidadVientoPosition = settings.getInt("velocidadVientoSpinner", velocidadVientoPosition);
-	      velocidadViento.setSelection(velocidadVientoPosition);
-	      
-	      int tipoPulverizacionPosition = tipoPulverizacion.getAdapter().getCount();
-	      tipoPulverizacionPosition = settings.getInt("tipoPulverizacionSpinner", tipoPulverizacionPosition);
-	      tipoPulverizacion.setSelection(tipoPulverizacionPosition);
-	      
-	      //System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
-		
+
+		int productosAplicarPosition = productosAplicar.getAdapter().getCount();
+		productosAplicarPosition = settings.getInt("productosAplicarSpinner",productosAplicarPosition);
+		productosAplicar.setSelection(productosAplicarPosition);
+
+		int formaActuacionPosition = formaActuacion.getAdapter().getCount(); 
+		formaActuacionPosition = settings.getInt("formaActuacionSpinner", formaActuacionPosition);
+		formaActuacion.setSelection(formaActuacionPosition);
+
+		int utilizaMojantesPosition = utilizaMojantes.getAdapter().getCount();
+		utilizaMojantesPosition = settings.getInt("utilizaMojantesSpinner", utilizaMojantesPosition);
+		utilizaMojantes.setSelection(utilizaMojantesPosition);
+
+		int zonaCriticaPosition = zonaCritica.getAdapter().getCount();
+		zonaCriticaPosition = settings.getInt("zonaCriticaSpinner", zonaCriticaPosition);
+		zonaCritica.setSelection(zonaCriticaPosition);
+
+		int temperaturaPosition = temperatura.getAdapter().getCount();
+		temperaturaPosition = settings.getInt("temperaturaSpinner", temperaturaPosition);
+		temperatura.setSelection(temperaturaPosition);
+
+		int humedadRelativaPosition = humedadRelativa.getAdapter().getCount();
+		humedadRelativaPosition = settings.getInt("humedadRelativaSpinner", humedadRelativaPosition);
+		humedadRelativa.setSelection(humedadRelativaPosition);
+
+		int velocidadVientoPosition = velocidadViento.getAdapter().getCount();
+		velocidadVientoPosition = settings.getInt("velocidadVientoSpinner", velocidadVientoPosition);
+		velocidadViento.setSelection(velocidadVientoPosition);
+
+		int tipoPulverizacionPosition = tipoPulverizacion.getAdapter().getCount();
+		tipoPulverizacionPosition = settings.getInt("tipoPulverizacionSpinner", tipoPulverizacionPosition);
+		tipoPulverizacion.setSelection(tipoPulverizacionPosition);
+
+		//System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
 	}
-	
-	
+
 	@Override
 	protected void onPause(){
-		  super.onPause(); 
-		  
-		  SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-	      SharedPreferences.Editor editor = settings.edit();
-	      
-	      int productosAplicarPosition = productosAplicar.getSelectedItemPosition();
-	      editor.putInt("productosAplicarSpinner", productosAplicarPosition);
-	      
-	      int formaActuacionPosition = formaActuacion.getSelectedItemPosition();
-	      editor.putInt("formaActuacionSpinner", formaActuacionPosition);
-	      
-	      int utilizaMojantesPosition = utilizaMojantes.getSelectedItemPosition();
-	      editor.putInt("utilizaMojantesSpinner", utilizaMojantesPosition);
-	      
-	      int zonaCriticaPosition = zonaCritica.getSelectedItemPosition();
-	      editor.putInt("zonaCriticaSpinner", zonaCriticaPosition);
-	      
-	      int temperaturaPosition = temperatura.getSelectedItemPosition();
-	      editor.putInt("temperaturaSpinner", temperaturaPosition);
-	      
-	      int humedadRelativaPosition = humedadRelativa.getSelectedItemPosition();
-	      editor.putInt("humedadRelativaSpinner", humedadRelativaPosition);
-	      
-	      int velocidadVientoPosition = velocidadViento.getSelectedItemPosition();
-	      editor.putInt("velocidadVientoSpinner", velocidadVientoPosition);
-	      
-	      int tipoPulverizacionPosition = tipoPulverizacion.getSelectedItemPosition();
-	      editor.putInt("tipoPulverizacionSpinner", tipoPulverizacionPosition);
-	      
-	      // Commit the edits!
-	      editor.commit();
-	      //System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+		super.onPause(); 
 
-	}
-	
-	
-	public void onSaveInstanceState(Bundle state) {
-		super.onSaveInstanceState(state);
-		// Save UI state changes to the savedInstanceState.
-		// This bundle will be passed to onCreate if the process is
-		// killed and restarted.
-		super.onSaveInstanceState(state);
-		//state.putInt("spinnerIndex", pro);
-		
+		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+		SharedPreferences.Editor editor = settings.edit();
+
+		int productosAplicarPosition = productosAplicar.getSelectedItemPosition();
+		editor.putInt("productosAplicarSpinner", productosAplicarPosition);
+
+		int formaActuacionPosition = formaActuacion.getSelectedItemPosition();
+		editor.putInt("formaActuacionSpinner", formaActuacionPosition);
+
+		int utilizaMojantesPosition = utilizaMojantes.getSelectedItemPosition();
+		editor.putInt("utilizaMojantesSpinner", utilizaMojantesPosition);
+
+		int zonaCriticaPosition = zonaCritica.getSelectedItemPosition();
+		editor.putInt("zonaCriticaSpinner", zonaCriticaPosition);
+
+		int temperaturaPosition = temperatura.getSelectedItemPosition();
+		editor.putInt("temperaturaSpinner", temperaturaPosition);
+
+		int humedadRelativaPosition = humedadRelativa.getSelectedItemPosition();
+		editor.putInt("humedadRelativaSpinner", humedadRelativaPosition);
+
+		int velocidadVientoPosition = velocidadViento.getSelectedItemPosition();
+		editor.putInt("velocidadVientoSpinner", velocidadVientoPosition);
+
+		int tipoPulverizacionPosition = tipoPulverizacion.getSelectedItemPosition();
+		editor.putInt("tipoPulverizacionSpinner", tipoPulverizacionPosition);
+
+		// Commit the edits!
+		editor.commit();
+		//System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
+
 	}
 
 	@Override
 	public void onRestoreInstanceState(Bundle savedInstanceState) {
 		super.onRestoreInstanceState(savedInstanceState);
-		
 
 	}
 
+	@SuppressWarnings("hiding")
 	private class ArrayAdapterMio<String> extends ArrayAdapter<String> {
 
 		public ArrayAdapterMio(Context context, int resource,
@@ -477,37 +456,21 @@ public class A_1_3Activity extends ActionBarActivity{
 		return super.onPrepareOptionsMenu(menu);
 	}
 
-
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
-
-
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		/*int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);*/
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// app icon in action bar clicked; goto parent activity.
 			this.finish();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
-
-
 
 }

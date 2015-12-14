@@ -1,15 +1,13 @@
 package com.secuest.dosacitric;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Indice extends Activity{
@@ -27,18 +25,38 @@ public class Indice extends Activity{
 
 			}
 		});
-
-	//// Click to A_1Activity ////
-			TextView identificacionTratamiendo = (TextView) findViewById(R.id.identificacionTratamiendo);
-			identificacionTratamiendo.setClickable(true);
-			identificacionTratamiendo.setOnClickListener(new OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					startActivity(new Intent(Indice.this, A_1Activity.class));
-
-				}
-			});
 		
+		ImageButton ajustes = (ImageButton) findViewById(R.id.ajustes);
+		ajustes.setClickable(true);
+		ajustes.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(Indice.this, Ajustes.class));
+
+			}
+		});
+		
+		ImageButton ayuda = (ImageButton) findViewById(R.id.ayuda);
+		ayuda.setClickable(true);
+		ayuda.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(Indice.this, AyudaIndice.class));
+
+			}
+		});
+
+		//// Click to A_1Activity ////
+		TextView identificacionTratamiendo = (TextView) findViewById(R.id.identificacionTratamiendo);
+		identificacionTratamiendo.setClickable(true);
+		identificacionTratamiendo.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(Indice.this, A_1Activity.class));
+
+			}
+		});
+
 		//// Click to A_1_3Activity ////
 		TextView volumendeapli = (TextView) findViewById(R.id.volumendeapli);
 		volumendeapli.setClickable(true);
@@ -73,36 +91,16 @@ public class Indice extends Activity{
 		});
 
 	}
-	
 
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		return super.onPrepareOptionsMenu(menu);
 	}
 
-
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.add, menu);
-	    return super.onCreateOptionsMenu(menu);
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		
-		super.onOptionsItemSelected(item);
-		switch (item.getItemId()) {
-		case R.id.ic_action_new:
-			SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-			SharedPreferences.Editor editor = settings.edit();
-			editor.clear();
-			editor.commit();
-			startActivity(new Intent(Indice.this, A_1Activity.class));
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}
+		return super.onCreateOptionsMenu(menu);
 	}
 
 }

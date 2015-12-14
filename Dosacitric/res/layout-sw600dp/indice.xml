@@ -197,6 +197,20 @@
             android:background="#FFFFFF"
             android:gravity="center_horizontal" >
 
+            <ImageButton
+                android:id="@+id/ayuda"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/inter3" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp"
+                android:background="#E65F00" />
+
             <Button
                 android:id="@+id/siguiente"
                 android:layout_width="0dp"
@@ -206,6 +220,20 @@
                 android:padding="10dip"
                 android:text="SIGUIENTE"
                 android:textColor="#E65F00" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp"
+                android:background="#E65F00" />
+
+            <ImageButton
+                android:id="@+id/ajustes"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/printer" />
         </TableRow>
     </TableLayout>
 

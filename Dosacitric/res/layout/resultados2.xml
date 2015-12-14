@@ -36,7 +36,7 @@
                 android:background="#E65F00" />
 
             <ImageButton
-                android:id="@+id/acercaDe"
+                android:id="@+id/ayuda"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
@@ -115,7 +115,7 @@
                 android:layout_below="@+id/textView2"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Velocidad de avance deseada (v):"
+                android:text="Velocidad de avance (v):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -139,7 +139,7 @@
                 android:layout_below="@+id/textView4"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Caudal de líquido total:"
+                android:text="Caudal de líquido total (Q):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -151,7 +151,7 @@
                 android:layout_below="@+id/textView5"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Características del sistema hidráulico del equipo"
+                android:text="Características del sistema hidráulico del equipo:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -161,9 +161,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView6"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="16dp"
-                android:text="- Nº total boquillas:"
+                android:text="Nº total boquillas:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -173,9 +173,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView7"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="16dp"
-                android:text="- Nº boquillas disponibles/sector:"
+                android:text="Nº boquillas disponibles/sector:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -185,11 +185,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView8"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:background="#ff6600"
-                android:text="Boquillas a cerrar por zona"
+                android:text="Boquillas a cerrar por zona:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -199,9 +198,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView9"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona Alta:"
+                android:text="- Zona Alta:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -211,9 +210,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView10"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona Baja:"
+                android:text="- Zona Baja:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -223,9 +222,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView14"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona Alta (nA):"
+                android:text="- Zona Alta (nA):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -235,9 +234,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView12"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona Media (nM):"
+                android:text="- Zona Media (nM):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -247,11 +246,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView11"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:background="#ff6600"
-                android:text="Número de boquillas por zona"
+                android:text="Número de boquillas por zona:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -264,8 +262,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:background="#ff6600"
-                android:text="Porcentaje de vegetación a pulverizar por zona"
+                android:text="Porcentaje de vegetación a pulverizar por zona:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -275,9 +272,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView13"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona Baja (nB):"
+                android:text="- Zona Baja (nB):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -287,9 +284,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView43"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona Alta (%A):"
+                android:text="- Zona Alta (%A):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -299,9 +296,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView16"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona Media (%M):"
+                android:text="- Zona Media (%M):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -311,9 +308,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView17"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona Baja (%B):"
+                android:text="- Zona Baja (%B):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -325,7 +322,7 @@
                 android:layout_alignBottom="@+id/textView2"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:text="L/Ha"
+                android:text="L/ha"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -517,9 +514,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView777"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="16dp"
-                android:text="Caudal de liquido por sector:"
+                android:text="Caudal de líquido por sector:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -529,7 +526,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView222"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="16dp"
                 android:text="Variación de caudal admisible:"
                 android:textColor="@color/white"
@@ -544,8 +541,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:background="#ff6600"
-                android:text="Caudal de líquido por boquilla"
+                android:text="Caudal de líquido por boquilla:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -558,8 +554,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:background="#ff6600"
-                android:text="Características del caudal"
+                android:text="Características del caudal:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -569,9 +564,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView699"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona Alta (nA):"
+                android:text="- Zona Alta (nA):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -581,9 +576,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView122"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona Media (nM):"
+                android:text="- Zona Media (nM):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -593,9 +588,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView132"
-                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="16dp"
-                android:text="Zona Baja (nB):"
+                android:text="- Zona Baja (nB):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 

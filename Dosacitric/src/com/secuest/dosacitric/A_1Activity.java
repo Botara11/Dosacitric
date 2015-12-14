@@ -1,11 +1,7 @@
 package com.secuest.dosacitric;
 
-import java.security.Guard;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-
-import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -16,9 +12,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnHoverListener;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -26,10 +20,10 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+@SuppressWarnings("deprecation")
 public class A_1Activity extends ActionBarActivity{
 
 	private int debug = 0;
@@ -44,10 +38,14 @@ public class A_1Activity extends ActionBarActivity{
 
 	static final int DATE_PICKER_ID = 1111; 
 
+	@SuppressWarnings("unused")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.a_1);
+
+		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
 
 		Context guarda = getApplicationContext();
 		SharedPreferences preferencias = guarda.getSharedPreferences("Guarda", Context.MODE_PRIVATE);		
@@ -129,14 +127,21 @@ public class A_1Activity extends ActionBarActivity{
 			}
 		});
 
-
-
 		Button indice = (Button) findViewById(R.id.indice);
 		indice.setClickable(true);
 		indice.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				startActivity(new Intent(A_1Activity.this, Indice.class));
+			}
+		});
+
+		ImageButton ayuda = (ImageButton) findViewById(R.id.ayuda);
+		ayuda.setClickable(true);
+		ayuda.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(A_1Activity.this, AyudaA_1Activity.class));
 			}
 		});
 
@@ -174,6 +179,7 @@ public class A_1Activity extends ActionBarActivity{
 
 	}
 
+	@SuppressWarnings({ "unused", "hiding" })
 	private class ArrayAdapterMio<String> extends ArrayAdapter<String> {
 
 		public ArrayAdapterMio(Context context, int resource,
@@ -208,7 +214,6 @@ public class A_1Activity extends ActionBarActivity{
 
 	}
 
-
 	@Override
 	protected void onPause(){
 		super.onPause(); 
@@ -229,13 +234,21 @@ public class A_1Activity extends ActionBarActivity{
 		return super.onPrepareOptionsMenu(menu);
 	}
 
-
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			this.finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 
 	@Override
@@ -270,16 +283,6 @@ public class A_1Activity extends ActionBarActivity{
 		}
 	};
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
+
 
 }

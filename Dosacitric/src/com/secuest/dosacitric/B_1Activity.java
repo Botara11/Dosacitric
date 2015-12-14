@@ -71,14 +71,14 @@ CompoundButton.OnCheckedChangeListener  {
 		actionBar.setDisplayHomeAsUpEnabled(true);
 
 		pb = new ParteB();
-		
+
 		volumenAplicacionCalculado = (TextView) findViewById(R.id.textViewVolumenAplicacionCalculado);
 		SwitchvolumenAplicacionCalculado = (Switch) findViewById(R.id.switchVolumenAplicacionCalculado);
 
 		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 		String VolumenApp = settings.getString("volumenApp", "");
 		volumenAplicacionCalculado.setText(VolumenApp);
-		
+
 
 		SwitchvolumenAplicacionCalculado.setOnCheckedChangeListener(this);
 		SwitchvolumenAplicacionCalculado.setOnClickListener(new View.OnClickListener() {
@@ -88,7 +88,7 @@ CompoundButton.OnCheckedChangeListener  {
 				if(SwitchvolumenAplicacionCalculado.isChecked() == true){
 					SwitchvolumenAplicacionDeseado.setChecked(false);
 				}else{
-					 SwitchvolumenAplicacionDeseado.setChecked(true);
+					SwitchvolumenAplicacionDeseado.setChecked(true);
 				}
 			}
 		});
@@ -101,11 +101,11 @@ CompoundButton.OnCheckedChangeListener  {
 			public void onClick(View v) {
 				actualizarCaudal();
 				if(SwitchvolumenAplicacionDeseado.isChecked() == true){
-					 SwitchvolumenAplicacionCalculado.setChecked(false);
-					 }else{
-					 SwitchvolumenAplicacionCalculado.setChecked(true);
-					 }
-				
+					SwitchvolumenAplicacionCalculado.setChecked(false);
+				}else{
+					SwitchvolumenAplicacionCalculado.setChecked(true);
+				}
+
 				// TODO Auto-generated method stub
 				/*if(SwitchvolumenAplicacionDeseado.isChecked() == true){
 					editVolumen.setText(AnchoTrabajo);
@@ -121,23 +121,23 @@ CompoundButton.OnCheckedChangeListener  {
 			SwitchvolumenAplicacionCalculado.setChecked(true);
 			SwitchvolumenAplicacionDeseado.setChecked(false);
 		}
-		
-		
+
+
 		anchoTrabajoCalculado = (TextView) findViewById(R.id.textViewAnchoTrabajoCalculado);
 		SwitchAnchoTrabajoCalculado= (Switch) findViewById(R.id.switchAnchoTrabajoCalculado);
 		String AnchoTrabajo = settings.getString("anchocalle", "");
 		anchoTrabajoCalculado.setText(AnchoTrabajo);
 		SwitchAnchoTrabajoCalculado.setOnCheckedChangeListener(this);
-		
 
-		
+
+
 		SwitchAnchoTrabajoCalculado.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				actualizarCaudal();
 				if(SwitchAnchoTrabajoCalculado.isChecked() == true){
-					 SwitchAnchoTrabajoDeseado.setChecked(false);
+					SwitchAnchoTrabajoDeseado.setChecked(false);
 				}else{
-						 SwitchAnchoTrabajoDeseado.setChecked(true);
+					SwitchAnchoTrabajoDeseado.setChecked(true);
 				}
 			}
 		});
@@ -149,10 +149,10 @@ CompoundButton.OnCheckedChangeListener  {
 			public void onClick(View v) {
 				actualizarCaudal();
 				if(SwitchAnchoTrabajoDeseado.isChecked() == true){
-					 SwitchAnchoTrabajoCalculado.setChecked(false);
-					 }else{
-						 SwitchAnchoTrabajoCalculado.setChecked(true);
-					 }
+					SwitchAnchoTrabajoCalculado.setChecked(false);
+				}else{
+					SwitchAnchoTrabajoCalculado.setChecked(true);
+				}
 			}
 		});
 		if (AnchoTrabajo==""){
@@ -291,7 +291,7 @@ CompoundButton.OnCheckedChangeListener  {
 		ayuda.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(B_1Activity.this, AyudaTipoTratamiento.class));
+				startActivity(new Intent(B_1Activity.this, AyudaB_1Activity.class));
 			}
 		});
 
@@ -312,7 +312,7 @@ CompoundButton.OnCheckedChangeListener  {
 
 		velocidadAvance.setFocusable(true);
 		velocidadAvance.setFocusableInTouchMode(true);
-		
+
 		velocidadAvanceSeekbar.setProgress(1);
 		velocidadAvanceSeekbar.incrementProgressBy(1);
 		velocidadAvanceSeekbar.setMax(502);
@@ -341,7 +341,6 @@ CompoundButton.OnCheckedChangeListener  {
 			public void onStopTrackingTouch(SeekBar seekBar) {
 			}
 		});
-
 	}
 
 	private class ArrayAdapterMio<String> extends ArrayAdapter<String> {
@@ -383,7 +382,6 @@ CompoundButton.OnCheckedChangeListener  {
 
 	}
 
-
 	@Override
 	protected void onPause(){
 		super.onPause(); 
@@ -398,7 +396,7 @@ CompoundButton.OnCheckedChangeListener  {
 		editor.putString("caudalSector", caudalSector.getText().toString());
 		editor.putString("editBoquillas", editBoquillas.getText().toString());
 		editor.commit();
-		
+
 	}
 
 	@Override
@@ -406,16 +404,12 @@ CompoundButton.OnCheckedChangeListener  {
 		return super.onPrepareOptionsMenu(menu);
 	}
 
-
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
-
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -440,8 +434,6 @@ CompoundButton.OnCheckedChangeListener  {
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 		// TODO Auto-generated method stub
-		
+
 	}
-
-
 }

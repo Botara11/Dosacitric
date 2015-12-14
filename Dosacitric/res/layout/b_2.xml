@@ -77,7 +77,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="13dp"
+                android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:text="Número de boquillas que deben cerrarse por zona"
                 android:textColor="@color/white"
@@ -446,18 +446,6 @@
                 android:textSize="17sp" />
 
             <TextView
-                android:id="@+id/textView25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/zonaBajaPorcentaje"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
-                android:text="Intervalo de caudales admisibles"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <TextView
                 android:id="@+id/textView34"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -495,6 +483,7 @@
                 android:layout_height="25dp"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/ImageView08"
+                android:layout_marginBottom="32dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"
                 android:background="@color/green" />
@@ -610,9 +599,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/ImageView09"
+                android:layout_below="@+id/zonaBajaPorcentaje"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:maxLines="2"
                 android:text="Variación de caudal admisible"
                 android:textColor="@color/white"
@@ -622,14 +611,24 @@
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/variacionCaudalSeekBar"
-                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
                 android:layout_below="@+id/variacionCaudalSeekBar"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
                 android:text="(Comprendido entre 1 y 10)"
                 android:textColor="@color/green"
                 android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="16dp"
+                android:text="Intervalo de caudales admisibles"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
         </RelativeLayout>
     </ScrollView>
 

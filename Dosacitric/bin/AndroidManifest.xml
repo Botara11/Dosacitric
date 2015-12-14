@@ -9,7 +9,10 @@
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo256"
@@ -28,7 +31,7 @@
         <activity
             android:name="Indice"
             android:label="@string/Indice"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="A_1Activity"
@@ -37,11 +40,6 @@
         </activity>
         <activity
             android:name="A_1_1Activity"
-            android:label="@string/B1"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="A_1_2Activity"
             android:label="@string/B1"
             android:screenOrientation="portrait" >
         </activity>
@@ -57,7 +55,7 @@
         </activity>
         <activity
             android:name="B_2Activity"
-            android:label="@string/C2"
+            android:label="@string/C1"
             android:screenOrientation="portrait" >
         </activity>
         <activity
@@ -67,7 +65,7 @@
         </activity>
         <activity
             android:name="C_2Activity"
-            android:label="@string/D2"
+            android:label="@string/D1"
             android:screenOrientation="portrait" >
         </activity>
         <activity
@@ -76,25 +74,10 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="C_4Activity"
-            android:label="@string/D4"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="C_4bActivity"
-            android:label="@string/D4"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="C_4bbActivity"
-            android:label="@string/D4"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
             android:name="C_4ZonaAlta"
             android:label="@string/ZA"
-            android:screenOrientation="portrait" 
-            android:theme="@style/mytheme">
+            android:screenOrientation="portrait"
+            android:theme="@style/mytheme" >
         </activity>
         <activity
             android:name="C_4ZonaMedia"
@@ -109,7 +92,22 @@
             android:theme="@style/mytheme" >
         </activity>
         <activity
-            android:name="AjusteBoquillas"
+            android:name="Resultados1"
+            android:label="@string/R1"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="Resultados2"
+            android:label="@string/R2"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="Resultados3"
+            android:label="@string/R3"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="Ajustes"
             android:label="@string/AjusteBoquillas"
             android:screenOrientation="portrait" >
         </activity>
@@ -124,8 +122,73 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name="MostrarBoquillasContinuacion"
+            android:label="Mis boquillas"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name="BorrarBoquillas"
             android:label="@string/BorrarBoquillas"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="AyudaIndice"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="AyudaAjustes"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="AyudaAjustesInformacion"
+            android:label="@string/AcercaDe"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="AyudaA_1Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="AyudaA_1_1Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="AyudaA_1_3Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="AyudaResultados1"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="AyudaB_1Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="AyudaB_2Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="AyudaC_1Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="AyudaResultados2"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="AyudaResultados3"
+            android:label="Ayuda"
             android:screenOrientation="portrait" >
         </activity>
         <activity
@@ -149,57 +212,22 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="Resultados1"
-            android:label="@string/R1"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="Resultados2"
-            android:label="@string/R2"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="Resultados3"
-            android:label="@string/R3"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="Ayuda"
-            android:label="Ayuda"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
             android:name="CatalogosListView"
-            android:label="Fabricantes"
+            android:label="@string/Fabricantes"
             android:screenOrientation="portrait"
-            android:theme="@style/mytheme"  >
+            android:theme="@style/mytheme" >
         </activity>
         <activity
             android:name="PresionesListView"
-            android:label="Presiones"
+            android:label="@string/Presiones"
             android:screenOrientation="portrait"
-            android:theme="@style/mytheme"   >
+            android:theme="@style/mytheme" >
         </activity>
         <activity
             android:name="BoquillasListView"
-            android:label="Boquillas"
+            android:label="@string/Boquillas"
             android:screenOrientation="portrait"
-            android:theme="@style/mytheme">
-        </activity>
-        <activity
-            android:name="AcercaDe_1"
-            android:label="@string/AcercaDeTITULO"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="AcercaDe_2"
-            android:label="@string/AcercaDeTITULO"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="AyudaTipoTratamiento"
-            android:label="@string/AyudaTipoTratamiento"
-            android:screenOrientation="portrait" >
+            android:theme="@style/mytheme" >
         </activity>
     </application>
 

@@ -1,0 +1,35 @@
+#Android generated
+bin
+gen
+tmp
+
+#Eclipse
+.project
+.classpath
+.settings
+
+#IntelliJ IDEA
+.idea
+*.iml
+classes
+
+#Maven
+target
+release.properties
+pom.xml.*
+
+#Command line
+local.properties
+build.xml
+proguard-project.txt
+
+#Gradle
+library/build
+sample/build
+/build
+.gradle
+.travis.yml
+Dosacitric/bin/*
+.DS*
+Dosacitric/res/*
+Dosacitric/.DS_Store

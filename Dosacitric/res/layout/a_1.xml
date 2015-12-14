@@ -21,12 +21,26 @@
             <Button
                 android:id="@+id/indice"
                 android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
                 android:gravity="center"
                 android:padding="10dip"
                 android:text="INDICE"
                 android:textColor="#E65F00" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp"
+                android:background="#E65F00" />
+
+            <ImageButton
+                android:id="@+id/ayuda"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/inter3" />
 
             <View
                 android:layout_width="1dip"
@@ -111,7 +125,10 @@
                 android:background="#FFFFFF"
                 android:digits=" /-ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz1234567890"
                 android:ems="10"
-                android:gravity="center" />
+                android:gravity="center"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
 
             <EditText
                 android:id="@+id/idParcela"
@@ -125,7 +142,9 @@
                 android:digits=" /-ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz1234567890"
                 android:ems="10"
                 android:gravity="center"
-                android:maxLines="1" />
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
 
             <EditText
                 android:id="@+id/referencia"
@@ -138,7 +157,10 @@
                 android:background="#FFFFFF"
                 android:digits=" /-ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz1234567890"
                 android:ems="10"
-                android:gravity="center" >
+                android:gravity="center"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" >
             </EditText>
 
             <TextView

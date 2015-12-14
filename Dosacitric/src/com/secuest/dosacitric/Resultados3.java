@@ -20,6 +20,7 @@ public class Resultados3 extends ActionBarActivity {
 
 	private ParteC partec7;
 	private DecimalFormat df;
+	private DecimalFormat di;
 	private TextView AnchoDeTrabajo;
 	private TextView VelocidadDeAvance;
 	private TextView BoquillaZonaAlta;
@@ -27,10 +28,13 @@ public class Resultados3 extends ActionBarActivity {
 	private TextView BoquillaZonaBaja;
 	private TextView Presion;
 	private TextView Marca;
+	private TextView Marca2;
+	private TextView Marca3;
 	private TextView EleccionBoquillaZonaAlta;
 	private TextView EleccionBoquillaZonaMedia;
 	private TextView EleccionBoquillaZonaBaja;
 	private TextView VolumenCaldoAplicado;
+	private TextView CaudalLiqTotal;
 	public static final String PREFS_NAME = "Guarda";
 
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,9 @@ public class Resultados3 extends ActionBarActivity {
 
 		df = new DecimalFormat();
 		df.setMaximumFractionDigits(2);
+		
+		di = new DecimalFormat();
+		di.setMaximumFractionDigits(1);
 
 		Intent c6 = getIntent();
 		partec7 = (ParteC) c6.getSerializableExtra("modeloZonaBaja");
@@ -57,16 +64,16 @@ public class Resultados3 extends ActionBarActivity {
 
 		String modeloZonaAlta = db.getCaudalAunaPresionDeBoquilla(
 				partec7.MarcaSeleccionada,  resultmodeloZonaAlta, 
-				Integer.parseInt(partec7.PresionSeleccionada.replace(" bares", "")));
+				Integer.parseInt(partec7.PresionSeleccionada.replace(" bar", "")));
 
 		String modeloZonaMedia = db.getCaudalAunaPresionDeBoquilla(
 				partec7.MarcaSeleccionada,  resultmodeloZonaMedia, 
-				Integer.parseInt(partec7.PresionSeleccionada.replace(" bares", "")));
+				Integer.parseInt(partec7.PresionSeleccionada.replace(" bar", "")));
 
 		String modeloZonaBaja = db.getCaudalAunaPresionDeBoquilla(
 				partec7.MarcaSeleccionada,  resultmodeloZonaBaja, 
-				Integer.parseInt(partec7.PresionSeleccionada.replace(" bares", "")));
-
+				Integer.parseInt(partec7.PresionSeleccionada.replace(" bar", "")));		
+		
 		Float ValorZonaAlta = Float.parseFloat(modeloZonaAlta);
 		Float ValorZonaMedia = Float.parseFloat(modeloZonaMedia);
 		Float ValorZonaBaja = Float.parseFloat(modeloZonaBaja);
@@ -80,22 +87,28 @@ public class Resultados3 extends ActionBarActivity {
 		BoquillaZonaBaja = (TextView) findViewById(R.id.BoquillaZBajaTextView);
 		Presion = (TextView) findViewById(R.id.PresionTextView);
 		Marca = (TextView) findViewById(R.id.MarcaTextView);
+		Marca2 = (TextView) findViewById(R.id.MarcaTextView2);
+		Marca3 = (TextView) findViewById(R.id.MarcaTextView3);
 		EleccionBoquillaZonaAlta = (TextView) findViewById(R.id.BoquillaEleccionZAltaTextView);
 		EleccionBoquillaZonaMedia = (TextView) findViewById(R.id.BoquillaEleccionZMediaTextView);
 		EleccionBoquillaZonaBaja = (TextView) findViewById(R.id.BoquillaEleccionZBajaTextView);
 		VolumenCaldoAplicado = (TextView)findViewById(R.id.VolumenCaldoTextView);
-
+		CaudalLiqTotal = (TextView)findViewById(R.id.CaudalLiqTotalTextView);
+		
 		AnchoDeTrabajo.setText(String.valueOf(df.format(partec7.AnchoCalle)));
-		VelocidadDeAvance.setText(String.valueOf(partec7.VelocidadAvance));
+		VelocidadDeAvance.setText(String.valueOf(di.format(partec7.VelocidadAvance)));
 		BoquillaZonaAlta.setText(String.valueOf(partec7.NumeroBoquillasZona[0]));
 		BoquillaZonaMedia.setText(String.valueOf(partec7.NumeroBoquillasZona[1]));
 		BoquillaZonaBaja.setText(String.valueOf(partec7.NumeroBoquillasZona[2]));
-		Presion.setText(String.valueOf(String.valueOf(partec7.PresionSeleccionada)));;
-		Marca.setText(String.valueOf(partec7.MarcaSeleccionada));;
-		EleccionBoquillaZonaAlta.setText(String.valueOf(partec7.ModeloZonaAltaSeleccionado));;
-		EleccionBoquillaZonaMedia.setText(String.valueOf(partec7.ModeloZonaMediaSeleccionado));;
-		EleccionBoquillaZonaBaja.setText(String.valueOf(partec7.ModeloZonaBajaSeleccionado));;
-		VolumenCaldoAplicado.setText(String.valueOf(partec7.VolumenCaldoAplicado));;
+		Presion.setText(String.valueOf(String.valueOf(partec7.PresionSeleccionada)));
+		Marca.setText(String.valueOf(partec7.MarcaSeleccionada)+".");
+		Marca2.setText(String.valueOf(partec7.MarcaSeleccionada)+".");
+		Marca3.setText(String.valueOf(partec7.MarcaSeleccionada)+".");
+		EleccionBoquillaZonaAlta.setText(String.valueOf(partec7.ModeloZonaAltaSeleccionado));
+		EleccionBoquillaZonaMedia.setText(String.valueOf(partec7.ModeloZonaMediaSeleccionado));
+		EleccionBoquillaZonaBaja.setText(String.valueOf(partec7.ModeloZonaBajaSeleccionado));
+		VolumenCaldoAplicado.setText(String.valueOf(partec7.VolumenCaldoAplicado));
+		CaudalLiqTotal.setText(String.valueOf(di.format(partec7.CaudalTotal)));
 
 		Button nuevoTratamiento = (Button) findViewById(R.id.nuevoTratamiento);
 		nuevoTratamiento.setClickable(true);
@@ -121,8 +134,14 @@ public class Resultados3 extends ActionBarActivity {
 			}
 		});
 		
-		
-
+		ImageButton ayuda = (ImageButton) findViewById(R.id.ayuda);
+		ayuda.setClickable(true);
+		ayuda.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(Resultados3.this, AyudaResultados3.class));
+			}
+		});
 		
 		ImageButton printer = (ImageButton) findViewById(R.id.printer);
 		printer.setClickable(true);
@@ -166,17 +185,14 @@ public class Resultados3 extends ActionBarActivity {
 
 				//Calendar cal = Calendar.getInstance();
 				String referencia = settings.getString("referencia", "");
-				mypdf.finish_document("DosacitricD"+referencia);
+				mypdf.finish_document("DosacitricD"+referencia, getApplicationContext());
 				//mypdf.finish_document("Dosacitric_D"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
 				
 				Toast toast = Toast.makeText(getApplicationContext(), "El PDF sera guardado en DESCARGAS", Toast.LENGTH_SHORT);
 				toast.show();
 			}
 		});
-	
-	
 	}
-
 	
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {

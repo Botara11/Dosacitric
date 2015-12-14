@@ -2,7 +2,6 @@ package com.secuest.dosacitric;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -21,6 +20,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+@SuppressWarnings("deprecation")
 public class A_1_1Activity extends ActionBarActivity{
 	private int debug = 0;
 	private Spinner densidadFoliar;
@@ -105,7 +105,7 @@ public class A_1_1Activity extends ActionBarActivity{
 
 				try {
 
-					revisando = "Densidad foliar del ‡rbol";
+					revisando = "Densidad foliar del ï¿½rbol";
 					Float densidadFoliar1 = (float) 999.999;
 					int den = densidadFoliar.getSelectedItemPosition();
 					switch(den){
@@ -119,7 +119,7 @@ public class A_1_1Activity extends ActionBarActivity{
 					case 3:  Double.parseDouble("p");
 					break;
 					}
-					
+
 					revisando = "Ancho de calle";
 					reemplazado = anchocalle.getText().toString().replace(',', '.');
 					float anchocalle1 = (float) Double.parseDouble(reemplazado);
@@ -224,7 +224,7 @@ public class A_1_1Activity extends ActionBarActivity{
 		ayuda.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(A_1_1Activity.this, Ayuda.class));
+				startActivity(new Intent(A_1_1Activity.this, AyudaA_1_1Activity.class));
 			}
 		});
 
@@ -355,6 +355,6 @@ public class A_1_1Activity extends ActionBarActivity{
 			return super.onOptionsItemSelected(item);
 		}
 	}
-	
+
 
 }

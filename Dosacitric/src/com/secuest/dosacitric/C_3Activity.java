@@ -25,7 +25,7 @@ public class C_3Activity extends ListActivity{
 		setContentView(R.layout.catalogoslistview_layout);
 
 		String[] marcas = { "Teejet", "Albuz", "Hardi", "Discos",
-		"Otras" };
+		"Otras","Mis boquillas" };
 		marcas2=marcas;
 		
 		ArrayList<Lista_entrada> datos = new ArrayList<Lista_entrada>();  

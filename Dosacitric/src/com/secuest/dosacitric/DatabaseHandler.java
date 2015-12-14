@@ -21,6 +21,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 	// Login table name
 	private static final String TABLE_BOQUI = "login";
+	private static final String TABLE_MIS_BOQUI = "misboquillas";
 
 	// Login Table Columns names
 	private static final String KEY_ID = "id";
@@ -56,7 +57,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				+ KEY_P10 + " DOUBLE," + KEY_P11 + " DOUBLE," + KEY_P12
 				+ " DOUBLE," + KEY_P13 + " DOUBLE," + KEY_P14 + " DOUBLE,"
 				+ KEY_P15 + " DOUBLE," + KEY_P16 + " DOUBLE, " + ACTIVE + " INTEGER" + ")";
+		String CREATE_MIS_BOQUI_TABLE = "CREATE TABLE " + TABLE_MIS_BOQUI + "("
+				+ KEY_ID + " INTEGER PRIMARY KEY," + KEY_MARCA + " TEXT,"
+				+ KEY_MODELO + " TEXT," + KEY_DIAMETRO + " DOUBLE,"
+				+ KEY_CAUDAL + " DOUBLE," + KEY_P6 + " DOUBLE," + KEY_P7
+				+ " DOUBLE," + KEY_P8 + " DOUBLE," + KEY_P9 + " DOUBLE,"
+				+ KEY_P10 + " DOUBLE," + KEY_P11 + " DOUBLE," + KEY_P12
+				+ " DOUBLE," + KEY_P13 + " DOUBLE," + KEY_P14 + " DOUBLE,"
+				+ KEY_P15 + " DOUBLE," + KEY_P16 + " DOUBLE, " + ACTIVE + " INTEGER" + ")";
+		
 		db.execSQL(CREATE_LOGIN_TABLE);
+		db.execSQL(CREATE_MIS_BOQUI_TABLE);
 		Log.d("", "CREADA BD");
 	}
 
@@ -102,6 +113,44 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		db.insert(TABLE_BOQUI, null, values);
 		db.close(); // Closing database connection
 	}
+	
+	public void deleteFromMisBoqui(String modelo){
+		SQLiteDatabase db = this.getWritableDatabase();
+		//String str = "DELETE FROM "+TABLE_BOQUI+" WHERE "+
+		db.delete(TABLE_BOQUI, KEY_MARCA + "=" + "'MIS BOQUILLAS'" + " and " + KEY_MODELO +"='" + modelo+"' ", null);
+		db.delete(TABLE_BOQUI, KEY_MARCA + "=" + "'MIS BOQUILLAS'" + " and " + KEY_MODELO +"='" + modelo+"' ", null);
+		
+	}
+	
+	public void addBoquillaMisBoqui(String modelo, Double diametro,
+			Double caudal, Double p6, Double p7, Double p8, Double p9,
+			Double p10, Double p11, Double p12, Double p13, Double p14,
+			Double p15, Double p16, int active) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		String marca = "MIS BOQUILLAS";
+		ContentValues values = new ContentValues();
+		values.put(KEY_MARCA, marca); //1
+		values.put(KEY_MODELO, modelo);//2
+		values.put(KEY_DIAMETRO, diametro); //3
+		values.put(KEY_CAUDAL, caudal);//4
+		values.put(KEY_P6, p6); //5
+		values.put(KEY_P7, p7);
+		values.put(KEY_P8, p8);
+		values.put(KEY_P9, p9);
+		values.put(KEY_P10, p10);
+		values.put(KEY_P11, p11);
+		values.put(KEY_P12, p12);
+		values.put(KEY_P13, p13);
+		values.put(KEY_P14, p14);
+		values.put(KEY_P15, p15);
+		values.put(KEY_P16, p16);
+		values.put(ACTIVE, active);
+
+		// Inserting Row
+		db.insert(TABLE_BOQUI, null, values);
+		db.insert(TABLE_MIS_BOQUI, null, values);
+		db.close(); // Closing database connection
+	}
 
 	//Conseguir el caudal de una boquilla a una determinada presion
 	public String getCaudalAunaPresionDeBoquilla(String marca, String modelo, int presion) {
@@ -120,6 +169,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			Boquillas = (cursor.getString(presion-1));
 			//System.out.println("anadido "+cursor.getString(2) + " " + cursor.getString(3));
 		}
+		
 		return Boquillas;
 	}
 
@@ -129,7 +179,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 		String selectQuery = "SELECT * FROM " + TABLE_BOQUI + " WHERE "
 				+ KEY_MARCA + "=='" + marca + "'";
-
+		System.out.println(selectQuery);
 		SQLiteDatabase db = this.getReadableDatabase();
 		Cursor cursor = db.rawQuery(selectQuery, null);
 		// Move to first row
@@ -145,10 +195,48 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			}
 			System.out.println(modelo.size());
 		}
+		
 		return modelo;
 	}
 
+	public void mostrarTodo(String marca) {
+		ArrayList<String> modelo = new ArrayList<String>();
 
+		String selectQuery = "SELECT * FROM " + TABLE_BOQUI + " WHERE "
+				+ KEY_MARCA + "=='" + marca + "'";
+		System.out.println(selectQuery);
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.rawQuery(selectQuery, null);
+		// Move to first row
+		cursor.moveToFirst();
+		System.out.println("Hay " + cursor.getCount() + " filas");
+		if (cursor.getCount() != 0) {
+			//modelo.add(cursor.getString(2)); // GET MODELO
+			System.out.println("anadido "+cursor.getString(1)+ " " +
+					cursor.getString(2) + " " + 
+					cursor.getString(3)+ " " +
+					cursor.getString(4)+ " " +
+					cursor.getString(5)+ " " +
+					cursor.getString(6)+ " " +
+					cursor.getString(7)+ " " +
+					cursor.getString(8));
+
+			while (cursor.moveToNext()) {
+				modelo.add(cursor.getString(2)); // REVISAR SI SE PASA
+				System.out.println("anadido "+cursor.getString(1)+ " " +
+						cursor.getString(2) + " " + 
+						cursor.getString(3)+ " " +
+						cursor.getString(4)+ " " +
+						cursor.getString(5)+ " " +
+						cursor.getString(6)+ " " +
+						cursor.getString(7)+ " " +
+						cursor.getString(8));			
+				}
+			System.out.println(modelo.size());
+		}
+		
+		//return modelo;
+	}
 
 	/**
 	 * Getting user data from database
@@ -229,7 +317,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	public void resetTables() {
 		SQLiteDatabase db = this.getWritableDatabase();
 		// Delete All Rows
-		db.delete(TABLE_BOQUI, null, null);
+		db.delete(TABLE_BOQUI, KEY_MARCA + "<>" + "'MIS BOQUILLAS'", null);
+		//db.delete(TABLE_BOQUI, null, null);
 		db.close();
 	}
 	/*

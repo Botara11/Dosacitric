@@ -10,7 +10,6 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -21,6 +20,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+@SuppressWarnings("deprecation")
 public class C_1Activity extends ActionBarActivity implements
 CompoundButton.OnCheckedChangeListener{
 
@@ -104,7 +104,7 @@ CompoundButton.OnCheckedChangeListener{
 		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 		String ancho = settings.getString("anchocalle","");
 		anchoTrabajoCalculado.setText(ancho);
-		
+
 
 		SwitchAnchoTrabajoCalculado.setOnClickListener(new View.OnClickListener() {
 
@@ -147,12 +147,12 @@ CompoundButton.OnCheckedChangeListener{
 		velocidadAvanceCalculada = (TextView) findViewById(R.id.velocidadAvance);
 		velocidadAvanceDeseada = (EditText) findViewById(R.id.editText1);
 		SwitchVelocidadAvanceCalculada = (Switch) findViewById(R.id.switchVelocidadAvanceCalculada);
-		
+
 		settings = getSharedPreferences(PREFS_NAME, 0);
 		String velocidadAvance = settings.getString("velocidadAvance","");
 		velocidadAvanceCalculada.setText(velocidadAvance);
-		
-		
+
+
 		SwitchVelocidadAvanceCalculada.setOnCheckedChangeListener(this);
 		SwitchVelocidadAvanceCalculada.setOnClickListener(new View.OnClickListener() {
 
@@ -251,7 +251,7 @@ CompoundButton.OnCheckedChangeListener{
 		ayuda.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(C_1Activity.this, AyudaTipoTratamiento.class));
+				startActivity(new Intent(C_1Activity.this, AyudaC_1Activity.class));
 			}
 		});
 
@@ -259,7 +259,7 @@ CompoundButton.OnCheckedChangeListener{
 
 	}
 
-	
+
 
 	@Override
 	protected void onResume(){
@@ -275,7 +275,7 @@ CompoundButton.OnCheckedChangeListener{
 		//System.out.println("Leer: ancho="+settings.getString("anchocalle", "")+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
 
 	}
-	
+
 	@Override
 	protected void onPause(){
 		super.onPause(); 
@@ -309,50 +309,6 @@ CompoundButton.OnCheckedChangeListener{
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.main, menu);
 		return super.onCreateOptionsMenu(menu);
-	}
-
-
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		/*int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);*/
-		switch (item.getItemId()) {
-		case R.id.action_settings:
-			System.out.println("AJUSTES");
-			return true;
-
-
-		case android.R.id.home:
-			// app icon in action bar clicked; goto parent activity.
-			this.finish();
-			return true;
-
-
-		default:
-			return super.onOptionsItemSelected(item);
-		}
-
-	}
-
-	public Boolean onMenuItemClick(MenuItem item) {
-		switch (item.getItemId()) {
-
-		case R.id.action_settings:	
-			Intent ajusteBoquillas = new Intent(C_1Activity.this, AjusteBoquillas.class);
-			startActivity(ajusteBoquillas);
-			return true;
-
-		default:
-			return super.onContextItemSelected(item);
-
-		}
 	}
 
 	@Override

@@ -25,9 +25,9 @@ public class C_2Activity extends ListActivity {
 		//setContentView(R.layout.c_2);  
 		setContentView(R.layout.catalogoslistview_layout);
 		
-		String[] presiones = { "6 bares", "7 bares", "8 bares", "9 bares",
-				"10 bares", "11 bares", "12 bares", "13 bares", "14 bares",
-				"15 bares", "16 bares" };
+		String[] presiones = { "6 bar", "7 bar", "8 bar", "9 bar",
+				"10 bar", "11 bar", "12 bar", "13 bar", "14 bar",
+				"15 bar", "16 bar" };
 		presiones2 = presiones;
 
 		ArrayList<Lista_entrada> datos = new ArrayList<Lista_entrada>();  

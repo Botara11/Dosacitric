@@ -8,9 +8,10 @@ import com.secuest.dosacitric.apw.PaperSize;
 import com.secuest.dosacitric.apw.StandardFonts;
 import com.secuest.dosacitric.apw.Transformation;
 
+import android.app.DownloadManager;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Environment;
+
 
 public class pdfCreator {
 
@@ -22,7 +23,7 @@ public class pdfCreator {
 		mPDFWriter = new PDFWriter(PaperSize.FOLIO_WIDTH, PaperSize.FOLIO_HEIGHT);
 		mPDFWriter.setFont(StandardFonts.SUBTYPE, StandardFonts.TIMES_ROMAN, StandardFonts.WIN_ANSI_ENCODING);
 		mPDFWriter.addRawContent("0.7 0.7 0.7 rg\n");
-		mPDFWriter.addText(30, 90, 10, "® Dosacitric", Transformation.DEGREES_270_ROTATION);
+		mPDFWriter.addText(30, 90, 10, "® dosacitric", Transformation.DEGREES_270_ROTATION);
 		mPDFWriter.addRawContent("1 0 0 rg\n");
 		mPDFWriter.addText(30, 880, 38, "DOSACITRIC");
 		mPDFWriter.addRawContent("0 0 0 rg\n");
@@ -79,19 +80,8 @@ public class pdfCreator {
 
 		mPDFWriter.addLine(40,line_pointer-40-40-40*2, 410+160,line_pointer-40-40-40*2);
 		mPDFWriter.addLine(40,line_pointer-40-40-40*3, 410+160,line_pointer-40-40-40*3);
-		
-		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-		
 		Calendar cal = Calendar.getInstance();
-		String referencia = settings.getString("referencia", "");
-		
-		finish_document("Dosacitric_C"+"referencia");
-		//finish_document("Dosacitric_C"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
-	}
-
-	private SharedPreferences getSharedPreferences(String string, int modePrivate) {
-		// TODO Auto-generated method stub
-		return null;
+		//finish_document("Dosacitric_C"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR),cxt);
 	}
 
 	public void readFile(String filename){
@@ -115,10 +105,9 @@ public class pdfCreator {
 		}
 	}
 
-
 	public void create() {
 		String pdfcontent = generateHelloWorldPDF();
-		outputToFile("helloworld.pdf",pdfcontent,"ISO-8859-1");
+		//outputToFile("helloworld.pdf",pdfcontent,"ISO-8859-1");
 	}
 
 	private void incrementLinePointer(){
@@ -127,7 +116,7 @@ public class pdfCreator {
 			mPDFWriter.newPage();
 			mPDFWriter.setFont(StandardFonts.SUBTYPE, StandardFonts.TIMES_ROMAN, StandardFonts.WIN_ANSI_ENCODING);
 			mPDFWriter.addRawContent("190 190 190 rg\n");
-			mPDFWriter.addText(30, 90, 10, "® Dosacitric", Transformation.DEGREES_270_ROTATION);
+			mPDFWriter.addText(30, 90, 10, "® dosacitric", Transformation.DEGREES_270_ROTATION);
 			line_pointer = 842;
 			mPDFWriter.addRawContent("0 0 0 rg\n");
 		} else {
@@ -141,7 +130,7 @@ public class pdfCreator {
 		incrementLinePointer();
 	}
 
-	public void finish_document(String filename){
+	public void finish_document(String filename, Context cxt){
 		int pageCount = mPDFWriter.getPageCount();
 		for (int i = 0; i < pageCount; i++) {
 			mPDFWriter.setCurrentPage(i);
@@ -149,9 +138,8 @@ public class pdfCreator {
 		}
 
 		String s = mPDFWriter.asString();
-		outputToFile(filename,s,"ISO-8859-1");
+		outputToFile(filename,s,"ISO-8859-1",cxt);
 	}
-
 
 	public String generateHelloWorldPDF() {
 		mPDFWriter = new PDFWriter(PaperSize.FOLIO_WIDTH, PaperSize.FOLIO_HEIGHT);
@@ -166,7 +154,7 @@ public class pdfCreator {
 		mPDFWriter.addTextAsHex(70, 50, 12, "68656c6c6f20776f726c6420286173206865782921");
 		mPDFWriter.setFont(StandardFonts.SUBTYPE, StandardFonts.COURIER, StandardFonts.WIN_ANSI_ENCODING);
 		mPDFWriter.addRawContent("0 0 0 rg\n");
-		mPDFWriter.addText(30, 90, 10, "® Dosacitric", Transformation.DEGREES_270_ROTATION);
+		mPDFWriter.addText(30, 90, 10, "® dosacitric", Transformation.DEGREES_270_ROTATION);
 
 		mPDFWriter.newPage();
 		mPDFWriter.addRawContent("[] 0 d\n");
@@ -176,14 +164,14 @@ public class pdfCreator {
 		mPDFWriter.addRectangle(40, 50, 280, 50);
 		mPDFWriter.addText(85, 75, 18, "Code Research Laboratories");
 		mPDFWriter.addRawContent("0 0 0 rg\n");
-		mPDFWriter.addText(30, 90, 10, "® Dosacitric", Transformation.DEGREES_270_ROTATION);
+		mPDFWriter.addText(30, 90, 10, "®dosacitric", Transformation.DEGREES_270_ROTATION);
 
 		mPDFWriter.newPage();
 		mPDFWriter.setFont(StandardFonts.SUBTYPE, StandardFonts.COURIER_BOLD);
 		mPDFWriter.addText(150, 150, 14, "http://coderesearchlabs.com");
 		mPDFWriter.addLine(150, 140, 270, 140);
 		mPDFWriter.addRawContent("0 0 0 rg\n");
-		mPDFWriter.addText(30, 90, 10, "® Dosacitric", Transformation.DEGREES_270_ROTATION);
+		mPDFWriter.addText(30, 90, 10, "®dosacitric", Transformation.DEGREES_270_ROTATION);
 
 		int pageCount = mPDFWriter.getPageCount();
 		for (int i = 0; i < pageCount; i++) {
@@ -195,35 +183,28 @@ public class pdfCreator {
 		return s;
 	}
 
-
-	public void outputToFile(String fileName, String pdfContent, String encoding) {
-
+	public void outputToFile(String fileName, String pdfContent, String encoding,Context cnt) {
+		String folder = "";
 		try {
 
 			File newFolder = new File(Environment.getExternalStorageDirectory(), "Descargas");
+			folder="Descargas";
 			if (!newFolder.exists()) {
 				newFolder = new File(Environment.getExternalStorageDirectory(), "Download");
+				folder="Download";
+				if (!newFolder.exists()) 
+					newFolder.mkdir();
 			}
-			else 
-				newFolder.mkdir();
+
 			File file = new File(newFolder, fileName+".pdf");
 
-			/*File newFolder;
-			newFolder = new File(Environment.getExternalStorageDirectory(), ".xaBIOS");
-			if (!newFolder.exists()) {
-				newFolder = new File(Environment.getExternalStorageDirectory(), ".xaBIOS");
-				if (!newFolder.exists()) {
-					newFolder.mkdir();
-				}
-			}*/
-
-
 			file.createNewFile();
+			//Context nuev = null;
+			DownloadManager ola = (DownloadManager) cnt.getSystemService(Context.DOWNLOAD_SERVICE);
+			ola.addCompletedDownload(fileName+".pdf", "Datos cultivo", true, "application/pdf", Environment.getExternalStorageDirectory()+"/"+folder+"/"+fileName+".pdf", (long) 1029.0, true);
 
 			FileOutputStream fOut = new FileOutputStream(file);
-			//OutputStreamWriter myOutWriter = new OutputStreamWriter(fOut);
 			fOut.write(pdfContent.getBytes(encoding));
-			//myOutWriter.close();
 			fOut.close();
 		} catch (Exception ex) {
 			System.out.println("exeption: " + ex);
@@ -242,7 +223,5 @@ public class pdfCreator {
 		str=str.replace("&Uacute;","Ú");
 		return str;
 	}
-
-
 
 } 

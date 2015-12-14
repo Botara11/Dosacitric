@@ -1,5 +1,7 @@
 package com.secuest.dosacitric;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -7,71 +9,117 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
+@SuppressWarnings("deprecation")
 public class IngresarBoquillas extends ActionBarActivity {
+
+	private EditText ireferencia;
+	private EditText caudal;
+	private EditText presion;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.ajuste_boquillas);
+		setContentView(R.layout.ingresar_boquillas);
 
 		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 
+		Context guarda = getApplicationContext();
+		SharedPreferences pref = guarda.getSharedPreferences("Guarda", Context.MODE_PRIVATE);		
 
+		ireferencia = (EditText) findViewById(R.id.editText2);
+		caudal = (EditText) findViewById(R.id.editText4);
+		presion = (EditText) findViewById(R.id.editText3);
 
-		Button siguiente = (Button) findViewById(R.id.siguiente);
+		Button siguiente = (Button) findViewById(R.id.botonIngresar);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				
-				String revisando = "";
-				String reemplazado = "";
 
+				String reemplazado = "";
+				String quien = "";
 				try{
+					quien="Caudal";
+					reemplazado = caudal.getText().toString().replace(',', '.');
+					Double dob_caudal = Double.parseDouble(reemplazado);
+					quien="Presion";
+					reemplazado = presion.getText().toString().replace(',', '.');
+					Double dob_presion = Double.parseDouble(reemplazado);
+
+					DatabaseHandler db = new DatabaseHandler(getApplicationContext());
+
+					double k = dob_caudal/java.lang.Math.pow(dob_presion,0.5);
+					db.addBoquillaMisBoqui(ireferencia.getText().toString(),0.0,(double)dob_caudal,
+							k*java.lang.Math.pow(6.0,0.5),
+							k*java.lang.Math.pow(7.0,0.5),
+							k*java.lang.Math.pow(8.0,0.5),
+							k*java.lang.Math.pow(9.0,0.5),
+							k*java.lang.Math.pow(10.0,0.5),
+							k*java.lang.Math.pow(11.0,0.5),
+							k*java.lang.Math.pow(12.0,0.5),
+							k*java.lang.Math.pow(13.0,0.5),
+							k*java.lang.Math.pow(14.0,0.5),
+							k*java.lang.Math.pow(15.0,0.5),
+							k*java.lang.Math.pow(16.0,0.5),
+							1);
+
+					//db.mostrarTodo("MIS BOQUILLAS");
+					Toast toast = Toast.makeText(getApplicationContext(), "Boquilla ingresada correctamente", Toast.LENGTH_SHORT);
+					toast.show();
+					finish();
 
 				} catch (Exception e) {
 					e.printStackTrace();
-					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+revisando+'"'+" incorrecto", Toast.LENGTH_SHORT);
+					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+quien+'"'+" incorrecto", Toast.LENGTH_SHORT);
 					toast.show();
 				}
-
 			}
-
 		});
 	}
+
+	@Override
+	protected void onResume(){
+		super.onResume();
+
+	}
+
+	@Override
+	protected void onPause(){
+		super.onPause(); 
+
+		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+		SharedPreferences.Editor editor = settings.edit();
+
+		editor.putString("referencia", ireferencia.getText().toString());
+		editor.putString("caudal", caudal.getText().toString());
+		editor.putString("presion", presion.getText().toString());
+		editor.commit();
+
+	}
+
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		return super.onPrepareOptionsMenu(menu);
 	}
 
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		/*int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);*/
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// app icon in action bar clicked; goto parent activity.
 			this.finish();
 			return true;
 		default:
-			return super.onOptionsItemSelected(item);
+			return onOptionsItemSelected(item);
 		}
 	}
 
