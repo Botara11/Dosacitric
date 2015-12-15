@@ -3,7 +3,7 @@ package com.secuest.dosacitric;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,8 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-@SuppressWarnings("deprecation")
-public class IngresarBoquillas extends ActionBarActivity {
+public class IngresarBoquillas extends AppCompatActivity {
 
 	private EditText ireferencia;
 	private EditText caudal;
@@ -24,11 +23,11 @@ public class IngresarBoquillas extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ingresar_boquillas);
 
-		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
-
-		Context guarda = getApplicationContext();
-		SharedPreferences pref = guarda.getSharedPreferences("Guarda", Context.MODE_PRIVATE);		
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 		ireferencia = (EditText) findViewById(R.id.editText2);
 		caudal = (EditText) findViewById(R.id.editText4);

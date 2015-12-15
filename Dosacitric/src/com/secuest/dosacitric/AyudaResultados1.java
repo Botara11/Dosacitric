@@ -1,14 +1,13 @@
 package com.secuest.dosacitric;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-@SuppressWarnings("deprecation")
-public class AyudaResultados1 extends ActionBarActivity{
+public class AyudaResultados1 extends AppCompatActivity{
 
 	private TextView cuerpo1;
 	private TextView cuerpo2;
@@ -18,13 +17,16 @@ public class AyudaResultados1 extends ActionBarActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ayuda_resultados1);
 
-		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 		cuerpo1 = (TextView) findViewById(R.id.cuerpo1);
 		cuerpo2 = (TextView) findViewById(R.id.cuerpo2);
 
-		String stringCuerpo1 = "Aquí se mostrará un resumen de la información introducida en el puntos 0, 1, 2 y 3, y se indicará el <font color=#E65F00> volumen de aplición </font> recomendado en esas condiciones de trabajo.";
+		String stringCuerpo1 = "Aquí se mostrará un resumen de la información introducida en el puntos 0, 1, 2 y 3, y se indicará el <font color=#ff6600> volumen de aplición </font> recomendado en esas condiciones de trabajo.";
 		String stringCuerpo2 = "Al presionar sobre este icono se guardan los datos de “RESUMEN Y RESULTADOS I” en la aplicación “Descargas” del propio dispositivo utilizado (Tablet o Smartphone).";
 
 		cuerpo1.setText(Html.fromHtml(stringCuerpo1));

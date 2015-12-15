@@ -1,13 +1,10 @@
-
-    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/text1"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:gravity="left|center"
-        android:text="Hola"
-        android:textColor="#000000"
-        android:textSize="20sp" 
-        android:background="#FFFFFF"
-        android:paddingLeft="7sp"/>
-    
- 
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/text1"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="#FFFFFF"
+    android:gravity="left|center"
+    android:paddingLeft="7sp"
+    android:text="Hola"
+    android:textColor="#000000"
+    android:textSize="20sp" />

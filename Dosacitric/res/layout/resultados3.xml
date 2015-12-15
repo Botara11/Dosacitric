@@ -27,26 +27,26 @@
                 android:gravity="center"
                 android:padding="10dip"
                 android:text="INDICE"
-                android:textColor="#E65F00" />
+                android:textColor="#ff6600" />
 
             <View
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
-                android:background="#E65F00" />
+                android:background="#ff6600" />
 
             <ImageButton
                 android:id="@+id/ayuda"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:background="@drawable/inter3" />
+                android:background="@drawable/ayuda" />
 
             <View
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
-                android:background="#E65F00" />
+                android:background="#ff6600" />
 
             <ImageButton
                 android:id="@+id/printer"
@@ -59,7 +59,7 @@
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
-                android:background="#E65F00" />
+                android:background="#ff6600" />
 
             <Button
                 android:id="@+id/nuevoTratamiento"
@@ -69,7 +69,7 @@
                 android:gravity="center"
                 android:padding="0dip"
                 android:text="NUEVO TRATAMIENTO"
-                android:textColor="#E65F00" />
+                android:textColor="#ff6600" />
         </TableRow>
     </TableLayout>
 
@@ -87,10 +87,11 @@
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="16dp"
                 android:background="#ff6600"
+                android:padding="10dp"
                 android:text="D. VOLUMEN DE CALDO APLICADO"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
@@ -353,7 +354,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView3"
-                android:layout_marginBottom="32dp"
+                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="Volumen de caldo aplicado (V):"
@@ -406,28 +407,6 @@
                 android:textSize="17sp" />
 
             <TextView
-                android:id="@+id/MarcaTextView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/BoquillaEleccionZMediaTextView"
-                android:layout_alignBottom="@+id/BoquillaEleccionZMediaTextView"
-                android:layout_alignLeft="@+id/MarcaTextView"
-                android:text="TextView"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <TextView
-                android:id="@+id/MarcaTextView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/BoquillaEleccionZBajaTextView"
-                android:layout_alignBottom="@+id/BoquillaEleccionZBajaTextView"
-                android:layout_alignLeft="@+id/MarcaTextView2"
-                android:text="TextView"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -459,6 +438,27 @@
                 android:text="TextView"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/MarcaTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/BoquillaEleccionZMediaTextView"
+                android:layout_toLeftOf="@+id/BoquillaEleccionZMediaTextView"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/MarcaTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/BoquillaEleccionZBajaTextView"
+                android:layout_toLeftOf="@+id/BoquillaEleccionZBajaTextView"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
         </RelativeLayout>
     </ScrollView>
 

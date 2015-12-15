@@ -63,7 +63,7 @@
                 android:gravity="center"
                 android:padding="10dip"
                 android:text="Ingresar"
-                android:textColor="#E65F00" />
+                android:textColor="#ff6600" />
         </TableRow>
     </TableLayout>
 

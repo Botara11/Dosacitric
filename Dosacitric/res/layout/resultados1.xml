@@ -26,26 +26,26 @@
                 android:background="#FFFFFF"
                 android:padding="10dip"
                 android:text="INDICE"
-                android:textColor="#E65F00" />
+                android:textColor="#ff6600" />
 
             <View
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
-                android:background="#E65F00" />
+                android:background="#ff6600" />
 
             <ImageButton
                 android:id="@+id/ayuda"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:background="@drawable/inter3" />
+                android:background="@drawable/ayuda" />
 
             <View
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
-                android:background="#E65F00" />
+                android:background="#ff6600" />
 
             <ImageButton
                 android:id="@+id/printer"
@@ -58,7 +58,7 @@
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
-                android:background="#E65F00" />
+                android:background="#ff6600" />
 
             <Button
                 android:id="@+id/siguiente"
@@ -68,7 +68,7 @@
                 android:gravity="center"
                 android:padding="10dip"
                 android:text="SIGUIENTE"
-                android:textColor="#E65F00" />
+                android:textColor="#ff6600" />
         </TableRow>
     </TableLayout>
 
@@ -171,11 +171,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_below="@+id/textView8"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#ff6600"
+                android:paddingLeft="10dp"
                 android:text="B.2. TIPO DE TRATAMIENTO"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
@@ -233,11 +233,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_below="@+id/textView13"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#ff6600"
+                android:paddingLeft="10dp"
                 android:text="B.3. CONDICIONES METEOROLÓGICAS"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
@@ -283,11 +285,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_below="@+id/textView17"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#ff6600"
+                android:paddingLeft="10dp"
                 android:text="B.4. EQUIPO EMPLEADO"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
@@ -309,11 +313,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_below="@+id/textView19"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#ff6600"
+                android:paddingLeft="10dp"
                 android:text="B.5. VOLUMEN DE APLICACIÓN"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
@@ -324,7 +330,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/textView20"
-                android:layout_marginBottom="32dp"
+                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
@@ -469,7 +475,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/textView21"
-                android:layout_marginBottom="32dp"
                 android:layout_toLeftOf="@+id/textView21"
                 android:text="TextView"
                 android:textColor="@color/white"
@@ -558,11 +563,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
                 android:background="#ff6600"
+                android:paddingLeft="10dp"
                 android:text="B.0. IDENTIFICACIÓN DEL TRATAMIENTO"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
@@ -616,10 +621,12 @@
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/TextView06"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_below="@+id/TextView06"
                 android:layout_marginTop="16dp"
                 android:background="#ff6600"
+                android:paddingLeft="10dp"
                 android:text="B.1. CARACTERÍSTICAS DEL CULTIVO"
                 android:textColor="@color/white"
                 android:textSize="17sp" />

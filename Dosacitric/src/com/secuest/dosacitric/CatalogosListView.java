@@ -12,10 +12,8 @@ import android.widget.TextView;
 public class CatalogosListView extends ListActivity{
 
 	private com.secuest.dosacitric.Lista_adaptador mAdapter;
+	@SuppressWarnings("unused")
 	private ArrayList<String> mItems;
-	private int mTotal;
-	private int mPosition;
-	private ArrayList<String> marcasAdecu ;
 	private float[] inter;
 
 	ListView listView ;

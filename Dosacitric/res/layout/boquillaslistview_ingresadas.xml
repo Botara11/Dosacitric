@@ -14,7 +14,7 @@
         android:gravity="center"
         android:padding="10dip"
         android:text="SALIR"
-        android:textColor="#E65F00" />
+        android:textColor="#ff6600" />
 
     <RelativeLayout
         android:layout_width="match_parent"

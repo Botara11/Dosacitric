@@ -2,16 +2,17 @@ package com.secuest.dosacitric;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,8 +21,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-@SuppressWarnings("deprecation")
-public class A_1_1Activity extends ActionBarActivity{
+public class A_1_1Activity extends AppCompatActivity{
+	
 	private int debug = 0;
 	private Spinner densidadFoliar;
 	private EditText anchocalle;
@@ -38,8 +39,11 @@ public class A_1_1Activity extends ActionBarActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.a_1_1);
 
-		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 		densidadFoliar = (Spinner) findViewById(R.id.densidadFoliar);
 		anchocalle = (EditText) findViewById(R.id.anchocalle);

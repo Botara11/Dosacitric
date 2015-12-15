@@ -3,7 +3,7 @@ package com.secuest.dosacitric;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,8 +11,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TableRow;
 
-@SuppressWarnings("deprecation")
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 	int debug = 0;
 	String pagina;
 	private ProgressBar barra;
@@ -22,6 +21,10 @@ public class MainActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.portada);
+		
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 		final DatabaseHandler db = new DatabaseHandler(this);
 		/*System.out.println("GEEEETTTT COUNT DB ="+db.getRowCount());
@@ -186,7 +189,7 @@ public class MainActivity extends ActionBarActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
+		//getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 

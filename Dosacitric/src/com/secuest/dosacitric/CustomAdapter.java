@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+@SuppressWarnings("rawtypes")
 public class CustomAdapter extends ArrayAdapter {
     public static final int TYPE_ODD = 0;
     public static final int TYPE_EVEN = 1;
@@ -22,7 +23,8 @@ public class CustomAdapter extends ArrayAdapter {
     public int getItemViewType(int position) {
         return objects[position].getType();
     }
-    public CustomAdapter(Context context, int resource, ListViewItem[] objects) {
+    @SuppressWarnings("unchecked")
+	public CustomAdapter(Context context, int resource, ListViewItem[] objects) {
         super(context, resource, objects);
         this.objects = objects;
     }

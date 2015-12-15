@@ -27,7 +27,7 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/inter3" />
+                android:background="@drawable/ayuda" />
 
             <View
                 android:layout_width="1dip"

@@ -26,26 +26,26 @@
                 android:background="#FFFFFF"
                 android:padding="10dip"
                 android:text="INDICE"
-                android:textColor="#E65F00" />
+                android:textColor="#ff6600" />
 
             <View
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
-                android:background="#E65F00" />
+                android:background="#ff6600" />
 
             <ImageButton
                 android:id="@+id/ayuda"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:background="@drawable/inter3" />
+                android:background="@drawable/ayuda" />
 
             <View
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
-                android:background="#E65F00" />
+                android:background="#ff6600" />
 
             <Button
                 android:id="@+id/siguiente"
@@ -55,7 +55,7 @@
                 android:gravity="center"
                 android:padding="10dip"
                 android:text="SIGUIENTE"
-                android:textColor="#E65F00" />
+                android:textColor="#ff6600" />
         </TableRow>
     </TableLayout>
 

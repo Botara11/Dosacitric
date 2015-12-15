@@ -8,16 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 public class BoquillasListView extends ListActivity{
 
-	private com.secuest.dosacitric.Lista_adaptador mAdapter;
-	private ArrayList<String> mItems;
-	private int mTotal;
-	private int mPosition;
+	
 	private String marca;
 	private float[] inter;
 	private String presion;

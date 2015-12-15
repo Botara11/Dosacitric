@@ -2,15 +2,15 @@ package com.secuest.dosacitric;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.util.Calendar;
-import com.secuest.dosacitric.apw.PDFWriter;
-import com.secuest.dosacitric.apw.PaperSize;
-import com.secuest.dosacitric.apw.StandardFonts;
-import com.secuest.dosacitric.apw.Transformation;
 
 import android.app.DownloadManager;
 import android.content.Context;
 import android.os.Environment;
+
+import com.secuest.dosacitric.apw.PDFWriter;
+import com.secuest.dosacitric.apw.PaperSize;
+import com.secuest.dosacitric.apw.StandardFonts;
+import com.secuest.dosacitric.apw.Transformation;
 
 
 public class pdfCreator {
@@ -80,7 +80,6 @@ public class pdfCreator {
 
 		mPDFWriter.addLine(40,line_pointer-40-40-40*2, 410+160,line_pointer-40-40-40*2);
 		mPDFWriter.addLine(40,line_pointer-40-40-40*3, 410+160,line_pointer-40-40-40*3);
-		Calendar cal = Calendar.getInstance();
 		//finish_document("Dosacitric_C"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR),cxt);
 	}
 
@@ -106,7 +105,7 @@ public class pdfCreator {
 	}
 
 	public void create() {
-		String pdfcontent = generateHelloWorldPDF();
+		//String pdfcontent = generateHelloWorldPDF();
 		//outputToFile("helloworld.pdf",pdfcontent,"ISO-8859-1");
 	}
 

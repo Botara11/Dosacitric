@@ -1,14 +1,14 @@
 package com.secuest.dosacitric;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-@SuppressWarnings("deprecation")
-public class AyudaResultados3 extends ActionBarActivity{
+
+public class AyudaResultados3 extends AppCompatActivity{
 
 	private TextView cuerpo1;
 	private TextView cuerpo2;
@@ -34,8 +34,11 @@ public class AyudaResultados3 extends ActionBarActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ayuda_resultados3);
 		
-		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 		cuerpo1 = (TextView) findViewById(R.id.cuerpo1);
 		cuerpo2 = (TextView) findViewById(R.id.cuerpo2);
@@ -56,12 +59,12 @@ public class AyudaResultados3 extends ActionBarActivity{
 		cuerpo18 = (TextView) findViewById(R.id.cuerpo18);
 		cuerpo19 = (TextView) findViewById(R.id.cuerpo19);
 		
-		String stringCuerpo1 = "Este valor se corresponde con el valor introducido en <font color=#E65F00> DOSACITRIC </font> y representa el ancho de la calle a tratar en metros."; 
-		String stringCuerpo2 = "Este valor se corresponde con el valor introducido en <font color=#E65F00> DOSACITRIC </font> y representa la velocidad de avance del equipo en km/h.";
+		String stringCuerpo1 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa el ancho de la calle a tratar en metros."; 
+		String stringCuerpo2 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa la velocidad de avance del equipo en km/h.";
 		String stringCuerpo3 = "- Zona Alta (nA): Representa el número boquillas que van trabajar en la zona alta del equipo.";
 		String stringCuerpo4 = "- Zona Media (nM): Representa el número boquillas que van a trabajar en la zona media del equipo.";
 		String stringCuerpo5 = "- Zona Baja (nB): Representa el número boquillas que van a trabajar en la zona baja del equipo.";
-		String stringCuerpo6 = "Este valor se corresponde con el valor introducido en <font color=#E65F00> DOSACITRIC </font> y representa la presión (bar) a la que se va a hacer el tratamiento.";
+		String stringCuerpo6 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa la presión (bar) a la que se va a hacer el tratamiento.";
 		String stringCuerpo7 = "- Zona Alta: Representa el modelo de boquilla instalado en la zona alta del equipo (Fabricante. Modelo).";
 		String stringCuerpo8 = "- Zona Media: Representa el modelo de boquilla instalado en la zona media del equipo (Fabricante. Modelo). Quitar corchetes y añadir el fabricante delante.";
 		String stringCuerpo9 = "- Zona Baja: Representa el modelo de boquilla instalado en la zona baja del equipo (Fabricante. Modelo).";
@@ -71,7 +74,7 @@ public class AyudaResultados3 extends ActionBarActivity{
 		String stringCuerpo14 = "V = Volumen de aplicación, en litros de caldo aplicar por hectárea.";
 		String stringCuerpo15 = "a = ancho de trabajo en m.";
 		String stringCuerpo16 = "v= velocidad de avance en Km/h.";
-		String stringCuerpo17 = "Este valor se corresponde con el valor calculado por <font color=#E65F00> DOSACITRIC </font> de los litros de caldo (agua + producto fitosanitario) que se han aplicado por hectárea en las condiciones especificadas en el tratamiento. ";
+		String stringCuerpo17 = "Este valor se corresponde con el valor calculado por <font color=#ff6600> DOSACITRIC </font> de los litros de caldo (agua + producto fitosanitario) que se han aplicado por hectárea en las condiciones especificadas en el tratamiento. ";
 		String stringCuerpo18 = "Al presionar sobre este icono se guardan los datos de “RESUMEN Y RESULTADOS III” en la aplicación “Descargas” del propio dispositivo utilizado (Tablet o Smartphone).";
 		String stringCuerpo19 = "Al presionar sobre este botón se borrarán todos los datos introducidos, pudiéndose introducir luego nuevos datos para calcular un nuevo tratamiento.";
 		

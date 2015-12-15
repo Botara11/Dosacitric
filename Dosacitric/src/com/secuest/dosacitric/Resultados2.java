@@ -2,11 +2,12 @@ package com.secuest.dosacitric;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,8 +17,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-@SuppressWarnings("deprecation")
-public class Resultados2 extends ActionBarActivity {
+public class Resultados2 extends AppCompatActivity {
 
 	private DecimalFormat df;
 	private DecimalFormat di;
@@ -47,8 +47,11 @@ public class Resultados2 extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.resultados2);
 
-		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 		df = new DecimalFormat();
 		df.setMaximumFractionDigits(2);

@@ -1,14 +1,13 @@
 package com.secuest.dosacitric;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-@SuppressWarnings("deprecation")
-public class AyudaA_1Activity extends ActionBarActivity{
+public class AyudaA_1Activity extends AppCompatActivity{
 
 	private TextView cuerpo1;
 	private TextView cuerpo2;
@@ -21,8 +20,11 @@ public class AyudaA_1Activity extends ActionBarActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ayudaa_1activity);
 
-		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 		cuerpo1 = (TextView) findViewById(R.id.cuerpo1);
 		cuerpo2 = (TextView) findViewById(R.id.cuerpo2);
@@ -31,10 +33,10 @@ public class AyudaA_1Activity extends ActionBarActivity{
 		cuerpo5 = (TextView) findViewById(R.id.cuerpo5);
 		
 		String stringCuerpo1 = " En este punto se deben introducir los siguientes datos:";
-		String stringCuerpo2 = "- <font color=#E65F00>Fecha:</font> Fecha del tratamiento en formato libre.";
-		String stringCuerpo3 = "- <font color=#E65F00>Identificación de la parcela:</font> Término municipal, polígono y parcela o cualquier otro sistema de identificación de la parcela.";
-		String stringCuerpo4 = "- <font color=#E65F00>Identificación del tratamiento:</font> Descripción del tratamiento a realizar.";
-		String stringCuerpo5 = "- <font color=#E65F00>Referencia:</font> Código de identificación del tratamiento en formato libre.";
+		String stringCuerpo2 = "- <font color=#ff6600>Fecha:</font> Fecha del tratamiento en formato libre.";
+		String stringCuerpo3 = "- <font color=#ff6600>Identificación de la parcela:</font> Término municipal, polígono y parcela o cualquier otro sistema de identificación de la parcela.";
+		String stringCuerpo4 = "- <font color=#ff6600>Identificación del tratamiento:</font> Descripción del tratamiento a realizar.";
+		String stringCuerpo5 = "- <font color=#ff6600>Referencia:</font> Código de identificación del tratamiento en formato libre.";
 
 		cuerpo1.setText(Html.fromHtml(stringCuerpo1));
 		cuerpo2.setText(Html.fromHtml(stringCuerpo2));

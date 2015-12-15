@@ -1,14 +1,13 @@
 package com.secuest.dosacitric;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-@SuppressWarnings("deprecation")
-public class AyudaResultados2 extends ActionBarActivity{
+public class AyudaResultados2 extends AppCompatActivity{
 
 	private TextView cuerpo1;
 	private TextView cuerpo2;
@@ -39,8 +38,11 @@ public class AyudaResultados2 extends ActionBarActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ayuda_resultados2);
 
-		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 		cuerpo1 = (TextView) findViewById(R.id.cuerpo1);
 		cuerpo2 = (TextView) findViewById(R.id.cuerpo2);
@@ -66,9 +68,9 @@ public class AyudaResultados2 extends ActionBarActivity{
 		cuerpo22 = (TextView) findViewById(R.id.cuerpo22);
 		cuerpo23 = (TextView) findViewById(R.id.cuerpo23);
 
-		String stringCuerpo1 = "Este valor se corresponde con el valor introducido en <font color=#E65F00> DOSACITRIC </font> y representa los litros de caldo (agua + producto fitosanitario) que se desean aplicar por hectárea."; 
-		String stringCuerpo2 = "Este valor se corresponde con el valor introducido en <font color=#E65F00> DOSACITRIC </font> y representa la velocidad de avance del equipo en km/h.";
-		String stringCuerpo3 = "Este valor se corresponde con el valor introducido en <font color=#E65F00> DOSACITRIC </font> y representa el ancho de la calle a tratar en metros.";
+		String stringCuerpo1 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa los litros de caldo (agua + producto fitosanitario) que se desean aplicar por hectárea."; 
+		String stringCuerpo2 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa la velocidad de avance del equipo en km/h.";
+		String stringCuerpo3 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa el ancho de la calle a tratar en metros.";
 		String stringCuerpo4 = "Este valor se ha obtenido aplicando la fórmula:";
 		String stringCuerpo5 = "donde:";
 		String stringCuerpo6 = "Q = Caudal de caldo aplicado por el equipo en L/min";
@@ -85,9 +87,9 @@ public class AyudaResultados2 extends ActionBarActivity{
 		String stringCuerpo17 = "- Zona Alta (%A): Representa el porcentaje de vegetación a tratar por las boquillas abiertas situadas en la zona alta del equipo (nA).";
 		String stringCuerpo18 = "- Zona Media (%M): Representa el porcentaje de vegetación a tratar por las boquillas abiertas situadas en la zona media del equipo (nM).";
 		String stringCuerpo19 = "- Zona Baja (%B): Representa el porcentaje de vegetación a tratar por las boquillas abiertas situadas en la zona baja del equipo (nB).";
-		String stringCuerpo20 = "<font color=#E65F00>Fabricantes:</font> Muestra los fabricante de boquillas que disponen de alguna(s) boquilla(s) que cumple(n) con los requisitos establecidos en el tratamiento. Para conocer el modelo concreto de la boquilla debe seleccionarse el fabricante <font color=#E65F00>(Hardi, Teejet, Albuz, …)</font>. Si no aparece ningún fabricante, esto indica que no hay ninguna boquilla que cumpla con los requisitos establecidos para el tratamiento. La opción <font color=#E65F00>“Otras”</font> incluye las boquillas introducidas manualmente por el propio usuario.";
-		String stringCuerpo21 = "<font color=#E65F00>Presiones:</font> Muestra las presiones de trabajo de las boquillas que cumple(n) con los requisitos establecidos en el tratamiento. Para conocer el modelo concreto de la(s) boquilla(s) debe seleccionar una presión concreta.";
-		String stringCuerpo22 = "<font color=#E65F00>Boquillas:</font> Muestra los modelos de boquillas que cumplen con los requisitos establecidos en el tratamiento.";
+		String stringCuerpo20 = "<font color=#ff6600>Fabricantes:</font> Muestra los fabricante de boquillas que disponen de alguna(s) boquilla(s) que cumple(n) con los requisitos establecidos en el tratamiento. Para conocer el modelo concreto de la boquilla debe seleccionarse el fabricante <font color=#ff6600>(Hardi, Teejet, Albuz, …)</font>. Si no aparece ningún fabricante, esto indica que no hay ninguna boquilla que cumpla con los requisitos establecidos para el tratamiento. La opción <font color=#ff6600>“Otras”</font> incluye las boquillas introducidas manualmente por el propio usuario.";
+		String stringCuerpo21 = "<font color=#ff6600>Presiones:</font> Muestra las presiones de trabajo de las boquillas que cumple(n) con los requisitos establecidos en el tratamiento. Para conocer el modelo concreto de la(s) boquilla(s) debe seleccionar una presión concreta.";
+		String stringCuerpo22 = "<font color=#ff6600>Boquillas:</font> Muestra los modelos de boquillas que cumplen con los requisitos establecidos en el tratamiento.";
 		String stringCuerpo23 = "Al presionar sobre este icono se guardan los datos de “RESUMEN Y RESULTADOS II” en la aplicación “Descargas” del propio dispositivo utilizado (Tablet o Smartphone).";
 
 		cuerpo1.setText(Html.fromHtml(stringCuerpo1));

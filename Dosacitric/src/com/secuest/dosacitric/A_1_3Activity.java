@@ -2,11 +2,12 @@ package com.secuest.dosacitric;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,8 +20,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-@SuppressWarnings("deprecation")
-public class A_1_3Activity extends ActionBarActivity{
+public class A_1_3Activity extends AppCompatActivity{
 
 	private Spinner productosAplicar;
 	private Spinner formaActuacion;
@@ -36,8 +36,11 @@ public class A_1_3Activity extends ActionBarActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.a_1_3);
 
-		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 		productosAplicar = (Spinner) findViewById(R.id.productosAplicar);
 		formaActuacion = (Spinner) findViewById(R.id.formaActuacion);

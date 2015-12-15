@@ -6,80 +6,39 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/Marca"
+        android:id="@+id/Referencia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="MARCA"
-        android:textColor="@color/white" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Marca"
-        android:background="@color/white"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
-
-    <TextView
-        android:id="@+id/Modelo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText1"
-        android:text="MODELO"
-        android:textColor="@color/white" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Modelo"
-        android:background="@color/white"
-        android:ems="10" />
-
-    <TextView
-        android:id="@+id/Presion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Modelo"
-        android:layout_marginTop="38dp"
-        android:text="PRESIÓN"
-        android:textColor="@color/white" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Presion"
-        android:background="@color/white"
-        android:ems="10" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:text="REFERENCIA"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/Caudal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/editText2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
         android:text="CAUDAL"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/editText4"
+    <TextView
+        android:id="@+id/Presion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Caudal"
-        android:background="@color/white"
-        android:ems="10" />
+        android:layout_below="@+id/editText3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:text="PRESIÓN"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <TableLayout
         android:id="@+id/table"
@@ -104,8 +63,92 @@
                 android:gravity="center"
                 android:padding="10dip"
                 android:text="Ingresar"
-                android:textColor="#E65F00" />
+                android:textColor="#ff6600" />
         </TableRow>
     </TableLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Referencia"
+        android:layout_below="@+id/Referencia"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="(Marca, modelo y color de la boquilla)"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Caudal"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Caudal"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number|textVisiblePassword" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Presion"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Presion"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number|textVisiblePassword" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Caudal"
+        android:layout_alignBottom="@+id/Caudal"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/Caudal"
+        android:text="(L/min)"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Presion"
+        android:layout_alignBottom="@+id/Presion"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/Presion"
+        android:text="(bar)"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:digits=" /-ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz1234567890"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>

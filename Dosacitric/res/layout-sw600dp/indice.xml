@@ -25,7 +25,7 @@
                 android:gravity="left|center"
                 android:paddingLeft="10dp"
                 android:text="A. IDENTIFICACIÓN DEL TRATAMIENTO"
-                android:textColor="#E65F00"
+                android:textColor="#ff6600"
                 android:textSize="20sp" />
 
             <TextView
@@ -100,7 +100,7 @@
                 android:gravity="left|center"
                 android:paddingLeft="10dp"
                 android:text="C. ELECCIÓN DE BOQUILLAS"
-                android:textColor="#E65F00"
+                android:textColor="#ff6600"
                 android:textSize="20sp" />
 
             <TextView
@@ -139,7 +139,7 @@
                 android:gravity="left|center"
                 android:paddingLeft="10dp"
                 android:text="B. VOLUMEN DE APLICACIÓN (L/ha)"
-                android:textColor="#E65F00"
+                android:textColor="#ff6600"
                 android:textSize="20sp" />
 
             <TextView
@@ -154,7 +154,7 @@
                 android:gravity="left|center"
                 android:paddingLeft="10dp"
                 android:text="D. VOLUMEN DE CALDO APLICADO (L/ha)"
-                android:textColor="#E65F00"
+                android:textColor="#ff6600"
                 android:textSize="20sp" />
 
             <TextView
@@ -203,13 +203,13 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/inter3" />
+                android:background="@drawable/ayuda" />
 
             <View
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
-                android:background="#E65F00" />
+                android:background="#ff6600" />
 
             <Button
                 android:id="@+id/siguiente"
@@ -219,13 +219,13 @@
                 android:gravity="center"
                 android:padding="10dip"
                 android:text="SIGUIENTE"
-                android:textColor="#E65F00" />
+                android:textColor="#ff6600" />
 
             <View
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
-                android:background="#E65F00" />
+                android:background="#ff6600" />
 
             <ImageButton
                 android:id="@+id/ajustes"

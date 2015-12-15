@@ -27,13 +27,13 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/inter3" />
+                android:background="@drawable/ayuda" />
 
             <View
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
-                android:background="#E65F00" />
+                android:background="#ff6600" />
 
             <Button
                 android:id="@+id/informacion"
@@ -43,7 +43,7 @@
                 android:gravity="center"
                 android:padding="10dip"
                 android:text="Más información..."
-                android:textColor="#E65F00" />
+                android:textColor="#ff6600" />
         </TableRow>
     </TableLayout>
 
@@ -68,7 +68,7 @@
                 android:gravity="center"
                 android:padding="10dip"
                 android:text="Eliminar boquilla"
-                android:textColor="#E65F00"
+                android:textColor="#ff6600"
                 android:textSize="20sp" />
 
             <Button
@@ -83,7 +83,7 @@
                 android:gravity="center"
                 android:padding="10dip"
                 android:text="Visualizar mis boquillas"
-                android:textColor="#E65F00"
+                android:textColor="#ff6600"
                 android:textSize="20sp" />
 
             <TextView
@@ -111,7 +111,7 @@
                 android:gravity="center"
                 android:padding="10dip"
                 android:text="Ingresar boquillas"
-                android:textColor="#E65F00"
+                android:textColor="#ff6600"
                 android:textSize="20sp" />
 
             <TextView
@@ -206,7 +206,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/cuerpo8"
-                android:layout_marginBottom="32dp"
+                android:layout_marginBottom="16dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/logoesp" />
 

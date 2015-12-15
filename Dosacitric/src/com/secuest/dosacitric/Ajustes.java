@@ -2,7 +2,7 @@ package com.secuest.dosacitric;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,15 +10,17 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-@SuppressWarnings("deprecation")
-public class Ajustes extends ActionBarActivity{
+public class Ajustes extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ajustes);
 
-		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 		Button ingresar = (Button) findViewById(R.id.botonIngresarBoquilla);
 		ingresar.setClickable(true);
@@ -48,7 +50,7 @@ public class Ajustes extends ActionBarActivity{
 				startActivity(new Intent(Ajustes.this, BorrarBoquillas.class));
 			}
 		});
-		
+
 		ImageButton ayuda = (ImageButton) findViewById(R.id.ayuda);
 		ayuda.setClickable(true);
 		ayuda.setOnClickListener(new OnClickListener() {
@@ -57,13 +59,14 @@ public class Ajustes extends ActionBarActivity{
 				startActivity(new Intent(Ajustes.this, AyudaAjustes.class));
 			}
 		});
-		
+
 		Button informacion = (Button) findViewById(R.id.informacion);
 		informacion.setClickable(true);
 		informacion.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(Ajustes.this, AyudaAjustesInformacion.class));
+				startActivity(new Intent(Ajustes.this,
+						AyudaAjustesInformacion.class));
 			}
 		});
 	}

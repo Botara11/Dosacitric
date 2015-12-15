@@ -14,9 +14,7 @@ public abstract class Lista_adaptador extends BaseAdapter {
     private ArrayList<?> entradas; 
     private int R_layout_IdView; 
     private Context contexto;
-    
-    
-      
+          
     public Lista_adaptador(Context contexto, int R_layout_IdView, ArrayList<?> entradas) {
         super();
         this.contexto = contexto;
@@ -26,7 +24,6 @@ public abstract class Lista_adaptador extends BaseAdapter {
       
     public Lista_adaptador(OnClickListener onClickListener,
 			int listItemComentarios, ArrayList<Lista_entrada> datos) {
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

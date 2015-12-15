@@ -384,7 +384,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/printer"
-                android:layout_marginBottom="32dp"
+                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="0dp"
@@ -396,7 +396,6 @@
                 android:layout_height="30dp"
                 android:layout_below="@+id/cuerpo22"
                 android:layout_gravity="center"
-                android:layout_marginBottom="32dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/printer" />

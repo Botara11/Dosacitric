@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,8 +15,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-@SuppressWarnings("deprecation")
-public class Resultados1 extends ActionBarActivity{
+public class Resultados1 extends AppCompatActivity{
 
 	private TextView fechaDiaResultados1;
 	private TextView fechaMesResultados1;
@@ -46,8 +45,11 @@ public class Resultados1 extends ActionBarActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.resultados1);
 
-		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);	
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 		
 		fechaDiaResultados1 = (TextView) findViewById(R.id.fechaMesResultados1);
 		fechaMesResultados1 = (TextView) findViewById(R.id.fechaDiaResultados1);

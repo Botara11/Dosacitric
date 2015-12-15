@@ -15,9 +15,8 @@ import android.widget.TextView;
 public class MostrarBoquillas extends ListActivity {
 
 	private com.secuest.dosacitric.Lista_adaptador mAdapter;
-	private float[] inter;
 	private ArrayList<String> presionesAdecu;
-	private String marca ;
+
 
 	ListView listView ;
 
@@ -31,10 +30,7 @@ public class MostrarBoquillas extends ListActivity {
 
 		ArrayList<Lista_entrada> datos = new ArrayList<Lista_entrada>();  
 
-		marca = getString(R.string.mis_boquillas);
-		float bu[] = {0,100,0,100,0,100};
-		inter = bu;
-
+		
 		//Lista que va a contener las marcas y dentro de cada una las presiones que correspondan
 		presionesAdecu = new ArrayList<String>();
 
@@ -85,10 +81,9 @@ public class MostrarBoquillas extends ListActivity {
 		super.onListItemClick(list, view, position, id);
 
 		String selectedItem = ((Lista_entrada) getListAdapter().getItem(position)).get_texto(0);
-
+		
 		Intent res = new Intent(MostrarBoquillas.this, MostrarBoquillasContinuacion.class);
-		//res.putExtra("marca", selectedItem);
-		//res.putExtra("inter", inter);
+		res.putExtra("modelo", selectedItem);
 		startActivity(res);
 	}
 }

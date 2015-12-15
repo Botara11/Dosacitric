@@ -1,15 +1,13 @@
 package com.secuest.dosacitric;
 
-import android.content.Context;
-import android.content.SharedPreferences;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-@SuppressWarnings("deprecation")
-public class MostrarBoquillasContinuacion extends ActionBarActivity{
+public class MostrarBoquillasContinuacion extends AppCompatActivity{
 
 	private TextView referencia;
 	private TextView caudal;
@@ -20,23 +18,24 @@ public class MostrarBoquillasContinuacion extends ActionBarActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.mostrar_boquillas_continuacion);
 
-
-		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);	
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);	
 
 		referencia = (TextView) findViewById(R.id.referenciaTextView);
 		caudal = (TextView) findViewById(R.id.caudalTextView);
 		presion = (TextView) findViewById(R.id.presionTextView);
 
-		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-
-		String stringReferencia = settings.getString("ireferncia", "");
-		String stringCaudal = settings.getString("caudal", "");
-		String stringPresion = settings.getString("presion", "");
-
-		referencia.setText(String.valueOf(stringReferencia));
-		caudal.setText(String.valueOf(stringCaudal));
-		presion.setText(String.valueOf(stringPresion));
+		
+		Intent c5 = getIntent();
+		String modelo = c5.getStringExtra("modelo");
+		DatabaseHandler db = new DatabaseHandler(this);
+		String caudal_s = db.getCaudalAunaPresionDeBoquilla("MIS BOQUILLAS", modelo, 10);
+		referencia.setText(modelo);
+		caudal.setText(caudal_s);
+		presion.setText("10");
 
 	}
 

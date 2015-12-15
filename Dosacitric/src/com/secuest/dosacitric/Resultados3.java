@@ -1,11 +1,12 @@
 package com.secuest.dosacitric;
 
 import java.text.DecimalFormat;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,8 +16,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-@SuppressWarnings("deprecation")
-public class Resultados3 extends ActionBarActivity {
+public class Resultados3 extends AppCompatActivity {
 
 	private ParteC partec7;
 	private DecimalFormat df;
@@ -41,8 +41,11 @@ public class Resultados3 extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.resultados3);
 
-		android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 		df = new DecimalFormat();
 		df.setMaximumFractionDigits(2);
@@ -104,9 +107,9 @@ public class Resultados3 extends ActionBarActivity {
 		Marca.setText(String.valueOf(partec7.MarcaSeleccionada)+".");
 		Marca2.setText(String.valueOf(partec7.MarcaSeleccionada)+".");
 		Marca3.setText(String.valueOf(partec7.MarcaSeleccionada)+".");
-		EleccionBoquillaZonaAlta.setText(String.valueOf(partec7.ModeloZonaAltaSeleccionado));
-		EleccionBoquillaZonaMedia.setText(String.valueOf(partec7.ModeloZonaMediaSeleccionado));
-		EleccionBoquillaZonaBaja.setText(String.valueOf(partec7.ModeloZonaBajaSeleccionado));
+		EleccionBoquillaZonaAlta.setText(String.valueOf(partec7.ModeloZonaAltaSeleccionado.get(0)));
+		EleccionBoquillaZonaMedia.setText(String.valueOf(partec7.ModeloZonaMediaSeleccionado.get(0)));
+		EleccionBoquillaZonaBaja.setText(String.valueOf(partec7.ModeloZonaBajaSeleccionado.get(0)));
 		VolumenCaldoAplicado.setText(String.valueOf(partec7.VolumenCaldoAplicado));
 		CaudalLiqTotal.setText(String.valueOf(di.format(partec7.CaudalTotal)));
 

@@ -22,7 +22,7 @@
                 android:layout_marginTop="165dp"
                 android:gravity="center"
                 android:text="DOSACITRIC"
-                android:textColor="#E65F00"
+                android:textColor="#ff6600"
                 android:textSize="75sp" />
 
             <TextView
@@ -35,7 +35,7 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="V.01."
-                android:textColor="#E65F00"
+                android:textColor="#ff6600"
                 android:textSize="75sp" />
 
             <TextView
@@ -114,13 +114,13 @@
                 android:gravity="center"
                 android:padding="10dip"
                 android:text="NUEVO TRATAMIENTO"
-                android:textColor="#E65F00" />
+                android:textColor="#ff6600" />
 
             <View
                 android:layout_width="1dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="10dp"
-                android:background="#E65F00" />
+                android:background="#ff6600" />
 
             <Button
                 android:id="@+id/siguiente"
@@ -130,7 +130,7 @@
                 android:gravity="center"
                 android:padding="10dip"
                 android:text="COMENZAR"
-                android:textColor="#E65F00" />
+                android:textColor="#ff6600" />
         </TableRow>
     </TableLayout>
 

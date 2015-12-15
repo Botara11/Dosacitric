@@ -14,12 +14,12 @@
 	<string name="R1">B.R. RESUMEN Y RESULTADOS I</string>
 	<string name="C1">C.1. INTRODUCCION DE DATOS</string>
 	<string name="R2">C.R. RESUMEN Y RESULTADOS II</string>
-	<string name="D1">D.1. Introducción de datos</string>
+	<string name="D1">D.1. INTRODUCCION DE DATOS</string>
 	<string name="D2">D.1. SELECCIONAR PRESION. Introducción de datos</string>
 	<string name="D3">D.1. SELECCIONAR FABRICANTE. Introducción de datos</string>
-	<string name="ZA">D.1. ZONA ALTA. BOQUILLA SELECCIONADA. Introducción de datos</string>
-	<string name="ZM">D.1. ZONA MEDIA. BOQUILLA SELECCIONADA. Introducción de datos</string>
-	<string name="ZB">D.1. ZONA BAJA. BOQUILLA SELECCIONADA. Introducción de datos</string>
+	<string name="ZA">D.1. ZONA ALTA. BOQUILLA SELECCIONADA. INTRODUCCION DE DATOS</string>
+	<string name="ZM">D.1. ZONA MEDIA. BOQUILLA SELECCIONADA. INTRODUCCION DE DATOS</string>
+	<string name="ZB">D.1. ZONA BAJA. BOQUILLA SELECCIONADA. INTRODUCCION DE DATOS</string>
 	<string name="R3">D.R. RESUMEN Y RESULTADOS III</string>
 	<string name="ParteA">Parte A</string>
 	<string name="ParteB">Parte B</string>
