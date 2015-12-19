@@ -41,6 +41,7 @@ public class IngresarBoquillas extends AppCompatActivity {
 
 				String reemplazado = "";
 				String quien = "";
+				int existe = 0;
 				try{
 					quien="Caudal";
 					reemplazado = caudal.getText().toString().replace(',', '.');
@@ -51,6 +52,11 @@ public class IngresarBoquillas extends AppCompatActivity {
 
 					DatabaseHandler db = new DatabaseHandler(getApplicationContext());
 
+					existe = db.existeBoquillaMisBoquillas(ireferencia.getText().toString());
+					if (existe != 0){
+						@SuppressWarnings("unused")
+						Double auxialiar = Double.parseDouble("");
+					}
 					double k = dob_caudal/java.lang.Math.pow(dob_presion,0.5);
 					db.addBoquillaMisBoqui(ireferencia.getText().toString(),0.0,(double)dob_caudal,
 							k*java.lang.Math.pow(6.0,0.5),
@@ -65,7 +71,7 @@ public class IngresarBoquillas extends AppCompatActivity {
 							k*java.lang.Math.pow(15.0,0.5),
 							k*java.lang.Math.pow(16.0,0.5),
 							1);
-
+					db.addBoquillaValoresInsertados(ireferencia.getText().toString(), dob_caudal, dob_presion);
 					//db.mostrarTodo("MIS BOQUILLAS");
 					Toast toast = Toast.makeText(getApplicationContext(), "Boquilla ingresada correctamente", Toast.LENGTH_SHORT);
 					toast.show();
@@ -73,7 +79,13 @@ public class IngresarBoquillas extends AppCompatActivity {
 
 				} catch (Exception e) {
 					e.printStackTrace();
-					Toast toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+quien+'"'+" incorrecto", Toast.LENGTH_SHORT);
+					Toast toast;
+					if (existe == 0)
+						toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+quien+'"'+" incorrecto", Toast.LENGTH_SHORT);
+					else
+						toast = Toast.makeText(getApplicationContext(), "La referencia ya existe en la base de datos", Toast.LENGTH_SHORT);
+					
+						
 					toast.show();
 				}
 			}

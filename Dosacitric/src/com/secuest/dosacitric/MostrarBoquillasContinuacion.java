@@ -1,5 +1,7 @@
 package com.secuest.dosacitric;
 
+import java.util.ArrayList;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -32,10 +34,11 @@ public class MostrarBoquillasContinuacion extends AppCompatActivity{
 		Intent c5 = getIntent();
 		String modelo = c5.getStringExtra("modelo");
 		DatabaseHandler db = new DatabaseHandler(this);
-		String caudal_s = db.getCaudalAunaPresionDeBoquilla("MIS BOQUILLAS", modelo, 10);
+		//String caudal_s = db.getCaudalAunaPresionDeBoquilla("MIS BOQUILLAS", modelo, 10);
+		ArrayList<String> datos = db.getDatosIntroMisBoquillas(modelo);
 		referencia.setText(modelo);
-		caudal.setText(caudal_s);
-		presion.setText("10");
+		caudal.setText(datos.get(0));
+		presion.setText(datos.get(1));
 
 	}
 

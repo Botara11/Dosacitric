@@ -21,7 +21,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 	// Login table name
 	private static final String TABLE_BOQUI = "login";
-	private static final String TABLE_MIS_BOQUI = "misboquillas";
+	//private static final String TABLE_MIS_BOQUI = "misboquillas";
+	private static final String TABLE_BOQUILLAS_INTRO = "boquillasintroducidas";
 
 	// Login Table Columns names
 	private static final String KEY_ID = "id";
@@ -41,6 +42,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	private static final String KEY_P15 = "p15";
 	private static final String KEY_P16 = "p16";
 	private static final String ACTIVE = "active";
+	private static final String KEY_PRESION = "presion";
+	
 
 	public DatabaseHandler(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -57,7 +60,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				+ KEY_P10 + " DOUBLE," + KEY_P11 + " DOUBLE," + KEY_P12
 				+ " DOUBLE," + KEY_P13 + " DOUBLE," + KEY_P14 + " DOUBLE,"
 				+ KEY_P15 + " DOUBLE," + KEY_P16 + " DOUBLE, " + ACTIVE + " INTEGER" + ")";
-		String CREATE_MIS_BOQUI_TABLE = "CREATE TABLE " + TABLE_MIS_BOQUI + "("
+/*		String CREATE_MIS_BOQUI_TABLE = "CREATE TABLE " + TABLE_MIS_BOQUI + "("
 				+ KEY_ID + " INTEGER PRIMARY KEY," + KEY_MARCA + " TEXT,"
 				+ KEY_MODELO + " TEXT," + KEY_DIAMETRO + " DOUBLE,"
 				+ KEY_CAUDAL + " DOUBLE," + KEY_P6 + " DOUBLE," + KEY_P7
@@ -65,9 +68,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				+ KEY_P10 + " DOUBLE," + KEY_P11 + " DOUBLE," + KEY_P12
 				+ " DOUBLE," + KEY_P13 + " DOUBLE," + KEY_P14 + " DOUBLE,"
 				+ KEY_P15 + " DOUBLE," + KEY_P16 + " DOUBLE, " + ACTIVE + " INTEGER" + ")";
-		
+*/
+		String CREATE_BOQUIL_INTRO = "CREATE TABLE " + TABLE_BOQUILLAS_INTRO + "("
+				+ KEY_ID + " INTEGER PRIMARY KEY,"
+				+ KEY_MODELO + " TEXT," + KEY_CAUDAL + " DOUBLE," + KEY_PRESION + " DOUBLE" + ")";
 		db.execSQL(CREATE_LOGIN_TABLE);
-		db.execSQL(CREATE_MIS_BOQUI_TABLE);
+//		db.execSQL(CREATE_MIS_BOQUI_TABLE);
+		db.execSQL(CREATE_BOQUIL_INTRO);
 		Log.d("", "CREADA BD");
 	}
 
@@ -77,7 +84,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// Drop older table if existed
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_BOQUI);
-
 		// Create tables again
 		onCreate(db);
 	}
@@ -119,7 +125,18 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		//String str = "DELETE FROM "+TABLE_BOQUI+" WHERE "+
 		db.delete(TABLE_BOQUI, KEY_MARCA + "=" + "'MIS BOQUILLAS'" + " and " + KEY_MODELO +"='" + modelo+"' ", null);
 		db.delete(TABLE_BOQUI, KEY_MARCA + "=" + "'MIS BOQUILLAS'" + " and " + KEY_MODELO +"='" + modelo+"' ", null);
+		db.delete(TABLE_BOQUILLAS_INTRO,  KEY_MODELO +"='" + modelo+"' ", null);
 		
+	}
+	public void addBoquillaValoresInsertados(String modelo,Double caudal,Double presion){
+		SQLiteDatabase db = this.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put(KEY_MODELO, modelo);//1
+		values.put(KEY_CAUDAL, caudal);//2
+		values.put(KEY_PRESION, presion);//3
+		db.insert(TABLE_BOQUILLAS_INTRO, null, values);
+		db.close(); // Closing database connection
+
 	}
 	
 	public void addBoquillaMisBoqui(String modelo, Double diametro,
@@ -148,10 +165,43 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 		// Inserting Row
 		db.insert(TABLE_BOQUI, null, values);
-		db.insert(TABLE_MIS_BOQUI, null, values);
+//		db.insert(TABLE_MIS_BOQUI, null, values);
 		db.close(); // Closing database connection
 	}
 
+	public ArrayList<String> getDatosIntroMisBoquillas(String modelo){
+		ArrayList<String> datos = new ArrayList<String>();
+		String selectQuery = "SELECT * FROM " + TABLE_BOQUILLAS_INTRO + " WHERE "
+				+ KEY_MODELO + "=='"+modelo+"' ";
+
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.rawQuery(selectQuery, null);
+		// Move to first row
+		cursor.moveToFirst();
+		System.out.println("Hay " + cursor.getCount() + " filas");
+		if (cursor.getCount() != 0) {
+			datos.add(cursor.getString(2));
+			datos.add(cursor.getString(3));
+			//System.out.println("anadido "+cursor.getString(2) + " " + cursor.getString(3));
+		}
+		return datos;
+
+	}
+	public int existeBoquillaMisBoquillas(String modelo){
+		
+		String marca = "MIS BOQUILLAS";
+		String selectQuery = "SELECT * FROM " + TABLE_BOQUI + " WHERE "
+				+ KEY_MARCA + "=='" + marca + "'" + " AND " + KEY_MODELO +
+				"=='"+modelo+"' ";
+
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.rawQuery(selectQuery, null);
+		// Move to first row
+		cursor.moveToFirst();
+		System.out.println("Hay " + cursor.getCount() + " filas");
+		return cursor.getCount();
+	}
+	
 	//Conseguir el caudal de una boquilla a una determinada presion
 	public String getCaudalAunaPresionDeBoquilla(String marca, String modelo, int presion) {
 		String Boquillas = "";
