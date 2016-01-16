@@ -120,6 +120,7 @@ public class Resultados3 extends AppCompatActivity {
 		nuevoTratamiento.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				@SuppressWarnings("unused")
 				AlertDialog alert = new AlertDialog.Builder(Resultados3.this)
 			    .setTitle("Nuevo tratamiento")
 			    .setMessage("¿Realmente quiere borrar todos los datos introducidos en DOSACITRIC?")

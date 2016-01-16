@@ -2,19 +2,20 @@ package com.secuest.dosacitric;
 
 import java.util.ArrayList;
 
-import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.SparseBooleanArray;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 
-public class C_4ZonaMedia extends ListActivity implements
-OnClickListener {
+public class C_4ZonaMedia extends AppCompatActivity{
 	Button siguiente;
 	ListView listView;
 	ArrayAdapter<String> adapter;
@@ -27,6 +28,12 @@ OnClickListener {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.c_4);
+		
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
 
 		findViewsById();
 
@@ -49,7 +56,7 @@ OnClickListener {
 		String[] lv_arr = new String[modelosZ2.size()];
 		lv_arr = modelosZ2.toArray(lv_arr);
 		adapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_single_choice, lv_arr);
+				R.layout.list_item_con_arrow, lv_arr);
 		listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 		listView.setAdapter(adapter);
 
@@ -57,32 +64,35 @@ OnClickListener {
 
 	private void findViewsById() {
 		listView = (ListView) findViewById(android.R.id.list);
-	}
+		listView.setOnItemClickListener(new OnItemClickListener() {
 
-	@Override
-	protected void onListItemClick(ListView list, View view, int position, long id) {
-		super.onListItemClick(list, view, position, id);
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
 
-		SparseBooleanArray checked = listView.getCheckedItemPositions();
-		ArrayList<String> selectedItems2 = new ArrayList<String>();
-		//String item = "";
-		for (int i = 0; i < checked.size(); i++) {
-			// Item position in adapter
-			position = checked.keyAt(i);
-			// Add sport if it is checked i.e.) == TRUE!
-			if (checked.valueAt(i))
-				selectedItems2.add(adapter.getItem(position));
-			//item = (String) getListAdapter().getItem(position);
+				SparseBooleanArray checked = listView.getCheckedItemPositions();
+				ArrayList<String> selectedItems2 = new ArrayList<String>();
+				//String item = "";
+				for (int i = 0; i < checked.size(); i++) {
+					// Item position in adapter
+					position = checked.keyAt(i);
+					// Add sport if it is checked i.e.) == TRUE!
+					if (checked.valueAt(i))
+						selectedItems2.add(adapter.getItem(position));
+					//item = (String) getListAdapter().getItem(position);
 
-		}
+				}
 
-		Intent c4 = getIntent();
-		partec5 = (ParteC) c4.getSerializableExtra("modeloZonaAlta");
-		partec5.rellenarC5(selectedItems2);
+				Intent c4 = getIntent();
+				partec5 = (ParteC) c4.getSerializableExtra("modeloZonaAlta");
+				partec5.rellenarC5(selectedItems2);
 
-		Intent c5 = new Intent(this, C_4ZonaBaja.class);
-		c5.putExtra("modeloZonaMedia", partec5);
-		startActivity(c5);
+				Intent c5 = new Intent(C_4ZonaMedia.this, C_4ZonaBaja.class);
+				c5.putExtra("modeloZonaMedia", partec5);
+				startActivity(c5);
+				
+			}
+		});
 	}
 
 	@Override
@@ -100,8 +110,15 @@ OnClickListener {
 	}
 
 	@Override
-	public void onClick(View v) {
-
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			// app icon in action bar clicked; goto parent activity.
+			this.finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 
 }

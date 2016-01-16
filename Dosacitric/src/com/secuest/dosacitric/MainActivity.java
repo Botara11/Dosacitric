@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 		nuevoTratamiento.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				@SuppressWarnings("unused")
 				AlertDialog alert = new AlertDialog.Builder(MainActivity.this)
 			    .setTitle("Nuevo tratamiento")
 			    .setMessage("¿Realmente quiere borrar todos los datos introducidos en DOSACITRIC?")

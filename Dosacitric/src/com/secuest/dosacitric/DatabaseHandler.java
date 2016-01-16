@@ -226,9 +226,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	//Conseguir el modelo de una boquilla a una determinada presion y marca
 	public ArrayList<String> getModelo(String marca, int presion) {
 		ArrayList<String> modelo = new ArrayList<String>();
-
+		String mimarca;
+		if (marca.compareTo("Mis boquillas")==0) mimarca = "MIS BOQUILLAS";
+		else mimarca=marca;
 		String selectQuery = "SELECT * FROM " + TABLE_BOQUI + " WHERE "
-				+ KEY_MARCA + "=='" + marca + "'";
+				+ KEY_MARCA + "=='" + mimarca + "'";
 		System.out.println(selectQuery);
 		SQLiteDatabase db = this.getReadableDatabase();
 		Cursor cursor = db.rawQuery(selectQuery, null);
