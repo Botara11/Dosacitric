@@ -4,14 +4,16 @@ import java.util.ArrayList;
 
 import android.app.ListActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class MostrarBoquillas extends ListActivity {
+public class MostrarBoquillas extends AppCompatActivity {
 
 	private com.secuest.dosacitric.Lista_adaptador mAdapter;
 	private ArrayList<String> presionesAdecu;
@@ -26,6 +28,12 @@ public class MostrarBoquillas extends ListActivity {
 		// Get ListView object from xml
 		listView = (ListView) findViewById(android.R.id.list);
 
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
+
 		ArrayList<Lista_entrada> datos = new ArrayList<Lista_entrada>();  
 
 		//Lista que va a contener las marcas y dentro de cada una las presiones que correspondan
@@ -33,14 +41,14 @@ public class MostrarBoquillas extends ListActivity {
 
 		DatabaseHandler db = new DatabaseHandler(
 				getApplicationContext());
-		presionesAdecu = db.getBoquillas("MIS BOQUILLAS", 0.0, 100.0, "p6");
+		presionesAdecu = db.getBoquillas("Mis boquillas", 0.0, 100000.0, "p6");
 		for(int i=0;i<presionesAdecu.size();i++){
-			//String caudal_s = db.getCaudalAunaPresionDeBoquilla("MIS BOQUILLAS", modelo, 10);
+			//String caudal_s = db.getCaudalAunaPresionDeBoquilla("Mis boquillas", modelo, 10);
 			ArrayList<String> datos2 = db.getDatosIntroMisBoquillas(presionesAdecu.get(i));
 			//caudal.setText(datos.get(1));
 			//presion.setText(datos.get(0));
 			datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ presionesAdecu.get(i) +"  ("+
-			datos2.get(1)+ "L/min a "+datos2.get(0)+" bar)" }));
+			datos2.get(1)+ " L/min a "+datos2.get(0)+" bar)" }));
 		}
 
 		// you only need to instantiate these the first time your fragment is
@@ -59,8 +67,8 @@ public class MostrarBoquillas extends ListActivity {
 
 		}
 
-		getListView().setAdapter(mAdapter);
-		setListAdapter(mAdapter);
+		listView.setAdapter(mAdapter);
+		//listView.setListAdapter(mAdapter);
 
 		Button salir = (Button) findViewById(R.id.siguiente);
 		salir.setClickable(true);
@@ -77,15 +85,16 @@ public class MostrarBoquillas extends ListActivity {
 		return super.onPrepareOptionsMenu(menu);
 	}
 
+	
 	@Override
-	protected void onListItemClick(ListView list, View view, int position, long id) {
-		super.onListItemClick(list, view, position, id);
-/*
-		String selectedItem = ((Lista_entrada) getListAdapter().getItem(position)).get_texto(0);
-		Intent res = new Intent(MostrarBoquillas.this, MostrarBoquillasContinuacion.class);
-		res.putExtra("modelo", selectedItem);
-		startActivity(res);
-*/
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			this.finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 }
 

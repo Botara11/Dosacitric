@@ -5,18 +5,20 @@ import java.util.ArrayList;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.SparseBooleanArray;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 
-public class BorrarBoquillas extends ListActivity implements
-OnClickListener{
+public class BorrarBoquillas extends AppCompatActivity{
 	
 	Button siguiente;
 	ListView listView;
@@ -29,9 +31,41 @@ OnClickListener{
 		super.onCreate(savedInstanceState);
 		//setContentView(R.layout.boquillaslistview_borrar);
 		setContentView(R.layout.boquillaslistview_borrar);
+		
+
+		getSupportActionBar().setHomeButtonEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setIcon(R.drawable.logo256);
+		getSupportActionBar().setDisplayShowTitleEnabled(true);
+
 		Selected = "";
 		listView = (ListView) findViewById(android.R.id.list);
 
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+
+
+				SparseBooleanArray checked = listView.getCheckedItemPositions();
+				ArrayList<String> selectedItems = new ArrayList<String>();
+
+				Selected = adapter.getItem(position);
+				System.out.println(position+" "+adapter.getItem(position));
+				for (int i = 0; i < checked.size(); i++) {
+					// Item position in adapter
+					position = checked.keyAt(i);
+					// Add sport if it is checked i.e.) == TRUE!
+					if (checked.valueAt(i))
+						selectedItems.add(adapter.getItem(position));
+					//item = (String) getListAdapter().getItem(position);
+				}
+				
+			}
+		});
+		
 		Button borrar = (Button) findViewById(R.id.siguiente);
 		borrar.setClickable(true);
 		borrar.setOnClickListener(new OnClickListener() {
@@ -50,15 +84,15 @@ OnClickListener{
 
 		DatabaseHandler db = new DatabaseHandler(this);
 
-		ArrayList<String> boq = db.getBoquillas("MIS BOQUILLAS", 0.0, 100.0, "p6");
+		ArrayList<String> boq = db.getBoquillas("Mis boquillas", 0.0, 100000.0, "p6");
 		String[] lv_arr = new String[boq.size()];
 		lv_arr = boq.toArray(lv_arr);
 		adapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_single_choice, lv_arr);
+				R.layout.item_choice, lv_arr);
 		listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 		listView.setAdapter(adapter);
 	}
-
+/*
 	@Override
 	protected void onListItemClick(ListView list, View view, int position, long id) {
 		super.onListItemClick(list, view, position, id);
@@ -77,7 +111,7 @@ OnClickListener{
 			//item = (String) getListAdapter().getItem(position);
 		}
 	}
-
+*/
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		return super.onPrepareOptionsMenu(menu);
@@ -100,11 +134,6 @@ OnClickListener{
 		default:
 			return super.onOptionsItemSelected(item);
 		}
-	}
-
-	@Override
-	public void onClick(View v) {
-
 	}
 
 }

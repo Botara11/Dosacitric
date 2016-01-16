@@ -70,7 +70,6 @@ public class IngresarBoquillas extends AppCompatActivity {
 							k*java.lang.Math.pow(16.0,0.5),
 							1);
 					db.addBoquillaValoresInsertados(ireferencia.getText().toString(), dob_caudal, dob_presion);
-					//db.mostrarTodo("MIS BOQUILLAS");
 					Toast toast = Toast.makeText(getApplicationContext(), "Boquilla ingresada correctamente", Toast.LENGTH_SHORT);
 					toast.show();
 					finish();

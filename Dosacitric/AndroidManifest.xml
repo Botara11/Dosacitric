@@ -133,7 +133,9 @@
         <activity
             android:name="BorrarBoquillas"
             android:label="@string/BorrarBoquillas"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" >
+            
         </activity>
         <activity
             android:name="AyudaIndice"

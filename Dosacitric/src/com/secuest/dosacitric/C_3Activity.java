@@ -26,7 +26,6 @@ public class C_3Activity extends ListActivity{
 
 		String[] marcas = { "Teejet", "Albuz", "Hardi", "Discos", "Mis boquillas" };
 		marcas2=marcas;
-		marcas2[4]="MIS BOQUILLAS";
 		
 		ArrayList<Lista_entrada> datos = new ArrayList<Lista_entrada>();  
 

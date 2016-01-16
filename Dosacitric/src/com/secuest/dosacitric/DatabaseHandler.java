@@ -123,8 +123,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	public void deleteFromMisBoqui(String modelo){
 		SQLiteDatabase db = this.getWritableDatabase();
 		//String str = "DELETE FROM "+TABLE_BOQUI+" WHERE "+
-		db.delete(TABLE_BOQUI, KEY_MARCA + "=" + "'MIS BOQUILLAS'" + " and " + KEY_MODELO +"='" + modelo+"' ", null);
-		db.delete(TABLE_BOQUI, KEY_MARCA + "=" + "'MIS BOQUILLAS'" + " and " + KEY_MODELO +"='" + modelo+"' ", null);
+		db.delete(TABLE_BOQUI, KEY_MARCA + "=" + "'Mis boquillas'" + " and " + KEY_MODELO +"='" + modelo+"' ", null);
+		db.delete(TABLE_BOQUI, KEY_MARCA + "=" + "'Mis boquillas'" + " and " + KEY_MODELO +"='" + modelo+"' ", null);
 		db.delete(TABLE_BOQUILLAS_INTRO,  KEY_MODELO +"='" + modelo+"' ", null);
 		
 	}
@@ -144,7 +144,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			Double p10, Double p11, Double p12, Double p13, Double p14,
 			Double p15, Double p16, int active) {
 		SQLiteDatabase db = this.getWritableDatabase();
-		String marca = "MIS BOQUILLAS";
+		String marca = "Mis boquillas";
 		ContentValues values = new ContentValues();
 		values.put(KEY_MARCA, marca); //1
 		values.put(KEY_MODELO, modelo);//2
@@ -189,7 +189,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	}
 	public int existeBoquillaMisBoquillas(String modelo){
 		
-		String marca = "MIS BOQUILLAS";
+		String marca = "Mis boquillas";
 		String selectQuery = "SELECT * FROM " + TABLE_BOQUI + " WHERE "
 				+ KEY_MARCA + "=='" + marca + "'" + " AND " + KEY_MODELO +
 				"=='"+modelo+"' ";
@@ -227,7 +227,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	public ArrayList<String> getModelo(String marca, int presion) {
 		ArrayList<String> modelo = new ArrayList<String>();
 		String mimarca;
-		if (marca.compareTo("Mis boquillas")==0) mimarca = "MIS BOQUILLAS";
+		if (marca.compareTo("Mis boquillas")==0) mimarca = "Mis boquillas";
 		else mimarca=marca;
 		String selectQuery = "SELECT * FROM " + TABLE_BOQUI + " WHERE "
 				+ KEY_MARCA + "=='" + mimarca + "'";
@@ -369,7 +369,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	public void resetTables() {
 		SQLiteDatabase db = this.getWritableDatabase();
 		// Delete All Rows
-		db.delete(TABLE_BOQUI, KEY_MARCA + "<>" + "'MIS BOQUILLAS'", null);
+		db.delete(TABLE_BOQUI, KEY_MARCA + "<>" + "'Mis boquillas'", null);
 		//db.delete(TABLE_BOQUI, null, null);
 		db.close();
 	}

@@ -33,7 +33,6 @@ public class MostrarBoquillasContinuacion extends AppCompatActivity{
 		Intent c5 = getIntent();
 		String modelo = c5.getStringExtra("modelo");
 		DatabaseHandler db = new DatabaseHandler(this);
-		//String caudal_s = db.getCaudalAunaPresionDeBoquilla("MIS BOQUILLAS", modelo, 10);
 		ArrayList<String> datos = db.getDatosIntroMisBoquillas(modelo);
 		referencia.setText(modelo);
 		caudal.setText(datos.get(1));

@@ -14,6 +14,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TableRow;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 	int debug = 0;
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
 		//db.resetTables();
 		barra = (ProgressBar) findViewById(R.id.progressBar1);
 		tableLay = (TableRow) findViewById(R.id.tableLayout1);
+		TextView version = (TextView) findViewById(R.id.textView3);
+		version.setText("V.2.1");
 		tableLay.setVisibility(View.INVISIBLE);
 		
 		Button siguiente = (Button) findViewById(R.id.siguiente);
