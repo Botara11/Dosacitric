@@ -178,7 +178,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		Cursor cursor = db.rawQuery(selectQuery, null);
 		// Move to first row
 		cursor.moveToFirst();
-		System.out.println("Hay " + cursor.getCount() + " filas");
+		//System.out.println("Hay " + cursor.getCount() + " filas");
 		if (cursor.getCount() != 0) {
 			datos.add(cursor.getString(2));
 			datos.add(cursor.getString(3));
@@ -304,7 +304,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		Cursor cursor = db.rawQuery(selectQuery, null);
 		// Move to first row
 		cursor.moveToFirst();
-		System.out.println("Hay " + cursor.getCount() + " filas");
+		//System.out.println("Hay " + cursor.getCount() + " filas");
 		if (cursor.getCount() != 0) {
 			boquillas.add(cursor.getString(2)); // GET MODELO
 			//System.out.println("anadido "+cursor.getString(2) + " " + cursor.getString(3));
@@ -313,7 +313,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 				boquillas.add(cursor.getString(2)); // REVISAR SI SE PASA
 				//System.out.println("anadido "+cursor.getString(2) + " " + cursor.getString(3));
 			}
-			System.out.println(boquillas.size());
+			//System.out.println(boquillas.size());
 		}
 		return boquillas;
 

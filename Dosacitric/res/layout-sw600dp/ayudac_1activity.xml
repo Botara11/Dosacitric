@@ -23,6 +23,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Ancho de la calle calculado"
                 android:textColor="@color/white"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -35,7 +36,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/cabecera2"
@@ -46,6 +48,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Características del sistema hidráulico del equipo"
                 android:textColor="@color/white"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -57,6 +60,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Velocidad de avance calculada"
                 android:textColor="@color/white"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -69,6 +73,7 @@
                 android:layout_marginTop="10dp"
                 android:text="D.1. SELECCIONAR PRESIÓN. Introducción de datos."
                 android:textColor="@color/white"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -80,6 +85,7 @@
                 android:layout_marginTop="20dp"
                 android:text="D.1. SELECCIONAR FABRICANTE. Introducción de datos."
                 android:textColor="@color/white"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -92,6 +98,7 @@
                 android:layout_marginTop="20dp"
                 android:text="D.1. ZONA ALTA. BOQUILLA SELECCIONADA. Introducción de datos."
                 android:textColor="@color/white"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -103,6 +110,7 @@
                 android:layout_marginTop="20dp"
                 android:text="D.1. ZONA MEDIA. BOQUILLA SELECCIONADA. Introducción de datos."
                 android:textColor="@color/white"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -114,6 +122,7 @@
                 android:layout_marginTop="20dp"
                 android:text="D.1. ZONA BAJA. BOQUILLA SELECCIONADA. Introducción de datos."
                 android:textColor="@color/white"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -126,7 +135,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/cuerpo3"
@@ -138,7 +148,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/cuerpo4"
@@ -150,7 +161,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/cuerpo5"
@@ -162,7 +174,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/cuerpo6"
@@ -174,7 +187,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/cuerpo7"
@@ -186,7 +200,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/cuerpo8"
@@ -199,12 +214,13 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/zonaboquillas"
                 android:layout_width="wrap_content"
-                android:layout_height="250dp"
+                android:layout_height="350dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/cuerpo2"

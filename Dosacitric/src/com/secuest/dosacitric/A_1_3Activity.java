@@ -204,7 +204,7 @@ public class A_1_3Activity extends AppCompatActivity{
 					break;
 					}
 
-					revisando = "¿Utiliza coadyuvantes (mojantes)";
+					revisando = "¿Utiliza coadyuvantes (mojantes)?";
 					Float utilizaMojantes1 = (float) 999.999;
 					int uti = utilizaMojantes.getSelectedItemPosition();
 					switch(uti){

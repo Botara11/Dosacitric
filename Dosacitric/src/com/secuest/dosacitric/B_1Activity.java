@@ -31,10 +31,8 @@ CompoundButton.OnCheckedChangeListener  {
 	private int debug = 1;
 	private TextView volumenAplicacionCalculado;
 	private Switch SwitchvolumenAplicacionCalculado;
-	private Switch SwitchvolumenAplicacionDeseado;
 	private TextView anchoTrabajoCalculado;
 	private Switch SwitchAnchoTrabajoCalculado;
-	private Switch SwitchAnchoTrabajoDeseado;
 	private TextView velocidadAvance;
 	private SeekBar velocidadAvanceSeekbar;
 	private EditText editAncho;
@@ -80,91 +78,40 @@ CompoundButton.OnCheckedChangeListener  {
 
 		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 		String VolumenApp = settings.getString("volumenApp", "");
+		
 		volumenAplicacionCalculado.setText(VolumenApp);
-
 
 		SwitchvolumenAplicacionCalculado.setOnCheckedChangeListener(this);
 		SwitchvolumenAplicacionCalculado.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
 				actualizarCaudal();
-				if(SwitchvolumenAplicacionCalculado.isChecked() == true){
-					SwitchvolumenAplicacionDeseado.setChecked(false);
-				}else{
-					SwitchvolumenAplicacionDeseado.setChecked(true);
-				}
 			}
 		});
 
-
-		SwitchvolumenAplicacionDeseado = (Switch) findViewById(R.id.switchVolumenAplicacionDeseado);
-		SwitchvolumenAplicacionDeseado.setOnCheckedChangeListener(this);
-		SwitchvolumenAplicacionDeseado.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View v) {
-				actualizarCaudal();
-				if(SwitchvolumenAplicacionDeseado.isChecked() == true){
-					SwitchvolumenAplicacionCalculado.setChecked(false);
-				}else{
-					SwitchvolumenAplicacionCalculado.setChecked(true);
-				}
-
-				// TODO Auto-generated method stub
-				/*if(SwitchvolumenAplicacionDeseado.isChecked() == true){
-					editVolumen.setText(AnchoTrabajo);
-				}else{
-				}*/
-
-			}
-		});
 		if (VolumenApp==""){
 			SwitchvolumenAplicacionCalculado.setChecked(false);
-			SwitchvolumenAplicacionDeseado.setChecked(true);
-		}else{
-			SwitchvolumenAplicacionCalculado.setChecked(true);
-			SwitchvolumenAplicacionDeseado.setChecked(false);
 		}
-
 
 		anchoTrabajoCalculado = (TextView) findViewById(R.id.textViewAnchoTrabajoCalculado);
 		SwitchAnchoTrabajoCalculado= (Switch) findViewById(R.id.switchAnchoTrabajoCalculado);
+
 		String AnchoTrabajo = settings.getString("anchocalle", "");
+
 		anchoTrabajoCalculado.setText(AnchoTrabajo);
+		
 		SwitchAnchoTrabajoCalculado.setOnCheckedChangeListener(this);
-
-
-
 		SwitchAnchoTrabajoCalculado.setOnClickListener(new View.OnClickListener() {
+			
 			public void onClick(View v) {
 				actualizarCaudal();
-				if(SwitchAnchoTrabajoCalculado.isChecked() == true){
-					SwitchAnchoTrabajoDeseado.setChecked(false);
-				}else{
-					SwitchAnchoTrabajoDeseado.setChecked(true);
-				}
 			}
 		});
 
-		SwitchAnchoTrabajoDeseado = (Switch) findViewById(R.id.switchAnchoTrabajoDeseado);
-		SwitchAnchoTrabajoDeseado.setOnCheckedChangeListener(this);
-		SwitchAnchoTrabajoDeseado.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View v) {
-				actualizarCaudal();
-				if(SwitchAnchoTrabajoDeseado.isChecked() == true){
-					SwitchAnchoTrabajoCalculado.setChecked(false);
-				}else{
-					SwitchAnchoTrabajoCalculado.setChecked(true);
-				}
-			}
-		});
 		if (AnchoTrabajo==""){
 			SwitchAnchoTrabajoCalculado.setChecked(false);
-			SwitchAnchoTrabajoDeseado.setChecked(true);
-		}else{
-			SwitchAnchoTrabajoCalculado.setChecked(true);
-			SwitchAnchoTrabajoDeseado.setChecked(false);
 		}
+
 		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
 		velocidadAvance.setText("0.99");
 
@@ -178,20 +125,15 @@ CompoundButton.OnCheckedChangeListener  {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
 					int count) {
-				// TODO Auto-generated method stub
-
 			}
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
 					int after) {
-				// TODO Auto-generated method stub
-
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
-				// TODO Auto-generated method stub
 				actualizarCaudal();
 			}
 		});
@@ -202,23 +144,19 @@ CompoundButton.OnCheckedChangeListener  {
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
 					int count) {
-				// TODO Auto-generated method stub
-
 			}
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
 					int after) {
-				// TODO Auto-generated method stub
-
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
-				// TODO Auto-generated method stub
 				actualizarCaudal();
 			}
 		});
+
 		editBoquillas = (EditText) findViewById(R.id.editText4);
 
 		Button siguiente = (Button) findViewById(R.id.siguiente);
@@ -232,21 +170,21 @@ CompoundButton.OnCheckedChangeListener  {
 					Float vol, ancho;
 
 					if (SwitchvolumenAplicacionCalculado.isChecked()) {
-						quien = "volumenAplicacionCalculado";
+						quien = "Volumen de aplicación calculado";
 						vol = Float.parseFloat(volumenAplicacionCalculado.getText()
 								.toString());
 					} else {
-						quien = "volumenAplicacionDeseado";
+						quien = "Volumen de aplicación deseado";
 						vol = Float
 								.parseFloat(editVolumen.getText().toString());
 					}
 
 					if (SwitchAnchoTrabajoCalculado.isChecked()) {
-						quien = "anchoTrabajoCalculado";
+						quien = "Ancho de trabajo calculado";
 						ancho = Float.parseFloat(anchoTrabajoCalculado
 								.getText().toString());
 					} else {
-						quien = "anchoTrabajoDeseado";
+						quien = "Ancho de trabajo deseado";
 						ancho = Float
 								.parseFloat(editAncho.getText().toString());
 					}
@@ -271,14 +209,6 @@ CompoundButton.OnCheckedChangeListener  {
 				}
 			}
 		});
-
-		/*
-		 * volumenAplicacionCalculado.setChecked(true);
-		 * volumenAplicacionSiguiente.setChecked(false);
-		 * 
-		 * anchoTrabajoCalculado.setChecked(true);
-		 * anchoTrabajoSiguiente.setChecked(false);
-		 */
 
 		Button indice = (Button) findViewById(R.id.indice);
 		indice.setClickable(true);
@@ -393,8 +323,8 @@ CompoundButton.OnCheckedChangeListener  {
 		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
 		SharedPreferences.Editor editor = settings.edit();
 
-		editor.putString("volumenAplicacionCalculado", editVolumen.getText().toString());
-		editor.putString("anchoTrabajoCalculado", editAncho.getText().toString());
+		editor.putString("volumenCalculado", editVolumen.getText().toString());
+		editor.putString("anchoCalculado", editAncho.getText().toString());
 		editor.putString("velocidadAvance", velocidadAvance.getText().toString());
 		editor.putString("caudalTotal", caudalTotal.getText().toString());
 		editor.putString("caudalSector", caudalSector.getText().toString());

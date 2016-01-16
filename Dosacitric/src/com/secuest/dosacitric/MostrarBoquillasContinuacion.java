@@ -29,7 +29,6 @@ public class MostrarBoquillasContinuacion extends AppCompatActivity{
 		referencia = (TextView) findViewById(R.id.referenciaTextView);
 		caudal = (TextView) findViewById(R.id.caudalTextView);
 		presion = (TextView) findViewById(R.id.presionTextView);
-
 		
 		Intent c5 = getIntent();
 		String modelo = c5.getStringExtra("modelo");
@@ -37,22 +36,10 @@ public class MostrarBoquillasContinuacion extends AppCompatActivity{
 		//String caudal_s = db.getCaudalAunaPresionDeBoquilla("MIS BOQUILLAS", modelo, 10);
 		ArrayList<String> datos = db.getDatosIntroMisBoquillas(modelo);
 		referencia.setText(modelo);
-		caudal.setText(datos.get(0));
-		presion.setText(datos.get(1));
+		caudal.setText(datos.get(1));
+		presion.setText(datos.get(0));
 
 	}
-
-	@Override
-	protected void onResume(){
-		super.onResume();
-	}
-
-
-	@Override
-	protected void onPause(){
-		super.onPause(); 
-	}
-
 
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		return super.onPrepareOptionsMenu(menu);

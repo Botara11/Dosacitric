@@ -87,7 +87,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/seekBar1"
                 android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/seekBar1"
                 android:layout_marginRight="10dp"
+                android:gravity="center"
                 android:text="km/h"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
@@ -129,8 +131,7 @@
                 android:background="@color/white"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                 >
+                android:inputType="number|textVisiblePassword" >
             </EditText>
 
             <SeekBar
@@ -234,11 +235,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView16"
                 android:layout_below="@+id/textView16"
+                android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
                 android:text="Número total de boquillas"
                 android:textColor="@color/white"
-                android:textSize="17sp"
-                android:layout_marginBottom="16dp" />
+                android:textSize="17sp" />
 
             <Switch
                 android:id="@+id/switchVolumenAplicacionCalculado"
@@ -250,21 +251,19 @@
                 android:layout_marginTop="16dp"
                 android:checked="true"
                 android:onClick="onSwitchClicked "
-                android:text="Volumen de aplicacion \n calculado"
+                android:text="Volumen de aplicación \n calculado"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
-            <Switch
+            <TextView
                 android:id="@+id/switchVolumenAplicacionDeseado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/switchVolumenAplicacionCalculado"
-                android:layout_alignRight="@+id/switchVolumenAplicacionCalculado"
                 android:layout_below="@+id/textViewVolumenAplicacionCalculado"
                 android:layout_marginTop="20dp"
-                android:checked="false"
-                android:onClick="onSwitchClicked "
-                android:text="Volumen de aplicacion \n deseado"
+                android:layout_toLeftOf="@+id/textView11"
+                android:text="Volumen de aplicación deseado"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -273,7 +272,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignRight="@+id/switchVolumenAplicacionDeseado"
+                android:layout_alignRight="@+id/switchVolumenAplicacionCalculado"
                 android:layout_below="@+id/editTextVolumenAplicacionDeseado"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="30dp"
@@ -283,7 +282,7 @@
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
-            <Switch
+            <TextView
                 android:id="@+id/switchAnchoTrabajoDeseado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -292,9 +291,7 @@
                 android:layout_below="@+id/textViewAnchoTrabajoCalculado"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:checked="false"
-                android:onClick="onSwitchClicked "
-                android:text="Ancho de trabajo \n deseado"
+                android:text="Ancho de trabajo deseado"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 

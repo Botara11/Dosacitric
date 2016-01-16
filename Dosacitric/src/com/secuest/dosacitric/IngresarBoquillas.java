@@ -1,7 +1,5 @@
 package com.secuest.dosacitric;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -84,32 +82,12 @@ public class IngresarBoquillas extends AppCompatActivity {
 						toast = Toast.makeText(getApplicationContext(), "Valor de "+'"'+quien+'"'+" incorrecto", Toast.LENGTH_SHORT);
 					else
 						toast = Toast.makeText(getApplicationContext(), "La referencia ya existe en la base de datos", Toast.LENGTH_SHORT);
-					
-						
+
+
 					toast.show();
 				}
 			}
 		});
-	}
-
-	@Override
-	protected void onResume(){
-		super.onResume();
-
-	}
-
-	@Override
-	protected void onPause(){
-		super.onPause(); 
-
-		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-		SharedPreferences.Editor editor = settings.edit();
-
-		editor.putString("referencia", ireferencia.getText().toString());
-		editor.putString("caudal", caudal.getText().toString());
-		editor.putString("presion", presion.getText().toString());
-		editor.commit();
-
 	}
 
 	@Override

@@ -24,26 +24,25 @@ public class C_3Activity extends ListActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.catalogoslistview_layout);
 
-		String[] marcas = { "Teejet", "Albuz", "Hardi", "Discos",
-		"Otras","MIS BOQUILLAS" };
+		String[] marcas = { "Teejet", "Albuz", "Hardi", "Discos", "Mis boquillas" };
 		marcas2=marcas;
-		
+
 		ArrayList<Lista_entrada> datos = new ArrayList<Lista_entrada>();  
 
 
 		for(int i=0;i<marcas.length;i++){
 			datos.add(new Lista_entrada(R.drawable.arrow,1,new String[]{ marcas[i]}));
 		}
-		
+
 		if (mAdapter == null) {
 			mAdapter = new Lista_adaptador(this , R.layout.list_item_coniconos, datos){
 				@Override
 				public void onEntrada(Object entrada, View view) {
 					if (entrada != null) {
 						TextView texto_superior_entrada = (TextView) view.findViewById(R.id.textsuperior); 
-			            if (texto_superior_entrada != null) 
-			            	texto_superior_entrada.setText(((Lista_entrada) entrada).get_texto(0)); 
-						
+						if (texto_superior_entrada != null) 
+							texto_superior_entrada.setText(((Lista_entrada) entrada).get_texto(0)); 
+
 						ImageView imagen_entrada = (ImageView) view.findViewById(R.id.image); 
 						if (imagen_entrada != null)
 							imagen_entrada.setImageResource(((Lista_entrada) entrada).get_idImagen());
@@ -52,7 +51,7 @@ public class C_3Activity extends ListActivity{
 			};		
 
 		}
-		
+
 		getListView().setAdapter(mAdapter);
 		setListAdapter(mAdapter);
 

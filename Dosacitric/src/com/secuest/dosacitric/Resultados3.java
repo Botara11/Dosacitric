@@ -2,7 +2,9 @@ package com.secuest.dosacitric;
 
 import java.text.DecimalFormat;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -118,13 +120,29 @@ public class Resultados3 extends AppCompatActivity {
 		nuevoTratamiento.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
-				SharedPreferences.Editor editor = settings.edit();
-				editor.clear();
-				editor.commit();
-				
-				startActivity(new Intent(Resultados3.this, Indice.class));
-				finish();
+				AlertDialog alert = new AlertDialog.Builder(Resultados3.this)
+			    .setTitle("Nuevo tratamiento")
+			    .setMessage("¿Realmente quiere borrar todos los datos introducidos en DOSACITRIC?")
+			    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+			        public void onClick(DialogInterface dialog, int which) { 
+			            // do nothing
+			        }
+			     })
+			    .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+			        public void onClick(DialogInterface dialog, int which) { 
+
+						SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+						SharedPreferences.Editor editor = settings.edit();
+						editor.clear();
+						editor.commit();
+						
+						startActivity(new Intent(Resultados3.this, Indice.class));
+						finish();
+			        }
+			     })
+			    
+			    .setIcon(android.R.drawable.ic_dialog_alert)
+			     .show();
 			}
 		});
 
@@ -191,7 +209,7 @@ public class Resultados3 extends AppCompatActivity {
 				mypdf.finish_document("DosacitricD"+referencia, getApplicationContext());
 				//mypdf.finish_document("Dosacitric_D"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
 				
-				Toast toast = Toast.makeText(getApplicationContext(), "El PDF sera guardado en DESCARGAS", Toast.LENGTH_SHORT);
+				Toast toast = Toast.makeText(getApplicationContext(), "El PDF será guardado en DESCARGAS", Toast.LENGTH_SHORT);
 				toast.show();
 			}
 		});

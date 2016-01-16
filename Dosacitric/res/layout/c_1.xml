@@ -276,7 +276,7 @@
                 android:gravity="center"
                 android:textStyle="bold" />
 
-            <Switch
+            <TextView
                 android:id="@+id/switchVelocidadAvanceDeseada"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -284,9 +284,7 @@
                 android:layout_below="@+id/velocidadAvance"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:checked="false"
-                android:onClick="onSwitchClicked "
-                android:text="Velocidad de avance \n deseada"
+                android:text="Velocidad de avance deseada"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -313,6 +311,7 @@
                 android:layout_above="@+id/switchVelocidadAvanceDeseada"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
+                android:gravity="center"
                 android:text="km/h"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
@@ -343,16 +342,14 @@
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
-            <Switch
+            <TextView
                 android:id="@+id/switchAnchoTrabajoDeseado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/anchoCalleParteC"
                 android:layout_below="@+id/textViewVolum"
                 android:layout_marginTop="20dp"
-                android:checked="false"
-                android:onClick="onSwitchClicked "
-                android:text="Ancho de la calle \n deseado"
+                android:text="Ancho de la calle deseado"
                 android:textColor="@color/white"
                 android:textSize="17dp" />
 
@@ -360,8 +357,9 @@
                 android:id="@+id/textView18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView19"
+                android:layout_alignParentLeft="true"
                 android:layout_below="@+id/anchoCalculadoParteC"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:text="Características del sistema hidráulico del equipo"
                 android:textColor="@color/white"

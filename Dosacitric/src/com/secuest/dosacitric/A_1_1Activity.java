@@ -22,8 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class A_1_1Activity extends AppCompatActivity{
-	
-	private int debug = 0;
+
 	private Spinner densidadFoliar;
 	private EditText anchocalle;
 	private EditText distancia;
@@ -65,7 +64,6 @@ public class A_1_1Activity extends AppCompatActivity{
 		formaArb.setAdapter(adaptador0);
 		formaArb.setSelection(adaptador0.getCount());
 
-
 		ArrayList<String> lista1 = new ArrayList<String>();
 		lista1.add("Hace menos de 3 meses");
 		lista1.add("Entre 3 meses y 1 año");
@@ -78,7 +76,6 @@ public class A_1_1Activity extends AppCompatActivity{
 		fechaUltima.setAdapter(adaptador1);
 		fechaUltima.setSelection(adaptador1.getCount());
 
-
 		ArrayList<String> lista2 = new ArrayList<String>();
 		lista2.add("Bajo");
 		lista2.add("Medio");
@@ -90,15 +87,6 @@ public class A_1_1Activity extends AppCompatActivity{
 		gradoPoda.setAdapter(adaptador2);
 		gradoPoda.setSelection(adaptador2.getCount());
 
-		if (debug==1){
-			//PONIENDO VALORES PARA DEBUG
-			anchocalle.setText("6");
-			distancia.setText("6");
-			longitudArb.setText("6");
-			anchuraArb.setText("6");
-			alturaArb.setText("6");
-		}
-
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
@@ -109,7 +97,7 @@ public class A_1_1Activity extends AppCompatActivity{
 
 				try {
 
-					revisando = "Densidad foliar del �rbol";
+					revisando = "Densidad foliar del árbol";
 					Float densidadFoliar1 = (float) 999.999;
 					int den = densidadFoliar.getSelectedItemPosition();
 					switch(den){
@@ -271,7 +259,6 @@ public class A_1_1Activity extends AppCompatActivity{
 		} 
 	}
 
-
 	@Override
 	protected void onResume(){
 		super.onResume();
@@ -300,7 +287,6 @@ public class A_1_1Activity extends AppCompatActivity{
 		alturaArb.setText(settings.getString("alturaArboles", ""));
 
 	}
-
 
 	@Override
 	protected void onPause(){
@@ -331,34 +317,20 @@ public class A_1_1Activity extends AppCompatActivity{
 		return super.onPrepareOptionsMenu(menu);
 	}
 
-
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		/*int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);*/
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			// app icon in action bar clicked; goto parent activity.
 			this.finish();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
-
-
 }

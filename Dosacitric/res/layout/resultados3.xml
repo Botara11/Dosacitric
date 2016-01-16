@@ -69,7 +69,8 @@
                 android:gravity="center"
                 android:padding="0dip"
                 android:text="NUEVO TRATAMIENTO"
-                android:textColor="#ff6600" />
+                android:textColor="#ff6600"
+                android:textSize="11sp" />
         </TableRow>
     </TableLayout>
 
@@ -458,7 +459,6 @@
                 android:text="TextView"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
-
         </RelativeLayout>
     </ScrollView>
 

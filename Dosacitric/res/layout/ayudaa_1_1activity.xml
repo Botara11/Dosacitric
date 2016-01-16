@@ -88,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/arbolesdatos"
+                android:layout_below="@+id/cuerpo5"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
@@ -213,26 +213,6 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/white" />
-
-            <ImageView
-                android:id="@+id/arbolescolores"
-                android:layout_width="wrap_content"
-                android:layout_height="300dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/cuerpo5"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/arbolescolores" />
-
-            <ImageView
-                android:id="@+id/arbolesdatos"
-                android:layout_width="wrap_content"
-                android:layout_height="300dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/arbolescolores"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/arbolesdatos" />
 
             <ImageView
                 android:id="@+id/dimensiones"

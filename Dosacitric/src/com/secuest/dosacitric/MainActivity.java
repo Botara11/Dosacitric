@@ -1,6 +1,10 @@
 package com.secuest.dosacitric;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -36,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 		barra = (ProgressBar) findViewById(R.id.progressBar1);
 		tableLay = (TableRow) findViewById(R.id.tableLayout1);
 		tableLay.setVisibility(View.INVISIBLE);
+		
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
@@ -44,9 +49,41 @@ public class MainActivity extends AppCompatActivity {
 				System.out.println("CLICK");
 				startActivity(new Intent(MainActivity.this, Indice.class));
 				//startActivity(new Intent(MainActivity.this, NewIngresarBoquillas.class));
-
 			}
 		});
+		
+		Button nuevoTratamiento = (Button) findViewById(R.id.nuevoTratamiento);
+		nuevoTratamiento.setClickable(true);
+		nuevoTratamiento.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				AlertDialog alert = new AlertDialog.Builder(MainActivity.this)
+			    .setTitle("Nuevo tratamiento")
+			    .setMessage("¿Realmente quiere borrar todos los datos introducidos en DOSACITRIC?")
+			    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+			        public void onClick(DialogInterface dialog, int which) { 
+			            // do nothing
+			        }
+			     })
+			    .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+			        public void onClick(DialogInterface dialog, int which) { 
+
+			        	SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
+						SharedPreferences.Editor editor = settings.edit();
+						editor.clear();
+						editor.commit();
+						
+						startActivity(new Intent(MainActivity.this, Indice.class));
+						finish();
+			        }
+			     })
+			    
+			    .setIcon(android.R.drawable.ic_dialog_alert)
+			     .show();
+				
+			}
+		});
+		
 		/*
 		pdfCreator pdf = new pdfCreator();
 		//pdf.dibujarTabla("");

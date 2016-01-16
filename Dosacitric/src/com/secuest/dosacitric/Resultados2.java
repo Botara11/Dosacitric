@@ -153,13 +153,19 @@ public class Resultados2 extends AppCompatActivity {
 				ArrayList<String> marcasAdecu = new ArrayList<String>();
 
 				bucleDentro: for (String mar : marcas) {
+					System.out.println();System.out.println();
+					System.out.println("\n\nMarca: "+mar);
 					for (String pres : presiones) {
+						System.out.println("Presion: "+pres);
 						ArrayList<String> boquillasZ1 = db.getBoquillas(mar,
 								inter[0], inter[1], pres);
 						ArrayList<String> boquillasZ2 = db.getBoquillas(mar,
 								inter[2], inter[3], pres);
 						ArrayList<String> boquillasZ3 = db.getBoquillas(mar,
 								inter[4], inter[5], pres);
+						System.out.println("--Check_z1:"+boquillasZ1.toString()+" z2:"+boquillasZ2.toString()+" z3:"+
+								boquillasZ3.toString());
+						
 						if (boquillasZ1 != null && boquillasZ2 != null
 								&& boquillasZ3 != null) {
 							if (boquillasZ1.size() > 0
@@ -219,22 +225,23 @@ public class Resultados2 extends AppCompatActivity {
 				if(!settings.getString("fecha", "").equals("")){
 					String A = ""+
 						"A IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
-						"Fecha "+settings.getString("fecha", "")+"<tipo>3<n>"+
-						"Identificaci&oacute;n de la parcela "+settings.getString("idparcela", "")+"<tipo>3<n>"+
-						"Identificaci&oacute;n del tratamiento +"+settings.getString("idtratamiento", "")+"+<tipo>3<n>"+
-						"Refer&eacute;ncia "+settings.getString("referencia", "")+"<tipo>3";
+						"Fecha: "+settings.getString("fecha", "")+"<tipo>3<n>"+
+						"Identificaci&oacute;n de la parcela: "+settings.getString("idparcela", "")+"<tipo>3<n>"+
+						"Identificaci&oacute;n del tratamiento: "+settings.getString("idtratamiento", "")+"<tipo>3<n>"+
+						"Refer&eacute;ncia: "+settings.getString("referencia", "")+"<tipo>3";
 					rw.write("A", A);
 					mypdf.readFile("A");
 				}
 				String C = ""+
-						"C. REGULACI&Oacute;N DEL PULVERIZADOR HIDRONEUM&Aacute;TICO (TURBO)<tipo>1<n>"+
-						"Volumen de aplicaci&oacute;n (V) "+Resultados2.this.VolAplicacion.getText().toString()+" L/Ha<tipo>3<n>"+
-						"Velocidad de avance deseada "+Resultados2.this.VelAvance.getText().toString()+" km/h<tipo>3<n>"+
-						"Ancho de trabajo (a)"+Resultados2.this.AnchoTrabajo.getText().toString()+"+ m<tipo>3<n>"+
-						"Caudal l&iacute;quido total "+Resultados2.this.CaudalLiqTotal.getText().toString()+"L/min<tipo>3<n>"+
-						"Caracterl&iacute;sticas del sistema hidrl&aacute;ulico del equipo<tipo>3<n>"+
-						"- Nº total boquillas "+Resultados2.this.NumTotalBoq.getText().toString()+"<tipo>3<n>"+
-						"- Nº boquillas desponibles/sector "+Resultados2.this.NumBoqPorSector.getText().toString()+"<tipo>3<n>"+
+						"C. REGULACI&Oacute;N DEL PULVERIZADOR<tipo>1<n>"+
+						" HIDRONEUM&Aacute;TICO (TURBO)<tipo>1<n>"+
+						"Volumen de aplicaci&oacute;n (V): "+Resultados2.this.VolAplicacion.getText().toString()+" L/Ha<tipo>3<n>"+
+						"Velocidad de avance deseada (v): "+Resultados2.this.VelAvance.getText().toString()+" km/h<tipo>3<n>"+
+						"Ancho de trabajo (a): "+Resultados2.this.AnchoTrabajo.getText().toString()+" m<tipo>3<n>"+
+						"Caudal l&iacute;quido total: "+Resultados2.this.CaudalLiqTotal.getText().toString()+" L/min<tipo>3<n>"+
+						"Caracterl&iacute;sticas del sistema hidr&aacute;ulico del equipo:<tipo>3<n>"+
+						"- Nº total boquillas: "+Resultados2.this.NumTotalBoq.getText().toString()+"<tipo>3<n>"+
+						"- Nº boquillas desponibles/sector: "+Resultados2.this.NumBoqPorSector.getText().toString()+"<tipo>3<n>"+
 						"Boquillas a cerrar por zona<tipo>2<n>"+
 						"Zona Alta: "+Resultados2.this.BoqCerrAlta.getText().toString()+"<tipo>3<n> "+
 						"Zona Baja: "+Resultados2.this.BoqCerrBaja.getText().toString()+"<tipo>3<n> "+
@@ -243,12 +250,12 @@ public class Resultados2 extends AppCompatActivity {
 						"Zona Media (nM): "+Resultados2.this.BoqAbiMedia.getText().toString()+"<tipo>3<n> "+
 						"Zona Baja (nB): "+Resultados2.this.BoqAbiBaja.getText().toString()+"<tipo>3<n> "+
 						"Porcentaje de vegetaci&oacute;n a pulverizar por zona<tipo>2<n>"+
-						"Zona Alta (A%): "+Resultados2.this.VegetaAlta.getText().toString()+" %<tipo>3<n>"+
-						"Zona Media (A%): "+Resultados2.this.VegetaMedia.getText().toString()+" %<tipo>3<n>"+
-						"Zona Baja (A%): "+Resultados2.this.VegetaBaja.getText().toString()+" %<tipo>3<n>"+
-						"Caracterl&iacute;sticas del cauda<tipo>2<n>"+
-						"Caudal l&iacute;quido por sector"+Resultados2.this.CaudalLiqSector.getText().toString()+" L/min<tipo>3<n>"+
-						"Variaci&oacute;n de caudal admisible"+Resultados2.this.VarCaudalAdmisible.getText().toString()+" %<tipo>3<n>"+
+						"Zona Alta (A%): "+Resultados2.this.VegetaAlta.getText().toString()+" <tipo>3<n>"+
+						"Zona Media (A%): "+Resultados2.this.VegetaMedia.getText().toString()+" <tipo>3<n>"+
+						"Zona Baja (A%): "+Resultados2.this.VegetaBaja.getText().toString()+" <tipo>3<n>"+
+						"Caracter&iacute;sticas del caudal<tipo>2<n>"+
+						"Caudal l&iacute;quido por sector: " +Resultados2.this.CaudalLiqSector.getText().toString()+" L/min<tipo>3<n>"+
+						"Variaci&oacute;n de caudal admisible: "+Resultados2.this.VarCaudalAdmisible.getText().toString()+" <tipo>3<n>"+
 						"Caudal l&iacute;quido por boquilla<tipo>2<n>"+
 						"Zona Alta (nA): "+Resultados2.this.CaudalLiqAlta.getText().toString()+" L/min<tipo>3<n>"+
 						"Zona Media (nM): "+Resultados2.this.CaudalLiqMedia.getText().toString()+" L/min<tipo>3<n>"+
@@ -259,21 +266,26 @@ public class Resultados2 extends AppCompatActivity {
 						getApplicationContext());
 
 				String[] marcas = { "Teejet", "Hardi", "Albuz", "Lechler",
-						"Discos", "Otros" };
+						"Discos", "Otros", "Mis boquillas" };
 				String[] presiones = { "p6", "p7", "p8", "p9", "p10", "p11",
 						"p12", "p13", "p14", "p15", "p16" };
 
 				ArrayList<String> marcasAdecu = new ArrayList<String>();
 
-				bucleDentro: for (String mar : marcas) {
+				for (String mar : marcas) {
+					System.out.println();System.out.println();
+					System.out.println("Marca: "+mar);
 					int marcaPrimera = 0;
 					for (String pres : presiones) {
+						System.out.println("Presion: "+pres);
 						ArrayList<String> boquillasZ1 = db.getBoquillas(mar,
 								inter[0], inter[1], pres);
 						ArrayList<String> boquillasZ2 = db.getBoquillas(mar,
 								inter[2], inter[3], pres);
 						ArrayList<String> boquillasZ3 = db.getBoquillas(mar,
 								inter[4], inter[5], pres);
+						System.out.println("--Check_z1:"+boquillasZ1.toString()+" z2:"+boquillasZ2.toString()+" z3:"+
+								boquillasZ3.toString());
 						if (boquillasZ1 != null && boquillasZ2 != null
 								&& boquillasZ3 != null) {
 							if (boquillasZ1.size() > 0
@@ -317,7 +329,7 @@ public class Resultados2 extends AppCompatActivity {
 								mypdf.insertarZonas(boquillaDezona);
 								// Se muestran
 								marcasAdecu.add(mar);
-								continue bucleDentro;
+								//continue bucleDentro;
 							}
 						}
 					}
@@ -330,7 +342,7 @@ public class Resultados2 extends AppCompatActivity {
 				mypdf.finish_document("DosacitricC"+referencia, getApplicationContext());
 				//mypdf.finish_document("Dosacitric_C"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
 
-				Toast toast = Toast.makeText(getApplicationContext(), "El PDF sera guardado en DESCARGAS", Toast.LENGTH_SHORT);
+				Toast toast = Toast.makeText(getApplicationContext(), "El PDF será guardado en DESCARGAS", Toast.LENGTH_SHORT);
 				toast.show();
 			}
 		});

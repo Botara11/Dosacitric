@@ -15,7 +15,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logo256"
+        android:icon="@drawable/logodosacitric"
         android:label="@string/app_name"
         android:logo="@drawable/logodosacitric"
         android:theme="@style/AppTheme" >
@@ -93,7 +93,7 @@
             android:name="C_4ZonaBaja"
             android:label="@string/ZB"
             android:screenOrientation="portrait"
-            android:theme="@style/mytheme" >
+            android:theme="@style/AppTheme2" >
         </activity>
         <activity
             android:name="Resultados1"
@@ -133,8 +133,7 @@
         <activity
             android:name="BorrarBoquillas"
             android:label="@string/BorrarBoquillas"
-            android:screenOrientation="portrait"
-            android:theme="@style/mytheme" >
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="AyudaIndice"

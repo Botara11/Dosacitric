@@ -233,7 +233,7 @@
                 android:layout_height="35dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/printer" />
+                android:background="@drawable/ajustes" />
         </TableRow>
     </TableLayout>
 

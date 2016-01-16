@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -27,14 +26,12 @@ CompoundButton.OnCheckedChangeListener{
 	private TextView anchoTrabajoCalculado;
 	private EditText anchoTrabajoDeseado;
 	private Switch SwitchAnchoTrabajoCalculado;
-	private Switch SwitchAnchoTrabajoDeseado;
 	private EditText zonaAlta;
 	private EditText zonaMedia;
 	private EditText zonaBaja;	
 	private TextView velocidadAvanceCalculada;
 	private EditText velocidadAvanceDeseada;
 	private Switch SwitchVelocidadAvanceCalculada;
-	private Switch SwitchVelocidadAvanceDeseada;
 	private ParteC partec1;
 	public static final String PREFS_NAME = "Guarda";
 
@@ -56,20 +53,15 @@ CompoundButton.OnCheckedChangeListener{
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
 					int count) {
-				// TODO Auto-generated method stub
-
 			}
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
 					int after) {
-				// TODO Auto-generated method stub
-
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
-				// TODO Auto-generated method stub
 			}
 		});
 
@@ -80,20 +72,15 @@ CompoundButton.OnCheckedChangeListener{
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
 					int count) {
-				// TODO Auto-generated method stub
-
 			}
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
 					int after) {
-				// TODO Auto-generated method stub
-
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
-				// TODO Auto-generated method stub
 			}
 		});
 
@@ -101,91 +88,48 @@ CompoundButton.OnCheckedChangeListener{
 
 		anchoTrabajoCalculado = (TextView) findViewById(R.id.anchoCalleParteC);
 		anchoTrabajoDeseado = (EditText) findViewById(R.id.anchoCalculadoParteC);
+
 		SwitchAnchoTrabajoCalculado = (Switch) findViewById(R.id.switchAnchoTrabajoCalculado);
 		SwitchAnchoTrabajoCalculado.setOnCheckedChangeListener(this);
+
 		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 		String ancho = settings.getString("anchocalle","");
 		anchoTrabajoCalculado.setText(ancho);
 
-
 		SwitchAnchoTrabajoCalculado.setOnClickListener(new View.OnClickListener() {
-
+			
 			public void onClick(View v) {
-				if(SwitchAnchoTrabajoCalculado.isChecked() == true){
-					SwitchAnchoTrabajoDeseado.setChecked(false);
-				}else{
-
-					SwitchAnchoTrabajoDeseado.setChecked(true);
-				}
-
 			}
 		});
 
-		SwitchAnchoTrabajoDeseado = (Switch) findViewById(R.id.switchAnchoTrabajoDeseado);
-		SwitchAnchoTrabajoDeseado.setOnCheckedChangeListener(this);
-		SwitchAnchoTrabajoDeseado.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View v) {
-				if(SwitchAnchoTrabajoDeseado.isChecked() == true){
-					SwitchAnchoTrabajoCalculado.setChecked(false);
-				}else{
-					SwitchAnchoTrabajoCalculado.setChecked(true);
-				}
-
-			}
-		});
 		if (ancho==""){
 			SwitchAnchoTrabajoCalculado.setChecked(false);
-			SwitchAnchoTrabajoDeseado.setChecked(true);
-		}else{
-			SwitchAnchoTrabajoCalculado.setChecked(true);
-			SwitchAnchoTrabajoDeseado.setChecked(false);
 		}
-
 
 		zonaAlta = (EditText) findViewById(R.id.textoZonaAlta);
 		zonaMedia = (EditText) findViewById(R.id.textoZonaMedia);
 		zonaBaja = (EditText) findViewById(R.id.textoZonaBaja);
+
 		velocidadAvanceCalculada = (TextView) findViewById(R.id.velocidadAvance);
 		velocidadAvanceDeseada = (EditText) findViewById(R.id.editText1);
-		SwitchVelocidadAvanceCalculada = (Switch) findViewById(R.id.switchVelocidadAvanceCalculada);
 
 		settings = getSharedPreferences(PREFS_NAME, 0);
 		String velocidadAvance = settings.getString("velocidadAvance","");
-		velocidadAvanceCalculada.setText(velocidadAvance);
 
+		SwitchVelocidadAvanceCalculada = (Switch) findViewById(R.id.switchVelocidadAvanceCalculada);
+		velocidadAvanceCalculada.setText(velocidadAvance);
 
 		SwitchVelocidadAvanceCalculada.setOnCheckedChangeListener(this);
 		SwitchVelocidadAvanceCalculada.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				if(SwitchVelocidadAvanceCalculada.isChecked() == true){
-					SwitchVelocidadAvanceDeseada.setChecked(false);
-				}else{
-					SwitchVelocidadAvanceDeseada.setChecked(true);
-				}
 			}
 		});
 
-		SwitchVelocidadAvanceDeseada = (Switch) findViewById(R.id.switchVelocidadAvanceDeseada);
-		SwitchVelocidadAvanceDeseada.setOnCheckedChangeListener(this);
-		SwitchVelocidadAvanceDeseada.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View v) {
-				if(SwitchVelocidadAvanceDeseada.isChecked() == true){
-					SwitchVelocidadAvanceCalculada.setChecked(false);
-				}else{
-					SwitchVelocidadAvanceCalculada.setChecked(true);
-				}
-			}
-		});
 		if (velocidadAvance==""){
 			SwitchVelocidadAvanceCalculada.setChecked(false);
-			SwitchVelocidadAvanceDeseada.setChecked(true);
-		}else{
-			SwitchVelocidadAvanceCalculada.setChecked(true);
-			SwitchVelocidadAvanceDeseada.setChecked(false);
 		}
+
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
@@ -256,12 +200,7 @@ CompoundButton.OnCheckedChangeListener{
 				startActivity(new Intent(C_1Activity.this, AyudaC_1Activity.class));
 			}
 		});
-
-
-
 	}
-
-
 
 	@Override
 	protected void onResume(){
@@ -291,8 +230,6 @@ CompoundButton.OnCheckedChangeListener{
 		editor.putString("zonaBaja", zonaBaja.getText().toString());
 		editor.putString("velocidadAvanceDeseada", velocidadAvanceDeseada.getText().toString());
 
-
-		// Commit the edits!
 		editor.commit();
 		//System.out.println("Escribir: ancho="+anchocalle.getText().toString()+"; "+selectedPosition +" " + selectedPosition2+" "+ selectedPosition3+" "+ selectedPosition4);
 
@@ -309,7 +246,7 @@ CompoundButton.OnCheckedChangeListener{
 		inflater.inflate(R.menu.main, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
-	
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
@@ -323,15 +260,5 @@ CompoundButton.OnCheckedChangeListener{
 
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-		switch (buttonView.getId()) {
-		case R.id.switchAnchoTrabajoCalculado:
-			Log.i("switch_compat", isChecked + "");
-			break;
-		case R.id.switchAnchoTrabajoDeseado:
-			Log.i("switch_compat2", isChecked + "");
-			break;
-		}
-
 	}
-
 }
