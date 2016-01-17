@@ -15,7 +15,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logo256"
+        android:icon="@drawable/logodosacitric"
         android:label="@string/app_name"
         android:logo="@drawable/logodosacitric"
         android:theme="@style/AppTheme" >
@@ -81,19 +81,19 @@
             android:name="C_4ZonaAlta"
             android:label="@string/ZA"
             android:screenOrientation="portrait"
-            android:theme="@style/mytheme" >
+            android:theme="@style/AppTheme2" >
         </activity>
         <activity
             android:name="C_4ZonaMedia"
             android:label="@string/ZM"
             android:screenOrientation="portrait"
-            android:theme="@style/mytheme" >
+            android:theme="@style/AppTheme2" >
         </activity>
         <activity
             android:name="C_4ZonaBaja"
             android:label="@string/ZB"
             android:screenOrientation="portrait"
-            android:theme="@style/mytheme" >
+            android:theme="@style/AppTheme2" >
         </activity>
         <activity
             android:name="Resultados1"
@@ -134,7 +134,8 @@
             android:name="BorrarBoquillas"
             android:label="@string/BorrarBoquillas"
             android:screenOrientation="portrait"
-            android:theme="@style/mytheme" >
+            android:theme="@style/AppTheme2" >
+            
         </activity>
         <activity
             android:name="AyudaIndice"
@@ -219,20 +220,17 @@
         <activity
             android:name="CatalogosListView"
             android:label="@string/Fabricantes"
-            android:screenOrientation="portrait"
-            android:theme="@style/mytheme" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="PresionesListView"
             android:label="@string/Presiones"
-            android:screenOrientation="portrait"
-            android:theme="@style/mytheme" >
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="BoquillasListView"
             android:label="@string/Boquillas"
-            android:screenOrientation="portrait"
-            android:theme="@style/mytheme" >
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

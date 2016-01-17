@@ -220,20 +220,17 @@
         <activity
             android:name="CatalogosListView"
             android:label="@string/Fabricantes"
-            android:screenOrientation="portrait"
-            android:theme="@style/mytheme" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="PresionesListView"
             android:label="@string/Presiones"
-            android:screenOrientation="portrait"
-            android:theme="@style/mytheme" >
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="BoquillasListView"
             android:label="@string/Boquillas"
-            android:screenOrientation="portrait"
-            android:theme="@style/mytheme" >
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

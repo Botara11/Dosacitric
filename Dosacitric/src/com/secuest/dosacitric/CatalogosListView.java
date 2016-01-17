@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -63,7 +65,7 @@ public class CatalogosListView extends ListActivity{
 
 	@Override
 	protected void onListItemClick(ListView list, View view, int position, long id) {
-		super.onListItemClick(list, view, position, id);
+		//super.onListItemClick(list, view, position, id);
 
 		String selectedItem = ((Lista_entrada) getListAdapter().getItem(position)).get_texto(0);
 
@@ -73,5 +75,28 @@ public class CatalogosListView extends ListActivity{
 		startActivity(res);
 	}
 
+	@Override
+	public boolean onPrepareOptionsMenu(Menu menu) {
+		return super.onPrepareOptionsMenu(menu);
+	}
+
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			this.finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
 }
 

@@ -46,7 +46,9 @@
 	</style>
 
     
-    <style name="mytheme" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+    <!--style name="mytheme" parent="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"-->
+            <style name="mytheme" parent="Theme.AppCompat.Light">
+        
     	<item name="android:textColor">#FFFFFF</item>
        <item name="android:background">#000000</item>
     </style>
