@@ -54,7 +54,7 @@ public class AyudaAjustesInformacion extends AppCompatActivity{
 		String stringCuerpo8 = "<font color=#ff6600> DOSACITRIC </font> se ha elaborado a partir de los resultados obtenidos en los proyectos de investigación PULVERXACT<sup>1</sup> y OPTIDOSA<sup>2</sup>, llevados a cabo por el grupo de investigación de la Unidad de Mecanización y Tecnología Agraria de la Universidad Politécnica de Valencia."; 
 		String stringCuerpo9 = "<i> (1)Proyecto PULVERXACT. Implementación de un sistema de decisión de la dosis de producto fitosanitario en tratamientos de plantaciones (frutales, viñedo y cítricos). Contrato AGL 2002-04260-C04. Organismo financiador Ministerio de Ciencia y Tecnología.</i>";
 		String stringCuerpo10 = "<i>(2)Proyecto OPTIDOSA. Reducción del uso de producto fitosanitarios en cultivos arbóreos. Optimización de la dosis de aplicación en cítricos, frutales y vid. Contrato AGL 2007-66093-C04. Organismo financiador Ministerio de Educación y Ciencia.</i>";
-		String stringCuerpo11 = "Aplicación desarrollada por Álvaro Serneguet Sorlí e Idir Ferrah Muñoz";
+		String stringCuerpo11 = "Aplicación desarrollada por Álvaro Serneguet Sorlí e Idir Ferrah Muñoz.";
 
 		cuerpo1.setText(Html.fromHtml(stringCuerpo1));
 		cuerpo2.setText(Html.fromHtml(stringCuerpo2));
