@@ -1,5 +1,10 @@
 package com.secuest.dosacitric;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -122,6 +127,57 @@ public class MainActivity extends AppCompatActivity {
 					if (readDate==null || db.getRowCount()<=0){
 						ds.write(".date", tiempo + "");
 						System.out.println("readDate = NULL");
+						//LEER_COPIA_LOCAL=true;
+						Context ctx = getApplicationContext();
+						InputStream inputStream = ctx.getResources().openRawResource(R.raw.bbdd);
+
+					    InputStreamReader inputreader = new InputStreamReader(inputStream);
+					    BufferedReader buffreader = new BufferedReader(inputreader);
+					    String line;
+					    StringBuilder text = new StringBuilder();
+
+					    try {
+					        while (( line = buffreader.readLine()) != null) {
+					            text.append(line);
+					            text.append('\n');
+					        }
+					    } catch (IOException e) {
+					        
+					    }
+					    pagina = text.toString();
+					    db.resetTables();
+						pagina = pagina.replace(",", ".");
+						String[] nuevo = pagina.split("<!-- Hosting24 Analytics Code -->");					//*****CAMBIAR CUANDO HAYA CAMBIADO EL HOSTING*****///
+						pagina = nuevo[0];
+						System.out.println(pagina);
+
+						String[] boquillas = pagina.split("\n");
+						for(int i=0;i<boquillas.length;i++){ 
+							String[] boq = boquillas[i].split("%%%");
+
+							//HAY DATOS QUE ESTAN VACIOS "" ASI QUE NO SE PUEDE HACER DOUBLE.PARSEDOUBLE()
+							Double k = Double.parseDouble(boq[4])/java.lang.Math.pow(10.0,0.5);
+							//MARCA - MODELO - DIAMETRO(puede no haber) - CAUDAL
+							double dia;
+							if(boq[2].compareTo("")!=0){
+								dia = Double.parseDouble(boq[2]);
+							}else 
+								dia = 0.0;
+							//System.out.println(boq[1] + " "+boq[4]+"/("+boq[4]+"^0,5) = " +k);
+							db.addBoquilla(boq[0],boq[1],dia,Double.parseDouble(boq[4]),k*java.lang.Math.pow(6.0,0.5),
+									k*java.lang.Math.pow(7.0,0.5),
+									k*java.lang.Math.pow(8.0,0.5),
+									k*java.lang.Math.pow(9.0,0.5),
+									k*java.lang.Math.pow(10.0,0.5),
+									k*java.lang.Math.pow(11.0,0.5),
+									k*java.lang.Math.pow(12.0,0.5),
+									k*java.lang.Math.pow(13.0,0.5),
+									k*java.lang.Math.pow(14.0,0.5),
+									k*java.lang.Math.pow(15.0,0.5),
+									k*java.lang.Math.pow(16.0,0.5),
+									1);
+						}
+					
 						DESCARGAR = true;
 					} else {
 						System.out.println("el float parseado="+Long.parseLong(readDate));
@@ -146,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
 					pagina = (new http()).connect("http://dosacitric.webs.upv.es/BBDD.txt");
 					if(pagina == null){
 						System.out.println("pagina descargada es NULL");
+						DONE=true;
 					}else if(DESCARGAR){
 						db.resetTables();
 						pagina = pagina.replace(",", ".");

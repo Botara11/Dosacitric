@@ -1022,7 +1022,8 @@ int layout support_simple_spinner_dropdown_item 0x7f03004f
 int layout zonaslistview 0x7f030050
 int menu add 0x7f0d0000
 int menu main 0x7f0d0001
-int raw gtm_analytics 0x7f050000
+int raw bbdd 0x7f050000
+int raw gtm_analytics 0x7f050001
 int string A 0x7f070045
 int string AcercaDe 0x7f070043
 int string AjusteBoquillas 0x7f070057
