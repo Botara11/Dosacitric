@@ -2,7 +2,6 @@ package com.secuest.dosacitric;
 
 import java.util.ArrayList;
 
-import android.app.ListActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;

@@ -254,7 +254,7 @@
                 android:layout_marginTop="50dp"
                 android:background="#ff6600"
                 android:paddingLeft="10dp"
-                android:text="B.3. CONDICIONES METEREOLOGICAS"
+                android:text="B.3. CONDICIONES METEOROLÓGICAS"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 

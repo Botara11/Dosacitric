@@ -102,12 +102,12 @@ public class Resultados1 extends AppCompatActivity{
 			densidadFoliar.setText("Alta");
 		}
 
-		xAncho.setText(String.format("%.2f", resultadosA3.AnchoCalle));
-		yDistancia.setText(String.format("%.2f", resultadosA3.DistanciaArboles));
-		volumenArbol.setText(String.format("%.2f", resultadosA3.VolumenArbol));
+		xAncho.setText(String.format("%.1f", resultadosA3.AnchoCalle));
+		yDistancia.setText(String.format("%.1f", resultadosA3.DistanciaArboles));
+		volumenArbol.setText(String.format("%.1f", resultadosA3.VolumenArbol));
 		
 		if (resultadosA3.IndiceFormaArbol == 0) {
-			formaArbol.setText("Esférica");
+			formaArbol.setText("EsfÃ©rica");
 		}
 		else{
 			formaArbol.setText("Seto");
@@ -172,7 +172,7 @@ public class Resultados1 extends AppCompatActivity{
 		}
 
 		if (resultadosA3.IndiceMojantes == 0){
-			utilizaMojantes.setText("Sí");
+			utilizaMojantes.setText("Sí­");
 		}
 		else {
 			utilizaMojantes.setText("No");
@@ -199,20 +199,20 @@ public class Resultados1 extends AppCompatActivity{
 		}
 
 		if (resultadosA3.IndiceHumedad == 0){
-			humedadRelativa.setText("< 35% (muy seco)");
+			humedadRelativa.setText("< 35% (Muy seco)");
 		}
 		else if (resultadosA3.IndiceHumedad == 1){
-			humedadRelativa.setText("35-60% (normal)");
+			humedadRelativa.setText("35-60% (Normal)");
 		}
 		else {
-			humedadRelativa.setText("> 60% (muy húmedo)");
+			humedadRelativa.setText("> 60% (Muy húmedo)");
 		}
 
 		if (resultadosA3.VelocidadViento == 1){
-			velocidadViento.setText("< 1m/s (sin viento)");
+			velocidadViento.setText("< 1m/s (Sin viento)");
 		}
 		else {
-			velocidadViento.setText("1-3 m/s (brisa suave)");
+			velocidadViento.setText("1-3 m/s (Brisa suave)");
 		}
 
 		if (resultadosA3.TipoPulverizador == 1){
@@ -268,7 +268,7 @@ public class Resultados1 extends AppCompatActivity{
 						"B.1 Caracter&iacute;sticas del cultivo<tipo>2<n>"+
 						"Densidad foliar del &aacute;rbol: "+densidadFoliar.getText().toString()+"<tipo>3<n>"+
 						"Marco de plantaci&oacute;n: "+xAncho.getText().toString()+" m x "+yDistancia.getText().toString()+" m<tipo>3<n>"+
-						"Volumen del &aacute;rbol: "+volumenArbol.getText().toString()+" "+ Html.fromHtml("m<sup>3</sup>/árbol")+"<tipo>3<n>"+
+						"Volumen del &aacute;rbol: "+volumenArbol.getText().toString()+" "+ Html.fromHtml("m<sup>3</sup>/Ã¡rbol")+"<tipo>3<n>"+
 						"Forma del &aacute;rbol: "+formaArbol.getText().toString()+"<tipo>3<n>"+
 						"Fecha de la &uacute;ltima poda: "+fechaUltimaPoda.getText().toString()+"<tipo>3<n>"+
 						"Grado de poda: "+gradoPoda.getText().toString()+"<tipo>3<n>"+
@@ -291,7 +291,7 @@ public class Resultados1 extends AppCompatActivity{
 				String referencia = settings.getString("referencia", "");
 				mypdf.finish_document("DosacitricB"+referencia, getApplicationContext());
 				//mypdf.finish_document("Dosacitric_B"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
-				Toast toast = Toast.makeText(getApplicationContext(), "El PDF será guardado en DESCARGAS", Toast.LENGTH_SHORT);
+				Toast toast = Toast.makeText(getApplicationContext(), "El PDF serÃ¡ guardado en DESCARGAS", Toast.LENGTH_SHORT);
 				toast.show();
 			}
 		});

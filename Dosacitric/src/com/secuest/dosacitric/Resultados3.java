@@ -196,9 +196,9 @@ public class Resultados3 extends AppCompatActivity {
 						"Presi&oacute;n seleccionada: "+Presion.getText().toString()+"<tipo>3<n> "+
 						"Marca seleccionada: "+Marca.getText().toString()+"<tipo>3<n> "+
 						"Elecci&oacute;n del modelo de boquilla<tipo>2<n> "+
-						"    Zona Alta:   "+EleccionBoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
-						"    Zona Media:   "+EleccionBoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
-						"    Zona Baja:   "+EleccionBoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
+						"    Zona Alta: "+EleccionBoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
+						"    Zona Media: "+EleccionBoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
+						"    Zona Baja: "+EleccionBoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
 						"Caracter&iacute;sticas del caudal <tipo>2<n> "+
 						"Volumen de caldo aplicado: "+VolumenCaldoAplicado.getText().toString()+" L/ha<tipo>3";
 				

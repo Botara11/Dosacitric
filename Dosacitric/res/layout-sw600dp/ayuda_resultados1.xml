@@ -25,12 +25,25 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/cabecera1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_below="@+id/cuerpo1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:text="IMPRESIÓN DE RESULTADOS:"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/cuerpo2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/printer"
+                android:layout_below="@+id/cabecera1"
                 android:layout_marginBottom="16dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -38,14 +51,24 @@
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/cuerpo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/printer"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
             <ImageView
                 android:id="@+id/printer"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_below="@+id/cuerpo1"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/cuerpo2"
                 android:background="@drawable/printer" />
         </RelativeLayout>
     </ScrollView>

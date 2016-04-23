@@ -11,6 +11,7 @@ public class AyudaResultados1 extends AppCompatActivity{
 
 	private TextView cuerpo1;
 	private TextView cuerpo2;
+	private TextView cuerpo3;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +27,13 @@ public class AyudaResultados1 extends AppCompatActivity{
 		cuerpo1 = (TextView) findViewById(R.id.cuerpo1);
 		cuerpo2 = (TextView) findViewById(R.id.cuerpo2);
 
-		String stringCuerpo1 = "Aquí se mostrará un resumen de la información introducida en el puntos 0, 1, 2 y 3, y se indicará el <font color=#ff6600> volumen de aplicación </font> recomendado en esas condiciones de trabajo.";
-		String stringCuerpo2 = "Al presionar sobre este icono se guardan los datos de “RESUMEN Y RESULTADOS I” en la aplicación “Descargas” del propio dispositivo utilizado (Tablet o Smartphone).";
-
+		String stringCuerpo1 = "Se muestra un resumen de la información introducida en los puntos 0, 1, 2 y 3, y se indicará el <font color=#ff6600> volumen de aplicación </font> recomendado en esas condiciones de trabajo.";
+		String stringCuerpo2 = "Al presionar sobre este icono";
+		String stringCuerpo3 = "se guardan los datos de “RESUMEN Y RESULTADOS I” en la aplicación “Descargas” del propio dispositivo utilizado (Tablet o Smartphone).";
+		
 		cuerpo1.setText(Html.fromHtml(stringCuerpo1));
 		cuerpo2.setText(Html.fromHtml(stringCuerpo2));
+		cuerpo3.setText(Html.fromHtml(stringCuerpo3));
 
 	}
 
@@ -56,3 +59,4 @@ public class AyudaResultados1 extends AppCompatActivity{
 		}
 	}
 }
+

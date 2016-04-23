@@ -279,8 +279,8 @@ public class A_1Activity extends ActionBarActivity{
 			day   = selectedDay;
 
 			// Show selected date 
-			fecha.setText(new StringBuilder().append(month + 1)
-					.append("-").append(day).append("-").append(year)
+			fecha.setText(new StringBuilder().append(day)
+					.append("-").append(month + 1).append("-").append(year)
 					.append(" "));
 
 		}

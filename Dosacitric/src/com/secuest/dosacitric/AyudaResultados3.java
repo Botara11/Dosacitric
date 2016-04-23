@@ -75,7 +75,7 @@ public class AyudaResultados3 extends AppCompatActivity{
 		String stringCuerpo15 = "a = ancho de trabajo en m.";
 		String stringCuerpo16 = "v= velocidad de avance en Km/h.";
 		String stringCuerpo17 = "Este valor se corresponde con el valor calculado por <font color=#ff6600> DOSACITRIC </font> de los litros de caldo (agua + producto fitosanitario) que se han aplicado por hectárea en las condiciones especificadas en el tratamiento. ";
-		String stringCuerpo18 = "Al presionar sobre este icono se guardan los datos de “RESUMEN Y RESULTADOS III” en la aplicación “Descargas” del propio dispositivo utilizado (Tablet o Smartphone).";
+		String stringCuerpo18 = "Al presionar sobre este icono se guardan los datos de RESUMEN Y RESULTADOS III en la aplicación Descargas del propio dispositivo utilizado (Tablet o Smartphone).";
 		String stringCuerpo19 = "Al presionar sobre este botón se borrarán todos los datos introducidos, pudiéndose introducir luego nuevos datos para calcular un nuevo tratamiento.";
 		
 		cuerpo1.setText(Html.fromHtml(stringCuerpo1));

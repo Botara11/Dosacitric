@@ -108,6 +108,7 @@ public class XObjectImage {
 
 	private String encodeImageData(ByteArrayOutputStream baos) {
 		ByteArrayOutputStream sob = new ByteArrayOutputStream();
+		@SuppressWarnings("resource")
 		ASCII85Encoder enc85 = new ASCII85Encoder(sob);
 		try {
 			int i = 0;
