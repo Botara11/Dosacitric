@@ -257,10 +257,10 @@ public class Resultados1 extends AppCompatActivity{
 				if(!settings.getString("fecha", "").equals("")){
 					String A = ""+
 							"A. IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
-							"Fecha: "+settings.getString("fecha", "")+"<tipo>3<n>"+
-							"Identificaci&oacute;n de la parcela: "+settings.getString("idparcela", "")+"<tipo>3<n>"+
-							"Identificaci&oacute;n del tratamiento: "+settings.getString("idtratamiento", "")+"<tipo>3<n>"+
-							"Refer&eacute;ncia: "+settings.getString("referencia", "")+"<tipo>3";
+							"Fecha: "+settings.getString("fecha", "")+"<tipo>2<n>"+
+							"Identificaci&oacute;n de la parcela: "+settings.getString("idparcela", "")+"<tipo>2<n>"+
+							"Identificaci&oacute;n del tratamiento: "+settings.getString("idtratamiento", "")+"<tipo>2<n>"+
+							"Refer&eacute;ncia: "+settings.getString("referencia", "")+"<tipo>2";
 					rw.write("A", A);
 					mypdf.readFile("A");
 				}
@@ -291,7 +291,7 @@ public class Resultados1 extends AppCompatActivity{
 				String referencia = settings.getString("referencia", "");
 				mypdf.finish_document("DosacitricB"+referencia, getApplicationContext());
 				//mypdf.finish_document("Dosacitric_B"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR));
-				Toast toast = Toast.makeText(getApplicationContext(), "El PDF serÃ¡ guardado en DESCARGAS", Toast.LENGTH_SHORT);
+				Toast toast = Toast.makeText(getApplicationContext(), "El PDF será guardado en DESCARGAS", Toast.LENGTH_SHORT);
 				toast.show();
 			}
 		});

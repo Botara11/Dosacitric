@@ -176,10 +176,10 @@ public class Resultados3 extends AppCompatActivity {
 				if(!settings.getString("fecha", "").equals("")){
 					String A = ""+
 						"A. IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
-						"Fecha: "+settings.getString("fecha", "")+"<tipo>3<n>"+
-						"Identificaci&oacute;n de la parcela: "+settings.getString("idparcela", "")+"<tipo>3<n>"+
-						"Identificaci&oacute;n del tratamiento: "+settings.getString("idtratamiento", "")+"<tipo>3<n>"+
-						"Referencia: "+settings.getString("referencia", "")+"<tipo>3";
+						"Fecha: "+settings.getString("fecha", "")+"<tipo>2<n>"+
+						"Identificaci&oacute;n de la parcela: "+settings.getString("idparcela", "")+"<tipo>2<n>"+
+						"Identificaci&oacute;n del tratamiento: "+settings.getString("idtratamiento", "")+"<tipo>2<n>"+
+						"Referencia: "+settings.getString("referencia", "")+"<tipo>2";
 					rw.write("A", A);
 					mypdf.readFile("A");
 				}

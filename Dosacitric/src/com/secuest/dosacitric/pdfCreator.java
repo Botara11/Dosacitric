@@ -15,8 +15,8 @@ import com.secuest.dosacitric.apw.Transformation;
 
 public class pdfCreator {
 
-	private int line_pointer = 842;
-	private int btw_lines = 30;
+	private int line_pointer = 872;
+	private int btw_lines = 27;
 	private PDFWriter mPDFWriter;
 
 	public pdfCreator(){
@@ -24,9 +24,12 @@ public class pdfCreator {
 		mPDFWriter.setFont(StandardFonts.SUBTYPE, StandardFonts.TIMES_ROMAN, StandardFonts.WIN_ANSI_ENCODING);
 		mPDFWriter.addRawContent("0.7 0.7 0.7 rg\n");
 		mPDFWriter.addText(30, 90, 10, "® dosacitric", Transformation.DEGREES_270_ROTATION);
-		mPDFWriter.addRawContent("1 0 0 rg\n");
+		mPDFWriter.addRawContent("1 0.4 0 rg\n");
 		mPDFWriter.addText(30, 880, 38, "DOSACITRIC");
 		mPDFWriter.addRawContent("0 0 0 rg\n");
+		mPDFWriter.addText(277, 912, 14, "dosacitric@upv.es");
+		mPDFWriter.addText(277, 896, 14, "Unidad de Mecanización y Tecnología Agraria");
+		mPDFWriter.addText(277, 880, 14, "UNIVERSIDAD POLITÉCNICA DE VALENCIA");
 	}
 
 	public void writeFile(){
@@ -92,12 +95,13 @@ public class pdfCreator {
 			System.out.println(Alines[i]);
 			String[] Aitem = Alines[i].split("<tipo>");
 			switch(Integer.parseInt(Aitem[1])){
-			case 1: insertLine("",24);insertLine(Aitem[0],24);
+			case 1: insertLine("",24);insertLine(Aitem[0],22);
 			break;
-			case 2: insertLine("      "+Aitem[0],20);
+			case 2: insertLine("      "+Aitem[0],18);
 			break;
-			case 3: insertLine("      "+"      "+Aitem[0],14);
+			case 3: line_pointer=line_pointer+8;insertLine("      "+"      "+"      "+"  "+Aitem[0],11);
 			break;
+			case 4: insertLine(Aitem[0],22);
 			default: 
 				break;
 			}
@@ -117,7 +121,12 @@ public class pdfCreator {
 			mPDFWriter.addRawContent("190 190 190 rg\n");
 			mPDFWriter.addText(30, 90, 10, "® dosacitric", Transformation.DEGREES_270_ROTATION);
 			line_pointer = 842;
+			mPDFWriter.addRawContent("1 0.4 0 rg\n");
+			mPDFWriter.addText(30, 880, 38, "DOSACITRIC");
 			mPDFWriter.addRawContent("0 0 0 rg\n");
+			mPDFWriter.addText(277, 912, 14, "dosacitric@upv.es");
+			mPDFWriter.addText(277, 896, 14, "Unidad de Mecanización y Tecnología Agraria");
+			mPDFWriter.addText(277, 880, 14, "UNIVERSIDAD POLITÉCNICA DE VALENCIA");
 		} else {
 			line_pointer=line_pointer-btw_lines;
 		}
@@ -125,8 +134,9 @@ public class pdfCreator {
 	}
 
 	public void insertLine(String str, int size){
-		mPDFWriter.addText(30, line_pointer, size, str);
 		incrementLinePointer();
+		mPDFWriter.addText(30, line_pointer, size, str);
+		
 	}
 
 	public void finish_document(String filename, Context cxt){

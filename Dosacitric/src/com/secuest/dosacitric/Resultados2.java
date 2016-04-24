@@ -225,23 +225,23 @@ public class Resultados2 extends AppCompatActivity {
 				if(!settings.getString("fecha", "").equals("")){
 					String A = ""+
 						"A IDENTIFICACI&Oacute;N DEL TRATAMIENTO<tipo>1<n>"+
-						"Fecha: "+settings.getString("fecha", "")+"<tipo>3<n>"+
-						"Identificaci&oacute;n de la parcela: "+settings.getString("idparcela", "")+"<tipo>3<n>"+
-						"Identificaci&oacute;n del tratamiento: "+settings.getString("idtratamiento", "")+"<tipo>3<n>"+
-						"Refer&eacute;ncia: "+settings.getString("referencia", "")+"<tipo>3";
+						"Fecha: "+settings.getString("fecha", "")+"<tipo>2<n>"+
+						"Identificaci&oacute;n de la parcela: "+settings.getString("idparcela", "")+"<tipo>2<n>"+
+						"Identificaci&oacute;n del tratamiento: "+settings.getString("idtratamiento", "")+"<tipo>2<n>"+
+						"Refer&eacute;ncia: "+settings.getString("referencia", "")+"<tipo>2";
 					rw.write("A", A);
 					mypdf.readFile("A");
 				}
 				String C = ""+
 						"C. REGULACI&Oacute;N DEL PULVERIZADOR<tipo>1<n>"+
-						" HIDRONEUM&Aacute;TICO (TURBO)<tipo>1<n>"+
-						"Volumen de aplicaci&oacute;n (V): "+Resultados2.this.VolAplicacion.getText().toString()+" L/Ha<tipo>3<n>"+
-						"Velocidad de avance deseada (v): "+Resultados2.this.VelAvance.getText().toString()+" km/h<tipo>3<n>"+
-						"Ancho de trabajo (a): "+Resultados2.this.AnchoTrabajo.getText().toString()+" m<tipo>3<n>"+
-						"Caudal l&iacute;quido total: "+Resultados2.this.CaudalLiqTotal.getText().toString()+" L/min<tipo>3<n>"+
-						"Caracterl&iacute;sticas del sistema hidr&aacute;ulico del equipo:<tipo>3<n>"+
-						"- Nº total boquillas: "+Resultados2.this.NumTotalBoq.getText().toString()+"<tipo>3<n>"+
-						"- Nº boquillas desponibles/sector: "+Resultados2.this.NumBoqPorSector.getText().toString()+"<tipo>3<n>"+
+						" HIDRONEUM&Aacute;TICO (TURBO)<tipo>4<n>"+
+						"Volumen de aplicaci&oacute;n (V): "+Resultados2.this.VolAplicacion.getText().toString()+" L/Ha<tipo>2<n>"+
+						"Velocidad de avance deseada (v): "+Resultados2.this.VelAvance.getText().toString()+" km/h<tipo>2<n>"+
+						"Ancho de trabajo (a): "+Resultados2.this.AnchoTrabajo.getText().toString()+" m<tipo>2<n>"+
+						"Caudal l&iacute;quido total: "+Resultados2.this.CaudalLiqTotal.getText().toString()+" L/min<tipo>2<n>"+
+						"Caracterl&iacute;sticas del sistema hidr&aacute;ulico del equipo:<tipo>2<n>"+
+						"- Nº total boquillas: "+Resultados2.this.NumTotalBoq.getText().toString()+"<tipo>2<n>"+
+						"- Nº boquillas desponibles/sector: "+Resultados2.this.NumBoqPorSector.getText().toString()+"<tipo>2<n>"+
 						"Boquillas a cerrar por zona<tipo>2<n>"+
 						"Zona Alta: "+Resultados2.this.BoqCerrAlta.getText().toString()+"<tipo>3<n> "+
 						"Zona Baja: "+Resultados2.this.BoqCerrBaja.getText().toString()+"<tipo>3<n> "+
