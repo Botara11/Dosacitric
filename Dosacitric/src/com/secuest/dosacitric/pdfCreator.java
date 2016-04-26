@@ -59,7 +59,7 @@ public class pdfCreator {
 		//insertLine("  "+marca,19);
 		mPDFWriter.addText(30, line_pointer, 19, "  "+marca);
 		line_pointer=line_pointer-10;
-		//incrementLinePointer();
+		//incrementLinePointer(); 
 	}
 	
 	public void insertarPresion(String presion){
