@@ -54,16 +54,21 @@ public class pdfCreator {
 
 	public void insertarMarca(String marca){
 		btw_lines = 40;
-		incrementLinePointer();
+		incrementLinePointer();incrementLinePointer();
 		mPDFWriter.addRectangle(30, line_pointer-15, 410+80, 40);
-		insertLine("  "+marca,19);
+		//insertLine("  "+marca,19);
+		mPDFWriter.addText(30, line_pointer, 19, "  "+marca);
 		line_pointer=line_pointer-10;
 		//incrementLinePointer();
 	}
+	
 	public void insertarPresion(String presion){
+	    incrementLinePointer();
 		mPDFWriter.addLine(30,line_pointer-3, 410+160,line_pointer-3);
-		insertLine(presion,19);
+		//insertLine(presion,19);
+		mPDFWriter.addText(30, line_pointer, 19, presion);
 	}
+	
 	public void insertarZonas(String zona){
 		insertLine(zona,15);
 	}
@@ -120,7 +125,7 @@ public class pdfCreator {
 			mPDFWriter.setFont(StandardFonts.SUBTYPE, StandardFonts.TIMES_ROMAN, StandardFonts.WIN_ANSI_ENCODING);
 			mPDFWriter.addRawContent("190 190 190 rg\n");
 			mPDFWriter.addText(30, 90, 10, "® dosacitric", Transformation.DEGREES_270_ROTATION);
-			line_pointer = 842;
+			line_pointer = 838;
 			mPDFWriter.addRawContent("1 0.4 0 rg\n");
 			mPDFWriter.addText(30, 880, 38, "DOSACITRIC");
 			mPDFWriter.addRawContent("0 0 0 rg\n");

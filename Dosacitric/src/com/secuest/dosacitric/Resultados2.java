@@ -307,8 +307,8 @@ public class Resultados2 extends AppCompatActivity {
 										boquillaDezona = "            ";
 									}
 								}
-								
-								mypdf.insertarZonas(boquillaDezona);
+								if (boquillaDezona.compareTo("            ")!=0)
+									mypdf.insertarZonas(boquillaDezona);
 								boquillaDezona = "Zona media:   ";
 								for (int u=0;u<boquillasZ2.size();u++){
 									boquillaDezona=boquillaDezona+boquillasZ2.get(u)+ "   ";
@@ -317,7 +317,8 @@ public class Resultados2 extends AppCompatActivity {
 										boquillaDezona = "            ";
 									}
 								}
-								mypdf.insertarZonas(boquillaDezona);
+								if (boquillaDezona.compareTo("            ")!=0)
+									mypdf.insertarZonas(boquillaDezona);
 								boquillaDezona = "Zona baja:   ";
 								for (int u=0;u<boquillasZ3.size();u++){
 									boquillaDezona=boquillaDezona+boquillasZ3.get(u)+ "   ";
@@ -326,7 +327,8 @@ public class Resultados2 extends AppCompatActivity {
 										boquillaDezona = "            ";
 									}
 								}
-								mypdf.insertarZonas(boquillaDezona);
+								if (boquillaDezona.compareTo("            ")!=0)
+									mypdf.insertarZonas(boquillaDezona);
 								// Se muestran
 								marcasAdecu.add(mar);
 								//continue bucleDentro;
