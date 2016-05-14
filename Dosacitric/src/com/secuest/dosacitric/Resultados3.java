@@ -185,23 +185,22 @@ public class Resultados3 extends AppCompatActivity {
 				}
 				String D = ""+
 						"D. DETERMINACI&Oacute;N DEL VOLUMEN<tipo>1<n>"+
-						"   DE CALDO APLICADO<tipo>1<n>"+
-						"Ancho de trabajo: "+AnchoDeTrabajo.getText().toString()+" m<tipo>3<n>"+
-						"Velocidad de avance: "+VelocidadDeAvance.getText().toString()+" km/h<tipo>3<n>"+
+						"   DE CALDO APLICADO<tipo>4<n>"+
+						"Ancho de trabajo: "+AnchoDeTrabajo.getText().toString()+" m<tipo>2<n>"+
+						"Velocidad de avance: "+VelocidadDeAvance.getText().toString()+" km/h<tipo>2<n>"+
 						"Caracter&iacute;sticas del sistema hidr&aacute;ulico del equipo "+"<tipo>2<n>"+
-						"Num. de boquillas por zona<tipo>3<n>"+
-						"    Zona Alta (nA): "+BoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
-						"   Zona Media (nM): "+BoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
-						"   Zona Baja (nB): "+BoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
+						"Num. de boquillas por zona:<tipo>3<n> "+
+						"    - Zona Alta (nA): "+BoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
+						"    - Zona Media (nM): "+BoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
+						"    - Zona Baja (nB): "+BoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
 						"Presi&oacute;n seleccionada: "+Presion.getText().toString()+"<tipo>3<n> "+
-						"Marca seleccionada: "+Marca.getText().toString()+"<tipo>3<n> "+
-						"Elecci&oacute;n del modelo de boquilla<tipo>2<n> "+
-						"    Zona Alta: "+EleccionBoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
-						"    Zona Media: "+EleccionBoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
-						"    Zona Baja: "+EleccionBoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
-						"Caracter&iacute;sticas del caudal <tipo>2<n> "+
-						"Volumen de caldo aplicado: "+VolumenCaldoAplicado.getText().toString()+" L/ha<tipo>3";
-				
+						"Boquillas seleccionadas:<tipo>3<n> "+
+						"    - Zona Alta: "+Marca.getText().toString()+"."+EleccionBoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
+						"    - Zona Media: "+Marca.getText().toString()+"."+EleccionBoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
+						"    - Zona Baja: "+Marca.getText().toString()+"."+EleccionBoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
+						"Caudal de l&iacute;quido total (Q): "+CaudalLiqTotal.getText().toString()+" L/min<tipo>3<n> "+
+						"Volumen de caldo aplicado (V): "+VolumenCaldoAplicado.getText().toString()+" L/ha<tipo>3";
+				//"Marca seleccionada: "+Marca.getText().toString()+"<tipo>3<n> "+
 				rw.write("D", D);
 				mypdf.readFile("D");
 
