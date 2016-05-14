@@ -1,6 +1,7 @@
 package com.secuest.dosacitric;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 
 public class ParteB implements Serializable {
 
@@ -112,18 +113,19 @@ public class ParteB implements Serializable {
 		CaudalLiquidoBoquilla[2] = CaudalLiquidoZona[2]
 				/ NumeroBoquillasAbiertas[2];
 		VariacionCaudalAdmisible = VariacionCaudalAdmisible / 100;
-		IntervaloCaudalAdmisible[0] = CaudalLiquidoBoquilla[0]
-				* (1 - VariacionCaudalAdmisible);
-		IntervaloCaudalAdmisible[1] = CaudalLiquidoBoquilla[0]
-				* (1 + VariacionCaudalAdmisible);
-		IntervaloCaudalAdmisible[2] = CaudalLiquidoBoquilla[1]
-				* (1 - VariacionCaudalAdmisible);
-		IntervaloCaudalAdmisible[3] = CaudalLiquidoBoquilla[1]
-				* (1 + VariacionCaudalAdmisible);
-		IntervaloCaudalAdmisible[4] = CaudalLiquidoBoquilla[2]
-				* (1 - VariacionCaudalAdmisible);
-		IntervaloCaudalAdmisible[5] = CaudalLiquidoBoquilla[2]
-				* (1 + VariacionCaudalAdmisible);
+		DecimalFormat df = new DecimalFormat("#.##");
+		IntervaloCaudalAdmisible[0] = Float.parseFloat(df.format(CaudalLiquidoBoquilla[0]
+				* (1 - VariacionCaudalAdmisible)));
+		IntervaloCaudalAdmisible[1] = Float.parseFloat(df.format(CaudalLiquidoBoquilla[0]
+				* (1 + VariacionCaudalAdmisible)));
+		IntervaloCaudalAdmisible[2] = Float.parseFloat(df.format(CaudalLiquidoBoquilla[1]
+				* (1 - VariacionCaudalAdmisible)));
+		IntervaloCaudalAdmisible[3] = Float.parseFloat(df.format(CaudalLiquidoBoquilla[1]
+				* (1 + VariacionCaudalAdmisible)));
+		IntervaloCaudalAdmisible[4] = Float.parseFloat(df.format(CaudalLiquidoBoquilla[2]
+				* (1 - VariacionCaudalAdmisible)));
+		IntervaloCaudalAdmisible[5] = Float.parseFloat(df.format(CaudalLiquidoBoquilla[2]
+				* (1 + VariacionCaudalAdmisible)));
 
 	}
 

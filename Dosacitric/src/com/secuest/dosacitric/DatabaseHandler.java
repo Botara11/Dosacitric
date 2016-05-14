@@ -151,8 +151,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		values.put(KEY_DIAMETRO, diametro); //3
 		values.put(KEY_CAUDAL, caudal);//4
 		values.put(KEY_P6, p6); //5
-		values.put(KEY_P7, p7);
-		values.put(KEY_P8, p8);
+		values.put(KEY_P7, p7); //6
+		values.put(KEY_P8, p8); //7
 		values.put(KEY_P9, p9);
 		values.put(KEY_P10, p10);
 		values.put(KEY_P11, p11);
@@ -271,7 +271,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 					cursor.getString(5)+ " " +
 					cursor.getString(6)+ " " +
 					cursor.getString(7)+ " " +
-					cursor.getString(8));
+					cursor.getString(8)+ " " +
+					cursor.getString(9)+ " " +
+					cursor.getString(10)+ " " +
+					cursor.getString(11)+ " " +
+					cursor.getString(12)+ " " +
+					cursor.getString(13)+ " " +
+					cursor.getString(14)+ " " +
+					cursor.getString(15)+ " " +
+					cursor.getString(16));
 
 			while (cursor.moveToNext()) {
 				modelo.add(cursor.getString(2)); // REVISAR SI SE PASA
@@ -282,7 +290,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 						cursor.getString(5)+ " " +
 						cursor.getString(6)+ " " +
 						cursor.getString(7)+ " " +
-						cursor.getString(8));			
+						cursor.getString(8)+ " " +
+						cursor.getString(9)+ " " +
+						cursor.getString(10)+ " " +
+						cursor.getString(11)+ " " +
+						cursor.getString(12)+ " " +
+						cursor.getString(13)+ " " +
+						cursor.getString(14)+ " " +
+						cursor.getString(15)+ " " +
+						cursor.getString(16));			
 				}
 			System.out.println(modelo.size());
 		}
@@ -309,7 +325,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		//System.out.println("Hay " + cursor.getCount() + " filas");
 		if (cursor.getCount() != 0) {
 			boquillas.add(cursor.getString(2)); // GET MODELO
-			//System.out.println("anadido "+cursor.getString(2) + " " + cursor.getString(3));
+			System.out.println("Between: "+cursor.getString(2) + " " + cursor.getString(3));
 
 			while (cursor.moveToNext()) {
 				boquillas.add(cursor.getString(2)); // REVISAR SI SE PASA

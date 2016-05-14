@@ -150,13 +150,18 @@ public class Resultados2 extends AppCompatActivity {
 				String[] presiones = { "p6", "p7", "p8", "p9", "p10", "p11",
 						"p12", "p13", "p14", "p15", "p16" };
 
+				System.out.println("Inter Z1:"+inter[0]+" , "+inter[1]);
+				System.out.println("Inter Z2:"+inter[2]+" , "+inter[3]);
+				System.out.println("Inter Z3:"+inter[4]+" , "+inter[5]);
+				
 				ArrayList<String> marcasAdecu = new ArrayList<String>();
-
+				db.mostrarTodo("Albuz");
 				bucleDentro: for (String mar : marcas) {
 					System.out.println();System.out.println();
 					System.out.println("\n\nMarca: "+mar);
 					for (String pres : presiones) {
 						System.out.println("Presion: "+pres);
+						
 						ArrayList<String> boquillasZ1 = db.getBoquillas(mar,
 								inter[0], inter[1], pres);
 						ArrayList<String> boquillasZ2 = db.getBoquillas(mar,

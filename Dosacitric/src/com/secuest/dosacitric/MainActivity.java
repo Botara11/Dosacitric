@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -154,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
 						String[] boquillas = pagina.split("\n");
 						for(int i=0;i<boquillas.length;i++){ 
 							String[] boq = boquillas[i].split("%%%");
-
+							DecimalFormat df = new DecimalFormat("#.##");
 							//HAY DATOS QUE ESTAN VACIOS "" ASI QUE NO SE PUEDE HACER DOUBLE.PARSEDOUBLE()
 							Double k = Double.parseDouble(boq[4])/java.lang.Math.pow(10.0,0.5);
 							//MARCA - MODELO - DIAMETRO(puede no haber) - CAUDAL
@@ -164,17 +165,18 @@ public class MainActivity extends AppCompatActivity {
 							}else 
 								dia = 0.0;
 							//System.out.println(boq[1] + " "+boq[4]+"/("+boq[4]+"^0,5) = " +k);
-							db.addBoquilla(boq[0],boq[1],dia,Double.parseDouble(boq[4]),k*java.lang.Math.pow(6.0,0.5),
-									k*java.lang.Math.pow(7.0,0.5),
-									k*java.lang.Math.pow(8.0,0.5),
-									k*java.lang.Math.pow(9.0,0.5),
-									k*java.lang.Math.pow(10.0,0.5),
-									k*java.lang.Math.pow(11.0,0.5),
-									k*java.lang.Math.pow(12.0,0.5),
-									k*java.lang.Math.pow(13.0,0.5),
-									k*java.lang.Math.pow(14.0,0.5),
-									k*java.lang.Math.pow(15.0,0.5),
-									k*java.lang.Math.pow(16.0,0.5),
+							db.addBoquilla(boq[0],boq[1],dia,Double.parseDouble(df.format(Double.parseDouble(boq[4]))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(6.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(7.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(8.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(9.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(10.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(11.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(12.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(13.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(14.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(15.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(16.0,0.5))),
 									1);
 						}
 					
@@ -222,18 +224,20 @@ public class MainActivity extends AppCompatActivity {
 								dia = Double.parseDouble(boq[2]);
 							}else 
 								dia = 0.0;
+							DecimalFormat df = new DecimalFormat("#.##");
 							//System.out.println(boq[1] + " "+boq[4]+"/("+boq[4]+"^0,5) = " +k);
-							db.addBoquilla(boq[0],boq[1],dia,Double.parseDouble(boq[4]),k*java.lang.Math.pow(6.0,0.5),
-									k*java.lang.Math.pow(7.0,0.5),
-									k*java.lang.Math.pow(8.0,0.5),
-									k*java.lang.Math.pow(9.0,0.5),
-									k*java.lang.Math.pow(10.0,0.5),
-									k*java.lang.Math.pow(11.0,0.5),
-									k*java.lang.Math.pow(12.0,0.5),
-									k*java.lang.Math.pow(13.0,0.5),
-									k*java.lang.Math.pow(14.0,0.5),
-									k*java.lang.Math.pow(15.0,0.5),
-									k*java.lang.Math.pow(16.0,0.5),
+							db.addBoquilla(boq[0],boq[1],dia,Double.parseDouble(df.format(Double.parseDouble(boq[4]))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(6.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(7.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(8.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(9.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(10.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(11.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(12.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(13.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(14.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(15.0,0.5))),
+									Double.parseDouble(df.format(k*java.lang.Math.pow(16.0,0.5))),
 									1);
 						}
 
