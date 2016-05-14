@@ -94,7 +94,8 @@ public class ParteB implements Serializable {
 	public void calcularParteB() {
 
 		CaudalLiquidoTotal = VolumenApp * AnchoTrabajo * VelocidadAvance / 600; // 600
-																				// HARCODEADO---------
+											// HARCODEADO---------
+		
 		CaudalLiquidoSector = CaudalLiquidoTotal / 2; // SectorIzquierdo y
 														// Sector Derecho
 		NumeroBoquillasSector = NumeroTotalBoquillas / 2;
@@ -114,6 +115,13 @@ public class ParteB implements Serializable {
 				/ NumeroBoquillasAbiertas[2];
 		VariacionCaudalAdmisible = VariacionCaudalAdmisible / 100;
 		DecimalFormat df = new DecimalFormat("#.##");
+		IntervaloCaudalAdmisible[0] = CaudalLiquidoBoquilla[0] * (1-VariacionCaudalAdmisible);
+		IntervaloCaudalAdmisible[1] = CaudalLiquidoBoquilla[0] * (1+VariacionCaudalAdmisible);
+		IntervaloCaudalAdmisible[2] = CaudalLiquidoBoquilla[1] * (1-VariacionCaudalAdmisible);
+		IntervaloCaudalAdmisible[3] = CaudalLiquidoBoquilla[1] * (1+VariacionCaudalAdmisible);
+		IntervaloCaudalAdmisible[4] = CaudalLiquidoBoquilla[2] * (1-VariacionCaudalAdmisible);
+		IntervaloCaudalAdmisible[5] = CaudalLiquidoBoquilla[2] * (1+VariacionCaudalAdmisible);
+		/*
 		IntervaloCaudalAdmisible[0] = Float.parseFloat(df.format(CaudalLiquidoBoquilla[0]
 				* (1 - VariacionCaudalAdmisible)));
 		IntervaloCaudalAdmisible[1] = Float.parseFloat(df.format(CaudalLiquidoBoquilla[0]
@@ -126,7 +134,7 @@ public class ParteB implements Serializable {
 				* (1 - VariacionCaudalAdmisible)));
 		IntervaloCaudalAdmisible[5] = Float.parseFloat(df.format(CaudalLiquidoBoquilla[2]
 				* (1 + VariacionCaudalAdmisible)));
-
+		*/
 	}
 
 }

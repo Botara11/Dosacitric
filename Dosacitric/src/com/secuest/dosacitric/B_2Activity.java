@@ -42,7 +42,6 @@ public class B_2Activity extends AppCompatActivity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.b_2);
-		seebbarr();
 
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -76,6 +75,7 @@ public class B_2Activity extends AppCompatActivity{
 		variacionCaudalTextView.setText("3");
 		variacionCaudalSeekbar.setProgress(3);
 
+		seebbarr();
 
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
@@ -217,18 +217,16 @@ public class B_2Activity extends AppCompatActivity{
 			float zonaMediaPor = Float.parseFloat(zonaMediaPorcentaje.getText().toString());
 			quien="zonaBajaPorcentaje";
 			float zonaBajaPor = Float.parseFloat(zonaBajaPorcentaje.getText().toString());
-
 			float [] zPorcentaje = {zonaAltaPor,zonaMediaPor,zonaBajaPor};
 
 			quien="variacionCaudal";
 			float variacionCaud = Float.parseFloat(variacionCaudalTextView.getText().toString());
-
 			parteb2.rellenarB2(zCerr, zAbi, zPorcentaje, variacionCaud);
 
 			parteb2.calcularParteB();
 
 			float[] inter = parteb2.IntervaloCaudalAdmisible;
-
+			
 			zonaAltaIntervaloCaudal.setText(df.format(inter[0])+"-"+df.format(inter[1]));
 			zonaMediaIntervaloCaudal.setText(df.format(inter[2])+"-"+df.format(inter[3]));
 			zonaBajaIntervaloCaudal.setText(df.format(inter[4])+"-"+df.format(inter[5]));
@@ -244,7 +242,7 @@ public class B_2Activity extends AppCompatActivity{
 	public void seebbarr( ){
 
 		variacionCaudalSeekbar = (SeekBar) findViewById(R.id.variacionCaudalSeekBar);
-		variacionCaudalTextView = (TextView) findViewById(R.id.variacionCaudalTextView);
+		//variacionCaudalTextView = (TextView) findViewById(R.id.variacionCaudalTextView);
 		variacionCaudalSeekbar.setProgress(0);
 		variacionCaudalSeekbar.incrementProgressBy(1);
 		variacionCaudalSeekbar.setMax(10);

@@ -2,6 +2,7 @@ package com.secuest.dosacitric;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import android.content.Context;
 import android.content.Intent;
@@ -149,13 +150,12 @@ public class Resultados2 extends AppCompatActivity {
 						"Discos", "Otros", "Mis boquillas" };
 				String[] presiones = { "p6", "p7", "p8", "p9", "p10", "p11",
 						"p12", "p13", "p14", "p15", "p16" };
-
+				
 				System.out.println("Inter Z1:"+inter[0]+" , "+inter[1]);
 				System.out.println("Inter Z2:"+inter[2]+" , "+inter[3]);
 				System.out.println("Inter Z3:"+inter[4]+" , "+inter[5]);
 				
 				ArrayList<String> marcasAdecu = new ArrayList<String>();
-				db.mostrarTodo("Albuz");
 				bucleDentro: for (String mar : marcas) {
 					System.out.println();System.out.println();
 					System.out.println("\n\nMarca: "+mar);
@@ -274,7 +274,11 @@ public class Resultados2 extends AppCompatActivity {
 						"Discos", "Otros", "Mis boquillas" };
 				String[] presiones = { "p6", "p7", "p8", "p9", "p10", "p11",
 						"p12", "p13", "p14", "p15", "p16" };
-
+				String[] presionesString = { "Presion: 6 bar", "Presion: 7 bar", "Presion: 8 bar", "Presion: 9 bar",
+						"Presion: 10 bar", "Presion: 11 bar",
+						"Presion: 12 bar", "Presion: 13 bar", "Presion: 14 bar", "Presion: 15 bar", "Presion: 16 bar" };
+				int posicionArray = 0;
+				
 				ArrayList<String> marcasAdecu = new ArrayList<String>();
 
 				for (String mar : marcas) {
@@ -302,7 +306,8 @@ public class Resultados2 extends AppCompatActivity {
 								if(marcaPrimera==0){
 									mypdf.insertarMarca(mar);
 									marcaPrimera=1;}
-								mypdf.insertarPresion(pres);
+								posicionArray = Arrays.asList(presiones).indexOf(pres);
+								mypdf.insertarPresion(presionesString[posicionArray]);
 
 								String boquillaDezona = "Zona alta:   ";
 								for (int u=0;u<boquillasZ1.size();u++){

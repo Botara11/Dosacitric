@@ -165,19 +165,32 @@ public class MainActivity extends AppCompatActivity {
 							}else 
 								dia = 0.0;
 							//System.out.println(boq[1] + " "+boq[4]+"/("+boq[4]+"^0,5) = " +k);
-							db.addBoquilla(boq[0],boq[1],dia,Double.parseDouble(df.format(Double.parseDouble(boq[4]))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(6.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(7.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(8.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(9.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(10.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(11.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(12.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(13.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(14.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(15.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(16.0,0.5))),
-									1);
+							/*db.addBoquilla(boq[0],boq[1],dia,Double.parseDouble(df.format(Double.parseDouble(boq[4]))),
+							Double.parseDouble(df.format(k*java.lang.Math.pow(6.0,0.5))),
+							Double.parseDouble(df.format(k*java.lang.Math.pow(7.0,0.5))),
+							Double.parseDouble(df.format(k*java.lang.Math.pow(8.0,0.5))),
+							Double.parseDouble(df.format(k*java.lang.Math.pow(9.0,0.5))),
+							Double.parseDouble(df.format(k*java.lang.Math.pow(10.0,0.5))),
+							Double.parseDouble(df.format(k*java.lang.Math.pow(11.0,0.5))),
+							Double.parseDouble(df.format(k*java.lang.Math.pow(12.0,0.5))),
+							Double.parseDouble(df.format(k*java.lang.Math.pow(13.0,0.5))),
+							Double.parseDouble(df.format(k*java.lang.Math.pow(14.0,0.5))),
+							Double.parseDouble(df.format(k*java.lang.Math.pow(15.0,0.5))),
+							Double.parseDouble(df.format(k*java.lang.Math.pow(16.0,0.5))),
+							1);*/
+							db.addBoquilla(boq[0],boq[1],dia,Double.parseDouble(boq[4]),
+							k*java.lang.Math.pow(6.0,0.5),
+							k*java.lang.Math.pow(7.0,0.5),
+							k*java.lang.Math.pow(8.0,0.5),
+							k*java.lang.Math.pow(9.0,0.5),
+							k*java.lang.Math.pow(10.0,0.5),
+							k*java.lang.Math.pow(11.0,0.5),
+							k*java.lang.Math.pow(12.0,0.5),
+							k*java.lang.Math.pow(13.0,0.5),
+							k*java.lang.Math.pow(14.0,0.5),
+							k*java.lang.Math.pow(15.0,0.5),
+							k*java.lang.Math.pow(16.0,0.5),
+							1);
 						}
 					
 						DESCARGAR = true;
@@ -226,18 +239,18 @@ public class MainActivity extends AppCompatActivity {
 								dia = 0.0;
 							DecimalFormat df = new DecimalFormat("#.##");
 							//System.out.println(boq[1] + " "+boq[4]+"/("+boq[4]+"^0,5) = " +k);
-							db.addBoquilla(boq[0],boq[1],dia,Double.parseDouble(df.format(Double.parseDouble(boq[4]))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(6.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(7.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(8.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(9.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(10.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(11.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(12.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(13.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(14.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(15.0,0.5))),
-									Double.parseDouble(df.format(k*java.lang.Math.pow(16.0,0.5))),
+							db.addBoquilla(boq[0],boq[1],dia,Double.parseDouble(boq[4]),
+									k*java.lang.Math.pow(6.0,0.5),
+									k*java.lang.Math.pow(7.0,0.5),
+									k*java.lang.Math.pow(8.0,0.5),
+									k*java.lang.Math.pow(9.0,0.5),
+									k*java.lang.Math.pow(10.0,0.5),
+									k*java.lang.Math.pow(11.0,0.5),
+									k*java.lang.Math.pow(12.0,0.5),
+									k*java.lang.Math.pow(13.0,0.5),
+									k*java.lang.Math.pow(14.0,0.5),
+									k*java.lang.Math.pow(15.0,0.5),
+									k*java.lang.Math.pow(16.0,0.5),
 									1);
 						}
 

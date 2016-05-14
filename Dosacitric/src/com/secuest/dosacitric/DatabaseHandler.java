@@ -325,7 +325,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		//System.out.println("Hay " + cursor.getCount() + " filas");
 		if (cursor.getCount() != 0) {
 			boquillas.add(cursor.getString(2)); // GET MODELO
-			System.out.println("Between: "+cursor.getString(2) + " " + cursor.getString(3));
+			//System.out.println("Between: "+cursor.getString(2) + " " + cursor.getString(3));
 
 			while (cursor.moveToNext()) {
 				boquillas.add(cursor.getString(2)); // REVISAR SI SE PASA

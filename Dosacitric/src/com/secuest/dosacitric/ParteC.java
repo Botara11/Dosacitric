@@ -1,6 +1,7 @@
 package com.secuest.dosacitric;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class ParteC implements Serializable{
@@ -62,7 +63,7 @@ public class ParteC implements Serializable{
 	public void calcularParteC(Float ValorZonaAlta, Float ValorZonaMedia, Float ValorZonaBaja) {
 		
 		
-				
+		
 		CaudalZona[0] = ValorZonaAlta * NumeroBoquillasZona[0];
 		CaudalZona[1] = ValorZonaMedia * NumeroBoquillasZona[1];
 		CaudalZona[2] = ValorZonaBaja * NumeroBoquillasZona[2];
@@ -74,8 +75,8 @@ public class ParteC implements Serializable{
 		
 		CaudalSector = CaudalZonaTotal / 2;
 		CaudalTotal = CaudalSector * 2;
-		VolumenCaldoAplicado = (int) ((int) CaudalTotal * 600 / AnchoCalle * VelocidadAvance);
-		
+		DecimalFormat df = new DecimalFormat("#");
+		VolumenCaldoAplicado = (int) Float.parseFloat(df.format(( CaudalTotal * (float)600 / (AnchoCalle * VelocidadAvance))));
 		VolumenCaldoAplicadoHanegada = VolumenCaldoAplicado / 12;
 		
 	}

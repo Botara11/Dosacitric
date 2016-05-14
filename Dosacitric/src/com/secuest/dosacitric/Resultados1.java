@@ -107,7 +107,7 @@ public class Resultados1 extends AppCompatActivity{
 		volumenArbol.setText(String.format("%.1f", resultadosA3.VolumenArbol));
 		
 		if (resultadosA3.IndiceFormaArbol == 0) {
-			formaArbol.setText("EsfÃ©rica");
+			formaArbol.setText("Esférica");
 		}
 		else{
 			formaArbol.setText("Seto");
