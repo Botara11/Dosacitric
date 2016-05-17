@@ -151,10 +151,8 @@ public class ParteA implements Serializable{
 
 		int ent1;// VOLUMEN DE APLICACION
 		float temp = TRV * IndiceDosificacion * FactorEficiencia;
-		if (temp % 100 > 50)
-			ent1 = (((int) (temp / 100)) + 1) * 100;
-		else
-			ent1 = ((int) (temp / 100)) * 100;
+		
+		ent1 = (((int) (temp / 100)) + 1) * 100;		
 
 		VolumenAppLHA = ent1;
 		VolumenAppLHG = ent1/12;

@@ -1,5 +1,7 @@
 package com.secuest.dosacitric;
 
+import java.text.DecimalFormat;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,6 +19,7 @@ import android.widget.Toast;
 
 public class Resultados1 extends AppCompatActivity{
 
+	private DecimalFormat d;
 	private TextView fechaDiaResultados1;
 	private TextView fechaMesResultados1;
 	private TextView fechaAnoResultados1;
@@ -50,6 +53,9 @@ public class Resultados1 extends AppCompatActivity{
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
 		getSupportActionBar().setIcon(R.drawable.logo256);
 		getSupportActionBar().setDisplayShowTitleEnabled(true);
+		
+		d = new DecimalFormat();
+		d.setMaximumFractionDigits(0);
 		
 		fechaDiaResultados1 = (TextView) findViewById(R.id.fechaMesResultados1);
 		fechaMesResultados1 = (TextView) findViewById(R.id.fechaDiaResultados1);
@@ -85,8 +91,8 @@ public class Resultados1 extends AppCompatActivity{
 
 		String[] fech = settings.getString("fecha", "").split("-");
 
-		fechaDiaResultados1.setText(String.valueOf(fech[0]));
-		fechaMesResultados1.setText(String.valueOf(fech[1]));
+		fechaDiaResultados1.setText(String.valueOf(fech[1]));
+		fechaMesResultados1.setText(String.valueOf(fech[0]));
 		fechaAnoResultados1.setText(String.valueOf(fech[2]));
 		idParcelaResultados1.setText(String.valueOf(settings.getString("idparcela", "")));
 		idTratamientoResultados1.setText(String.valueOf(settings.getString("idtratamiento", "")));
@@ -172,7 +178,7 @@ public class Resultados1 extends AppCompatActivity{
 		}
 
 		if (resultadosA3.IndiceMojantes == 0){
-			utilizaMojantes.setText("Sí­");
+			utilizaMojantes.setText("Sí");
 		}
 		else {
 			utilizaMojantes.setText("No");
@@ -222,10 +228,9 @@ public class Resultados1 extends AppCompatActivity{
 			tipoPulverizador.setText("Pistola");
 		}
 
-		String auxiliar = resultadosA3.VolumenAppLHA+"";
-		L_Ha.setText(auxiliar);
 		m3Arbol.setText(Html.fromHtml("m<sup>3</sup>/árbol"));
-
+		L_Ha.setText(String.valueOf(d.format(resultadosA3.VolumenAppLHA)));
+		
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
@@ -260,7 +265,7 @@ public class Resultados1 extends AppCompatActivity{
 							"Fecha: "+settings.getString("fecha", "")+"<tipo>2<n>"+
 							"Identificaci&oacute;n de la parcela: "+settings.getString("idparcela", "")+"<tipo>2<n>"+
 							"Identificaci&oacute;n del tratamiento: "+settings.getString("idtratamiento", "")+"<tipo>2<n>"+
-							"Refer&eacute;ncia: "+settings.getString("referencia", "")+"<tipo>2";
+							"Referencia: "+settings.getString("referencia", "")+"<tipo>2";
 					rw.write("A", A);
 					mypdf.readFile("A");
 				}
@@ -268,14 +273,14 @@ public class Resultados1 extends AppCompatActivity{
 						"B.1 Caracter&iacute;sticas del cultivo<tipo>2<n>"+
 						"Densidad foliar del &aacute;rbol: "+densidadFoliar.getText().toString()+"<tipo>3<n>"+
 						"Marco de plantaci&oacute;n: "+xAncho.getText().toString()+" m x "+yDistancia.getText().toString()+" m<tipo>3<n>"+
-						"Volumen del &aacute;rbol: "+volumenArbol.getText().toString()+" "+ Html.fromHtml("m<sup>3</sup>/Ã¡rbol")+"<tipo>3<n>"+
+						"Volumen del &aacute;rbol: "+volumenArbol.getText().toString()+" "+ Html.fromHtml("m<sup>3</sup>/árbol")+"<tipo>3<n>"+
 						"Forma del &aacute;rbol: "+formaArbol.getText().toString()+"<tipo>3<n>"+
 						"Fecha de la &uacute;ltima poda: "+fechaUltimaPoda.getText().toString()+"<tipo>3<n>"+
 						"Grado de poda: "+gradoPoda.getText().toString()+"<tipo>3<n>"+
 						"B.2 Tipo de tratamiento<tipo>2<n>"+
 						"Productos a aplicar: "+productosAplicar.getText().toString()+"<tipo>3<n>"+
 						"Forma de actuaci&oacute;n: "+formaActuacion.getText().toString()+"<tipo>3<n>"+
-						"Utiliza coadyuvantes (mojantes)?: "+utilizaMojantes.getText().toString()+"<tipo>3<n>"+
+						"Utiliza coadyuvantes (mojantes): "+utilizaMojantes.getText().toString()+"<tipo>3<n>"+
 						"Zona cr&iacute;tica a tratar: "+zonaCriticaATratar.getText().toString()+"<tipo>3<n>"+
 						"B.3 Condiciones meteorol&oacute;gicas<tipo>2<n>"+
 						"Temperatura: "+temperatura.getText().toString()+"<tipo>3<n>"+

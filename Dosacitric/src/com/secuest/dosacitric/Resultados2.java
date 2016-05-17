@@ -96,7 +96,8 @@ public class Resultados2 extends AppCompatActivity {
 				.format(resultados1.VolumenApp)));
 		VelAvance.setText(String.valueOf(di
 				.format(resultados1.VelocidadAvance)));
-		AnchoTrabajo.setText(String.valueOf(resultados1.AnchoTrabajo));
+		AnchoTrabajo.setText(String.valueOf(di
+				.format(resultados1.AnchoTrabajo)));
 		CaudalLiqTotal.setText(String.valueOf(di
 				.format(resultados1.CaudalLiquidoTotal)));
 		NumTotalBoq.setText(String.valueOf(resultados1.NumeroTotalBoquillas));
@@ -191,11 +192,17 @@ public class Resultados2 extends AppCompatActivity {
 				 * boquillasZ1.size()); for(int i=0;i<boquillasZ1.size();i++)
 				 * System.out.println(boquillasZ1.get(i));
 				 */
-				Intent res = new Intent(Resultados2.this,
-						CatalogosListView.class);
-				res.putExtra("marcas", marcasAdecu);
-				res.putExtra("inter", inter);
-				startActivity(res);
+				if (marcasAdecu.size()==0){
+					Intent res = new Intent(Resultados2.this,
+							NoHayBoquillas.class);
+					startActivity(res);
+					
+				}else{
+					Intent res = new Intent(Resultados2.this,
+							CatalogosListView.class);
+					res.putExtra("marcas", marcasAdecu);
+					res.putExtra("inter", inter);
+					startActivity(res);}
 			}
 		});
 
@@ -233,27 +240,27 @@ public class Resultados2 extends AppCompatActivity {
 						"Fecha: "+settings.getString("fecha", "")+"<tipo>2<n>"+
 						"Identificaci&oacute;n de la parcela: "+settings.getString("idparcela", "")+"<tipo>2<n>"+
 						"Identificaci&oacute;n del tratamiento: "+settings.getString("idtratamiento", "")+"<tipo>2<n>"+
-						"Refer&eacute;ncia: "+settings.getString("referencia", "")+"<tipo>2";
+						"Referencia: "+settings.getString("referencia", "")+"<tipo>2";
 					rw.write("A", A);
 					mypdf.readFile("A");
 				}
 				String C = ""+
 						"C. REGULACI&Oacute;N DEL PULVERIZADOR<tipo>1<n>"+
 						" HIDRONEUM&Aacute;TICO (TURBO)<tipo>4<n>"+
-						"Volumen de aplicaci&oacute;n (V): "+Resultados2.this.VolAplicacion.getText().toString()+" L/Ha<tipo>2<n>"+
+						"Volumen de aplicaci&oacute;n (V): "+Resultados2.this.VolAplicacion.getText().toString()+" L/ha<tipo>2<n>"+
 						"Velocidad de avance deseada (v): "+Resultados2.this.VelAvance.getText().toString()+" km/h<tipo>2<n>"+
 						"Ancho de trabajo (a): "+Resultados2.this.AnchoTrabajo.getText().toString()+" m<tipo>2<n>"+
 						"Caudal l&iacute;quido total: "+Resultados2.this.CaudalLiqTotal.getText().toString()+" L/min<tipo>2<n>"+
 						"Caracterl&iacute;sticas del sistema hidr&aacute;ulico del equipo:<tipo>2<n>"+
 						"- Nº total boquillas: "+Resultados2.this.NumTotalBoq.getText().toString()+"<tipo>2<n>"+
 						"- Nº boquillas desponibles/sector: "+Resultados2.this.NumBoqPorSector.getText().toString()+"<tipo>2<n>"+
-						"Boquillas a cerrar por zona<tipo>2<n>"+
+						"Boquillas a cerrar por zona<tipo>2<n> "+
 						"Zona Alta: "+Resultados2.this.BoqCerrAlta.getText().toString()+"<tipo>3<n> "+
-						"Zona Baja: "+Resultados2.this.BoqCerrBaja.getText().toString()+"<tipo>3<n> "+
-						"N&uacute;mero boquillas abiertas por zona<tipo>2<n>"+
+						"Zona Baja: "+Resultados2.this.BoqCerrBaja.getText().toString()+"<tipo>3<n>"+
+						"N&uacute;mero boquillas abiertas por zona<tipo>2<n> "+
 						"Zona Alta (nA): "+Resultados2.this.BoqAbiAlta.getText().toString()+"<tipo>3<n> "+
 						"Zona Media (nM): "+Resultados2.this.BoqAbiMedia.getText().toString()+"<tipo>3<n> "+
-						"Zona Baja (nB): "+Resultados2.this.BoqAbiBaja.getText().toString()+"<tipo>3<n> "+
+						"Zona Baja (nB): "+Resultados2.this.BoqAbiBaja.getText().toString()+"<tipo>3<n>"+
 						"Porcentaje de vegetaci&oacute;n a pulverizar por zona<tipo>2<n>"+
 						"Zona Alta (A%): "+Resultados2.this.VegetaAlta.getText().toString()+" <tipo>3<n>"+
 						"Zona Media (A%): "+Resultados2.this.VegetaMedia.getText().toString()+" <tipo>3<n>"+
@@ -274,9 +281,9 @@ public class Resultados2 extends AppCompatActivity {
 						"Discos", "Otros", "Mis boquillas" };
 				String[] presiones = { "p6", "p7", "p8", "p9", "p10", "p11",
 						"p12", "p13", "p14", "p15", "p16" };
-				String[] presionesString = { "Presion: 6 bar", "Presion: 7 bar", "Presion: 8 bar", "Presion: 9 bar",
-						"Presion: 10 bar", "Presion: 11 bar",
-						"Presion: 12 bar", "Presion: 13 bar", "Presion: 14 bar", "Presion: 15 bar", "Presion: 16 bar" };
+				String[] presionesString = { "Presión: 6 bar", "Presión: 7 bar", "Presión: 8 bar", "Presión: 9 bar",
+						"Presión: 10 bar", "Presión: 11 bar",
+						"Presión: 12 bar", "Presión: 13 bar", "Presión: 14 bar", "Presión: 15 bar", "Presión: 16 bar" };
 				int posicionArray = 0;
 				
 				ArrayList<String> marcasAdecu = new ArrayList<String>();

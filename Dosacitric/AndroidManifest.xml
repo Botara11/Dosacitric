@@ -232,6 +232,11 @@
             android:label="@string/Boquillas"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="NoHayBoquillas"
+            android:label=""
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>

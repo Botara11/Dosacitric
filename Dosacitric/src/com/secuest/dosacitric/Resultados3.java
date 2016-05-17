@@ -195,9 +195,9 @@ public class Resultados3 extends AppCompatActivity {
 						"    - Zona Baja (nB): "+BoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
 						"Presi&oacute;n seleccionada: "+Presion.getText().toString()+"<tipo>3<n> "+
 						"Boquillas seleccionadas:<tipo>3<n> "+
-						"    - Zona Alta: "+Marca.getText().toString()+"."+EleccionBoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
-						"    - Zona Media: "+Marca.getText().toString()+"."+EleccionBoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
-						"    - Zona Baja: "+Marca.getText().toString()+"."+EleccionBoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
+						"    - Zona Alta: "+Marca.getText().toString()+""+EleccionBoquillaZonaAlta.getText().toString()+"<tipo>3<n> "+
+						"    - Zona Media: "+Marca.getText().toString()+""+EleccionBoquillaZonaMedia.getText().toString()+"<tipo>3<n> "+
+						"    - Zona Baja: "+Marca.getText().toString()+""+EleccionBoquillaZonaBaja.getText().toString()+"<tipo>3<n> "+
 						"Caudal de l&iacute;quido total (Q): "+CaudalLiqTotal.getText().toString()+" L/min<tipo>3<n> "+
 						"Volumen de caldo aplicado (V): "+VolumenCaldoAplicado.getText().toString()+" L/ha<tipo>3";
 				//"Marca seleccionada: "+Marca.getText().toString()+"<tipo>3<n> "+

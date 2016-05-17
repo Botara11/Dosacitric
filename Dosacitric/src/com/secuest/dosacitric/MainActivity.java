@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 		barra = (ProgressBar) findViewById(R.id.progressBar1);
 		tableLay = (TableRow) findViewById(R.id.tableLayout1);
 		TextView version = (TextView) findViewById(R.id.textView3);
-		version.setText("V.2.1");
+		version.setText("V.1.0");
 		tableLay.setVisibility(View.INVISIBLE);
 		
 		Button siguiente = (Button) findViewById(R.id.siguiente);
