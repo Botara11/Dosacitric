@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="No hay boquillas disponibles \n para las características introducidas."
+        android:text="No hay boquillas disponibles \n para las características introducidas.\n Aumente si es posible la 'Variación \n de caudal admisible'."
         android:textColor="@color/white"
         android:textSize="20sp" />
 
