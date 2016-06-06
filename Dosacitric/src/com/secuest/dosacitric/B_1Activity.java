@@ -33,8 +33,7 @@ CompoundButton.OnCheckedChangeListener  {
 	private Switch SwitchvolumenAplicacionCalculado;
 	private TextView anchoTrabajoCalculado;
 	private Switch SwitchAnchoTrabajoCalculado;
-	private TextView velocidadAvance;
-	private SeekBar velocidadAvanceSeekbar;
+	private EditText velocidadAvance;
 	private EditText editAncho;
 	private EditText editVolumen;
 	private EditText editBoquillas;
@@ -63,7 +62,7 @@ CompoundButton.OnCheckedChangeListener  {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.b_1);
-		seebbarr();
+		//seebbarr();
 
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -112,9 +111,8 @@ CompoundButton.OnCheckedChangeListener  {
 			SwitchAnchoTrabajoCalculado.setChecked(false);
 		}
 
-		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
-		velocidadAvance.setText("0.99");
-
+		velocidadAvance = (EditText) findViewById(R.id.velocidadAvance);
+		
 		caudalTotal = (TextView) findViewById(R.id.textView15);
 		caudalSector = (TextView) findViewById(R.id.textView16);
 
@@ -239,7 +237,7 @@ CompoundButton.OnCheckedChangeListener  {
 
 	}
 
-	public void seebbarr() {
+	/*public void seebbarr() {
 		velocidadAvanceSeekbar = (SeekBar) findViewById(R.id.seekBar1);
 		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
 
@@ -274,7 +272,7 @@ CompoundButton.OnCheckedChangeListener  {
 			public void onStopTrackingTouch(SeekBar seekBar) {
 			}
 		});
-	}
+	}*/
 
 	@SuppressWarnings({ "unused", "hiding" })
 	private class ArrayAdapterMio<String> extends ArrayAdapter<String> {

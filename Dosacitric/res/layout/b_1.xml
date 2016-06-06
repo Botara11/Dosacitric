@@ -85,9 +85,8 @@
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/seekBar1"
                 android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/seekBar1"
+                android:layout_alignTop="@+id/TextView1"
                 android:layout_marginRight="10dp"
                 android:gravity="center"
                 android:text="km/h"
@@ -134,37 +133,25 @@
                 android:inputType="number|textVisiblePassword" >
             </EditText>
 
-            <SeekBar
-                android:id="@+id/seekBar1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignRight="@+id/textView8"
-                android:layout_below="@+id/TextView1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp" />
-
             <TextView
                 android:id="@+id/TextView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/seekBar1"
-                android:layout_below="@+id/seekBar1"
+                android:layout_alignLeft="@+id/TextView1"
+                android:layout_below="@+id/TextView1"
                 android:layout_marginTop="10dp"
                 android:text="(Comprendida entre 0,99 y 6,01)"
                 android:textColor="@color/green"
                 android:textSize="13sp" />
 
-            <TextView
+            <EditText
                 android:id="@+id/velocidadAvance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/textView7"
-                android:layout_alignTop="@+id/seekBar1"
+                android:layout_alignTop="@+id/TextView1"
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/textView7"
-                android:layout_toRightOf="@+id/seekBar1"
+                android:layout_toRightOf="@+id/switchAnchoTrabajoDeseado"
                 android:background="@color/white"
                 android:gravity="center" />
 
@@ -301,8 +288,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/editTextAnchoTrabajoDesesado"
                 android:layout_alignBottom="@+id/editTextAnchoTrabajoDesesado"
-                android:layout_alignRight="@+id/TextView1"
-                android:layout_marginRight="10dp"
+                android:layout_alignRight="@+id/textView7"
+                android:layout_toRightOf="@+id/editTextVolumenAplicacionDeseado"
                 android:text="m"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
@@ -312,7 +299,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
+                android:layout_alignRight="@+id/switchAnchoTrabajoDeseado"
                 android:layout_below="@+id/textView6"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="30dp"
@@ -363,10 +350,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/switchAnchoTrabajoDeseado"
+                android:layout_alignRight="@+id/editTextVolumenAplicacionDeseado"
                 android:layout_below="@+id/switchAnchoTrabajoCalculado"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_toLeftOf="@+id/TextView01"
                 android:background="@color/greylight"
                 android:gravity="center"
                 android:textStyle="bold" />
@@ -390,8 +376,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/switchAnchoTrabajoDeseado"
-                android:layout_alignLeft="@+id/textView6"
-                android:layout_marginRight="10dp"
+                android:layout_alignRight="@+id/textView5"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/textViewAnchoTrabajoCalculado"
                 android:text="m"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
