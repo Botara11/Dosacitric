@@ -44,7 +44,7 @@
                 android:layout_below="@+id/cuerpo1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="Velocidad de avance deseada (v):"
+                android:text="Velocidad de avance (v):"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 

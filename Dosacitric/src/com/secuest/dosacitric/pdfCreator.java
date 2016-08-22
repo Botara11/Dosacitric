@@ -29,7 +29,7 @@ public class pdfCreator {
 		mPDFWriter.addRawContent("0 0 0 rg\n");
 		mPDFWriter.addText(277, 912, 14, "dosacitric@upv.es");
 		mPDFWriter.addText(277, 896, 14, "Unidad de Mecanización y Tecnología Agraria");
-		mPDFWriter.addText(277, 880, 14, "UNIVERSIDAD POLITÉCNICA DE VALENCIA");
+		mPDFWriter.addText(277, 880, 14, "UNIVERSITAT POLITÈCNICA DE VALÈNCIA");
 	}
 
 	public void writeFile(){
@@ -91,6 +91,9 @@ public class pdfCreator {
 		//finish_document("Dosacitric_C"+cal.get(Calendar.DAY_OF_MONTH)+"-"+cal.get(Calendar.MONTH)+"-"+cal.get(Calendar.YEAR),cxt);
 	}
 
+	/*Método con el que se pueden modificar los parámetros de los 3 tipos
+	de letra*/
+	
 	public void readFile(String filename){
 		RWFile rw = new RWFile();
 		String A = rw.read(filename);

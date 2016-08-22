@@ -103,7 +103,7 @@
                 android:layout_below="@+id/cuerpo11"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="Intervalo de caudales admisibles"
+                android:text="Intervalo de caudales admisibles por boquilla de cada zona"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 

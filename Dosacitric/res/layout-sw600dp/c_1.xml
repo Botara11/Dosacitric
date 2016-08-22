@@ -115,7 +115,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Ancho de trabajo"
+                android:text="Seleccione una de las dos opciones:"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -127,7 +127,7 @@
                 android:layout_below="@+id/switchAnchoTrabajoDeseado"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="40dp"
-                android:text="Características del sistema hidráulico del equipo"
+                android:text="Características del sistema hidráulico del equipo:"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -147,8 +147,9 @@
                 android:id="@+id/Rojo"
                 android:layout_width="50dp"
                 android:layout_height="25dp"
-                android:layout_alignLeft="@+id/textView19"
+                android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView19"
+                android:layout_marginLeft="50dp"
                 android:layout_marginTop="20dp"
                 android:background="@color/red" />
 
@@ -156,7 +157,8 @@
                 android:id="@+id/Naranja"
                 android:layout_width="50dp"
                 android:layout_height="25dp"
-                android:layout_alignLeft="@+id/textView19"
+                android:layout_alignLeft="@+id/Rojo"
+                android:layout_alignRight="@+id/Rojo"
                 android:layout_below="@+id/Rojo"
                 android:layout_marginTop="20dp"
                 android:background="@color/orange" />
@@ -165,7 +167,8 @@
                 android:id="@+id/Verde"
                 android:layout_width="50dp"
                 android:layout_height="25dp"
-                android:layout_alignLeft="@+id/textView19"
+                android:layout_alignLeft="@+id/Naranja"
+                android:layout_alignRight="@+id/Naranja"
                 android:layout_below="@+id/Naranja"
                 android:layout_marginTop="20dp"
                 android:background="@color/green" />
@@ -253,7 +256,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="40dp"
                 android:gravity="center"
-                android:text="Velocidad de avance"
+                android:text="Seleccione una de las dos opciones:"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -304,9 +307,9 @@
                 android:id="@+id/switchVelocidadAvanceCalculada"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/Verde"
                 android:layout_below="@+id/textView4"
                 android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/textView15"
                 android:checked="true"
                 android:onClick="onSwitchClicked "
                 android:text="Velocidad de avance \n calculada"
@@ -402,7 +405,7 @@
                 android:layout_alignLeft="@+id/textView6"
                 android:layout_alignTop="@+id/velocidadAvance"
                 android:gravity="center"
-                android:text="km/h"
+                android:text="Km/h"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -410,11 +413,11 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/editText1"
                 android:layout_alignRight="@+id/textoZonaBaja"
                 android:layout_alignTop="@+id/editText1"
-                android:layout_alignBottom="@+id/editText1"
                 android:gravity="center"
-                android:text="km/h"
+                android:text="Km/h"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </RelativeLayout>

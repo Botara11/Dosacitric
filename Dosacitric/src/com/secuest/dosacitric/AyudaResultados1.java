@@ -30,10 +30,10 @@ public class AyudaResultados1 extends AppCompatActivity{
 		cuerpo3 = (TextView) findViewById(R.id.cuerpo3);
 		cuerpo4 = (TextView) findViewById(R.id.cuerpo4);
 
-		String stringCuerpo1 = "Se muestra un resumen de la información introducida en los puntos 0, 1, 2 y 3, y se indicará el <font color=#ff6600> volumen de aplicación </font> recomendado en esas condiciones de trabajo.";
+		String stringCuerpo1 = "En el apartado ”B.R. RESUMEN Y RESULTADOS I” se muestra un resumen de la información introducida en los puntos A y B de la aplicación, y se indicará el <font color=#ff6600> volumen de aplicación </font> recomendado en esas condiciones de trabajo.";
 		String stringCuerpo2 = "Al presionar sobre este icono";
-		String stringCuerpo3 = "se guardan los";
-		String stringCuerpo4 = "datos de “RESUMEN Y RESULTADOS I” en la aplicación “Descargas” del propio dispositivo utilizado (Tablet o Smartphone).";
+		String stringCuerpo3 = "se guardarán los";
+		String stringCuerpo4 = "datos de “B.R. RESUMEN Y RESULTADOS I” en la aplicación “Descargas” del propio dispositivo utilizado (Tablet o Smartphone).";
 		
 		cuerpo1.setText(Html.fromHtml(stringCuerpo1));
 		cuerpo2.setText(Html.fromHtml(stringCuerpo2));

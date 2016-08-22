@@ -116,11 +116,9 @@
                 android:layout_alignTop="@+id/textView2"
                 android:layout_marginRight="10dp"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="number|textVisiblePassword"
-                android:maxLength="2"
                 android:textSize="20sp" >
 
                 <requestFocus />
@@ -137,11 +135,9 @@
                 android:layout_marginRight="10dp"
                 android:layout_toRightOf="@+id/textView5"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="number|textVisiblePassword"
-                android:maxLength="2"
                 android:textSize="20sp" />
 
             <EditText
@@ -155,11 +151,9 @@
                 android:layout_marginRight="10dp"
                 android:layout_toRightOf="@+id/textView15"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="number|textVisiblePassword"
-                android:maxLength="2"
                 android:textSize="20sp" />
 
             <EditText
@@ -172,11 +166,9 @@
                 android:layout_marginRight="10dp"
                 android:layout_toRightOf="@+id/textView16"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="number|textVisiblePassword"
-                android:maxLength="2"
                 android:textSize="20sp" />
 
             <EditText
@@ -189,11 +181,9 @@
                 android:layout_marginRight="10dp"
                 android:layout_toRightOf="@+id/textView17"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="number|textVisiblePassword"
-                android:maxLength="2"
                 android:textSize="20sp" />
 
             <EditText
@@ -207,11 +197,9 @@
                 android:layout_toLeftOf="@+id/textView33"
                 android:layout_toRightOf="@+id/textView24"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="number|textVisiblePassword"
-                android:maxLength="2"
                 android:textSize="20sp" />
 
             <EditText
@@ -225,11 +213,9 @@
                 android:layout_toLeftOf="@+id/textView34"
                 android:layout_toRightOf="@+id/textView23"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="number|textVisiblePassword"
-                android:maxLength="2"
                 android:textSize="20sp" />
 
             <EditText
@@ -243,11 +229,9 @@
                 android:layout_toLeftOf="@+id/textView35"
                 android:layout_toRightOf="@+id/textView24"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="number|textVisiblePassword"
-                android:maxLength="2"
                 android:textSize="20sp" />
 
             <SeekBar
@@ -292,10 +276,11 @@
                 android:layout_alignTop="@+id/variacionCaudalSeekBar"
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/textView11"
-                android:layout_toRightOf="@+id/textView25"
+                android:layout_toRightOf="@+id/variacionCaudalSeekBar"
                 android:background="@color/white"
                 android:gravity="center"
-                android:textSize="20sp" />
+                android:textSize="20sp" 
+                android:layout_marginLeft="10dp"/>
 
             <TextView
                 android:id="@+id/textView11"
@@ -481,7 +466,7 @@
                 android:layout_below="@+id/textView1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="30dp"
-                android:text="Intervalo de caudales admisibles"
+                android:text="Intervalo de caudales admisibles por boquilla de cada zona:"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 

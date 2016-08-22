@@ -47,7 +47,7 @@ public class AyudaB_2Activity extends AppCompatActivity{
 		cuerpo12 = (TextView) findViewById(R.id.cuerpo12);
 		
 		String stringCuerpo1 = "En este apartado deben indicarse el número total de boquillas que deben cerrarse en la <font color=#ff6600>Zona Alta</font> del equipo y en la <font color=#ff6600>Zona Baja</font> del equipo. Dichos valores se obtendrán como suma de las boquillas que haya que cerrar en cada zona considerando todos los sectores existentes en el equipo (por ejemplo, derecho e izquierdo). ";
-		String stringCuerpo2 = "Para determinar el número de boquillas que hay que cerrar conviene poner el equipo en marcha dentro de la calle para observar que boquillas no pulverizan sobre la zona a tratar. ";
+		String stringCuerpo2 = "Para determinar el número de boquillas que hay que cerrar conviene poner el equipo en marcha dentro de la calle y observar cuántas boquillas no pulverizan sobre el cultivo a tratar.";
 		String stringCuerpo3 = "En este apartado deben indicarse el número total de boquillas que deben permanecer abiertas en la <font color=#ff6600>Zona Alta (nA), Media (nM) y Baja (nB)</font> del equipo. Para determinar dichos valores hay que considerar la forma del árbol y que las boquillas asignadas a cada zona deberán tratar la zona del cultivo establecida por nosotros en el apartado <font color=#ff6600>porcentaje de vegetación a pulverizar por zona</font>.";
 		String stringCuerpo4 = "<font color=#ff6600> A% </font> = Porcentaje de vegetación a tratar por las boquillas abiertas situadas en la zona alta del equipo (nA).";
 		String stringCuerpo5 = "<font color=#ff6600> M% </font> = Porcentaje de vegetación a tratar por las boquillas abiertas situadas en la zona media del equipo (nM).";
@@ -55,7 +55,7 @@ public class AyudaB_2Activity extends AppCompatActivity{
 		String stringCuerpo7 = "A la hora de introducir los datos hay que considerar que la suma de los tres porcentajes (A%, M% y B%) debe ser obligatoriamente 100%.";
 		String stringCuerpo8 = "Utilizando el botón desplazable, se deberá indicar la variación máxima de caudal admisible a la hora de hacer el tratamiento. Hay que tener en cuenta que:";
 		String stringCuerpo9 = "- Una variación en el caudal implica una variación en igual porcentaje en el volumen de aplicación.";
-		String stringCuerpo10 = "- A mayor variación de caudal mayor será el número de boquillas que se podrán emplear para realizar el tratamiento. ";
+		String stringCuerpo10 = "- A mayor variación de caudal mayor será el número de boquillas distintas que se podrán seleccionar para realizar el tratamiento. ";
 		String stringCuerpo11 = "<font color=#ff6600> DOSACITRIC </font> permite seleccionar una variación de caudal máxima del 10%.";
 		String stringCuerpo12 = "En este apartado <font color=#ff6600> DOSACITRIC </font> muestra el intervalo de caudales elegido por el usuario de cara a seleccionar las boquillas a colocar en cada zona del equipo y su presión de trabajo.";
 		

@@ -271,25 +271,24 @@ public class Resultados1 extends AppCompatActivity{
 				}
 				String B = "B. VOLUMEN DE APLICACI&Oacute;N<tipo>1<n>"+
 						"B.1 Caracter&iacute;sticas del cultivo<tipo>2<n>"+
-						"Densidad foliar del &aacute;rbol: "+densidadFoliar.getText().toString()+"<tipo>3<n>"+
-						"Marco de plantaci&oacute;n: "+xAncho.getText().toString()+" m x "+yDistancia.getText().toString()+" m<tipo>3<n>"+
-						"Volumen del &aacute;rbol: "+volumenArbol.getText().toString()+" "+ Html.fromHtml("m<sup>3</sup>/árbol")+"<tipo>3<n>"+
-						"Forma del &aacute;rbol: "+formaArbol.getText().toString()+"<tipo>3<n>"+
-						"Fecha de la &uacute;ltima poda: "+fechaUltimaPoda.getText().toString()+"<tipo>3<n>"+
-						"Grado de poda: "+gradoPoda.getText().toString()+"<tipo>3<n>"+
+						"          Densidad foliar del &aacute;rbol: "+densidadFoliar.getText().toString()+"<tipo>2<n>"+
+						"          Marco de plantaci&oacute;n: "+xAncho.getText().toString()+" m x "+yDistancia.getText().toString()+" m<tipo>2<n>"+
+						"          Volumen del &aacute;rbol: "+volumenArbol.getText().toString()+" "+ Html.fromHtml("m<sup>3</sup>/árbol")+"<tipo>2<n>"+
+						"          Forma del &aacute;rbol: "+formaArbol.getText().toString()+"<tipo>2<n>"+
+						"          Fecha de la &uacute;ltima poda: "+fechaUltimaPoda.getText().toString()+"<tipo>2<n>"+
+						//"          Grado de poda: "+gradoPoda.getText().toString()+"<tipo>2<n>"+
 						"B.2 Tipo de tratamiento<tipo>2<n>"+
-						"Productos a aplicar: "+productosAplicar.getText().toString()+"<tipo>3<n>"+
-						"Forma de actuaci&oacute;n: "+formaActuacion.getText().toString()+"<tipo>3<n>"+
-						"Utiliza coadyuvantes (mojantes): "+utilizaMojantes.getText().toString()+"<tipo>3<n>"+
-						"Zona cr&iacute;tica a tratar: "+zonaCriticaATratar.getText().toString()+"<tipo>3<n>"+
+						"          Productos a aplicar: "+productosAplicar.getText().toString()+"<tipo>2<n>"+
+						"          Forma de actuaci&oacute;n: "+formaActuacion.getText().toString()+"<tipo>2<n>"+
+						"          ¿Utiliza coadyuvantes?: "+utilizaMojantes.getText().toString()+"<tipo>2<n>"+
+						"          Zona cr&iacute;tica a tratar: "+zonaCriticaATratar.getText().toString()+"<tipo>2<n>"+
 						"B.3 Condiciones meteorol&oacute;gicas<tipo>2<n>"+
-						"Temperatura: "+temperatura.getText().toString()+"<tipo>3<n>"+
-						"Humedad relativa: "+humedadRelativa.getText().toString()+"<tipo>3<n>"+
-						"Velocidad del viento: "+velocidadViento.getText().toString()+"<tipo>3<n>"+
+						"          Temperatura: "+temperatura.getText().toString()+"<tipo>2<n>"+
+						"          Humedad relativa: "+humedadRelativa.getText().toString()+"<tipo>2<n>"+
+						"          Velocidad del viento: "+velocidadViento.getText().toString()+"<tipo>2<n>"+
 						"B.4 Equipo empleado<tipo>2<n>"+
-						"Tipo de pulverizador: "+tipoPulverizador.getText().toString()+"<tipo>3<n>"+
-						"B.5 Volumen de aplicaci&oacute;n <tipo>2<n>"+
-						L_Ha.getText().toString()+" L/ha<tipo>3";
+						"          Tipo de pulverizador: "+tipoPulverizador.getText().toString()+"<tipo>2<n>"+
+						"               VOLUMEN DE APLICACI&Oacute;N: "+L_Ha.getText().toString()+" L/ha<tipo>1";
 				rw.write("B", B);
 				mypdf.readFile("B");
 				//Calendar cal = Calendar.getInstance();

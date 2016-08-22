@@ -19,7 +19,6 @@ public class AyudaAjustesInformacion extends AppCompatActivity{
 	private TextView cuerpo8;
 	private TextView cuerpo9;
 	private TextView cuerpo10;
-	private TextView cuerpo11;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +41,6 @@ public class AyudaAjustesInformacion extends AppCompatActivity{
 		cuerpo8 = (TextView) findViewById(R.id.cuerpo8);
 		cuerpo9 = (TextView) findViewById(R.id.cuerpo9);
 		cuerpo10 = (TextView) findViewById(R.id.cuerpo10);
-		cuerpo11 = (TextView) findViewById(R.id.cuerpo11);
 
 		String stringCuerpo1 = "El objetivo de <font color=#ff6600> DOSACITRIC </font> es implementar un sistema de decisión que permita establecer al técnico de la explotación, responsable de hacer los tratamientos, el volumen de caldo a aplicar en los tratamientos fitosanitarios en cítricos, a partir de las características específicas del cultivo, del producto fitosanitario y de la plaga o enfermedad a tratar."; 
 		String stringCuerpo2 = "<font color=#ff6600> DOSACITRIC </font> determina el volumen de caldo a aplicar a partir de la fórmula";
@@ -54,8 +52,7 @@ public class AyudaAjustesInformacion extends AppCompatActivity{
 		String stringCuerpo8 = "<font color=#ff6600> DOSACITRIC </font> se ha elaborado a partir de los resultados obtenidos en los proyectos de investigación PULVERXACT<sup>1</sup> y OPTIDOSA<sup>2</sup>, llevados a cabo por el grupo de investigación de la Unidad de Mecanización y Tecnología Agraria de la Universidad Politécnica de Valencia."; 
 		String stringCuerpo9 = "<i> (1)Proyecto PULVERXACT. Implementación de un sistema de decisión de la dosis de producto fitosanitario en tratamientos de plantaciones (frutales, viñedo y cítricos). Contrato AGL 2002-04260-C04. Organismo financiador Ministerio de Ciencia y Tecnología.</i>";
 		String stringCuerpo10 = "<i>(2)Proyecto OPTIDOSA. Reducción del uso de producto fitosanitarios en cultivos arbóreos. Optimización de la dosis de aplicación en cítricos, frutales y vid. Contrato AGL 2007-66093-C04. Organismo financiador Ministerio de Educación y Ciencia.</i>";
-		String stringCuerpo11 = "Aplicación desarrollada por Álvaro Serneguet Sorlí e Idir Ferrah Muñoz.";
-
+		
 		cuerpo1.setText(Html.fromHtml(stringCuerpo1));
 		cuerpo2.setText(Html.fromHtml(stringCuerpo2));
 		cuerpo3.setText(Html.fromHtml(stringCuerpo3));
@@ -66,7 +63,6 @@ public class AyudaAjustesInformacion extends AppCompatActivity{
 		cuerpo8.setText(Html.fromHtml(stringCuerpo8));
 		cuerpo9.setText(Html.fromHtml(stringCuerpo9));
 		cuerpo10.setText(Html.fromHtml(stringCuerpo10));
-		cuerpo11.setText(Html.fromHtml(stringCuerpo11));
 
 	}
 

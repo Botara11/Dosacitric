@@ -116,11 +116,12 @@
                 android:layout_alignTop="@+id/textView2"
                 android:layout_marginRight="10dp"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                android:maxLength="2" />
+                android:inputType="number|textVisiblePassword" >
+
+                <requestFocus />
+            </EditText>
 
             <EditText
                 android:id="@+id/zonaBajaCerradas"
@@ -133,11 +134,9 @@
                 android:layout_marginRight="10dp"
                 android:layout_toRightOf="@+id/textView5"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                android:maxLength="2" />
+                android:inputType="number|textVisiblePassword" />
 
             <EditText
                 android:id="@+id/zonaAltaAbiertas"
@@ -150,11 +149,9 @@
                 android:layout_marginRight="10dp"
                 android:layout_toRightOf="@+id/textView15"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                android:maxLength="2" />
+                android:inputType="number|textVisiblePassword" />
 
             <EditText
                 android:id="@+id/zonaMediaAbiertas"
@@ -166,11 +163,9 @@
                 android:layout_marginRight="10dp"
                 android:layout_toRightOf="@+id/textView16"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                android:maxLength="2" />
+                android:inputType="number|textVisiblePassword" />
 
             <EditText
                 android:id="@+id/zonaBajaAbiertas"
@@ -182,11 +177,9 @@
                 android:layout_marginRight="10dp"
                 android:layout_toRightOf="@+id/textView17"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                android:maxLength="2" />
+                android:inputType="number|textVisiblePassword" />
 
             <EditText
                 android:id="@+id/zonaAltaPorcentaje"
@@ -199,11 +192,9 @@
                 android:layout_toLeftOf="@+id/textView33"
                 android:layout_toRightOf="@+id/textView24"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                android:maxLength="2" />
+                android:inputType="number|textVisiblePassword" />
 
             <EditText
                 android:id="@+id/zonaMediaPorcentanje"
@@ -216,11 +207,9 @@
                 android:layout_toLeftOf="@+id/textView34"
                 android:layout_toRightOf="@+id/textView23"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                android:maxLength="2" />
+                android:inputType="number|textVisiblePassword" />
 
             <EditText
                 android:id="@+id/zonaBajaPorcentaje"
@@ -233,11 +222,9 @@
                 android:layout_toLeftOf="@+id/textView35"
                 android:layout_toRightOf="@+id/textView24"
                 android:background="@color/white"
-                android:digits="0123456789"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                android:maxLength="2" />
+                android:inputType="number|textVisiblePassword" />
 
             <SeekBar
                 android:id="@+id/variacionCaudalSeekBar"

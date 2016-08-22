@@ -104,7 +104,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Marco de plantación:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -116,7 +116,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Volumen del árbol:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -128,7 +128,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Forma del árbol:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -138,33 +138,31 @@
                 android:layout_below="@+id/textView5"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Poda"
+                android:text="Poda:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView6"
-                android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
+                android:layout_toRightOf="@+id/textView6"
                 android:text="- Fecha de la última poda:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:layout_alignLeft="@+id/textView7"
                 android:layout_below="@+id/textView7"
-                android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
                 android:text="- Grado de poda:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -178,7 +176,7 @@
                 android:paddingLeft="10dp"
                 android:text="B.2. TIPO DE TRATAMIENTO"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -190,7 +188,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Productos a aplicar:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -202,7 +200,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Forma de actuación:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -214,7 +212,7 @@
                 android:layout_marginTop="16dp"
                 android:text="¿Utiliza coadyuvantes (mojantes)?:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -226,7 +224,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Zona crítica a tratar:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -240,7 +238,7 @@
                 android:paddingLeft="10dp"
                 android:text="B.3. CONDICIONES METEOROLÓGICAS"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -252,7 +250,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Temperatura:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -264,7 +262,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Humedad relativa:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView17"
@@ -276,7 +274,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Velocidad del viento:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView18"
@@ -290,7 +288,7 @@
                 android:paddingLeft="10dp"
                 android:text="B.4. EQUIPO EMPLEADO"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView19"
@@ -302,7 +300,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Tipo de pulverizador:"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView20"
@@ -316,21 +314,7 @@
                 android:paddingLeft="10dp"
                 android:text="B.5. VOLUMEN DE APLICACIÓN"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
-
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/textView20"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="16dp"
-                android:text="L/ha"
-                android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView23"
@@ -341,7 +325,7 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView26"
@@ -352,7 +336,7 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView27"
@@ -363,7 +347,7 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView28"
@@ -374,7 +358,7 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView29"
@@ -385,7 +369,7 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView30"
@@ -396,7 +380,7 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView31"
@@ -407,7 +391,7 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView32"
@@ -418,7 +402,7 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView33"
@@ -429,7 +413,7 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView34"
@@ -440,7 +424,7 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView35"
@@ -451,7 +435,7 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView36"
@@ -462,17 +446,46 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/dummy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
 
             <TextView
                 android:id="@+id/textView37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/dummy"
+                android:layout_below="@+id/textView20"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/green"
+                android:gravity="right"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView38"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textView21"
-                android:layout_toLeftOf="@+id/textView21"
-                android:text="TextView"
-                android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:layout_alignLeft="@+id/dummy"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView20"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/green"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="L/ha"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView42"
@@ -495,7 +508,7 @@
                 android:layout_toLeftOf="@+id/textView42"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView24"
@@ -506,7 +519,7 @@
                 android:layout_marginRight="10dp"
                 android:text="m"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView39"
@@ -517,7 +530,7 @@
                 android:layout_toLeftOf="@+id/textView24"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView40"
@@ -528,7 +541,7 @@
                 android:layout_toLeftOf="@+id/textView39"
                 android:text="x"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/TextView01"
@@ -539,7 +552,7 @@
                 android:layout_toLeftOf="@+id/textView40"
                 android:text="m"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView41"
@@ -550,7 +563,7 @@
                 android:layout_toLeftOf="@+id/TextView01"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/TextView02"
@@ -634,7 +647,7 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/idParcelaResultados1"
@@ -648,7 +661,7 @@
                 android:gravity="right"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/idTratamientoResultados1"
@@ -662,7 +675,7 @@
                 android:gravity="right"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/referenciaResultados1"
@@ -673,7 +686,7 @@
                 android:layout_marginRight="10dp"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/fechaMesResultados1"
@@ -684,7 +697,7 @@
                 android:layout_toLeftOf="@+id/TextView07"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/TextView09"
@@ -695,7 +708,7 @@
                 android:layout_toLeftOf="@+id/fechaMesResultados1"
                 android:text="/"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/fechaDiaResultados1"
@@ -706,7 +719,7 @@
                 android:layout_toLeftOf="@+id/TextView09"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/TextView07"
@@ -717,7 +730,7 @@
                 android:layout_toLeftOf="@+id/fechaAnoResultados1"
                 android:text="/"
                 android:textColor="@color/white"
-                android:textSize="20sp"  />
+                android:textSize="20sp" />
         </RelativeLayout>
     </ScrollView>
 

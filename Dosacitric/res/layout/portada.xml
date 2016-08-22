@@ -86,9 +86,9 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="16dp"
                 android:gravity="center"
-                android:src="@drawable/logoesp" />
+                android:src="@drawable/logoportada" />
 
             <TextView
                 android:id="@+id/textView5"

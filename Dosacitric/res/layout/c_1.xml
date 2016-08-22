@@ -104,7 +104,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Ancho de trabajo"
+                android:text="Seleccione una de las dos opciones:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -233,7 +233,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:text="Velocidad de avance"
+                android:text="Seleccione una de las dos opciones:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -312,7 +312,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:gravity="center"
-                android:text="km/h"
+                android:text="Km/h"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -324,7 +324,7 @@
                 android:layout_alignBottom="@+id/editText1"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:text="km/h"
+                android:text="Km/h"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -361,7 +361,7 @@
                 android:layout_below="@+id/anchoCalculadoParteC"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:text="Características del sistema hidráulico del equipo"
+                android:text="Características del sistema hidráulico del equipo:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 

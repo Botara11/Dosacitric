@@ -99,7 +99,7 @@
                 android:background="#FFFFFF"
                 android:gravity="left|center"
                 android:paddingLeft="10dp"
-                android:text="C. ELECCIÓN DE BOQUILLAS"
+                android:text="C. SELECCIÓN DE BOQUILLAS"
                 android:textColor="#ff6600"
                 android:textSize="20sp" />
 

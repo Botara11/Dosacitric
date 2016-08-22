@@ -60,7 +60,7 @@
                 android:layout_below="@+id/cuerpo2"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="C: ELECCIÓN DE BOQUILLAS "
+                android:text="C: SELECCIÓN DE BOQUILLAS "
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -117,6 +117,44 @@
                 android:layout_marginTop="10dp"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/cuerpo5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/cabecera3"
+                android:layout_below="@+id/cuerpo4"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/cuerpo6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/cuerpo5"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="1dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/cuerpo5"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/cuerpo4"
+                android:layout_marginRight="700dp"
+                android:layout_toRightOf="@+id/cuerpo5"
+                android:src="@drawable/ajustes" />
         </RelativeLayout>
     </ScrollView>
 

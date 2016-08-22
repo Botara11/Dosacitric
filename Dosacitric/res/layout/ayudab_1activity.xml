@@ -67,7 +67,7 @@
                 android:layout_alignLeft="@+id/cuerpo1"
                 android:layout_below="@+id/cuerpo2"
                 android:layout_marginTop="10dp"
-                android:text="Variación de caudal admisible"
+                android:text="Velocidad de avance deseada"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 

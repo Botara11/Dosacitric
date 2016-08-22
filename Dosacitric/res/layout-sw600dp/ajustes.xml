@@ -198,7 +198,7 @@
                 android:layout_below="@+id/cuerpo8"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/logoesp" />
+                android:src="@drawable/logoportada" />
 
             <ImageView
                 android:id="@+id/imageView2"

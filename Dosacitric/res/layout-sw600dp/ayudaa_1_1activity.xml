@@ -13,26 +13,15 @@
             android:layout_height="fill_parent" >
 
             <TextView
-                android:id="@+id/cabecera1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="16dp"
-                android:text="Características del cultivo"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
                 android:id="@+id/cuerpo1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/cabecera1"
+                android:layout_alignParentTop="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="16dp"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -240,17 +229,6 @@
                 android:layout_below="@+id/cuerpo16"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/dimensiones" />
-
-            <ImageView
-                android:id="@+id/dimensiones2"
-                android:layout_width="wrap_content"
-                android:layout_height="600dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/dimensiones"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/dimensiones2" />
         </RelativeLayout>
     </ScrollView>
 

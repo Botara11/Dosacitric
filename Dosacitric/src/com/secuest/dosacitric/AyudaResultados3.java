@@ -60,7 +60,7 @@ public class AyudaResultados3 extends AppCompatActivity{
 		cuerpo19 = (TextView) findViewById(R.id.cuerpo19);
 		
 		String stringCuerpo1 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa el ancho de la calle a tratar en metros."; 
-		String stringCuerpo2 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa la velocidad de avance del equipo en km/h.";
+		String stringCuerpo2 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa la velocidad de avance del equipo en Km/h.";
 		String stringCuerpo3 = "- Zona Alta (nA): Representa el número boquillas que van trabajar en la zona alta del equipo.";
 		String stringCuerpo4 = "- Zona Media (nM): Representa el número boquillas que van a trabajar en la zona media del equipo.";
 		String stringCuerpo5 = "- Zona Baja (nB): Representa el número boquillas que van a trabajar en la zona baja del equipo.";
@@ -68,15 +68,15 @@ public class AyudaResultados3 extends AppCompatActivity{
 		String stringCuerpo7 = "- Zona Alta: Representa el modelo de boquilla instalado en la zona alta del equipo (Fabricante. Modelo).";
 		String stringCuerpo8 = "- Zona Media: Representa el modelo de boquilla instalado en la zona media del equipo (Fabricante. Modelo). Quitar corchetes y añadir el fabricante delante.";
 		String stringCuerpo9 = "- Zona Baja: Representa el modelo de boquilla instalado en la zona baja del equipo (Fabricante. Modelo).";
-		String stringCuerpo10 = "Este valor se ha obtenido aplicando la fórmula:";
+		String stringCuerpo10 = "Representa el caudal aplicado por el equipo  en L/min, obtenido a partir de los datos introducidos en DOSACITRIC.";
 		String stringCuerpo12 = "donde:";
 		String stringCuerpo13 = "Q = Caudal de caldo aplicado por el equipo en L/min.";
 		String stringCuerpo14 = "V = Volumen de aplicación, en litros de caldo aplicar por hectárea.";
 		String stringCuerpo15 = "a = ancho de trabajo en m.";
 		String stringCuerpo16 = "v= velocidad de avance en Km/h.";
-		String stringCuerpo17 = "Este valor se corresponde con el valor calculado por <font color=#ff6600> DOSACITRIC </font> de los litros de caldo (agua + producto fitosanitario) que se han aplicado por hectárea en las condiciones especificadas en el tratamiento. ";
+		String stringCuerpo17 = "Este valor se ha calculado por <font color=#ff6600> DOSACITRIC </font> y representa los litros de caldo (agua + producto fitosanitario) que se han aplicado por hectárea.";
 		String stringCuerpo18 = "Al presionar sobre este icono se guardan los datos de RESUMEN Y RESULTADOS III en la aplicación Descargas del propio dispositivo utilizado (Tablet o Smartphone).";
-		String stringCuerpo19 = "Al presionar sobre este botón se borrarán todos los datos introducidos, pudiéndose introducir luego nuevos datos para calcular un nuevo tratamiento.";
+		String stringCuerpo19 = "Al presionar sobre este botón se borrarán todos los datos introducidos, en la aplicación. Recuerde que si desea guardar los datos deberá presionar el icono:";
 		
 		cuerpo1.setText(Html.fromHtml(stringCuerpo1));
 		cuerpo2.setText(Html.fromHtml(stringCuerpo2));

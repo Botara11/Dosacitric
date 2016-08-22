@@ -109,7 +109,7 @@
                 android:layout_below="@+id/cuerpo11"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="Intervalo de caudales admisibles"
+                android:text="Intervalo de caudales admisibles por boquilla de cada zona"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -235,7 +235,7 @@
             <ImageView
                 android:id="@+id/arboles"
                 android:layout_width="wrap_content"
-                android:layout_height="300dp"
+                android:layout_height="350dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/cuerpo3"

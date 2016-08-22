@@ -69,7 +69,7 @@ public class AyudaResultados2 extends AppCompatActivity{
 		cuerpo23 = (TextView) findViewById(R.id.cuerpo23);
 
 		String stringCuerpo1 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa los litros de caldo (agua + producto fitosanitario) que se desean aplicar por hectárea."; 
-		String stringCuerpo2 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa la velocidad de avance del equipo en km/h.";
+		String stringCuerpo2 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa la velocidad de avance del equipo en Km/h.";
 		String stringCuerpo3 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa el ancho de la calle a tratar en metros.";
 		String stringCuerpo4 = "Este valor se ha obtenido aplicando la fórmula:";
 		String stringCuerpo5 = "donde:";

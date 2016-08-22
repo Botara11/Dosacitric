@@ -57,19 +57,19 @@ public class AyudaA_1_1Activity extends AppCompatActivity{
 		cuerpo16 = (TextView) findViewById(R.id.cuerpo16);
 		
 		String stringCuerpo1 = "En este punto se deben introducir los siguientes datos:";
-		String stringCuerpo2 = "<font color=#ff6600>Densidad foliar:</font> Es un índice indicativo de la frondosidad de la vegetación y se define como el cociente entre la superficie foliar y el volumen de la copa del árbol. Es una variable independiente del tamaño del árbol, considerándose:";
-		String stringCuerpo3 = "- Densidad foliar alta: valor superior a 4,5 m<sup>2</sup>/m<sup>3</sup>.";
-		String stringCuerpo4 = "- Densidad foliar media: entre a 3,5 y a 4,5 m<sup>2</sup>/m<sup>3</sup>.";
-		String stringCuerpo5 = "- Densidad foliar baja: valor inferior a 3,5 m<sup>2</sup>/m<sup>3</sup>.";
-		String stringCuerpo6 = "<font color=#ff6600>Marco de plantación:</font>";
+		String stringCuerpo2 = "<font color=#ff6600>DENSIDAD FOLIAR:</font> Es un índice indicativo de la frondosidad de la vegetación y se define como el cociente entre la superficie foliar y el volumen de la copa del árbol. Es una variable independiente del tamaño del árbol, considerándose:";
+		String stringCuerpo3 = "- <b>Densidad foliar alta:</b> valor superior a 4,5 m<sup>2</sup>/m<sup>3</sup>. Por ejemplo, variedad Fortuna";
+		String stringCuerpo4 = "- <b>Densidad foliar media:</b> entre a 3,5 y a 4,5 m<sup>2</sup>/m<sup>3</sup>. Por ejemplo, variedades Clemenules y Navel Late";
+		String stringCuerpo5 = "- <b>Densidad foliar baja:</b> valor inferior a 3,5 m<sup>2</sup>/m<sup>3</sup>. Por ejemplo, variedad Marisol";
+		String stringCuerpo6 = "<font color=#ff6600>MARCO DE PLANTACIÓN:</font>";
 		String stringCuerpo7 = "<font color=#ff6600>x:</font> Corresponde al ancho de la calle. ";
 		String stringCuerpo8 = "<font color=#ff6600>y:</font> Corresponde a la separación entre árboles de una misma fila.";
-		String stringCuerpo9 = "<font color=#ff6600>Dimensiones de los árboles.</font> Corresponde a las dimensiones:";
+		String stringCuerpo9 = "<font color=#ff6600>DIMENSIONES DE LOS ÁRBOLES.</font> Corresponde a las dimensiones:";
 		String stringCuerpo10 = "<font color=#ff6600>I:</font> Largo.";
 		String stringCuerpo11 = "<font color=#ff6600>II:</font> Ancho.";
 		String stringCuerpo12 = "<font color=#ff6600>III:</font> Alto.";
-		String stringCuerpo13 = "<font color=#ff6600>Forma del árbol:</font> Se deberá elegir entre esférica (globo) y seto.";
-		String stringCuerpo14 = "<font color=#ff6600>Poda:</font>";
+		String stringCuerpo13 = "<font color=#ff6600>FORMA DEL ÁRBOL:</font> Se deberá elegir entre esférica (globo) y seto.";
+		String stringCuerpo14 = "<font color=#ff6600>PODA:</font>";
 		String stringCuerpo15 = "<font color=#ff6600>Fecha de última poda.</font> Se deberá elegir entre: menos de tres meses, de 3 meses a un año, de un año a dos años, y más de dos años.";
 		String stringCuerpo16 = "<font color=#ff6600>Grado de la poda.</font> Se deberá elegir entre: bajo, medio, y alto.";
 				

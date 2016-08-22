@@ -28,7 +28,7 @@ import android.widget.Toast;
 public class B_1Activity extends AppCompatActivity implements
 CompoundButton.OnCheckedChangeListener  {
 
-	private int debug = 1;
+	private int debug = 0;
 	private TextView volumenAplicacionCalculado;
 	private Switch SwitchvolumenAplicacionCalculado;
 	private TextView anchoTrabajoCalculado;

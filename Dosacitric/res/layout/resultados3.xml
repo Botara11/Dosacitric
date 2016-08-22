@@ -92,7 +92,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="16dp"
                 android:background="#ff6600"
-                android:padding="10dp"
+                android:paddingLeft="10dp"
                 android:text="D. VOLUMEN DE CALDO APLICADO"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
@@ -141,7 +141,7 @@
                 android:layout_below="@+id/textView6"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Nº de boquillas por zona:"
+                android:text="Nº de boquillas abiertas por zona:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -149,11 +149,11 @@
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView7"
                 android:layout_below="@+id/textView7"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:text="- Zona Alta (nA):"
+                android:layout_toRightOf="@+id/textView13"
+                android:text="Zona Alta (nA):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -164,7 +164,7 @@
                 android:layout_alignLeft="@+id/textView10"
                 android:layout_below="@+id/textView10"
                 android:layout_marginTop="16dp"
-                android:text="- Zona Media (nM):"
+                android:text="Zona Media (nM):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -175,7 +175,7 @@
                 android:layout_alignLeft="@+id/textView11"
                 android:layout_below="@+id/textView11"
                 android:layout_marginTop="20dp"
-                android:text="- Zona Baja (nB):"
+                android:text="Zona Baja (nB):"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -186,7 +186,7 @@
                 android:layout_alignLeft="@+id/textView7"
                 android:layout_below="@+id/textView12"
                 android:layout_marginTop="20dp"
-                android:text="Presión seleccionada:"
+                android:text="Presión:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -209,7 +209,7 @@
                 android:layout_alignLeft="@+id/textView12"
                 android:layout_below="@+id/textView43"
                 android:layout_marginTop="16dp"
-                android:text="- Zona Alta:"
+                android:text="Zona Alta:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -220,7 +220,7 @@
                 android:layout_alignLeft="@+id/textView16"
                 android:layout_below="@+id/textView16"
                 android:layout_marginTop="16dp"
-                android:text="- Zona Media:"
+                android:text="Zona Media:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -231,7 +231,7 @@
                 android:layout_alignLeft="@+id/textView17"
                 android:layout_below="@+id/textView17"
                 android:layout_marginTop="16dp"
-                android:text="- Zona Baja:"
+                android:text="Zona Baja:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -351,28 +351,15 @@
 
             <TextView
                 android:id="@+id/textView222"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_below="@+id/textView3"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
+                android:gravity="center"
                 android:text="Volumen de caldo aplicado (V):"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
-
-            <TextView
-                android:id="@+id/textView2223"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textView222"
-                android:layout_alignBottom="@+id/textView222"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
-                android:text="L/ha"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/AnchoTrabajoTextView"
@@ -396,16 +383,44 @@
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
+            <View
+                android:id="@+id/dummy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+
             <TextView
-                android:id="@+id/VolumenCaldoTextView"
+                android:id="@+id/textView37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/dummy"
+                android:layout_below="@+id/textView222"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/green"
+                android:gravity="right"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView38"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textView222"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/textView2223"
-                android:text="TextView"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:layout_alignLeft="@+id/dummy"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView222"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/green"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="L/ha"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -414,16 +429,16 @@
                 android:layout_alignLeft="@+id/textView43"
                 android:layout_below="@+id/textView19"
                 android:layout_marginTop="16dp"
-                android:text="Caudal de líquido total (Q):"
+                android:text="Caudal de líquido total \n del equipo (Q):"
                 android:textColor="@color/white"
-                android:textSize="17sp" />
+                android:textSize="17sp"
+                android:lines="2" />
 
             <TextView
                 android:id="@+id/TextView01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textView3"
-                android:layout_alignBottom="@+id/textView3"
+                android:layout_alignBottom="@+id/CaudalLiqTotalTextView"
                 android:layout_alignRight="@+id/BoquillaEleccionZBajaTextView"
                 android:text="L/min"
                 android:textColor="@color/white"
@@ -459,6 +474,55 @@
                 android:text="TextView"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/ImageView01"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignBottom="@+id/textView10"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:background="@color/red" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignBottom="@+id/textView16"
+                android:layout_alignLeft="@+id/ImageView01"
+                android:background="@color/red" />
+
+            <ImageView
+                android:id="@+id/ImageView02"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_above="@+id/textView12"
+                android:layout_alignLeft="@+id/ImageView01"
+                android:background="@color/orange" />
+
+            <ImageView
+                android:id="@+id/ImageView04"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignBottom="@+id/textView17"
+                android:layout_alignLeft="@+id/imageView1"
+                android:background="@color/orange" />
+
+            <ImageView
+                android:id="@+id/ImageView03"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignBottom="@+id/textView12"
+                android:layout_alignLeft="@+id/ImageView02"
+                android:background="@color/green" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignBottom="@+id/textView19"
+                android:layout_alignLeft="@+id/ImageView04"
+                android:background="@color/green" />
         </RelativeLayout>
     </ScrollView>
 

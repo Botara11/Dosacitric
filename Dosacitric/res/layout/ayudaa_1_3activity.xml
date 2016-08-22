@@ -18,7 +18,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Tipo de tratamiento"
+                android:text="TIPO DE TRATAMIENTO"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -65,7 +65,7 @@
                 android:layout_below="@+id/cuerpo3"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="Condiciones meteorológicas"
+                android:text="CONDICIONES METEOROLÓGICAS"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -88,7 +88,7 @@
                 android:layout_below="@+id/cuerpo4"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="Equipo empleado"
+                android:text="EQUIPO EMPLEADO"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -96,13 +96,13 @@
                 android:id="@+id/cuerpo5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:layout_alignLeft="@+id/cuerpo4"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/cabecera3"
-                android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/white" />
+
         </RelativeLayout>
     </ScrollView>
 
