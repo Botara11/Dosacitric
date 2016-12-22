@@ -16,7 +16,6 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,13 +24,10 @@ CompoundButton.OnCheckedChangeListener{
 
 	private TextView anchoTrabajoCalculado;
 	private EditText anchoTrabajoDeseado;
-	private Switch SwitchAnchoTrabajoCalculado;
 	private EditText zonaAlta;
 	private EditText zonaMedia;
-	private EditText zonaBaja;	
-	private TextView velocidadAvanceCalculada;
+	private EditText zonaBaja;
 	private EditText velocidadAvanceDeseada;
-	private Switch SwitchVelocidadAvanceCalculada;
 	private ParteC partec1;
 	public static final String PREFS_NAME = "Guarda";
 
@@ -88,86 +84,52 @@ CompoundButton.OnCheckedChangeListener{
 
 		anchoTrabajoCalculado = (TextView) findViewById(R.id.anchoCalleParteC);
 		anchoTrabajoDeseado = (EditText) findViewById(R.id.anchoCalculadoParteC);
-
-		SwitchAnchoTrabajoCalculado = (Switch) findViewById(R.id.switchAnchoTrabajoCalculado);
-		SwitchAnchoTrabajoCalculado.setOnCheckedChangeListener(this);
+		anchoTrabajoDeseado.setText("0.0");
 
 		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 		String ancho = settings.getString("anchocalle","");
 		anchoTrabajoCalculado.setText(ancho);
 
-		SwitchAnchoTrabajoCalculado.setOnClickListener(new View.OnClickListener() {
-			
-			public void onClick(View v) {
-			}
-		});
-
-		if (ancho==""){
-			SwitchAnchoTrabajoCalculado.setChecked(false);
-		}
-
 		zonaAlta = (EditText) findViewById(R.id.textoZonaAlta);
 		zonaMedia = (EditText) findViewById(R.id.textoZonaMedia);
 		zonaBaja = (EditText) findViewById(R.id.textoZonaBaja);
 
-		velocidadAvanceCalculada = (TextView) findViewById(R.id.velocidadAvance);
 		velocidadAvanceDeseada = (EditText) findViewById(R.id.editText1);
-
-		settings = getSharedPreferences(PREFS_NAME, 0);
-		String velocidadAvance = settings.getString("velocidadAvance","");
-
-		SwitchVelocidadAvanceCalculada = (Switch) findViewById(R.id.switchVelocidadAvanceCalculada);
-		velocidadAvanceCalculada.setText(velocidadAvance);
-
-		SwitchVelocidadAvanceCalculada.setOnCheckedChangeListener(this);
-		SwitchVelocidadAvanceCalculada.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View v) {
-			}
-		});
-
-		if (velocidadAvance==""){
-			SwitchVelocidadAvanceCalculada.setChecked(false);
-		}
+		velocidadAvanceDeseada.setText("0.0");
 
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
 		siguiente.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				String quien = "";
+				String revisando = "";
+				String reemplazado = "";
 				try {
+					
+					revisando = "Ancho de la calle deseado";
+					reemplazado = anchoTrabajoDeseado.getText().toString().replace(',', '.');
+					float ancho = (float) Double.parseDouble(reemplazado);
+					if(ancho <=0){					
+						reemplazado = "Ancho de la calle deseado";
+						Float.parseFloat("h");
+					}
+					
+					revisando = "Velocidad de avance deseada";
+					reemplazado = velocidadAvanceDeseada.getText().toString().replace(',', '.');
+					float velocidad = (float) Double.parseDouble(reemplazado);
+					if(velocidad <=0 ){
+						reemplazado = "Velocidad de avance deseada";
+						Float.parseFloat("h");
+					}
 
-					Float ancho, velocidad;
-
-					quien="Zona Alta";
+					revisando="Zona Alta";
 					int zAlta = Integer.parseInt(zonaAlta.getText().toString());
-					quien="Zona Media";
+					revisando="Zona Media";
 					int zMedia = Integer.parseInt(zonaMedia.getText().toString());
-					quien="Zona Baja";
+					revisando="Zona Baja";
 					int zBaja = Integer.parseInt(zonaBaja.getText().toString());
 
 					int [] zBoquillas = {zAlta,zMedia,zBaja};
-
-					if (SwitchAnchoTrabajoCalculado.isChecked()) {
-						quien = "Ancho de la calle calculado";
-						ancho = Float.parseFloat(anchoTrabajoCalculado.getText()
-								.toString());
-					} else {
-						quien = "Ancho de la calle deseado";
-						ancho = Float
-								.parseFloat(anchoTrabajoDeseado.getText().toString());
-					}
-
-					if (SwitchVelocidadAvanceCalculada.isChecked()) {
-						quien = "Velocidad de avance calculada";
-						velocidad = Float.parseFloat(velocidadAvanceCalculada
-								.getText().toString());
-					} else {
-						quien = "Velocidad de avance deseada";
-						velocidad = Float
-								.parseFloat(velocidadAvanceDeseada.getText().toString());
-					}
 
 					partec1.rellenarC1(ancho, zBoquillas, velocidad);
 					Intent c1 = new Intent(C_1Activity.this, C_2Activity.class);
@@ -176,7 +138,7 @@ CompoundButton.OnCheckedChangeListener{
 				} catch (Exception e) {
 					e.printStackTrace();
 					Toast toast = Toast.makeText(getApplicationContext(),
-							"Valor de " + '"' + quien + '"' + " incorrecto",
+							"Valor de " + '"' + revisando + '"' + " incorrecto",
 							Toast.LENGTH_SHORT);
 					toast.show();
 				}

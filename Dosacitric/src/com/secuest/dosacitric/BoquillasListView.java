@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.ListView;
 
 public class BoquillasListView extends ListActivity{
-
 	
 	private String marca;
 	private float[] inter;
@@ -23,14 +22,13 @@ public class BoquillasListView extends ListActivity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.boquillaslistview_layout);
-
+		
 		// Get ListView object from xml
 		listView = (ListView) findViewById(android.R.id.list);
 
 		marca = (String) getIntent().getStringExtra("marca");
 		inter = (float[]) getIntent().getSerializableExtra("inter");
 		presion = (String) getIntent().getStringExtra("presion");
-
 
 		DatabaseHandler db = new DatabaseHandler(
 				getApplicationContext());
@@ -41,11 +39,8 @@ public class BoquillasListView extends ListActivity{
 				inter[2], inter[3], presion);
 		ArrayList<String> boquillasZ3 = db.getBoquillas(marca,
 				inter[4], inter[5], presion);
-
-
+		
 		final ListViewItem[] items = new ListViewItem[3+boquillasZ1.size()+boquillasZ2.size()+boquillasZ3.size()];
-
-
 
 		//Los anadimos a la listView
 		int contador=0;
@@ -62,11 +57,8 @@ public class BoquillasListView extends ListActivity{
 			items[++contador] = new ListViewItem(boquillasZ3.get(i), CustomAdapter.TYPE_EVEN);
 		}
 
-
 		CustomAdapter customAdapter = new CustomAdapter(this, R.id.textsuperior, items);
 		listView.setAdapter(customAdapter);
-
-
 
 		Button siguiente = (Button) findViewById(R.id.siguiente);
 		siguiente.setClickable(true);
@@ -87,7 +79,4 @@ public class BoquillasListView extends ListActivity{
 		//String selectedItem = (String) getListAdapter().getItem(position);
 		//text.setText("You clicked " + selectedItem + " at position " + position);
 	}
-
-
-
 }

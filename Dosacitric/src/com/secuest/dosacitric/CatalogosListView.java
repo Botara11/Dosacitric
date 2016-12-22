@@ -1,6 +1,7 @@
 package com.secuest.dosacitric;
 
 import java.util.ArrayList;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,7 +26,7 @@ public class CatalogosListView extends ListActivity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.catalogoslistview_layout);
-
+		
 		// Get ListView object from xml
 		listView = (ListView) findViewById(android.R.id.list);
 		ArrayList<Lista_entrada> datos = new ArrayList<Lista_entrada>();  

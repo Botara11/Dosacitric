@@ -125,7 +125,6 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignRight="@+id/cabecera3"
                 android:layout_below="@+id/cuerpo4"
-                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/white"
@@ -147,14 +146,26 @@
 
             <ImageView
                 android:id="@+id/imageView1"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_alignBottom="@+id/cuerpo5"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/cuerpo4"
                 android:layout_marginRight="700dp"
                 android:layout_toRightOf="@+id/cuerpo5"
                 android:src="@drawable/ajustes" />
+
+            <TextView
+                android:id="@+id/cuerpo66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView1"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/cuerpo5"
+                android:layout_toRightOf="@+id/cabecera2"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
         </RelativeLayout>
     </ScrollView>
 

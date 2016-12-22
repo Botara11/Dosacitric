@@ -45,11 +45,11 @@ public class AyudaAjustesInformacion extends AppCompatActivity{
 		String stringCuerpo1 = "El objetivo de <font color=#ff6600> DOSACITRIC </font> es implementar un sistema de decisión que permita establecer al técnico de la explotación, responsable de hacer los tratamientos, el volumen de caldo a aplicar en los tratamientos fitosanitarios en cítricos, a partir de las características específicas del cultivo, del producto fitosanitario y de la plaga o enfermedad a tratar."; 
 		String stringCuerpo2 = "<font color=#ff6600> DOSACITRIC </font> determina el volumen de caldo a aplicar a partir de la fórmula";
 		String stringCuerpo3 = "V = TRV · I <sub>v</sub> · K";
-		String stringCuerpo4 = "donde 'V' es el volumen de caldo a aplicar en L/Ha, 'l<sub>v</sub>' el índice de dosificación en L/m3 y 'K' es un coeficiente de aplicación que depende de:";
+		String stringCuerpo4 = "donde 'V' es el volumen de caldo a aplicar en L/Ha, 'l<sub>v</sub>' el índice de dosificación en L/m<sup>3</sup> y 'K' es un coeficiente de aplicación que depende de:";
 		String stringCuerpo5 = "- Las características del cultivo, incluídas volumen de la vegetación por unidad de superficie (TRV - Tree Row Volumen), densidad foliar y grado de poda.";
 		String stringCuerpo6 = "- Las características de tratamiento, incluidas el tipo de plaga y el producto empleado en su control.";
-		String stringCuerpo7 = "- Las condiciones metereológicas en las que se prevé hacer el tratamiento, temperatura, velocidad del viento y humedad relativa.";
-		String stringCuerpo8 = "<font color=#ff6600> DOSACITRIC </font> se ha elaborado a partir de los resultados obtenidos en los proyectos de investigación PULVERXACT<sup>1</sup> y OPTIDOSA<sup>2</sup>, llevados a cabo por el grupo de investigación de la Unidad de Mecanización y Tecnología Agraria de la Universidad Politécnica de Valencia."; 
+		String stringCuerpo7 = "- Las condiciones meteorológicas en las que se prevé hacer el tratamiento, temperatura, velocidad del viento y humedad relativa.";
+		String stringCuerpo8 = "<font color=#ff6600> DOSACITRIC </font> se ha elaborado a partir de los resultados obtenidos en los proyectos de investigación PULVERXACT<sup>1</sup> y OPTIDOSA<sup>2</sup>, llevados a cabo por el grupo de investigación de la Unidad de Mecanización y Tecnología Agraria de la Universitat Politècnica de València."; 
 		String stringCuerpo9 = "<i> (1)Proyecto PULVERXACT. Implementación de un sistema de decisión de la dosis de producto fitosanitario en tratamientos de plantaciones (frutales, viñedo y cítricos). Contrato AGL 2002-04260-C04. Organismo financiador Ministerio de Ciencia y Tecnología.</i>";
 		String stringCuerpo10 = "<i>(2)Proyecto OPTIDOSA. Reducción del uso de producto fitosanitarios en cultivos arbóreos. Optimización de la dosis de aplicación en cítricos, frutales y vid. Contrato AGL 2007-66093-C04. Organismo financiador Ministerio de Educación y Ciencia.</i>";
 		

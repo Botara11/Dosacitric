@@ -223,9 +223,9 @@ public class A_1_1Activity extends AppCompatActivity{
 		densidadFoliar = (Spinner) findViewById(R.id.densidadFoliar);
 
 		ArrayList<String> lista = new ArrayList<String>();
-		lista.add("Bajo");
-		lista.add("Medio");
-		lista.add("Alto");
+		lista.add("Baja");
+		lista.add("Media");
+		lista.add("Alta");
 		lista.add("Seleccionar");
 		ArrayAdapterMio<String> adaptador = new ArrayAdapterMio<String>(this, 
 				//android.R.layout.simple_spinner_dropdown_item, lista);

@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
 		getSupportActionBar().setIcon(R.drawable.logo256);
 		getSupportActionBar().setDisplayShowTitleEnabled(true);
+		setTitle("DOSACITRIC");
 
 		final DatabaseHandler db = new DatabaseHandler(this);
 		/*System.out.println("GEEEETTTT COUNT DB ="+db.getRowCount());
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 			        }
 			     })
 			    
-			    .setIcon(android.R.drawable.ic_dialog_alert)
+			    .setIcon(android.R.drawable.ic_delete)
 			     .show();
 				
 			}

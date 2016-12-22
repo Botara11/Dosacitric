@@ -21,10 +21,10 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Volumen de aplicación calculado"
+                android:text="Volumen de aplicación"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/cuerpo1"
@@ -40,16 +40,29 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/cuerpo13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/cuerpo1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
                 android:id="@+id/cabecera2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/cuerpo1"
-                android:layout_below="@+id/cuerpo1"
-                android:layout_marginTop="10dp"
-                android:text="Ancho de trabajo calculado"
+                android:layout_alignLeft="@+id/cuerpo13"
+                android:layout_below="@+id/cuerpo13"
+                android:layout_marginTop="20dp"
+                android:text="Ancho de trabajo"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/cuerpo2"
@@ -65,16 +78,29 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/cuerpo14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/cuerpo2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
                 android:id="@+id/cabecera3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/cuerpo1"
-                android:layout_below="@+id/cuerpo2"
-                android:layout_marginTop="10dp"
+                android:layout_below="@+id/cuerpo14"
+                android:layout_marginTop="20dp"
                 android:text="Velocidad de avance deseada"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/cuerpo3"
@@ -95,11 +121,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/cuerpo1"
                 android:layout_below="@+id/cuerpo3"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:text="Características del sistema hidráulico del equipo"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/cuerpo4"
@@ -133,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/cuerpo5"
+                android:layout_below="@+id/ecuacion"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
@@ -146,7 +172,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/ecuacion"
+                android:layout_below="@+id/cuerpo6"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
@@ -223,8 +249,9 @@
                 android:id="@+id/ecuacion"
                 android:layout_width="200dp"
                 android:layout_height="130dp"
-                android:layout_below="@+id/cuerpo6"
+                android:layout_below="@+id/cuerpo5"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/pa" />
         </RelativeLayout>
     </ScrollView>

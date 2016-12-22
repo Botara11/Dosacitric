@@ -33,10 +33,10 @@ public class AyudaA_1Activity extends AppCompatActivity{
 		cuerpo5 = (TextView) findViewById(R.id.cuerpo5);
 		
 		String stringCuerpo1 = " En este punto se deben introducir los siguientes datos:";
-		String stringCuerpo2 = "- <font color=#ff6600>Fecha:</font> Fecha del tratamiento en formato libre.";
-		String stringCuerpo3 = "- <font color=#ff6600>Identificación de la parcela:</font> Término municipal, polígono y parcela o cualquier otro sistema de identificación de la parcela.";
-		String stringCuerpo4 = "- <font color=#ff6600>Identificación del tratamiento:</font> Descripción del tratamiento a realizar.";
-		String stringCuerpo5 = "- <font color=#ff6600>Referencia:</font> Código de identificación del tratamiento en formato libre.";
+		String stringCuerpo2 = "- <font color=#ff6600>FECHA:</font> Fecha del tratamiento en formato libre.";
+		String stringCuerpo3 = "- <font color=#ff6600>IDENTIFICACIÓN DE LA PARCELA:</font> Término municipal, polígono y parcela o cualquier otro sistema de identificación de la parcela.";
+		String stringCuerpo4 = "- <font color=#ff6600>IDENTIFICACIÓN DEL TRATAMIENTO:</font> Descripción del tratamiento a realizar.";
+		String stringCuerpo5 = "- <font color=#ff6600>REFERENCIA:</font> Código de identificación del tratamiento en formato libre.";
 
 		cuerpo1.setText(Html.fromHtml(stringCuerpo1));
 		cuerpo2.setText(Html.fromHtml(stringCuerpo2));

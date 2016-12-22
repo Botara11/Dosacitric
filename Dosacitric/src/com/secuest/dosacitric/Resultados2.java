@@ -308,7 +308,7 @@ public class Resultados2 extends AppCompatActivity {
 										+ " z2=" + boquillasZ2.size() + " z3="
 										+ boquillasZ3.size());
 								if(marcaPrimera==0){
-									mypdf.insertarMarca(mar);
+									mypdf.insertarMarca(mar.toUpperCase());
 									marcaPrimera=1;}
 								posicionArray = Arrays.asList(presiones).indexOf(pres);
 								mypdf.insertarPresion(presionesString[posicionArray]);

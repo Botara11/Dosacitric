@@ -192,7 +192,8 @@
                 android:background="#FFFFFF"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" >
+                android:inputType="number"
+                android:singleLine="true" >
 
                 <requestFocus />
             </EditText>
@@ -208,8 +209,9 @@
                 android:background="#FFFFFF"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                android:maxLines="1" />
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
 
             <EditText
                 android:id="@+id/anchuraArb"
@@ -221,7 +223,8 @@
                 android:background="#FFFFFF"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" />
+                android:inputType="number"
+                android:singleLine="true" />
 
             <EditText
                 android:id="@+id/alturaArb"
@@ -234,7 +237,8 @@
                 android:background="#FFFFFF"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" />
+                android:inputType="number"
+                android:singleLine="true" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -289,9 +293,9 @@
                 android:background="#FFFFFF"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword"
-                android:minLines="1"
-                android:minWidth="40dp" >
+                android:inputType="number"
+                android:minWidth="40dp"
+                android:singleLine="true" >
             </EditText>
 
             <TextView

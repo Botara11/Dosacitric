@@ -70,8 +70,8 @@ public class AyudaA_1_1Activity extends AppCompatActivity{
 		String stringCuerpo12 = "<font color=#ff6600>III:</font> Alto.";
 		String stringCuerpo13 = "<font color=#ff6600>FORMA DEL ÁRBOL:</font> Se deberá elegir entre esférica (globo) y seto.";
 		String stringCuerpo14 = "<font color=#ff6600>PODA:</font>";
-		String stringCuerpo15 = "<font color=#ff6600>Fecha de última poda.</font> Se deberá elegir entre: menos de tres meses, de 3 meses a un año, de un año a dos años, y más de dos años.";
-		String stringCuerpo16 = "<font color=#ff6600>Grado de la poda.</font> Se deberá elegir entre: bajo, medio, y alto.";
+		String stringCuerpo15 = "<font color=#ff6600>Fecha de última poda.</font> Se deberá elegir entre: menos de tres meses, de 3 meses a un año, de un año a dos años y más de dos años.";
+		String stringCuerpo16 = "<font color=#ff6600>Grado de la poda.</font> Se deberá elegir entre: bajo, medio y alto.";
 				
 				
 		cuerpo1.setText(Html.fromHtml(stringCuerpo1));

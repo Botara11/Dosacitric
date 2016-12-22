@@ -23,6 +23,7 @@
                 android:layout_marginTop="16dp"
                 android:text="Volumen de aplicación (V):"
                 android:textColor="@color/white"
+                
                 android:textStyle="bold" />
 
             <TextView
@@ -35,7 +36,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cabecera2"
@@ -46,6 +48,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Velocidad de avance (v):"
                 android:textColor="@color/white"
+                
                 android:textStyle="bold" />
 
             <TextView
@@ -57,39 +60,43 @@
                 android:layout_marginTop="10dp"
                 android:text="Ancho de trabajo (a):"
                 android:textColor="@color/white"
+                
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/cabecera4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cuerpo3"
-                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/cabecera5"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:text="El caudal de líquido total (Q):"
                 android:textColor="@color/white"
+                
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/cabecera5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cuerpo9"
+                android:layout_below="@+id/cuerpo3"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Características del sistema hidráulico del equipo:"
                 android:textColor="@color/white"
+                
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/cabecera6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cuerpo11"
-                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/cuerpo10"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Boquillas a cerrar por zona:"
                 android:textColor="@color/white"
+                
                 android:textStyle="bold" />
 
             <TextView
@@ -101,6 +108,7 @@
                 android:layout_marginTop="20dp"
                 android:text="Número de boquillas por zona:"
                 android:textColor="@color/white"
+                
                 android:textStyle="bold" />
 
             <TextView
@@ -112,6 +120,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Porcentaje de vegetación a pulverizar por zona:"
                 android:textColor="@color/white"
+                
                 android:textStyle="bold" />
 
             <TextView
@@ -123,6 +132,7 @@
                 android:layout_marginTop="20dp"
                 android:text="C.R. RESUMEN Y RESULTADOS II"
                 android:textColor="@color/white"
+                
                 android:textStyle="bold" />
 
             <TextView
@@ -135,7 +145,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo3"
@@ -147,7 +158,21 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
+
+            <TextView
+                android:id="@+id/cuerpo24"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/cabecera4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo4"
@@ -155,11 +180,12 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/cabecera4"
-                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/cuerpo24"
+                android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo5"
@@ -168,10 +194,11 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/ecuacion"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo6"
@@ -180,10 +207,11 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/cuerpo5"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo7"
@@ -192,10 +220,11 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/cuerpo6"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo8"
@@ -204,10 +233,11 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/cuerpo7"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo9"
@@ -216,10 +246,11 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/cuerpo8"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo10"
@@ -227,23 +258,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/cabecera5"
-                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/cuerpo9"
+                android:layout_marginLeft="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/cuerpo11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/cuerpo10"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo12"
@@ -252,10 +272,11 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/cabecera6"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo13"
@@ -264,10 +285,11 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/cuerpo12"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo14"
@@ -279,7 +301,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo15"
@@ -291,7 +314,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo16"
@@ -303,7 +327,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo17"
@@ -315,7 +340,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo18"
@@ -327,7 +353,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo19"
@@ -339,7 +366,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo20"
@@ -351,7 +379,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo21"
@@ -363,7 +392,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo22"
@@ -375,29 +405,52 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <TextView
                 android:id="@+id/cuerpo23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
+                android:layout_below="@+id/cuerpo22"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                 />
+
+            <TextView
+                android:id="@+id/cuerpo25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/cuerpo23"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/printer"
+                android:textColor="@color/white"
+                 />
+
+            <TextView
+                android:id="@+id/cuerpo26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/printer"
+                android:layout_below="@+id/cuerpo23"
                 android:layout_marginBottom="16dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                 />
 
             <ImageView
                 android:id="@+id/printer"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_below="@+id/cuerpo22"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/cuerpo23"
+                android:layout_toRightOf="@+id/cuerpo23"
                 android:background="@drawable/printer" />
 
             <ImageView
@@ -415,18 +468,15 @@
                 android:id="@+id/ecuacion"
                 android:layout_width="200dp"
                 android:layout_height="130dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
                 android:layout_below="@+id/cuerpo4"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/pa" />
 
             <ImageView
                 android:id="@+id/zonaboquillas"
                 android:layout_width="wrap_content"
-                android:layout_height="250dp"
+                android:layout_height="400dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/cuerpo13"

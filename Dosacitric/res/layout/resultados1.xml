@@ -577,7 +577,7 @@
                 android:layout_marginTop="16dp"
                 android:background="#ff6600"
                 android:paddingLeft="10dp"
-                android:text="B.0. IDENTIFICACIÓN DEL TRATAMIENTO"
+                android:text="A. IDENTIFICACIÓN DEL TRATAMIENTO"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 

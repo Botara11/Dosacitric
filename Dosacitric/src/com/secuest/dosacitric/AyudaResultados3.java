@@ -28,6 +28,9 @@ public class AyudaResultados3 extends AppCompatActivity{
 	private TextView cuerpo17;
 	private TextView cuerpo18;
 	private TextView cuerpo19;
+	private TextView cuerpo20;
+	private TextView cuerpo21;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,8 @@ public class AyudaResultados3 extends AppCompatActivity{
 		cuerpo17 = (TextView) findViewById(R.id.cuerpo17);
 		cuerpo18 = (TextView) findViewById(R.id.cuerpo18);
 		cuerpo19 = (TextView) findViewById(R.id.cuerpo19);
+		cuerpo20 = (TextView) findViewById(R.id.cuerpo20);
+		cuerpo21 = (TextView) findViewById(R.id.cuerpo21);
 		
 		String stringCuerpo1 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa el ancho de la calle a tratar en metros."; 
 		String stringCuerpo2 = "Este valor se corresponde con el valor introducido en <font color=#ff6600> DOSACITRIC </font> y representa la velocidad de avance del equipo en Km/h.";
@@ -75,7 +80,9 @@ public class AyudaResultados3 extends AppCompatActivity{
 		String stringCuerpo15 = "a = ancho de trabajo en m.";
 		String stringCuerpo16 = "v= velocidad de avance en Km/h.";
 		String stringCuerpo17 = "Este valor se ha calculado por <font color=#ff6600> DOSACITRIC </font> y representa los litros de caldo (agua + producto fitosanitario) que se han aplicado por hectárea.";
-		String stringCuerpo18 = "Al presionar sobre este icono se guardan los datos de RESUMEN Y RESULTADOS III en la aplicación Descargas del propio dispositivo utilizado (Tablet o Smartphone).";
+		String stringCuerpo18 = "Al presionar sobre este icono";  
+		String stringCuerpo20 = "se guardan los datos de";
+		String stringCuerpo21 = "RESUMEN Y RESULTADOS III en la aplicación Descargas del propio dispositivo utilizado (Tablet o Smartphone).";
 		String stringCuerpo19 = "Al presionar sobre este botón se borrarán todos los datos introducidos, en la aplicación. Recuerde que si desea guardar los datos deberá presionar el icono:";
 		
 		cuerpo1.setText(Html.fromHtml(stringCuerpo1));
@@ -96,6 +103,8 @@ public class AyudaResultados3 extends AppCompatActivity{
 		cuerpo17.setText(Html.fromHtml(stringCuerpo17));
 		cuerpo18.setText(Html.fromHtml(stringCuerpo18));
 		cuerpo19.setText(Html.fromHtml(stringCuerpo19));
+		cuerpo20.setText(Html.fromHtml(stringCuerpo20));
+		cuerpo21.setText(Html.fromHtml(stringCuerpo21));
 		
 	}
 

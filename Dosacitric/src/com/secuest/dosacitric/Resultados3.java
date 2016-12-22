@@ -100,7 +100,7 @@ public class Resultados3 extends AppCompatActivity {
 		VolumenCaldoAplicado = (TextView)findViewById(R.id.textView37);
 		CaudalLiqTotal = (TextView)findViewById(R.id.CaudalLiqTotalTextView);
 		
-		AnchoDeTrabajo.setText(String.valueOf(df.format(partec7.AnchoCalle)));
+		AnchoDeTrabajo.setText(String.valueOf(di.format(partec7.AnchoCalle)));
 		VelocidadDeAvance.setText(String.valueOf(di.format(partec7.VelocidadAvance)));
 		BoquillaZonaAlta.setText(String.valueOf(partec7.NumeroBoquillasZona[0]));
 		BoquillaZonaMedia.setText(String.valueOf(partec7.NumeroBoquillasZona[1]));
@@ -142,7 +142,7 @@ public class Resultados3 extends AppCompatActivity {
 			        }
 			     })
 			    
-			    .setIcon(android.R.drawable.ic_dialog_alert)
+			    .setIcon(android.R.drawable.ic_delete)
 			     .show();
 			}
 		});

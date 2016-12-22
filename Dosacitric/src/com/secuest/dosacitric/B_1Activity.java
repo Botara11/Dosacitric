@@ -20,8 +20,6 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.SeekBar;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,31 +27,33 @@ public class B_1Activity extends AppCompatActivity implements
 CompoundButton.OnCheckedChangeListener  {
 
 	private int debug = 0;
+	private DecimalFormat df;
 	private TextView volumenAplicacionCalculado;
-	private Switch SwitchvolumenAplicacionCalculado;
-	private TextView anchoTrabajoCalculado;
-	private Switch SwitchAnchoTrabajoCalculado;
-	private EditText velocidadAvance;
-	private EditText editAncho;
 	private EditText editVolumen;
-	private EditText editBoquillas;
+	private TextView anchoTrabajoCalculado;
+	private EditText editAncho;
+	private EditText velocidadAvance;
 	private TextView caudalTotal;
 	private TextView caudalSector;
+	private EditText editBoquillas;
 	private ParteB pb;
 	public static final String PREFS_NAME = "Guarda";
 
 
 	public void actualizarCaudal() {
 		try {
-			float a = Float.parseFloat(velocidadAvance.getText().toString());
 			float b = Float.parseFloat(editVolumen.getText().toString());
 			float c = Float.parseFloat(editAncho.getText().toString());
-			DecimalFormat df = new DecimalFormat();
-			df.setMaximumFractionDigits(2);
+			float a = Float.parseFloat(velocidadAvance.getText().toString());
+
+			df = new DecimalFormat();
+			df.setMaximumFractionDigits(1);
+
 			caudalTotal.setText(df.format(a * b * c / 0.6));
 			caudalSector.setText(df.format((a * b * c / 0.6) / 2));
 		} catch (Exception e) {
 			caudalTotal.setText("0.0");
+			caudalSector.setText("0.0");
 		}
 
 	}
@@ -62,7 +62,6 @@ CompoundButton.OnCheckedChangeListener  {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.b_1);
-		//seebbarr();
 
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -72,69 +71,13 @@ CompoundButton.OnCheckedChangeListener  {
 
 		pb = new ParteB();
 
-		volumenAplicacionCalculado = (TextView) findViewById(R.id.textViewVolumenAplicacionCalculado);
-		SwitchvolumenAplicacionCalculado = (Switch) findViewById(R.id.switchVolumenAplicacionCalculado);
-
 		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 		String VolumenApp = settings.getString("volumenApp", "");
-		
-		volumenAplicacionCalculado.setText(VolumenApp);
-
-		SwitchvolumenAplicacionCalculado.setOnCheckedChangeListener(this);
-		SwitchvolumenAplicacionCalculado.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View v) {
-				actualizarCaudal();
-			}
-		});
-
-		if (VolumenApp==""){
-			SwitchvolumenAplicacionCalculado.setChecked(false);
-		}
-
-		anchoTrabajoCalculado = (TextView) findViewById(R.id.textViewAnchoTrabajoCalculado);
-		SwitchAnchoTrabajoCalculado= (Switch) findViewById(R.id.switchAnchoTrabajoCalculado);
-
 		String AnchoTrabajo = settings.getString("anchocalle", "");
 
-		anchoTrabajoCalculado.setText(AnchoTrabajo);
-		
-		SwitchAnchoTrabajoCalculado.setOnCheckedChangeListener(this);
-		SwitchAnchoTrabajoCalculado.setOnClickListener(new View.OnClickListener() {
-			
-			public void onClick(View v) {
-				actualizarCaudal();
-			}
-		});
+		volumenAplicacionCalculado = (TextView) findViewById(R.id.textViewVolumenAplicacionCalculado);
+		volumenAplicacionCalculado.setText(VolumenApp);
 
-		if (AnchoTrabajo==""){
-			SwitchAnchoTrabajoCalculado.setChecked(false);
-		}
-
-		velocidadAvance = (EditText) findViewById(R.id.velocidadAvance);
-		
-		caudalTotal = (TextView) findViewById(R.id.textView15);
-		caudalSector = (TextView) findViewById(R.id.textView16);
-
-		editAncho = (EditText) findViewById(R.id.editTextAnchoTrabajoDesesado);
-		editAncho.setText("0.0");
-		editAncho.addTextChangedListener(new TextWatcher() {
-
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
-			}
-
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
-			}
-
-			@Override
-			public void afterTextChanged(Editable s) {
-				actualizarCaudal();
-			}
-		});
 		editVolumen = (EditText) findViewById(R.id.editTextVolumenAplicacionDeseado);
 		editVolumen.setText("0.0");
 		editVolumen.addTextChangedListener(new TextWatcher() {
@@ -155,6 +98,51 @@ CompoundButton.OnCheckedChangeListener  {
 			}
 		});
 
+		anchoTrabajoCalculado = (TextView) findViewById(R.id.textViewAnchoTrabajoCalculado);
+		anchoTrabajoCalculado.setText(AnchoTrabajo);
+
+		editAncho = (EditText) findViewById(R.id.editTextAnchoTrabajoDesesado);
+		editAncho.setText("0.0");
+		editAncho.addTextChangedListener(new TextWatcher() {
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+			}
+
+			@Override
+			public void afterTextChanged(Editable s) {
+				actualizarCaudal();
+			}
+		});
+
+		velocidadAvance = (EditText) findViewById(R.id.velocidadAvance);
+		velocidadAvance.setText("0.0");
+		velocidadAvance.addTextChangedListener(new TextWatcher() {
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+			}
+
+			@Override
+			public void afterTextChanged(Editable s) {
+				actualizarCaudal();
+			}
+		});
+		
+		caudalTotal = (TextView) findViewById(R.id.textView15);
+		caudalSector = (TextView) findViewById(R.id.textView16);
 		editBoquillas = (EditText) findViewById(R.id.editText4);
 
 		Button siguiente = (Button) findViewById(R.id.siguiente);
@@ -162,46 +150,46 @@ CompoundButton.OnCheckedChangeListener  {
 		siguiente.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				String quien = "";
+				String revisando = "";
+				String reemplazado = "";
 				try {
 
-					Float vol, ancho;
-
-					if (SwitchvolumenAplicacionCalculado.isChecked()) {
-						quien = "Volumen de aplicación calculado";
-						vol = Float.parseFloat(volumenAplicacionCalculado.getText()
-								.toString());
-					} else {
-						quien = "Volumen de aplicación deseado";
-						vol = Float
-								.parseFloat(editVolumen.getText().toString());
+					revisando = "Volumen de aplicación deseado";
+					reemplazado = editVolumen.getText().toString().replace(',', '.');
+					float volumenDeseado = (float) Double.parseDouble(reemplazado);
+					if(volumenDeseado <=0){					
+						reemplazado = "Volumen de aplicación deseado";
+						Float.parseFloat("h");
 					}
 
-					if (SwitchAnchoTrabajoCalculado.isChecked()) {
-						quien = "Ancho de trabajo calculado";
-						ancho = Float.parseFloat(anchoTrabajoCalculado
-								.getText().toString());
-					} else {
-						quien = "Ancho de trabajo deseado";
-						ancho = Float
-								.parseFloat(editAncho.getText().toString());
+					revisando = "Ancho de trabajo deseado";
+					reemplazado = editAncho.getText().toString().replace(',', '.');
+					float anchoDeseado = (float) Double.parseDouble(reemplazado);
+					if(anchoDeseado <=0){					
+						reemplazado = "Ancho de trabajo deseado";
+						Float.parseFloat("h");
 					}
-					quien = "Numero de boquillas";
+
+					revisando = "Velocidad de avance deseada ";
+					reemplazado = velocidadAvance.getText().toString().replace(',', '.');
+					float velAvance = (float) Double.parseDouble(reemplazado);
+					if (velAvance < 1 || velAvance > 6){					
+						reemplazado = "Velocidad de avance deseada ";
+						Float.parseFloat("h");
+					}
+
+					revisando = "Numero de boquillas";
 					int boq = Integer.parseInt(editBoquillas.getText()
 							.toString());
 
-					pb.rellenarB1(vol, ancho, Float.parseFloat(velocidadAvance
-							.getText().toString()), (float) 0.0, (float) 0.0,
-							// Float.parseFloat(caudalTotal.getText().toString()),
-							// Float.parseFloat(caudalSector.getText().toString()),
-							boq);
+					pb.rellenarB1(volumenDeseado, anchoDeseado, velAvance, (float) 0.0, (float) 0.0, boq);
 					Intent b1 = new Intent(B_1Activity.this, B_2Activity.class);
 					b1.putExtra("parteb1", pb);
 					startActivity(b1);
 				} catch (Exception e) {
 					e.printStackTrace();
 					Toast toast = Toast.makeText(getApplicationContext(),
-							"Valor de " + '"' + quien + '"' + " incorrecto",
+							"Valor de " + '"' + revisando + '"' + " incorrecto",
 							Toast.LENGTH_SHORT);
 					toast.show();
 				}
@@ -236,43 +224,6 @@ CompoundButton.OnCheckedChangeListener  {
 		/********************** TEST **********************/
 
 	}
-
-	/*public void seebbarr() {
-		velocidadAvanceSeekbar = (SeekBar) findViewById(R.id.seekBar1);
-		velocidadAvance = (TextView) findViewById(R.id.velocidadAvance);
-
-		velocidadAvance.setFocusable(true);
-		velocidadAvance.setFocusableInTouchMode(true);
-
-		velocidadAvanceSeekbar.setProgress(1);
-		velocidadAvanceSeekbar.incrementProgressBy(1);
-		velocidadAvanceSeekbar.setMax(502);
-
-		velocidadAvanceSeekbar
-		.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-
-			float progress_value;
-
-			@Override
-			public void onProgressChanged(SeekBar seekBar,
-					int progress, boolean fromUser) {
-				actualizarCaudal();
-				progress_value = (float) progress;
-				velocidadAvance.setText(""
-						+ (float) ((progress_value + 99) / 100));
-				actualizarCaudal();
-				velocidadAvance.requestFocus();
-			}
-
-			@Override
-			public void onStartTrackingTouch(SeekBar seekBar) {
-			}
-
-			@Override
-			public void onStopTrackingTouch(SeekBar seekBar) {
-			}
-		});
-	}*/
 
 	@SuppressWarnings({ "unused", "hiding" })
 	private class ArrayAdapterMio<String> extends ArrayAdapter<String> {

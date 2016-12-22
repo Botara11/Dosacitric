@@ -89,9 +89,12 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:background="@color/white"
+        android:digits=",.1234567890"
         android:ems="10"
         android:gravity="center"
-        android:inputType="number|textVisiblePassword" />
+        android:inputType="number"
+        android:maxLength="6"
+        android:singleLine="true" />
 
     <EditText
         android:id="@+id/editText4"
@@ -103,9 +106,12 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:background="@color/white"
+        android:digits=",.1234567890"
         android:ems="10"
         android:gravity="center"
-        android:inputType="number|textVisiblePassword" />
+        android:inputType="number"
+        android:maxLength="4"
+        android:singleLine="true" />
 
     <TextView
         android:id="@+id/textView1"

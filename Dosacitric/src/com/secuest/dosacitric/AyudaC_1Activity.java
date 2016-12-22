@@ -15,14 +15,13 @@ public class AyudaC_1Activity extends AppCompatActivity{
 	private TextView cuerpo4;
 	private TextView cuerpo5;
 	private TextView cuerpo6;
-	private TextView cuerpo7;
-	private TextView cuerpo8;
+	private TextView cuerpo9;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ayudac_1activity);
-		
+
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -35,27 +34,26 @@ public class AyudaC_1Activity extends AppCompatActivity{
 		cuerpo4 = (TextView) findViewById(R.id.cuerpo4);
 		cuerpo5 = (TextView) findViewById(R.id.cuerpo5);
 		cuerpo6 = (TextView) findViewById(R.id.cuerpo6);
-		cuerpo7 = (TextView) findViewById(R.id.cuerpo7);
-		cuerpo8 = (TextView) findViewById(R.id.cuerpo8);
-		
-		String stringCuerpo1 = "Este valor se corresponde con el ancho de trabajo obtenido por <font color=#ff6600>DOSACITRIC</font> a partir de los datos introducidos previamente. Si se desea mantener este valor como dato, llevar el botón desplazable a la posición “SI”. Si se desea introducir un valor diferente de ancho de trabajo, llevar el botón desplazable a la opción “NO” e introducir el <font color=#ff6600> ancho de la calle deseado</font> en la casilla inferior. Cabe indicar que el ancho trabajo, en cualquier caso, debe ser el ancho de la calle a tratar."; 
+		cuerpo9 = (TextView) findViewById(R.id.cuerpo9);
+
+
+		String stringCuerpo1 = "El <font color=#ff6600> Ancho de la calle calculado </font> se corresponde con el valor obtenido por <font color=#ff6600>DOSACITRIC</font> a partir de los datos introducidos previamente.";
+		String stringCuerpo9 = "El <font color=#ff6600> Ancho de la calle deseado </font> es el valor que va a utilizar <font color=#ff6600>DOSACITRIC</font> para hacer los cálculos. Se corresponde con el ancho de la calle a tratar. El usuario puede optar por introducir el valor calculado por <font color=#ff6600>DOSACITRIC</font> u otro valor.";
 		String stringCuerpo2 = "En este apartado deben indicarse el número total de boquillas que hay abiertas en la <font color=#ff6600> Zona Alta (nA), Media (nM) y Baja (nB)</font> del equipo.";
-		String stringCuerpo3 = "Este valor se corresponde con el valor obtenido por  <font color=#ff6600>DOSACITRIC</font> a partir de los datos introducidos previamente. Si se desea mantener este valor como dato, llevar el botón desplazable a la posición “SI”. Si se desea introducir un valor diferente de velocidad de avance, llevar el botón desplazable a la opción “NO” e introducir <font color=#ff6600> la velocidad de avance deseada </font> en la casilla inferior.";
+		String stringCuerpo3 = "En esta casilla se debe indicar <font color=#ff6600> la velocidad de avance </font> a la que se desea realizar el tratamiento en Km/h. ";
 		String stringCuerpo4 = "En este punto debe seleccionarse la presión a la que se desea realizar el tratamiento, pulsando sobre el valor elegido <font color=#ff6600> (6 bar, 7 bar, …, 16 bar)</font>.";
-		String stringCuerpo5 = "En este punto debe seleccionarse el fabricante de las boquillas que se van a  utilizar en el tratamiento, pulsando sobre el valor elegido <font color=#ff6600>(Teejet, Albuz, …, Otras)</font>.";
-		String stringCuerpo6 = "En este punto debe seleccionarse el modelo de boquilla utilizada en el pulverizador en la zona alta.";
-		String stringCuerpo7 = "En este punto debe seleccionarse el modelo de boquilla utilizada en el pulverizador en la zona media.";
-		String stringCuerpo8 = "En este punto debe seleccionarse el modelo de boquilla utilizada en el pulverizador en la zona baja.";
-		
+		String stringCuerpo5 = "En este punto debe seleccionarse el fabricante de las boquillas que se van a  utilizar en el tratamiento, pulsando sobre el valor elegido <font color=#ff6600>(Teejet, Albuz, …, Mis boquillas)</font>.";
+		String stringCuerpo6 = "En este punto debe seleccionarse el modelo de boquilla utilizada en el pulverizador en la <font color=#ff6600>Zona Alta</font>, <font color=#ff6600>Zona Media</font> y <font color=#ff6600>Zona Baja</font>.";
+
+
 		cuerpo1.setText(Html.fromHtml(stringCuerpo1));
 		cuerpo2.setText(Html.fromHtml(stringCuerpo2));
 		cuerpo3.setText(Html.fromHtml(stringCuerpo3));
 		cuerpo4.setText(Html.fromHtml(stringCuerpo4));
 		cuerpo5.setText(Html.fromHtml(stringCuerpo5));
 		cuerpo6.setText(Html.fromHtml(stringCuerpo6));
-		cuerpo7.setText(Html.fromHtml(stringCuerpo7));
-		cuerpo8.setText(Html.fromHtml(stringCuerpo8));
-		
+		cuerpo9.setText(Html.fromHtml(stringCuerpo9));
+
 	}
 
 	@Override

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.secuest.dosacitric"
-    android:versionCode="1"
+    android:versionCode="2"
     android:versionName="1.0" >
 
     <uses-sdk
@@ -135,7 +135,6 @@
             android:label="@string/BorrarBoquillas"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme2" >
-            
         </activity>
         <activity
             android:name="AyudaIndice"
@@ -225,16 +224,16 @@
         <activity
             android:name="PresionesListView"
             android:label="@string/Presiones"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="BoquillasListView"
             android:label="@string/Boquillas"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="NoHayBoquillas"
-            android:label=""
+            android:label="@string/Marcas"
             android:screenOrientation="portrait" >
         </activity>
     </application>

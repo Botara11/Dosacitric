@@ -98,10 +98,10 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView4"
+                android:layout_alignLeft="@+id/editTextAnchoTrabajoDesesado"
                 android:layout_below="@+id/textView4"
                 android:layout_marginTop="16dp"
-                android:text="Caudal de líquido total"
+                android:text="-  Caudal de líquido total"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -128,7 +128,7 @@
                 android:layout_alignLeft="@+id/TextView1"
                 android:layout_below="@+id/TextView1"
                 android:layout_marginTop="10dp"
-                android:text="(Comprendida entre 0,99 y 6,01)"
+                android:text="(Comprendida entre 1 y 6 Km/h)"
                 android:textColor="@color/green"
                 android:textSize="13sp" />
 
@@ -136,10 +136,9 @@
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:layout_alignLeft="@+id/textView8"
                 android:layout_alignRight="@+id/editTextAnchoTrabajoDesesado"
                 android:layout_below="@+id/textView8"
-                android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/greylight"
@@ -164,7 +163,7 @@
                 android:layout_alignLeft="@+id/textView15"
                 android:layout_below="@+id/textView15"
                 android:layout_marginTop="10dp"
-                android:text="Caudal de líquido por sector"
+                android:text="-  Caudal de líquido por sector"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -172,10 +171,9 @@
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:layout_alignLeft="@+id/textView9"
                 android:layout_alignRight="@+id/editTextAnchoTrabajoDesesado"
                 android:layout_below="@+id/textView9"
-                android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/greylight"
@@ -201,21 +199,20 @@
                 android:layout_below="@+id/textView16"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Número total de boquillas del equipo"
+                android:text="-  Número total de boquillas del equipo"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
-            <Switch
+            <TextView
                 android:id="@+id/switchVolumenAplicacionCalculado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textView17"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:checked="true"
-                android:onClick="onSwitchClicked "
-                android:text="Volumen de aplicación \n calculado"
+                android:layout_toLeftOf="@+id/textView3"
+                android:text="-  Volumen de aplicación calculado"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -227,22 +224,19 @@
                 android:layout_below="@+id/textViewVolumenAplicacionCalculado"
                 android:layout_marginTop="20dp"
                 android:layout_toLeftOf="@+id/textView11"
-                android:text="Volumen de aplicación deseado"
+                android:text="-  Volumen de aplicación deseado"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
-            <Switch
+            <TextView
                 android:id="@+id/switchAnchoTrabajoCalculado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:layout_alignLeft="@+id/editTextVolumenAplicacionDeseado"
                 android:layout_alignRight="@+id/switchVolumenAplicacionCalculado"
                 android:layout_below="@+id/TextView02"
-                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:checked="true"
-                android:onClick="onSwitchClicked "
-                android:text="Ancho de trabajo \n calculado"
+                android:text="-  Ancho de trabajo calculado"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -250,12 +244,11 @@
                 android:id="@+id/switchAnchoTrabajoDeseado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:layout_alignLeft="@+id/textViewAnchoTrabajoCalculado"
                 android:layout_alignRight="@+id/switchAnchoTrabajoCalculado"
                 android:layout_below="@+id/textViewAnchoTrabajoCalculado"
-                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:text="Ancho de trabajo deseado"
+                android:text="-  Ancho de trabajo deseado"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -326,7 +319,7 @@
                 android:id="@+id/textViewAnchoTrabajoCalculado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/switchAnchoTrabajoDeseado"
+                android:layout_alignLeft="@+id/switchAnchoTrabajoCalculado"
                 android:layout_alignRight="@+id/editTextVolumenAplicacionDeseado"
                 android:layout_below="@+id/switchAnchoTrabajoCalculado"
                 android:layout_marginTop="10dp"
@@ -369,9 +362,11 @@
                 android:layout_alignTop="@+id/textView3"
                 android:layout_toRightOf="@+id/TextView1"
                 android:background="@color/white"
+                android:digits=",.1234567890"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="number|textVisiblePassword" >
+                android:inputType="number"
+                android:singleLine="true" >
             </EditText>
 
             <TextView
@@ -395,7 +390,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Seleccione una de las dos opciones:"
+                android:text="Introduzca el Volumen de aplicación deseado:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -403,10 +398,11 @@
                 android:id="@+id/TextView02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editTextVolumenAplicacionDeseado"
+                android:layout_alignParentLeft="true"
                 android:layout_below="@+id/editTextVolumenAplicacionDeseado"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="30dp"
-                android:text="Seleccione una de las dos opciones:"
+                android:text="Introduzca el Ancho de trabajo deseado:"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
         </RelativeLayout>

@@ -134,7 +134,7 @@ public class pdfCreator {
 			mPDFWriter.addRawContent("0 0 0 rg\n");
 			mPDFWriter.addText(277, 912, 14, "dosacitric@upv.es");
 			mPDFWriter.addText(277, 896, 14, "Unidad de Mecanización y Tecnología Agraria");
-			mPDFWriter.addText(277, 880, 14, "UNIVERSIDAD POLITÉCNICA DE VALENCIA");
+			mPDFWriter.addText(277, 880, 14, "UNIVERSITAT POLITÈCNICA DE VALÈNCIA");
 		} else {
 			line_pointer=line_pointer-btw_lines;
 		}

@@ -36,7 +36,7 @@ public class AyudaAjustes extends AppCompatActivity{
 		cuerpo6 = (TextView) findViewById(R.id.cuerpo6);
 		cuerpo7 = (TextView) findViewById(R.id.cuerpo7);
 
-		String stringCuerpo1 = "En apartado de ajustes se podrá generar una base de datos de las boquillas propias que quiera emplear el usuario en la aplicación <font color=#ff6600>DOSACITRIC</font>."; 
+		String stringCuerpo1 = "En el apartado de ajustes se podrá generar una base de datos de las boquillas propias que quiera emplear el usuario en la aplicación <font color=#ff6600>DOSACITRIC</font>."; 
 		String stringCuerpo2 = "En este apartado se introducirán los datos de las boquillas propias.";
 		String stringCuerpo3 = "- Referencia: Marca, modelo y color de la boquilla.";
 		String stringCuerpo4 = "- Caudal: Representa el caudal proporcionado por esa boquilla en L/min a una presión de trabajo conocida.";
