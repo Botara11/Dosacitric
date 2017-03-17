@@ -89,7 +89,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="32dp"
                 android:gravity="center"
-                android:src="@drawable/logo_ministerio" />
+                android:src="@drawable/logoesp" />
 
             <TextView
                 android:id="@+id/textView5"

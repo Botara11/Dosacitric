@@ -90,10 +90,11 @@ public class Resultados1 extends AppCompatActivity{
 		SharedPreferences settings = getSharedPreferences("Guarda", Context.MODE_PRIVATE);
 
 		String[] fech = settings.getString("fecha", "").split("-");
-
-		fechaDiaResultados1.setText(String.valueOf(fech[1]));
+		if (fech.length>1){
+			fechaDiaResultados1.setText(String.valueOf(fech[1]));
+			fechaAnoResultados1.setText(String.valueOf(fech[2]));
+		}
 		fechaMesResultados1.setText(String.valueOf(fech[0]));
-		fechaAnoResultados1.setText(String.valueOf(fech[2]));
 		idParcelaResultados1.setText(String.valueOf(settings.getString("idparcela", "")));
 		idTratamientoResultados1.setText(String.valueOf(settings.getString("idtratamiento", "")));
 		referenciaResultados1.setText(String.valueOf(settings.getString("referencia", "")));
@@ -273,7 +274,7 @@ public class Resultados1 extends AppCompatActivity{
 						"B.1 Caracter&iacute;sticas del cultivo<tipo>2<n>"+
 						"          Densidad foliar del &aacute;rbol: "+densidadFoliar.getText().toString()+"<tipo>2<n>"+
 						"          Marco de plantaci&oacute;n: "+xAncho.getText().toString()+" m x "+yDistancia.getText().toString()+" m<tipo>2<n>"+
-						"          Volumen del &aacute;rbol: "+volumenArbol.getText().toString()+" "+ Html.fromHtml("m<sup>3</sup>/árbol")+"<tipo>2<n>"+
+						"          Volumen del &aacute;rbol: "+volumenArbol.getText().toString()+" "+ "m&cubico;/árbol"+"<tipo>2<n>"+
 						"          Forma del &aacute;rbol: "+formaArbol.getText().toString()+"<tipo>2<n>"+
 						"          Fecha de la &uacute;ltima poda: "+fechaUltimaPoda.getText().toString()+"<tipo>2<n>"+
 						//"          Grado de poda: "+gradoPoda.getText().toString()+"<tipo>2<n>"+

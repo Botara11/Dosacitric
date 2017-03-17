@@ -238,6 +238,8 @@ public class pdfCreator {
 		str=str.replace("&Iacute;","Í");
 		str=str.replace("&Oacute;","Ó");
 		str=str.replace("&Uacute;","Ú");
+		str=str.replace("&cubico;","³");
+		str=str.replace("&cuadrado;","²");
 		return str;
 	}
 
