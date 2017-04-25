@@ -12,10 +12,6 @@
         "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-hdpi/logo_actionbar.png"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-hdpi/dimensiones.png",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-hdpi/dimensiones.png"
-    },
-    {
         "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-hdpi/ayuda.png",
         "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-hdpi/ayuda.png"
     },

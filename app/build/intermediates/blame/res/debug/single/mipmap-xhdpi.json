@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xhdpi/dimensiones.png",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xhdpi/dimensiones.png"
-    },
-    {
         "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xhdpi/printer.png",
         "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xhdpi/printer.png"
     },

@@ -6,29 +6,23 @@
     density="xxxhdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1493132071489"
+    timestamp="1493133604943"
     token="630004703602846807"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="311" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="138" />
+        duration="0" />
     <task
         name="verifier"
-        duration="7" />
+        duration="0" />
 
-    <artifact
-        location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
     <artifact
         location="/home/alv/workspace/Dosacitric_final/app/build/outputs/apk/app-debug.apk"
         type="SPLIT_MAIN" />
@@ -40,6 +34,9 @@
         type="SPLIT" />
     <artifact
         location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
     <artifact
         location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
@@ -57,19 +54,16 @@
         location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
     <artifact
+        location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
         location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1493132071489"
+        timestamp="1493133604943"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
         <artifact
             location="/home/alv/workspace/Dosacitric_final/app/build/outputs/apk/app-debug.apk"
             type="SPLIT_MAIN" />
@@ -81,6 +75,9 @@
             type="SPLIT" />
         <artifact
             location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
             location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
@@ -96,6 +93,9 @@
             type="SPLIT" />
         <artifact
             location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/home/alv/workspace/Dosacitric_final/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
