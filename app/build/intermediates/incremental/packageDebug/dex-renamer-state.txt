@@ -1,7 +1,0 @@
-#Tue Apr 25 17:20:05 CEST 2017
-base.0=/home/alv/workspace/Dosacitric_final/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_84875ce79c905e17b67e08395c4c5a264213e0db
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=/home/alv/workspace/Dosacitric_final/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6fd6586c98e03ea4e04080b315d6c2fcda5aa3be/classes.dex
-base.1=/home/alv/workspace/Dosacitric_final/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6fd6586c98e03ea4e04080b315d6c2fcda5aa3be
-file.0=/home/alv/workspace/Dosacitric_final/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_84875ce79c905e17b67e08395c4c5a264213e0db/classes.dex

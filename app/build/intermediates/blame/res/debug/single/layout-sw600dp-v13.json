@@ -1,202 +1,202 @@
 [
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/presioneslistview_layout.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/presioneslistview_layout.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_boquillaslistview.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayuda_boquillaslistview.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ingresar_boquillas.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ingresar_boquillas.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/item_choice.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/item_choice.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/item.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/item.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/presioneslistview_layout.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/presioneslistview_layout.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/resultados3.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/resultados3.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudac_3activity.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayudac_3activity.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudab_2activity.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayudab_2activity.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudac_4_zona_baja.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayudac_4_zona_baja.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_presioneslistview.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayuda_presioneslistview.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/item.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/item.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/a_1_1.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/a_1_1.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/c_1.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/c_1.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/a_1.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/a_1.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/b_1.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/b_1.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudaa_1activity.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayudaa_1activity.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/a_1.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/a_1.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/indice.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/indice.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudab_2activity.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayudab_2activity.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudac_1activity.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayudac_1activity.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_catalogoslistview.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayuda_catalogoslistview.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/c_1.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/c_1.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_ajustes.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayuda_ajustes.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/b_1.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/b_1.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/b_2.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/b_2.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/zonaslistview.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/zonaslistview.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/siniconoslistview_layout.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/siniconoslistview_layout.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudac_4_zona_media.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayudac_4_zona_media.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/a_1_1.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/a_1_1.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudac_4_zona_alta.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayudac_4_zona_alta.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudac_1activity.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayudac_1activity.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/b_2.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/b_2.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_ajustes_informacion.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayuda_ajustes_informacion.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_resultados3.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayuda_resultados3.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudac_4_zona_media.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayudac_4_zona_media.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudac_4_zona_baja.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayudac_4_zona_baja.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/a_1_3.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/a_1_3.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/a_1_3.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/a_1_3.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/resultados1.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/resultados1.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudac_2activity.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayudac_2activity.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/c_3.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/c_3.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudac_3activity.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayudac_3activity.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_resultados3.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayuda_resultados3.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/item_choice.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/item_choice.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/boquillaslistview_ingresadas.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/boquillaslistview_ingresadas.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/c_3.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/c_3.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_indice.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayuda_indice.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/resultados2.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/resultados2.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/zonaslistview.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/zonaslistview.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/catalogoslistview_layout.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/catalogoslistview_layout.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/spinner_item.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/spinner_item.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/portada.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/portada.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudac_4_zona_alta.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayudac_4_zona_alta.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/list_item_con_arrow.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/list_item_con_arrow.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_presioneslistview.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayuda_presioneslistview.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/spinner_item.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/spinner_item.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/list_item_con_arrow.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/list_item_con_arrow.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_catalogoslistview.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayuda_catalogoslistview.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/catalogoslistview_layout.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/catalogoslistview_layout.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudaa_1_1activity.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayudaa_1_1activity.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/c_4.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/c_4.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/boquillaslistview_layout.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/boquillaslistview_layout.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ajustes.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ajustes.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudaa_1_3activity.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayudaa_1_3activity.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/indice.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/indice.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/list_item_coniconos.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/list_item_coniconos.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/portada.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/portada.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_boquillaslistview.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayuda_boquillaslistview.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/resultados2.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/resultados2.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_resultados2.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayuda_resultados2.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/nohayboquillas.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/nohayboquillas.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudab_1activity.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayudab_1activity.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/c_extra.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/c_extra.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_indice.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayuda_indice.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/boquillaslistview_layout.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/boquillaslistview_layout.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_ajustes_informacion.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayuda_ajustes_informacion.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudac_2activity.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayudac_2activity.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_ajustes.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayuda_ajustes.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/list_item_coniconos.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/list_item_coniconos.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/c_2.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/c_2.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_resultados1.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayuda_resultados1.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/resultados1.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/resultados1.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudaa_1activity.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayudaa_1activity.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/nohayboquillas.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/nohayboquillas.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/resultados3.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/resultados3.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/siniconoslistview_layout.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/siniconoslistview_layout.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/c_2.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/c_2.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/c_extra.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/c_extra.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ingresar_boquillas.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ingresar_boquillas.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/c_4.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/c_4.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudab_1activity.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayudab_1activity.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_resultados1.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ayuda_resultados1.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/boquillaslistview_borrar.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/boquillaslistview_borrar.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/boquillaslistview_borrar.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/boquillaslistview_borrar.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayuda_resultados2.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayuda_resultados2.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ajustes.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/ajustes.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudaa_1_1activity.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayudaa_1_1activity.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/boquillaslistview_ingresadas.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout-sw600dp/boquillaslistview_ingresadas.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/ayudaa_1_3activity.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/layout-sw600dp/ayudaa_1_3activity.xml"
     }
 ]

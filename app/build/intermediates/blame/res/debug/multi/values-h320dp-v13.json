@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h320dp-v13/values-h320dp-v13.xml",
+        "outputFile": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h320dp-v13/values-h320dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-h320dp-v13/values-h320dp-v13.xml",
+                    "file": "/home/didi/.android/build-cache/6eb652078264b1db87d0c672fcf4451db2f6c791/output/res/values-h320dp-v13/values-h320dp-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

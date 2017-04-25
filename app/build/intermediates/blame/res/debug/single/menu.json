@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/menu/add.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/menu/add.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/menu/main.xml"
     },
     {
-        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/menu/main.xml"
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/menu/add.xml",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/menu/add.xml"
     }
 ]
