@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="bottom" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/indice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="INDICE"
+                android:textColor="#ff6600" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp"
+                android:background="#ff6600" />
+
+
+            <ImageButton
+                android:id="@+id/ayuda"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/ayuda" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp"
+                android:background="#ff6600" />
+
+            <Button
+                android:id="@+id/siguiente"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="SIGUIENTE"
+                android:textColor="#ff6600" />
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/table" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/velocidadAvance"
+                android:layout_alignRight="@+id/textView5"
+                android:layout_alignTop="@+id/TextView1"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/velocidadAvance"
+                android:gravity="right"
+                android:text="Km/h"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/TextView2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="Características del sistema hidráulico del equipo"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/switchAnchoTrabajoDeseado"
+                android:layout_below="@+id/textView4"
+                android:layout_marginTop="16dp"
+                android:text="-  Caudal de líquido total"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView10"
+                android:layout_alignLeft="@+id/textView16"
+                android:layout_alignRight="@+id/textView16"
+                android:layout_alignTop="@+id/textView10"
+                android:background="@color/white"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number|textVisiblePassword" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/TextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TextView1"
+                android:layout_below="@+id/TextView1"
+                android:layout_marginTop="10dp"
+                android:text="(Comprendida entre 1 y 6 Km/h)"
+                android:textColor="@color/green"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/velocidadAvance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/TextView1"
+                android:layout_alignLeft="@+id/editTextAnchoTrabajoDesesado"
+                android:layout_alignRight="@+id/editTextAnchoTrabajoDesesado"
+                android:layout_alignTop="@+id/TextView1"
+                android:background="@color/white"
+                android:digits=",.1234567890"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView8"
+                android:layout_alignLeft="@+id/velocidadAvance"
+                android:layout_alignTop="@+id/textView8"
+                android:layout_toLeftOf="@+id/textView7"
+                android:background="@color/greylight"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/textView15"
+                android:layout_alignLeft="@+id/textView7"
+                android:layout_alignRight="@+id/textView12"
+                android:layout_alignTop="@+id/textView15"
+                android:gravity="left"
+                android:text="L/min"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView8"
+                android:layout_below="@+id/textView15"
+                android:layout_marginTop="20dp"
+                android:text="-  Caudal de líquido por sector"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView9"
+                android:layout_alignLeft="@+id/textView15"
+                android:layout_alignTop="@+id/textView9"
+                android:layout_toLeftOf="@+id/textView7"
+                android:background="@color/greylight"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView16"
+                android:layout_alignLeft="@+id/textView7"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textView16"
+                android:gravity="left"
+                android:text="L/min"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView9"
+                android:layout_below="@+id/textView16"
+                android:layout_marginTop="20dp"
+                android:text="-  Número total de boquillas del equipo"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/switchVolumenAplicacionCalculado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView17"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView17"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="20dp"
+                android:text="-  Volumen de aplicación calculado"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/switchVolumenAplicacionDeseado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/switchVolumenAplicacionCalculado"
+                android:layout_alignRight="@+id/switchVolumenAplicacionCalculado"
+                android:layout_below="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_marginTop="20dp"
+                android:text="-  Volumen de aplicación deseado"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/switchAnchoTrabajoCalculado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/switchVolumenAplicacionDeseado"
+                android:layout_alignRight="@+id/switchVolumenAplicacionDeseado"
+                android:layout_below="@+id/TextView02"
+                android:layout_marginTop="20dp"
+                android:text="-  Ancho de trabajo calculado"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/switchAnchoTrabajoDeseado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/switchAnchoTrabajoCalculado"
+                android:layout_alignRight="@+id/switchAnchoTrabajoCalculado"
+                android:layout_below="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_marginTop="20dp"
+                android:text="-  Ancho de trabajo deseado"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/TextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView6"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_toLeftOf="@+id/velocidadAvance"
+                android:text="Velocidad de avance deseada"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/switchVolumenAplicacionCalculado"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/switchVolumenAplicacionCalculado"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="120dp"
+                android:layout_toRightOf="@+id/textView10"
+                android:background="@color/greylight"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextVolumenAplicacionDeseado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/switchVolumenAplicacionDeseado"
+                android:layout_alignLeft="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_alignRight="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_alignTop="@+id/switchVolumenAplicacionDeseado"
+                android:background="@color/white"
+                android:digits=",.1234567890"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="20sp" >
+
+             <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/switchAnchoTrabajoCalculado"
+                android:layout_alignLeft="@+id/editTextVolumenAplicacionDeseado"
+                android:layout_alignRight="@+id/editTextVolumenAplicacionDeseado"
+                android:layout_alignTop="@+id/switchAnchoTrabajoCalculado"
+                android:background="@color/greylight"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextAnchoTrabajoDesesado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/switchAnchoTrabajoDeseado"
+                android:layout_alignLeft="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_alignRight="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_alignTop="@+id/switchAnchoTrabajoDeseado"
+                android:background="@color/white"
+                android:digits=",.1234567890"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewVolum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewVolumenAplicacionCalculado"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="60dp"
+                android:layout_toRightOf="@+id/editTextVolumenAplicacionDeseado"
+                android:gravity="left"
+                android:text="L/ha"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/editTextVolumenAplicacionDeseado"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/editTextVolumenAplicacionDeseado"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="60dp"
+                android:layout_toRightOf="@+id/editTextVolumenAplicacionDeseado"
+                android:gravity="left"
+                android:text="L/ha"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_alignLeft="@+id/textView6"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewAnchoTrabajoCalculado"
+                android:layout_marginRight="60dp"
+                android:gravity="left"
+                android:text="m"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/editTextAnchoTrabajoDesesado"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/editTextAnchoTrabajoDesesado"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="60dp"
+                android:layout_toRightOf="@+id/editTextAnchoTrabajoDesesado"
+                android:gravity="left"
+                android:text="m"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:text="Introduzca el Volumen de aplicación deseado:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/switchVolumenAplicacionDeseado"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:text="Introduzca el Ancho de trabajo deseado:"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,354 @@
+[
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayudab_2activity.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayudab_2activity.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/item_choice.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/item_choice.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/c_3.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/c_3.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayuda_ajustes.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayuda_ajustes.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/boquillaslistview_ingresadas.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/boquillaslistview_ingresadas.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayuda_ajustes_informacion.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayuda_ajustes_informacion.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayudac_3activity.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayudac_3activity.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayudac_1activity.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayudac_1activity.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/c_extra.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/c_extra.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/spinner_item.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/spinner_item.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/zonaslistview.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/zonaslistview.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/c_2.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/c_2.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/boquillaslistview_borrar.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/boquillaslistview_borrar.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/b_2.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/b_2.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/list_item_coniconos.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/list_item_coniconos.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayudaa_1_3activity.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayudaa_1_3activity.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayudaa_1_1activity.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayudaa_1_1activity.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayudac_4_zona_media.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayudac_4_zona_media.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayudac_4_zona_alta.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayudac_4_zona_alta.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayudaa_1activity.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayudaa_1activity.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/catalogoslistview_layout.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/catalogoslistview_layout.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/list_item_con_arrow.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/list_item_con_arrow.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/a_1_3.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/a_1_3.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/seleccionado_layout.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/seleccionado_layout.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/b_1.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/b_1.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ingresar_boquillas.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ingresar_boquillas.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/item.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/item.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayuda_resultados1.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayuda_resultados1.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayuda_boquillaslistview.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayuda_boquillaslistview.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/nohayboquillas.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/nohayboquillas.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/boquillaslistview_layout.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/boquillaslistview_layout.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayudab_1activity.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayudab_1activity.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/portada.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/portada.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ajustes.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ajustes.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/a_1.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/a_1.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayuda_resultados2.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayuda_resultados2.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/resultados2.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/resultados2.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayudac_4_zona_baja.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayudac_4_zona_baja.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayuda_resultados3.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayuda_resultados3.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayudac_2activity.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayudac_2activity.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/resultados3.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/resultados3.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/a_1_1.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/a_1_1.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/indice.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/indice.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayuda_indice.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayuda_indice.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/c_4.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/c_4.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayuda_catalogoslistview.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayuda_catalogoslistview.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/c_1.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/c_1.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/presioneslistview_layout.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/presioneslistview_layout.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/siniconoslistview_layout.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/siniconoslistview_layout.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/resultados1.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/resultados1.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/layout/ayuda_presioneslistview.xml",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/layout/ayuda_presioneslistview.xml"
+    }
+]

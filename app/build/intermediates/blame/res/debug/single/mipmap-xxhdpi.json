@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/printer.png",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xxhdpi/printer.png"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/arboles.png",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xxhdpi/arboles.png"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/logo_upv.png",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xxhdpi/logo_upv.png"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/logo_ministerio.png",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xxhdpi/logo_ministerio.png"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ecuacion.png",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xxhdpi/ecuacion.png"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/logo_app.png",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xxhdpi/logo_app.png"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/dimensiones.png",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xxhdpi/dimensiones.png"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/zonas_boquillas.png",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xxhdpi/zonas_boquillas.png"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ajustes.png",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xxhdpi/ajustes.png"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ayuda.png",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xxhdpi/ayuda.png"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/arrow.png",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xxhdpi/arrow.png"
+    },
+    {
+        "merged": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/logo_actionbar.png",
+        "source": "/home/alv/workspace/Dosacitric_final/app/src/main/res/mipmap-xxhdpi/logo_actionbar.png"
+    }
+]

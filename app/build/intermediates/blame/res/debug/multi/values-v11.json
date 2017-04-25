@@ -1,0 +1,458 @@
+[
+    {
+        "outputFile": "/home/alv/workspace/Dosacitric_final/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 9,
+                    "endColumn": 12,
+                    "endOffset": 398
+                },
+                "from": {
+                    "file": "/home/alv/workspace/Dosacitric_final/app/src/main/res/values-v11/styles.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 245,
+                        "endLine": 13,
+                        "endColumn": 12,
+                        "endOffset": 588
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 403,
+                    "endLine": 13,
+                    "endColumn": 12,
+                    "endOffset": 607
+                },
+                "from": {
+                    "file": "/home/alv/workspace/Dosacitric_final/app/src/main/res/values-v11/styles.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 940,
+                        "endLine": 26,
+                        "endColumn": 12,
+                        "endOffset": 1145
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 612,
+                    "endLine": 19,
+                    "endColumn": 12,
+                    "endOffset": 920
+                },
+                "from": {
+                    "file": "/home/alv/workspace/Dosacitric_final/app/src/main/res/values-v11/styles.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 626,
+                        "endLine": 21,
+                        "endColumn": 12,
+                        "endOffset": 934
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 925,
+                    "endLine": 25,
+                    "endColumn": 12,
+                    "endOffset": 1339
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 7,
+                        "endColumn": 12,
+                        "endOffset": 469
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1344,
+                    "endLine": 31,
+                    "endColumn": 12,
+                    "endOffset": 1764
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 474,
+                        "endLine": 13,
+                        "endColumn": 12,
+                        "endOffset": 894
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 1769,
+                    "endLine": 37,
+                    "endColumn": 12,
+                    "endOffset": 2192
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 899,
+                        "endLine": 19,
+                        "endColumn": 12,
+                        "endOffset": 1322
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 2197,
+                    "endLine": 43,
+                    "endColumn": 12,
+                    "endOffset": 2618
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1327,
+                        "endLine": 25,
+                        "endColumn": 12,
+                        "endOffset": 1748
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 2623,
+                    "endLine": 49,
+                    "endColumn": 12,
+                    "endOffset": 3045
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1753,
+                        "endLine": 31,
+                        "endColumn": 12,
+                        "endOffset": 2175
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 3050,
+                    "endLine": 55,
+                    "endColumn": 12,
+                    "endOffset": 3470
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 2180,
+                        "endLine": 37,
+                        "endColumn": 12,
+                        "endOffset": 2600
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 3475,
+                    "endColumn": 88,
+                    "endOffset": 3559
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 2605,
+                        "endColumn": 88,
+                        "endOffset": 2689
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 3564,
+                    "endColumn": 100,
+                    "endOffset": 3660
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 2694,
+                        "endColumn": 100,
+                        "endOffset": 2790
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 3665,
+                    "endLine": 62,
+                    "endColumn": 12,
+                    "endOffset": 4068
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 2795,
+                        "endLine": 44,
+                        "endColumn": 12,
+                        "endOffset": 3198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 63,
+                    "startColumn": 4,
+                    "startOffset": 4073,
+                    "endLine": 67,
+                    "endColumn": 12,
+                    "endOffset": 4488
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 45,
+                        "startColumn": 4,
+                        "startOffset": 3203,
+                        "endLine": 49,
+                        "endColumn": 12,
+                        "endOffset": 3618
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 68,
+                    "startColumn": 4,
+                    "startOffset": 4493,
+                    "endLine": 69,
+                    "endColumn": 12,
+                    "endOffset": 4595
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 50,
+                        "startColumn": 4,
+                        "startOffset": 3623,
+                        "endLine": 51,
+                        "endColumn": 12,
+                        "endOffset": 3725
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 70,
+                    "startColumn": 4,
+                    "startOffset": 4600,
+                    "endLine": 71,
+                    "endColumn": 12,
+                    "endOffset": 4724
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 52,
+                        "startColumn": 4,
+                        "startOffset": 3730,
+                        "endLine": 53,
+                        "endColumn": 12,
+                        "endOffset": 3854
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 72,
+                    "startColumn": 4,
+                    "startOffset": 4729,
+                    "endLine": 75,
+                    "endColumn": 9,
+                    "endOffset": 4952
+                },
+                "from": {
+                    "file": "/home/alv/workspace/Dosacitric_final/app/src/main/res/values-v11/styles.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1155,
+                        "endLine": 31,
+                        "endColumn": 9,
+                        "endOffset": 1378
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 76,
+                    "startColumn": 4,
+                    "startOffset": 4957,
+                    "endColumn": 70,
+                    "endOffset": 5023
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 3859,
+                        "endColumn": 70,
+                        "endOffset": 3925
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 77,
+                    "startColumn": 4,
+                    "startOffset": 5028,
+                    "endColumn": 82,
+                    "endOffset": 5106
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 4,
+                        "startOffset": 3930,
+                        "endColumn": 82,
+                        "endOffset": 4008
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 78,
+                    "startColumn": 4,
+                    "startOffset": 5111,
+                    "endLine": 128,
+                    "endColumn": 12,
+                    "endOffset": 8814
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 4,
+                        "startOffset": 4013,
+                        "endLine": 106,
+                        "endColumn": 12,
+                        "endOffset": 7716
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 129,
+                    "startColumn": 4,
+                    "startOffset": 8819,
+                    "endLine": 180,
+                    "endColumn": 12,
+                    "endOffset": 12662
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 107,
+                        "startColumn": 4,
+                        "startOffset": 7721,
+                        "endLine": 158,
+                        "endColumn": 12,
+                        "endOffset": 11564
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 181,
+                    "startColumn": 4,
+                    "startOffset": 12667,
+                    "endColumn": 90,
+                    "endOffset": 12753
+                },
+                "from": {
+                    "file": "/home/alv/.android/build-cache/97810b7923f05b2299c66b38134715db081879fc/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 159,
+                        "startColumn": 4,
+                        "startOffset": 11569,
+                        "endColumn": 90,
+                        "endOffset": 11655
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 182,
+                    "startColumn": 4,
+                    "startOffset": 12758,
+                    "endLine": 185,
+                    "endColumn": 12,
+                    "endOffset": 12934
+                },
+                "from": {
+                    "file": "/home/alv/workspace/Dosacitric_final/app/src/main/res/values-v11/styles.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 12,
+                        "startOffset": 1500,
+                        "endLine": 39,
+                        "endOffset": 1676
+                    }
+                }
+            }
+        ]
+    }
+]

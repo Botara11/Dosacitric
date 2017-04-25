@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.secuest.dosacitric"
+    android:versionCode="3"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_app"
+        android:label="@string/app_name"
+        android:logo="@mipmap/logo_app"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.secuest.dosacitric.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.Indice"
+            android:label="@string/Indice"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.A_1Activity"
+            android:label="@string/A"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.A_1_1Activity"
+            android:label="@string/B1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.A_1_3Activity"
+            android:label="@string/B3"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.B_1Activity"
+            android:label="@string/C1"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.B_2Activity"
+            android:label="@string/C1"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.C_1Activity"
+            android:label="@string/D1"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.C_2Activity"
+            android:label="@string/PRESIONES"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.C_3Activity"
+            android:label="@string/Marcas"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.C_4ZonaAlta"
+            android:label="@string/ZA"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.C_4ZonaMedia"
+            android:label="@string/ZM"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.C_4ZonaBaja"
+            android:label="@string/ZB"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.Resultados1"
+            android:label="@string/R1"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.Resultados2"
+            android:label="@string/R2"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.Resultados3"
+            android:label="@string/R3"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.Ajustes"
+            android:label="@string/AjusteBoquillas"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.IngresarBoquillas"
+            android:label="@string/IngresarBoquillas"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.MostrarBoquillas"
+            android:label="@string/MostrarBoquillas"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.MostrarBoquillasContinuacion"
+            android:label="Mis boquillas"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.BorrarBoquillas"
+            android:label="@string/BorrarBoquillas"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaIndice"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaAjustes"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaAjustesInformacion"
+            android:label="@string/AcercaDe"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaA_1Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaA_1_1Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaA_1_3Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaResultados1"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaB_1Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaB_2Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaResultados2"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaCatalogosListView"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaPresionesListView"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaBoquillasListView"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaC_1Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaC_2Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaC_3Activity"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaC_4ZonaAlta"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaC_4ZonaMedia"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaC_4ZonaBaja"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.AyudaResultados3"
+            android:label="Ayuda"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.ParteA"
+            android:label="@string/ParteA"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.ParteB"
+            android:label="@string/ParteB"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.ParteC"
+            android:label="@string/ParteC"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.CatalogosListView"
+            android:label="@string/Fabricantes"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.PresionesListView"
+            android:label="@string/Presiones"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.BoquillasListView"
+            android:label="@string/Boquillas"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.secuest.dosacitric.NoHayBoquillas"
+            android:label="@string/MARCAS"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>
