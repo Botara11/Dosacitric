@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/logo_ministerio.jpg",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-xxhdpi/logo_ministerio.jpg"
+    },
+    {
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/logo_upv.jpg",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-xxhdpi/logo_upv.jpg"
+    },
+    {
+        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/dimensiones.jpg",
+        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-xxhdpi/dimensiones.jpg"
+    }
+]

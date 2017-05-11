@@ -1,17 +1,5 @@
 [
     {
-        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-hdpi/ayuda.png",
-        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-hdpi/ayuda.png"
-    },
-    {
-        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-hdpi/arrow.png",
-        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-hdpi/arrow.png"
-    },
-    {
-        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-hdpi/logo_ministerio.png",
-        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-hdpi/logo_ministerio.png"
-    },
-    {
         "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-hdpi/logo_app.png",
         "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-hdpi/logo_app.png"
     },
@@ -24,20 +12,8 @@
         "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-hdpi/ecuacion.png"
     },
     {
-        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-hdpi/logo_upv.png",
-        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-hdpi/logo_upv.png"
-    },
-    {
-        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-hdpi/ajustes.png",
-        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-hdpi/ajustes.png"
-    },
-    {
         "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-hdpi/zonas_boquillas.png",
         "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-hdpi/zonas_boquillas.png"
-    },
-    {
-        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-hdpi/printer.png",
-        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-hdpi/printer.png"
     },
     {
         "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-hdpi/arboles.png",

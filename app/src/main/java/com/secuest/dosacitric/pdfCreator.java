@@ -117,8 +117,6 @@ public class pdfCreator {
 	}
 
 	public void create() {
-		//String pdfcontent = generateHelloWorldPDF();
-		//outputToFile("helloworld.pdf",pdfcontent,"ISO-8859-1");
 	}
 
 	private void incrementLinePointer(){

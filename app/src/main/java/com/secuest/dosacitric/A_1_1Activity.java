@@ -40,8 +40,6 @@ public class A_1_1Activity extends AppCompatActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.a_1_1);
 
-		//Funciona
-
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setDisplayShowHomeEnabled(true);

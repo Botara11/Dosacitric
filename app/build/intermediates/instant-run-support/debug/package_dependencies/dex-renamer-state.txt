@@ -1,0 +1,19 @@
+#Thu May 11 03:58:52 CEST 2017
+renamed.5=classes4.dex
+renamed.4=classes3.dex
+renamed.3=classes6.dex
+renamed.2=classes.dex
+renamed.1=classes2.dex
+renamed.0=classes5.dex
+base.5=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a7c488c7783cb48ac465dfbfa1b0f63e253e8862
+base.4=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_c150a5d699028c42dc876c8643954c5f241d5a10
+base.3=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_422f6b0ca70540c2e265f6bc4755bfa5854d2d36
+base.2=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_0bc03afc04b094336fd291d26528b78a094cac1d
+base.1=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e8bc8abaeb5d297e19c141d5fb55784ef0293cce
+base.0=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d21cdb365df760f7bbcda0ac8ce1bb815d5cba96
+file.5=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a7c488c7783cb48ac465dfbfa1b0f63e253e8862/classes.dex
+file.4=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_c150a5d699028c42dc876c8643954c5f241d5a10/classes.dex
+file.3=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_422f6b0ca70540c2e265f6bc4755bfa5854d2d36/classes.dex
+file.2=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_0bc03afc04b094336fd291d26528b78a094cac1d/classes.dex
+file.1=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e8bc8abaeb5d297e19c141d5fb55784ef0293cce/classes.dex
+file.0=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d21cdb365df760f7bbcda0ac8ce1bb815d5cba96/classes.dex

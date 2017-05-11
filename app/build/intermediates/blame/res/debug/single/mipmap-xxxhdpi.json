@@ -16,14 +16,6 @@
         "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-xxxhdpi/printer.png"
     },
     {
-        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/logo_upv.png",
-        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-xxxhdpi/logo_upv.png"
-    },
-    {
-        "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/logo_ministerio.png",
-        "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-xxxhdpi/logo_ministerio.png"
-    },
-    {
         "merged": "/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ajustes.png",
         "source": "/home/didi/AndroidStudioProjects/dosacitric/app/src/main/res/mipmap-xxxhdpi/ajustes.png"
     },

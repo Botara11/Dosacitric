@@ -25,7 +25,8 @@
                 android:layout_marginLeft="20dp"
                 android:gravity="center_vertical|left"
                 android:text="Hola"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="17sp"/>
         </LinearLayout>
     </RelativeLayout>
 

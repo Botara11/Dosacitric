@@ -1,0 +1,7 @@
+#Thu May 11 04:16:10 CEST 2017
+base.0=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5dc4719db3ef994cc16054fb76e53e75889d042a
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_9b56d3ae95748ddc58668744d28cbdb9b18632fe/classes.dex
+base.1=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_9b56d3ae95748ddc58668744d28cbdb9b18632fe
+file.0=/home/didi/AndroidStudioProjects/dosacitric/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5dc4719db3ef994cc16054fb76e53e75889d042a/classes.dex
